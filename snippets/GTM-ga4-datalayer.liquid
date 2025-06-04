@@ -1,0 +1,131 @@
+<script type="text/javascript">
+	window.dataLayer.push({ ecommerce: null });
+	window.dataLayer = window.dataLayer || [];
+	window.appStart = function(){
+		var productName = "{{ product.title | remove: "'" | remove: '"' }}";
+		var productId = "{{ product.id }}";
+		var productPrice = "{{ product.price | money_without_currency }}";
+		var productBrand = "{{ product.vendor | remove: "'" | remove: '"' }}";
+		var productCollection = "{{ product.collections[0].title | remove: "'" | remove: '"' }}"
+		var productVariant = "{{ product.selected_variant.sku }}"
+		var productCurrency = "{{ shop.currency }}"
+		
+		window.view_item_list = function(){
+          	     var items_array = []
+          {% for product in collection.products limit: 10 %}
+         
+                 items_array.push({
+                    item_id:"{{product.id}}",
+                    item_name:"{{ product.title | remove: "'" | remove: '"' }}",
+					currency:productCurrency,
+					price:"{{ product.price | money_without_currency }}",
+					item_brand:"{{ product.vendor | remove: "'" | remove: '"' }}",
+					item_category:"{{ collection.handle }}"
+          			});
+        
+        {% unless forloop.last %}
+        {% endunless %} {% endfor %}
+          console.log(items_array);
+			window.dataLayer.push({
+				event: 'view_item_list',
+ 				ecommerce: {
+    				items: items_array
+				}
+			});
+		};
+		window.view_item = function(){
+          
+			window.dataLayer.push({
+				event: 'view_item',
+ 				ecommerce: {
+                  value: "{{ product.price | money_without_currency }}",
+                  currency: "{{ shop.currency }}",
+                  items: [
+    				{
+						item_id:productId,
+						item_name:productName,
+						currency:productCurrency,
+						price:productPrice,
+						item_brand:productBrand,
+						item_category:productCollection,
+                        item_variant: "{{ product_variant.title }}"
+    				}]
+				}
+			});
+		};
+      		window.add_to_cart = function(){
+			window.dataLayer.push({
+				event: 'add_to_cart',
+ 				ecommerce: {
+                    value: "{{ product.price | money_without_currency }}",
+                    currency: "{{ shop.currency }}",
+                    items: [
+    				{
+						item_id:productId,
+						item_name:productName,
+                        item_variant: "{{ product_variant.title }}",
+						currency:productCurrency,
+						price:productPrice,
+						item_brand:productBrand,
+						item_category:productCollection,
+                        item_variant: "{{ product.selected_variant.title }}",
+                        quantity: "{{ line_item.quantity }}"
+    				}]
+				}
+			});
+		};
+      window.view_cart = function(){
+			window.dataLayer.push({
+				event: 'view_cart',
+ 				ecommerce: {
+                    value: "{{ cart.items_subtotal_price | money_without_currency }}",
+                    currency: "{{ shop.currency }}",
+    				items: [
+    				{% for line_item in cart.items %}{
+					item_id: "{{ line_item.product_id }}",
+					item_name:  "{{ line_item.product.title | remove: "'" | remove: '"' }}",
+					currency: "{{ shop.currency }}",
+					price: "{{ line_item.final_price | times: 0.01 }}",
+					item_brand: "{{ line_item.vendor }}",
+  					item_category: "{{ line_item.product.collections[0].title | remove: "'" | remove: '"' }}",
+                    item_variant: "{{ line_item.product.variants[0].title }}",
+                    quantity: "{{ line_item.quantity }}"
+                         },{% endfor %}
+    				]
+				}
+			});
+		};
+		window.begin_checkout = function(){
+			window.dataLayer.push({
+				event: 'begin_checkout',
+ 				ecommerce: {
+                  value: "{{ cart.items_subtotal_price | money_without_currency }}",
+                  currency: "{{ shop.currency }}",
+        			items: [
+        			{% for line_item in cart.items %}{
+        				item_id: "{{ line_item.product_id }}",
+        				item_name:  "{{ line_item.product.title | remove: "'" | remove: '"' }}",
+    					currency: "{{ shop.currency }}",
+    					price: "{{ line_item.final_price | times: 0.01 }}",
+    					item_brand: "{{ line_item.vendor }}",
+    					item_category: "{{ line_item.product.collections[0].title | remove: "'" | remove: '"' }}",
+                        item_variant: "{{ line_item.product.variants[0].title }}",
+                        quantity: "{{ line_item.quantity }}"
+                        },{% endfor %}
+    				]
+				}
+			});
+		};
+		if (window.location.href.indexOf("products") > -1){
+			view_item();
+		}
+		else if(window.location.href.indexOf("cart") > -1){
+			view_cart();
+		}
+		else if(window.location.href.indexOf("collections") > -1){
+			view_item_list();
+		}
+	}
+	appStart();
+
+</script>

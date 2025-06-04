@@ -1,0 +1,414 @@
+{% comment %} Content setttings {% endcomment %}
+{%- assign blocks = section.blocks -%}
+{% comment %} End content settings {% endcomment %}
+
+{% comment %} Is the color set to transparent? {% endcomment %}
+{%- assign text_alpha = section.settings.text_color | color_extract: 'alpha' -%}
+{%- assign icon_alpha = section.settings.icon_color | color_extract: 'alpha' -%}
+{%- assign background_alpha = section.settings.background | color_extract: 'alpha' -%}
+{%- assign gradient_alpha = section.settings.gradient | color_extract: 'alpha' -%}
+
+{% style %}
+  #shopify-section-{{ section.id }} {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+    padding-left: {{ section.settings.padding_left }}px;
+    padding-right: {{ section.settings.padding_right }}px;
+    {% if section.settings.width == 'wide' %}
+      width: 100%;
+    {% elsif section.settings.width == 'half' %}
+      width: 50%;
+    {% endif %}
+  }
+  .tab-page__linklist {
+    margin:  0 auto 45px; 
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+  }
+  .tab-page__linklist li {margin: 0 30px;}
+  .page-detail-head {
+    margin: 0 0 65px;
+    width: 100%;
+  }
+  .page-detail-head h2 {
+    font-size: 32px;
+    margin: 0 0 20px;
+  }
+  .page-description-tab {
+    width: 100%;
+  }
+  .tab-heading {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+  }
+  .tab-heading li {width: 100%;}
+  .tab-heading li a.tabmenu {
+    background-color: transparent;
+    border-radius: 20px 20px 0 0;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 16px;
+    padding: 18px 50px;
+    text-align: center;
+  }
+  .tab-heading li a.tabmenu.active {
+    background-color: {{ section.settings.background }};
+    font-weight: 600;
+  }
+  .tabcontent {
+    background-color: {{ section.settings.background }};
+    padding: 40px 80px;    
+  }
+  .tabcontent h3 {margin: 0 0 15px;}
+  .page-with-tab .table.is-bordered td, 
+  .page-with-tab .table.is-bordered th {border: none;}
+  
+  @media (max-width: 798px) {
+    .tab-page__linklist {
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-left: 30px;
+      margin-right: 30px;
+    }
+    .tab-page__linklist li {
+      margin: 0 0 12px;
+      white-space: nowrap;
+      width: 50%;
+    }
+    .tab-page__linklist li:nth-of-type(odd) {text-align: left;}
+    .tab-page__linklist li:nth-of-type(even) {text-align: right;}
+    .page-detail-head h2 {
+      font-size: 22px;
+      margin: 0 0 14px;
+    }
+    .tab-heading li a.tabmenu {
+      font-size: 15px;
+      padding: 8px 30px;
+    }
+    .tabcontent {padding: 40px 15px;}
+  }
+  {% render 'css-loop',
+      css: section_css,
+      id: section.id
+  %}
+  {% render 'css-loop',
+      css: section.settings.custom_css,
+      id: section.id
+  %}
+{% endstyle %}
+
+<section class="section
+                {{ section.settings.css_class }}
+                is-width-{{ section.settings.width }}
+                {% if section.settings.show_gutter == false %}
+                  has-no-side-gutter
+                  has-background
+                {% else %}
+                  has-gutter-enabled
+                {% endif %}
+                {% if section.settings.width == 'wide' %}
+                  equal-columns--outside-trim
+                {% endif %}"
+                {% if section.settings.animation != "none" %}
+                  data-scroll-class="{{ section.settings.animation }}"
+                {% endif %}>
+  <div class="container">
+    {% if linklists[section.settings.page_linklist].links.size > 0 %}
+      <ul class="tab-page__linklist">
+        {% for link in linklists[section.settings.page_linklist].links %}
+        <li>
+          <a href="{{ link.url }}"{% if link.active %} aria-current="page"{% endif %}>{{ link.title }}</a>
+        </li>
+        {% endfor %}
+      </ul>          
+    {% endif %}
+    {% if section.settings.title != blank or section.settings.content != blank %}
+      <div class="page-detail-head text-align-{{ section.settings.text_align }}">
+        {% if section.settings.title != blank %}
+          <h2>{{ section.settings.title }}</h2>
+        {% endif %} 
+        {% if section.settings.content != blank %}
+          <div class="rte">{{ section.settings.content }}</div>
+        {% endif %}
+      </div>
+    {% endif %}  
+
+  <div class="page-description-tab">
+  <ul class="tab-heading">
+    {% for block in blocks %}
+      {% if block.settings.title != blank %}
+        <li>
+          <a href="javascript:SwitchTab('tb_{{forloop.index}}', 'content_{{forloop.index}}');" id="tb_{{forloop.index}}" class="tabmenu{% if forloop.index == 1 %} active{% endif %}">
+          {{ block.settings.title }}
+          </a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+  
+  {% for block in blocks %}
+  {% if block.settings.page != blank or block.settings.text != blank %}
+  <div id="content_{{forloop.index}}" class="tabcontent"{% unless forloop.index == 1 %} style="display:none;"{% endunless %}> 
+    <h3 class="text-align-center">{{ block.settings.title }}</h3>
+    {% if block.settings.page != blank %}
+      <div class="page__content content">
+        {{ pages[block.settings.page].content }}
+      </div>
+    {% else %}  
+      {{ block.settings.text }}
+    {% endif %}  
+  </div>
+  {% endif %}
+  {% endfor %}
+  </div> 
+  </div>
+</section>
+
+<script type="text/javascript">
+function SwitchTab(tab_id, tab_content) {
+  // first of all we get all tab content blocks (I think the best way to get them by class names)
+  var x = document.getElementsByClassName("tabcontent");
+  var i;
+  for (i = 0; i < x.length; i++) {
+      x[i].style.display = 'none'; // hide all tab content
+  }
+  document.getElementById(tab_content).style.display = 'block'; // display the content of the tab we need
+
+  // now we get all tab menu items by class names (use the next code only if you need to highlight current tab)
+  var x = document.getElementsByClassName("tabmenu");
+  var i;
+  for (i = 0; i < x.length; i++) {
+      x[i].className = 'tabmenu'; 
+  }
+  document.getElementById(tab_id).className = 'tabmenu active';
+}
+</script>
+    
+{% schema %}
+{
+  "name": "Tab template",
+  "class": "tab-template-section",
+  "settings": [
+    {
+      "type": "link_list",
+      "id": "page_linklist",
+      "label": "Menu"
+    },    
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },    
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Text"
+    },
+    {
+      "type": "select",
+      "id": "text_align",
+      "label": "Text alignment",
+      "default": "center",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        }
+      ]
+    },    
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "rgba(0,0,0,0)"
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background",
+      "default": "#F4F4F4"
+    },
+    {
+      "type": "color",
+      "id": "gradient",
+      "label": "Gradient",
+      "default": "rgba(0,0,0,0)"
+    },
+    {
+      "type": "range",
+      "id": "gradient_rotation",
+      "label": "Gradient rotation",
+      "min": 0,
+      "max": 180,
+      "step": 10,
+      "default": 0,
+      "unit": "deg"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "width",
+      "label": "Width",
+      "default": "standard",
+      "options": [
+        {
+          "value": "half",
+          "label": "Half"
+        },
+        {
+          "value": "standard",
+          "label": "Standard"
+        },
+        {
+          "value": "wide",
+          "label": "Wide"
+        }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "show_gutter",
+      "label": "Show gutter",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top spacing",
+      "min": 0,
+      "max": 80,
+      "default": 20,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom spacing",
+      "min": 0,
+      "max": 80,
+      "default": 20,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_left",
+      "label": "Left spacing",
+      "min": 0,
+      "max": 80,
+      "default": 0,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_right",
+      "label": "Right spacing",
+      "min": 0,
+      "max": 80,
+      "default": 0,
+      "unit": "px"
+    },
+    {
+      "type": "select",
+      "id": "animation",
+      "label": "Animation",
+      "default": "none",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "fadeIn",
+          "label": "Fade in"
+        },
+        {
+          "value": "fadeInDown",
+          "label": "Fade in down"
+        },
+        {
+          "value": "fadeInLeft",
+          "label": "Fade in left"
+        },
+        {
+          "value": "fadeInRight",
+          "label": "Fade in right"
+        },
+        {
+          "value": "slideInLeft",
+          "label": "Slide in left"
+        },
+        {
+          "value": "slideInRight",
+          "label": "Slide in right"
+        },
+        {
+          "value": "zoomIn",
+          "label": "Zoom in"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Advanced",
+      "info": "[Learn more](https://help.outofthesandbox.com/hc/en-us/articles/360022329373)"
+    },
+    {
+      "type": "text",
+      "id": "css_class",
+      "label": "CSS Class"
+    },
+    {
+      "type": "textarea",
+      "id": "custom_css",
+      "label": "Custom CSS"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "tab_elements",
+      "name": "Tab element",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "default": "Tab heading"
+        },
+        {
+          "type": "page",
+          "id": "page",
+          "label": "Select respective page",
+          "info": "Show respective page"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Tab template",
+      "category": "Text"
+    }
+  ]
+}
+{% endschema %}

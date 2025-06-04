@@ -1,0 +1,436 @@
+<style>
+  .click-collect-procedure {margin-top: 3px;}
+  .click-collect-procedure .center {text-align: center;}
+  .inline-banner {
+    display:-webkit-flex;
+    display:flex;
+    -webkit-justify-content:space-evenly;
+    justify-content:space-evenly;
+    -webkit-align-items:center;
+    align-items:center;
+    margin-bottom:7px;
+  }
+  .inline-banner h2,
+  .inline-banner p {color:{{section.settings.text_color}};}
+  .inline-banner h2 {
+    letter-spacing:5px;
+    margin:10px 0;
+    text-transform:uppercase;
+  }
+  .banner-content-wrap,
+  .banner-img-wrap {
+    text-align:center;
+    min-height:340px;
+    width:100%;
+    display: -webkit-box;
+	display: flex;
+	-webkit-box-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	justify-content: center;
+    -webkit-flex-flow:column;
+    flex-flow:column;
+  }
+  .banner-content-inner {width: 320px;}
+  @media (min-width:1000px) {
+    .banner-content-wrap,
+    .banner-img-wrap {
+      min-height:600px;
+      {% if section.settings.image != blank %}
+      width:50%;
+      {% endif %}
+    }
+    .banner-content-inner {width: 350px;}
+  }
+  @media (max-width:767px) {
+    .inline-banner {
+      -webkit-flex-flow:column;
+      flex-flow:column;
+    }
+    .banner-img-wrap {order:1;}
+    .banner-content-wrap {order:2;}
+  }  
+  
+  {% if section.settings.image != blank %}
+  .inline-banner .banner-img-wrap {
+    background:url('{{ section.settings.image | img_url: '2048x' }}') no-repeat center top/cover;      
+  }
+  {% endif %}
+  
+  .column-images {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -webkit0-flex-flow:column;
+    flex-flow:column;
+  }
+  .column-images .indiviual-image {
+    background-color:#f9f9f9;
+    margin:0 0 7px;
+    width:100%;
+  }
+  .indiviual-image:not(.box-content) h3, 
+  .indiviual-image:not(.box-content) p {
+    margin: 30px 60px;
+  }
+  .indiviual-image:not(.box-content) p {color:#000;}
+  .indiviual-image h3 {
+    font-weight: 600;
+    letter-spacing:5px;
+    text-transform:uppercase;    
+  }
+  .indiviual-image:not(.box-content) img {max-width: 70%;}
+  @media (min-width:768px) {
+    .column-images {
+      -webkit-flex-flow:row wrap;
+      flex-flow:row wrap;
+    }
+    .column-images .indiviual-image:not(.box-content) {width:33%;}  
+    .indiviual-image:not(.box-content) h3, 
+    .indiviual-image:not(.box-content) p {
+      margin: 55px 5px 50px;
+    }
+  }
+  .indiviual-image.box-content {
+    background-color:#000;
+    color:#fff;
+    text-align:center;
+    min-height:340px;
+    width:100%;
+  }
+  .box-content-inner {
+    margin: 70px auto;
+    padding:0 20px;
+  } 
+  .indiviual-image.box-content p {
+    color:#fff;
+    margin:0 0 30px;
+    padding:0 35px;
+  }
+  .indiviual-image.box-content h3 {
+    color:#fff;
+    font-size:18px;
+    margin:15px 0;
+  }
+  .img-holder {
+    min-height: 70px;
+    display:-webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: flex-end;
+    align-items: flex-end;
+  }
+  .box-content-inner .action_button {    
+    border:#fff solid 1px;
+    border-radius:0;
+    color:#fff;
+    min-width:280px;
+  }
+  .box-content-inner .action_button:hover {
+    background-color:#fff;
+    color:#000;
+  }
+  
+  @media (min-width:768px) {
+    .indiviual-image.box-content {width:calc(50% - 3.5px);} 
+    .box-content-inner {max-width: 430px;}
+    .indiviual-image.box-content p {padding:0;}
+  }
+  .rich-text-inner {
+    color:#000;
+    margin:70px auto;
+    max-width:1080px;
+    padding:0 15px;
+  }
+  .rich-text-inner .button-wrap {margin-top:35px;}
+  .rich-text-inner .button-wrap .action_button {
+    border-radius:0;
+    min-width:280px;
+  }
+  .indiviual-image.box-content .button--secondary {
+    font-size: 11px;
+  }
+  .indiviual-image.box-content .button--secondary,
+  .indiviual-image.box-content .button--secondary:hover,
+  .indiviual-image.box-content .button--secondary:visited {
+    border-color: #fff;
+    color: #fff;
+  }
+  .click-collect-procedure .rich-text-inner p {margin-bottom: 15px;}
+  @media (min-width:480px) {
+    .rich-text-inner .button-wrap .action_button {min-width:320px;}
+  }
+  
+</style>
+
+
+<!-- Banner -->
+<div class="inline-banner">
+  <div class="banner-content-wrap"{% if section.settings.background_color != blank %} style="background-color:{{section.settings.background_color}}"{% endif %}>
+    <div class="banner-content-inner">
+      {% if section.settings.icon != blank %}      
+      <img src="{{ section.settings.icon | img_url: '80x' }}" />      
+      {% endif %}
+      {% if section.settings.title != blank  %}
+      <h2>{{ section.settings.title }}</h2>
+      {% endif %}
+      {% if section.settings.text != blank  %}
+      {{ section.settings.text }}
+      {% endif %}
+    </div>
+  </div>
+  {% if section.settings.image != blank %}
+  <div class="banner-img-wrap"></div>
+  {% endif %}
+</div>
+<!-- /Banner -->
+{% for block in section.blocks %}
+{% case block.type %}
+{% when 'image_text' %}
+<div class="column-images">
+  {% for i in (1..3) %}
+  {% capture stepsHeading %}step-title-{{ i }}{% endcapture %}
+  {% capture stepsImage %}step-image-{{ i }}{% endcapture %}
+  {% capture stepsContent %}step-text-{{ i }}{% endcapture %}
+  <div class="indiviual-image center">
+    {% if block.settings[stepsHeading] != blank %}
+    <h3>{{ block.settings[stepsHeading] }}</h3>
+    {% endif %}
+    {% if block.settings[stepsImage] != blank %}
+    <img src="{{ block.settings[stepsImage] | img_url: '1024x' }}" />
+    {% endif %}
+    {% if block.settings[stepsContent] != blank %}
+    {{ block.settings[stepsContent] }}
+    {% endif %}
+  </div>
+  {% endfor %}
+</div>
+
+{% when 'rich_text' %}
+<div class="rich-text-wrap center">
+  <div class="rich-text-inner">
+  {% if block.settings.text != blank %}
+  {{ block.settings.text }}
+  {% endif %}
+  {% if block.settings.link != blank %}
+  <p class="button-wrap">
+    <a href="{{block.settings.link}}" class="button button--primary">{{block.settings.link_text}}</a>
+  </p>
+  {% endif %}
+  </div>
+</div>
+
+{% when 'text_box' %}
+<div class="column-images">
+  {% for i in (1..2) %}
+  {% capture stepsHeading %}box-title-{{ i }}{% endcapture %}
+  {% capture stepsImage %}box-img-{{ i }}{% endcapture %}
+  {% capture stepsContent %}box-text-{{ i }}{% endcapture %} 
+  {% capture stepsButtonLink %}box-link-{{ i }}{% endcapture %}
+  {% capture stepsButtonLabel %}box-button-label-{{ i }}{% endcapture %}
+  <div class="indiviual-image box-content center">
+    <div class="box-content-inner">
+      {% if block.settings[stepsImage] != blank %}
+      <div class="img-holder"><img src="{{ block.settings[stepsImage] | img_url: '60x' }}" /></div>
+      {% endif %}
+      {% if block.settings[stepsHeading] != blank %}
+      <h3>{{ block.settings[stepsHeading] }}</h3>
+      {% endif %}
+      {% if block.settings[stepsContent] != blank %}
+      {{ block.settings[stepsContent] }}
+      {% endif %}
+      {% if block.settings[stepsButtonLink] != blank %}
+      <a href="{{ block.settings[stepsButtonLink] }}" class="button button--secondary">{{ block.settings[stepsButtonLabel] }}</a>
+      {% endif %}
+    </div>
+  </div>
+  {% endfor %}
+</div>  
+
+{% endcase %}
+{% endfor %}
+
+{% schema %}
+  {
+    "name": "How to click and collect",
+    "class": "click-collect-procedure",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Banner area"
+      },
+      {
+        "type": "image_picker",
+        "id": "icon",
+        "label": "Upload icon"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Heading",
+        "default": "Click & Collect"
+      },
+      {
+        "type": "richtext",
+        "id": "text",
+        "label": "Text",
+        "default": "<p>Let us make it easier for you to shop with Click & Collect from your favourite Jo Mercer store.</p>"
+      },
+	  {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text Color",
+        "default": "#FFFFFF"
+      },
+	  {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background Color",
+        "default": "#000000"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "image_text",
+        "name": "Steps",
+        "settings": [
+          {
+            "type": "text",
+            "id": "step-title-1",
+            "label": "Step-1 Heading",
+            "default": "Steps"
+          },
+		  {
+            "type": "image_picker",
+            "id": "step-image-1",
+            "label": "Step-1 Image"
+          },
+          {
+            "type": "richtext",
+            "id": "step-text-1",
+            "label": "Step-2 text",
+            "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          },
+          {
+            "type": "text",
+            "id": "step-title-2",
+            "label": "Step-3 Heading",
+            "default": "Steps"
+          },
+		  {
+            "type": "image_picker",
+            "id": "step-image-2",
+            "label": "Step-3 Image"
+          },
+          {
+            "type": "richtext",
+            "id": "step-text-2",
+            "label": "Step-3 text",
+            "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          },
+          {
+            "type": "text",
+            "id": "step-title-3",
+            "label": "Step-3 Heading",
+            "default": "Steps"
+          },
+		  {
+            "type": "image_picker",
+            "id": "step-image-3",
+            "label": "Step-3 Image"
+          },
+          {
+            "type": "richtext",
+            "id": "step-text-3",
+            "label": "Step-3 text",
+            "default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
+          }
+        ]
+      },	
+      {
+        "type": "rich_text",
+        "name": "Rich text",
+        "settings": [
+          {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text"
+          },
+          {
+            "type": "url",
+            "id": "link",
+            "label": "Button link"
+          },
+          {
+            "type": "text",
+            "id": "link_text",
+            "label": "Button label"
+          }
+        ]
+      },	
+      {
+        "type": "text_box",
+        "name": "Box content",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "box-img-1",
+            "label": "First box icon"
+          },
+          {
+            "type": "text",
+            "id": "box-title-1",
+            "label": "First box title"
+          },
+          {
+            "type": "richtext",
+            "id": "box-text-1",
+            "label": "First box text"
+          },
+          {
+            "type": "url",
+            "id": "box-link-1",
+            "label": "First box button link"
+          },
+          {
+            "type": "text",
+            "id": "box-button-label-1",
+            "label": "First box button label"
+          },
+          {
+            "type": "image_picker",
+            "id": "box-img-2",
+            "label": "Second box icon"
+          },
+          {
+            "type": "text",
+            "id": "box-title-2",
+            "label": "Second box title"
+          },
+          {
+            "type": "richtext",
+            "id": "box-text-2",
+            "label": "Second box text"
+          },
+          {
+            "type": "url",
+            "id": "box-link-2",
+            "label": "Second box button link"
+          },
+          {
+            "type": "text",
+            "id": "box-button-label-2",
+            "label": "Second box button label"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

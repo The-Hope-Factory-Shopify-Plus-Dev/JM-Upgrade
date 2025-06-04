@@ -1,0 +1,115 @@
+{% comment %}
+  cara_video_homepage.liquid
+  Adds responsive desktop/mobile video support.
+{% endcomment %}
+
+{%- assign id = section.id -%}
+{%- assign desktop_video = section.settings.desktop_video -%}
+{%- assign mobile_video = section.settings.mobile_video -%}
+{%- assign poster_image = section.settings.poster_image -%}
+{%- assign autoplay = section.settings.autoplay -%}
+{%- assign loop = section.settings.loop -%}
+{%- assign mute = section.settings.mute -%}
+{%- assign controls = section.settings.controls -%}
+
+<section id="shopify-section-{{ id }}" class="cara-video-section">
+  <a href="{{ section.settings.video_link }}" class="cara-video-link">
+    <div class="cara-video-container">
+      {% if poster_image != blank %}
+        <style>
+          #shopify-section-{{ id }} .cara-video video {
+            background-image: url({{ poster_image | img_url: 'master' }});
+            background-size: cover;
+            background-position: center;
+          }
+        </style>
+      {% endif %}
+  
+      <div class="cara-video">
+        <video 
+          autoplay={% if autoplay %}"autoplay"{% endif %} 
+          loop={% if loop %}"loop"{% endif %} 
+          muted={% if mute %}"muted"{% endif %} 
+          playsinline 
+          class="cara-video-desktop">
+          <source src="{{ desktop_video }}" type="video/mp4">
+        </video>
+        <video 
+          autoplay={% if autoplay %}"autoplay"{% endif %} 
+          loop={% if loop %}"loop"{% endif %} 
+          muted={% if mute %}"muted"{% endif %} 
+          playsinline 
+          class="cara-video-mobile">
+          <source src="{{ mobile_video }}" type="video/mp4">
+        </video>
+      </div>
+    </div>
+  </a>
+    
+  <style>
+    #shopify-section-{{ id }} .cara-video-mobile {
+      display: none;
+    }
+
+    @media only screen and (max-width: 749px) {
+      #shopify-section-{{ id }} .cara-video-desktop {
+        display: none;
+      }
+      #shopify-section-{{ id }} .cara-video-mobile {
+        display: block;
+      }
+    }
+  </style>
+</section>
+
+{% schema %}
+{
+  "name": "Cara Video Homepage",
+  "settings": [
+    {
+      "type": "url",
+      "id": "video_link",
+      "label": "Link to collection"
+    },
+    {
+      "type": "text",
+      "id": "desktop_video",
+      "label": "Desktop video URL",
+    },
+    {
+      "type": "text",
+      "id": "mobile_video",
+      "label": "Mobile video URL",
+    },
+    {
+      "type": "image_picker",
+      "id": "poster_image",
+      "label": "Poster Image"
+    },
+    {
+      "type": "checkbox",
+      "id": "autoplay",
+      "label": "Autoplay",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "loop",
+      "label": "Loop",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "mute",
+      "label": "Mute",
+      "default": true
+    }
+  ],
+  "presets": [
+    {
+      "name": "Cara Video Homepage",
+      "category": "Video"
+    }
+  ]
+}
+{% endschema %}

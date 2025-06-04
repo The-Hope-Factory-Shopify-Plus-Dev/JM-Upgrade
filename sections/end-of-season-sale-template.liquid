@@ -1,0 +1,507 @@
+<style>
+  .float-content {
+    padding-bottom:100px;
+    padding-top:100px;
+  }
+  @media (min-width:1024px) {
+    .float-content {
+      padding-bottom:{{section.settings.column_padding}}px;
+      padding-top:{{section.settings.column_padding}}px;
+    }
+  }
+  .content .flex-inner-content {display: flex;justify-content: center;align-items: center;height: 100%;padding: 0;}
+  .terms-text {margin-bottom: 15px;}
+  @media (min-width:1024px) {
+  .content .flex-inner-content.text-left {justify-content:left;}
+  .content .flex-inner-content.text-right {justify-content:flex-end;}
+  }
+  .heading-item, .price-item, .discount-bottom-text, .terms-text a {
+    color:{{section.settings.text_color}};
+  }
+  .content .price-item {font-size:45px;line-height:1.5;}
+  .content .discount-bottom-text {margin-bottom:30px;}
+  .content .heading-item {font-size:{{section.settings.heading_size}}px;}    
+  .content .price-item {font-size:{{section.settings.price_size}}px; font-weight:900;}
+  .content .discount-bottom-text {font-size:{{section.settings.discount_bottom_text_size}}px;}
+  @media (min-width:1024px) {
+    .content .discount-bottom-text {font-size:{{section.settings.discount_bottom_text_size}}px; margin-bottom:{{section.settings.discount_bottom_text_bottom_margin}}px;}
+  }
+  a.action_button,
+  .action_button {
+    background-color:{{section.settings.text_color}};
+    color:#000;
+    text-transform: uppercase;
+  }
+  a.action_button:hover,
+  .action_button:hover,
+  a.action_button:not(.right-section-button):hover,
+  .action_button:not(.right-section-button):hover {
+    background-color: #000;
+    color:#fff;
+  }
+  a.action_button:not(.right-section-button),
+  .action_button:not(.right-section-button) {
+    color:{{section.settings.background_color}};
+  }
+  .right-section-button{margin: 0px 6px 10px 0;}
+  .background_image{ 
+    background-image: url('{{section.settings.background_pic | img_url: "1024x"}}');
+      background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+     }
+    @media (max-width:767px) {
+  .background_image{ 
+    background-image: url('{{section.settings.mobile_background_pic | img_url: "1024x"}}');
+      background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+     }
+    }
+  
+  @media (max-width:1023px) and (min-width:768px) {    
+    .background_image {min-height:700px;}
+    .background_image .flex-inner-content {min-height:700px;}  
+  }
+  @media (max-width:767px){
+    .background_image {min-height:300px;}
+    .background_image .flex-inner-content {min-height:300px;}
+  }
+  .content .custom-link-blocks-area {margin-top: 24px;}
+  @media (max-width:767px){
+    .content .custom-link-blocks-area {margin-top: 0;}
+  }
+  .content .custom-link-blocks-area ul {list-style:none;width:100%;padding:0;margin:0;row-gap: 8px;}
+  .content .custom-link-blocks-area ul .custom-link-block { background-color:{{section.settings.custom_link_block_background_color}};}
+  .content .custom-link-blocks-area ul .custom-link-block .custom-link-block-link {font-weight:900;min-height:100px;}
+  .content .featured-collection-area h2 {font-size:{{section.settings.heading_size}}px;font-weight:900;color:{{section.settings.background_color}};margin-bottom:20px;}
+  .content .featured-collection-area .info span.quick_shop { display:none; }
+  .content .featured-collection-area .info span.title { text-align:center;width:100%; }
+  .content .featured-collection-area .info span.price { text-align:center;width:100%; }
+  .content .text-section-area {background-color:{{section.settings.text_section_background_color}};margin-top:30px;}
+  .content .text-section-area .text-section-content {width:80%;margin:0 auto;min-height:153px;}
+  .content .text-section-area .text-section-content p {color:{{section.settings.text_color}};font-size:{{section.settings.heading_size}}px;letter-spacing:5px;margin:0;}
+  .content .text-section-area .flex-inner-content.text-item { height:auto; }
+  @media (max-width:1023px) {
+    .content .text-section-area { margin-bottom:30px;padding:20px 0; }
+    .content .text-section-area .flex-inner-content.text-item:first-child { margin-bottom:10px; }
+    .content .text-section-area .flex-inner-content.text-item:nth-child(2) { margin-bottom:20px; }
+  }
+  .all-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .collection-title {color: {{ section.settings.collection_title_color }};}
+  #shopify-section-{{ section.id }} .flickity-prev-next-button {
+    height: 20px;
+    width: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  #shopify-section-{{ section.id }} .flickity-prev-next-button:before {background-size: 12px auto;}
+  #shopify-section-{{ section.id }} .flickity-button.previous {left: -10px;}  
+  #shopify-section-{{ section.id }} .flickity-button.next {right: -10px;}
+  #shopify-section-{{ section.id }} .flickity-slider {left: 10px !important;}
+  #shopify-section-{{ section.id }} .featured-collection-section {margin: 50px 0;}
+</style>
+<div class="container main content main-wrapper">
+  <div class="fourteen offset-by-one columns page clearfix"> 
+    <h1 class="title text-align-center"{% if section.settings.background_color != blank %} style="color:{{section.settings.background_color}}"{% endif %}>
+      {{ page.title }}
+    </h1>
+
+    <div class="flex-column">
+      <div class="flex-column-item" {% if section.settings.background_color != blank %}style="background-color:{{section.settings.background_color}}"{% endif %}>
+
+        <div class="float-content"{% if section.settings.text_color != blank %} style="color:{{section.settings.text_color}}"{% endif %}>
+          {% if section.settings.heading_text != blank %} 
+          <h2 class="heading-item"> {{section.settings.heading_text}}</h2>
+          {%endif%}
+
+          {% if section.settings.price_text != blank %} 
+          <h1 class="price-item"> {{section.settings.price_text}}</h1>
+          {%endif%}
+          
+          {% if section.settings.discount_bottom_text != blank %} 
+          <h2 class="discount-bottom-text"> {{section.settings.discount_bottom_text}}</h2>
+          {%endif%}
+
+          {% if section.settings.button_text != blank %} 
+          <a href="{{section.settings.button_text_url}}" class="action_button button">
+            {{section.settings.button_text}}
+          </a>
+          {%endif%}
+        </div>
+
+        {% if section.settings.term_and_condition != blank %}
+        <p class="terms-text"><a href="{{section.settings.term_and_condition_url}}">{{section.settings.term_and_condition}}</a></p>
+        {%endif%}
+
+      </div>
+
+      <div class="flex-column-item background_image" {% if section.settings.background_pic %} style=" "{% endif %}>
+        <div class="float-content flex-inner-content">
+          <div class="all-links">
+          {% assign price_tags = section.settings.shop_by_tag_button_text | split:"," %}
+          <a href="{{section.settings.shop_by_price_button_text_url}}"> <div class="shop-by-size action_button button right-section-button">{{section.settings.shop_by_price_button_text}}</div></a>
+
+          {% for price_tag in price_tags %}
+          {% assign price_tag_price_part = price_tag | split: '-' | last | remove: 'under-' | remove: '$' | strip  %}
+          {% assign url_param ='?_=pf' %}
+
+          {% assign url_param = url_param | append: "&pf_p_price=" | append: '0.00%3A' | append: price_tag_price_part %}
+          <a price_tag_price_part="{{price_tag_price_part}}" href="{% if section.settings.shop_by_price_button_text_url contains 'collections' %}{{section.settings.shop_by_price_button_text_url | split: 'collections/' | last | split: '/' | first | prepend: '/collections/' | append: '/'}}{% else %}/collections/outlet/{% endif %}{{url_param}}"><div  class="action_button button right-section-button">{{price_tag}}</div></a>
+
+          {% endfor %}
+          </div>
+        </div>
+      </div>
+
+    </div>  
+    
+    <div class="custom-link-blocks-area">
+      <ul class="flex-column">
+      {% for block in section.blocks %}
+        {% if block.settings.selected_item != blank %}
+        <li class="flex-column-item one-third custom-link-block with-margin">
+          <a href="{{block.settings.selected_item}}" class="custom-link-block-link flex-inner-content">
+          {{block.settings.button_label}}
+          </a>
+        </li>
+        {% endif %}
+      {% endfor %}
+      </ul>
+    </div>
+
+    {%- assign collection = collections[section.settings.collection] -%}
+    {% if section.settings.collection != blank %} 
+    <div class="featured-collection-section"> 
+      {% if section.settings.collection_title != blank %}  
+      <h2 class="title text-align-center collection-title">{{ section.settings.collection_title }}</h2>
+      {% endif %} 
+      <div class="featured-collection promo-featured-collection layout--slider">                  
+        {%
+          render 'product-slider',
+          limit: section.settings.products_limit,
+          products: collection.products,
+          skip_product: product,
+          per_slide: section.settings.products_per,
+          mobile_products_per_row: section.settings.mobile_products_per_row,
+          align_height: section.settings.align_height,
+          height: section.settings.collection_height,
+          show_gutter: section.settings.show_gutter,
+          featured_collection: section.settings.collection
+        %}            
+      </div>
+      <script
+        type="application/json"
+        data-section-id="{{ section.id }}"
+        data-section-data>
+        {
+          "collection_style": "slider",
+          "products_per": {{ section.settings.products_per | json}},
+          "products_available": {{ collection.all_products_count | json }},
+          "products_limit": {{ section.settings.products_limit | json }},
+          "align_height": {{ section.settings.align_height | json }}
+        }
+      </script>
+      <script data-theme-editor-load-script src="{{ 'z__jsFeaturedCollection.js' | asset_url }}"></script>
+    </div>
+    {% endif %}
+    
+    <div class="text-section-area">
+      <div class="flex-column text-section-content">
+        {% if section.settings.text_section_text_1 != blank %}
+        <div class="flex-column-item one-quarter flex-inner-content text-left text-item">{{section.settings.text_section_text_1}}</div>
+        {% endif %}
+        {% if section.settings.text_section_text_2 != blank %}
+        <div class="flex-column-item flex-inner-content text-item">{{section.settings.text_section_text_2}}</div>
+        {% endif %}
+        {% if section.settings.text_section_button_text != blank and section.settings.text_section_button_link != blank %}
+        <div class="flex-column-item one-quarter flex-inner-content text-right text-item"><a href="{{section.settings.text_section_button_link}}" class="action_button button">{{section.settings.text_section_button_text}}</a></div>
+        {% endif %}
+      </div>      
+    </div>
+
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "End Of Season Sale Page",
+	"class":"outlet-page end-of-season-sale-page jsFeaturedCollection",
+    "settings": [
+	  {
+        "type": "header",
+        "content": "2-column Area"
+      },
+      {
+        "type": "range",
+        "id": "column_padding",
+        "label": "Top & bottom space inside column",
+        "step": 10,
+        "min": 100,
+        "max": 300,
+        "default": 200,
+        "unit": "px"
+      },
+	  {
+        "type": "header",
+        "content": "Left column"
+      },
+	  {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background Color",
+        "default": "#ffffff"
+      },
+	  {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text color",
+        "default": "#ffffff"
+      },
+	  {
+        "type": "text",
+        "id": "heading_text",
+        "label": "Heading"
+      },
+	  {
+        "type": "range",
+        "id": "heading_size",
+        "label": "Font size",
+        "step": 1,
+        "min": 8,
+        "max": 50,
+        "default": 38,
+        "unit": "px"
+      },
+	  {
+        "type": "text",
+        "id": "price_text",
+        "label": "% of text"
+      },
+	  {
+        "type": "range",
+        "id": "price_size",
+        "label": "Font size",
+        "step": 1,
+        "min": 15,
+        "max": 88,
+        "default": 80,
+        "unit": "px"
+      },
+	  {
+        "type": "text",
+        "id": "discount_bottom_text",
+        "label": "Sale text"
+      },
+	  {
+        "type": "range",
+        "id": "discount_bottom_text_size",
+        "label": "Font size",
+        "step": 1,
+        "min": 15,
+        "max": 50,
+        "default": 38,
+        "unit": "px"
+      },
+	  {
+        "type": "range",
+        "id": "discount_bottom_text_bottom_margin",
+        "label": "Bottom margin",
+        "step": 1,
+        "min": 20,
+        "max": 80,
+        "default": 65,
+        "unit": "px"
+      },
+	  {
+        "type": "text",
+        "id": "button_text",
+        "label": "Button Text"
+      },
+      {
+        "type": "url",
+        "id": "button_text_url",
+        "label": "Button Link"
+      },
+	  {
+        "type": "text",
+        "id": "term_and_condition",
+        "label": "Term and condition text"
+      },{
+        "type": "url",
+        "id": "term_and_condition_url",
+        "label": "Term and condition text Link"
+      },
+	  {
+        "type": "header",
+        "content": "Right column"
+      },
+	  {
+        "type": "image_picker",
+        "id": "background_pic",
+        "label": "Background image",
+        "info": "683 x 730px recommended"
+      },
+{
+        "type": "image_picker",
+        "id": "mobile_background_pic",
+        "label": "Mobile background image",
+        "info": "683 x 730px recommended"
+      },
+	  {
+        "type": "text",
+        "id": "shop_by_price_button_text",
+        "label": "Shop by price button text"
+      },
+	  {
+        "type": "url",
+        "id": "shop_by_price_button_text_url",
+        "label": "Shop by price button text Link"
+      },
+	  {
+        "type": "text",
+        "id": "shop_by_tag_button_text",
+        "label": "Shop by price tag  ",
+		"info": "please add tag with comma(,) separator "
+      },
+	  {
+        "type": "header",
+        "content": "Custom Link Blocks Area"
+      },
+	  {
+        "type": "paragraph",
+        "content": "Add custom link blocks in block selection area"
+      },
+	  {
+        "type": "color",
+        "id": "custom_link_block_background_color",
+        "label": "Block background Color",
+        "default": "#e3e3e3"
+      },
+      {
+        "type": "header",
+        "content": "Collection"
+      },
+      {
+        "type": "text",
+        "id": "collection_title",
+        "label": "Collection title"
+      },
+      {
+        "type": "color",
+        "id": "collection_title_color",
+        "label": "Collection title color",
+        "default": "#d02e2b"
+      },
+      {
+        "type": "collection",
+        "id": "collection",
+        "label": "Collection"
+      },
+      {
+        "type": "range",
+        "id": "products_per",
+        "label": "Products per row",
+        "min": 2,
+        "max": 5,
+        "default": 5
+      },
+      {
+        "type": "select",
+        "id": "mobile_products_per_row",
+        "label": "Products per row on mobile",
+        "info": "Applied only when 'Collection layout' is set to 'Grid'.",
+        "options": [
+          {
+            "value": "1",
+            "label": "1"
+          },
+          {
+            "value": "2",
+            "label": "2"
+          }
+        ],
+        "default": "1"
+      },
+      {
+        "type": "range",
+        "id": "products_limit",
+        "label": "Limit products",
+        "min": 3,
+        "max": 50,
+        "default": 3
+      },
+      {
+        "type": "checkbox",
+        "id": "align_height",
+        "label": "Align to height"
+      },
+      {
+        "type": "range",
+        "id": "collection_height",
+        "label": "Product image height",
+        "min": 150,
+        "max": 400,
+        "step": 10,
+        "default": 200,
+        "unit": "px",
+        "info": "Applied when 'Align to height' is enabled. [Learn more](https://help.outofthesandbox.com/hc/en-us/articles/360022543913)"
+      },
+	  {
+        "type": "header",
+        "content": "Bottom text area"
+      },
+	  {
+        "type": "color",
+        "id": "text_section_background_color",
+        "label": "Background Color",
+        "default": "#ffffff"
+      },
+	  {
+        "type": "richtext",
+        "id": "text_section_text_1",
+        "label": "Text 1",
+		"default": "<p>Outlet</p>"
+      },
+	  {
+        "type": "richtext",
+        "id": "text_section_text_2",
+        "label": "Text 2",
+		"default": "<p>STYLES FROM $49.95</p>"
+      },
+	  {
+        "type": "text",
+        "id": "text_section_button_text",
+        "label": "Button text",
+		"default": "Shop Now"
+      },
+	  {
+        "type": "url",
+        "id": "text_section_button_link",
+        "label": "Button link"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "button_block",
+        "name": "Select block",
+        "settings": [
+          {
+            "type": "url",
+            "id": "selected_item",
+            "label": "Add a link"
+          },
+          {
+            "type": "text",
+            "id": "button_label",
+            "label": "Link text"
+          }
+        ]
+      }
+    ]
+   }
+{% endschema %}

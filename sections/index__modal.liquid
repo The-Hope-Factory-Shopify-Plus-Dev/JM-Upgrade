@@ -1,0 +1,250 @@
+{% comment %} HTML markup {% endcomment %}
+{% if localization.country.iso_code == 'AU' or localization.country.iso_code == 'NZ' %}
+<style>
+    @font-face {
+      font-family: "Friedel Pro";
+      src: url("{{ 'FriedelPro-Regular.woff' | file_url }}") format("woff");
+    }
+    @font-face {
+      font-family: "Friedel Pro Oblique";
+      src: url("{{ 'FriedelPro-Oblique.woff' | file_url }}") format("woff");
+    }
+  </style>
+  
+  <section
+    class="
+      section
+      is-width-{{ section.settings.width }}
+    "
+    data-section-id="{{ section.id }}"
+  >
+    <div id="plus-modal" class="modal">
+      <div class="plus-modal-content">
+        <span class="close" onclick="hideModal()">&times;</span>
+        <h1 class="plus-header-modal">
+          {{ section.settings.plus_location_greeting }},
+          {% comment %}{{ section.settings.plus_location }}{% endcomment %}
+        </h1>
+        <div class="plus-column-modal">
+          <div class="plus-perks">
+            <h3>{{ section.settings.plus_modal_heading_1 }}</h3>
+            <span>{{ section.settings.plus_modal_text_1 }}</span>
+          </div>
+          <div class="plus-perks">
+            <h3>{{ section.settings.plus_modal_heading_2 }}</h3>
+            <span>{{ section.settings.plus_modal_text_2 }}</span>
+          </div>
+          <div class="plus-perks">
+            <h3>{{ section.settings.plus_modal_heading_3 }}</h3>
+            <span>{{ section.settings.plus_modal_text_3 }}</span>
+          </div>
+        </div>
+        <div class="plus-modal-footer">
+          <button class="button button--primary plus-modal-button" onclick="hideModal()">Continue Shopping</button>
+          <span class="plus-redirect"
+            >Not shipping to {{ section.settings.plus_location }}? {{ 'general.plus.modal_redirect_html' | t -}}
+          </span>
+        </div>
+      </div>
+      <script>
+        // Get the modal
+        var modal = document.getElementById('plus-modal');
+        // Check if the modal has already been shown
+        if (!localStorage.getItem('modalShown')) {
+          // Show the modal
+          modal.style.display = 'inline';
+          // Set a flag in localStorage to prevent the modal from showing again
+          //localStorage.setItem('modalShown', false);
+        }
+  
+        // Hide the modal
+        function hideModal() {
+          modal.style.display = 'none';
+        }
+      </script>
+    </div>
+    <style>
+          /* Style the modal */
+      /* h1,h2,h3,h4,h5,h6 {
+          font-family: "Friedel Pro Oblique";
+      } */
+      #plus-modal {
+        display: none; /* Hidden by default */
+          position: fixed; /* Stay in place */
+          z-index: 14; /* Sit on top of newsletter */
+          left: 0;
+          top: 0;
+          width: 100%; /* Full width */
+           height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+      }
+  
+          /* Modal Content/Box */
+      .plus-modal-content {
+            background-color: #fefefe;
+            margin: 15% auto; /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 35%; /* Could be more or less, depending on screen size */
+      }
+
+      @media (max-width: 767px) {
+        #shopify-section-{{ section.id }} .modal .plus-modal-content {
+          margin: 38% 0;
+          width: 100%;
+        }
+      }
+  
+          /* Close Button */
+          .close {
+            float: right;
+            font-size: 35px;
+          }
+  
+          .close:hover,
+          .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+          }
+          .plus-perks {
+            width: 33%;
+            text-align: center;
+            padding: 0 10px;
+            flex-wrap: wrap;
+            display: flex;
+        }
+        .plus-perks h3 {
+          min-height: 50px;
+          margin: 0 auto;
+          font-size: {{ section.settings.sub_heading_size | append: 'px' }}
+      }
+      .plus-perks span {
+        font-size: 11px;
+        line-height: 1.5;
+        margin:auto;
+      }
+      .plus-modal-footer{
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      .plus-header-modal {
+        text-align: center;
+        font-size: {{ section.settings.heading_size | append: 'px' }}
+      }
+      .plus-column-modal {
+        display: flex;
+        justify-content: space-between;
+        margin: 35px 0;
+      }
+      .plus-modal-button {
+        font-size: 10px;
+      }
+      .plus-redirect {
+        font-size: 10px;
+        margin-top: 30px;
+        width: 100%;
+        display: block;
+      }
+      @media screen and (max-width: 600px) {
+        .plus-column-modal {
+          flex-direction: column;
+        }
+        .plus-perks {
+          width: 100%;
+          margin: 0 auto;
+          margin-bottom: 40px;
+        }
+        .plus-perks h3{
+        min-height: 0;
+        }
+      }
+    </style>
+  </section>
+  {% endif %}
+  {% schema %}
+  {
+    "name": "Plus Modal",
+    "class": "plus-modal-section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "plus_location_greeting",
+        "label": "Greeting",
+        "default": "Hello"
+      },
+      {
+        "type": "text",
+        "id": "plus_location",
+        "label": "Location",
+        "default": "Australia"
+      },
+      {
+        "type": "text",
+        "id": "plus_modal_heading_1",
+        "label": "Heading 1",
+        "default": "Free Shipping"
+      },
+      {
+        "type": "text",
+        "id": "plus_modal_text_1",
+        "label": "Caption 1",
+        "default": "Free Shipping eligible on all orders over $350"
+      },
+      {
+        "type": "text",
+        "id": "plus_modal_heading_2",
+        "label": "Heading 2",
+        "default": "Taxes & Duties Covered"
+      },
+      {
+        "type": "text",
+        "id": "plus_modal_text_2",
+        "label": "Caption 2",
+        "default": "We’ve got you covered! The price you see at checkout is inclusive of all taxes and duties."
+      },
+      {
+        "type": "text",
+        "id": "plus_modal_heading_3",
+        "label": "Heading 3",
+        "default": "Customer Support"
+      },
+      {
+        "type": "text",
+        "id": "plus_modal_text_3",
+        "label": "Caption 3",
+        "default": "Our customer care team is here to support you via email or live chat."
+      },
+      {
+        "type": "range",
+        "id": "heading_size",
+        "min": 10,
+        "max": 30,
+        "step": 1,
+        "unit": "px",
+        "label": "Heading size",
+        "default": 16
+      },
+      {
+        "type": "range",
+        "id": "sub_heading_size",
+        "min": 10,
+        "max": 30,
+        "step": 1,
+        "unit": "px",
+        "label": "Sub heading size",
+        "default": 16
+      }
+    ],
+    "presets": [
+      {
+        "name": "Plus Modal",
+        "category": "Layout",
+        "settings": {}
+      }
+    ]
+  }
+  {% endschema %}
+  

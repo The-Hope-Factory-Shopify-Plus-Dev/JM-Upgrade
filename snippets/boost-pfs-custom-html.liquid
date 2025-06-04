@@ -1,0 +1,12 @@
+{%- assign collection_handles = product.collections | map: 'handle' -%}
+
+{%
+  render 'product-thumbnail__swatch',
+  product: product
+%}
+        
+{% unless collection_handles contains 'coming-soon' %}
+  <div class="inline-quickshop js-product_section product-{{ product.id }}">
+     {% render 'product__form-collection', product: product %}
+  </div>
+{% endunless %}

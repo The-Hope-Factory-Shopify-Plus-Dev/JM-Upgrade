@@ -1,0 +1,442 @@
+$multi-column: true;
+
+$positive: green;
+$negative: darkred;
+$selected-bg: lightgray;
+$head-bg: whitesmoke;
+$border: gray;
+
+#cnc-container {
+  display:block;
+  margin:20px 0 0;
+  width:100%;
+}
+#cnc-map-container {
+  border:solid 1px #e1e1e1;
+  border-top:none;
+  width:calc(100% - 2px);
+}
+#cnc-results-container {
+  width:100%;
+}
+
+#cnc-container, #cnc-results-container, #cnc-product-container, #cnc-product-results-container {
+  #cnc-message {
+    margin-bottom: 20px;
+  }
+  /*.btn {
+    padding-left: 20px;
+    padding-right: 20px;
+    min-width: 200px;
+  }*/
+  .btn {
+    background-color:#e3e3e3;
+    color:#000;
+    cursor:pointer;
+    font-size:11px;
+    letter-spacing:2px;
+    font-weight:600;
+    margin:0;
+    padding: 10px 20px;
+    text-align: center;
+    text-transform:uppercase;
+  }
+  .btn i {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  /*table {
+    margin-top: 10px;
+    margin-bottom: 0;
+  }
+  th, td {
+    border-color: gray;
+    padding: 10px;
+  }
+  th {
+    background-color: whitesmoke;
+  }
+  td {
+    background-color: white;
+  }
+  th:first-child, td:first-child {
+    width: 50%;
+  }
+  th:nth-child(2), th:nth-child(3), td:nth-child(2), td:nth-child(3) {
+    text-align: center;
+    width: 25%;
+  }*/
+  .strike {
+    text-decoration: line-through;
+  }
+  .cnc-availability-table i {
+    font-size: 20px;
+  }
+
+  .cnc-heading-available, .cnc-heading-unavailable {
+    color: white;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;    
+    @media (max-width:480px) {
+      padding:5px;
+      max-width:130px;
+      width:100%;
+    }
+  }
+
+  .cnc-heading-available {
+    background-color: #000;
+  }
+
+  .cnc-heading-unavailable {
+    background-color: #e3e3e3;
+  }
+
+  .cnc-positive-text, .cnc-positive-text p {
+    color: $positive;
+  }
+
+  .cnc-negative-text, .cnc-positive-text p {
+    color: $negative;
+  }
+}
+
+#cnc-home-radio, #cnc-store-radio {
+    position: fixed;
+    opacity: 0;
+  }
+
+#cnc-results {
+  border-bottom: 1px solid #c3c3c3;
+  max-height: 400px;
+  position:relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+#cnc-outlets {
+  margin:0;
+  padding:0;
+  text-align: left;  
+  
+  li {
+    list-style: none;
+    border-left:solid 1px #c3c3c3;
+    border-right:solid 1px #c3c3c3;
+    margin:0;
+    padding:20px 20px 0;
+    position: relative;
+  }
+  .cnc-outlet {
+    position: absolute;
+    top: 12px;
+    left: 15px;
+  }
+  .cnc-outlet-label {
+    display: inline-table;
+    margin: 0;
+    width: 100%;
+    display:-webkit-flex;
+    display:flex;
+    -webkit-justify-content:space-between;
+    justify-content:space-between;
+    -webkit-align-items:center;
+    align-items:center;
+    border-bottom: solid 1px #c3c3c3;
+    padding-bottom: 20px;
+    
+    @media (max-width:480px) {
+      -webkit-flex-flow:column;
+      flex-flow:column;
+    }
+  }
+  li:last-child { 
+    /*border-bottom: 1px solid #c3c3c3;*/
+    
+    .cnc-outlet-label {border:none;}
+  }
+  label.cnc-outlet-label {
+    padding: 10px 10px 10px 45px;
+  }
+  input:checked+label {
+    background-color: #f7f7f7;
+    border-left:solid 2px #000 !important;
+  }
+  .cnc-product-outlet-label {
+    .cnc-store-details {
+      margin-bottom: 10px;
+      @media (max-width:480px) {
+        margin-bottom:20px;
+      }
+    }
+  }
+}
+
+#cnc-map {
+  height: 350px;
+}
+
+.cnc-address-search {
+  display:-webkit-flex;
+  display:flex;
+  -webkit-justify-content:space-between;
+  justify-content:space-between; 
+  -webkit-flex-wrap:wrap;
+  flex-wrap:wrap;
+  position:relative;
+  margin:35px 20px;
+  
+  p {width:100%;}
+}
+
+#shopify-section-product-template .cnc-address-search p {display:none;}
+
+input[type="text"].cnc-address-search-input,
+.cnc-address-search-input {
+  border:none;
+  border-radius:0;
+  border-bottom: 1px solid #c3c3c3;
+  margin:0;
+  padding-left:0;
+  padding-right:0;
+  vertical-align: middle;
+  width:100%;
+}
+button[type="button"].cnc-address-search-button,
+.cnc-address-search-button {
+  background-color:transparent;
+  color:#000;
+  font-size: 18px;
+  vertical-align: middle;
+  height: auto;
+  padding:0;
+  position:absolute;
+  right:0;
+  bottom:10px;
+  width: auto;
+  
+  .icon-search:before {font-weight:normal;}
+}
+
+.cnc-address-search-label {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  opacity: 0;
+}
+
+@media screen and (min-width: 750px) {
+  #cnc-container, #cnc-results-container, #cnc-product-container, #cnc-product-results-container {
+    label[for="cnc-store-radio"] {
+      margin-left: 10px;
+    }
+    @if ($multi-column) {
+      .cnc-availability-table, .cnc-store-details {
+        float: left;
+        vertical-align: top;
+        margin: 0;
+      }
+      .cnc-availability-table {
+        width: 60%;
+      }
+      .cnc-store-details {
+        padding-right: 20px;
+        width: 40%;
+      }
+    }
+  }
+  #cnc-outlets {
+    .cnc-product-outlet-label {
+      .cnc-store-details {
+        color:#000;
+        float: none;
+        font-size:14px;
+        display: inline-block;
+        width: 60%;
+        vertical-align: middle;
+        margin-bottom: 0;
+      }
+      .cnc-heading-availability {
+        display: inline-block;
+        font-size: 12px;
+        line-height: 15px;
+        width: 40%;
+        max-width: 90px;
+        padding: 10px 15px;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+#shopify-section-cart-template {
+
+  #cnc-container .btn {
+    background-color:transparent;
+    border:solid 1px #ccc;
+    font-size: 14px;
+    font-weight:600;
+    letter-spacing:0;
+    margin:0 0 30px; 
+    position:relative;
+    -webkit-transition:all 02s linear 0s;
+    transition:all 0.2s linear 0s;
+    
+    &:hover {
+      background-color:#000;
+      border-color:#000;
+      color:#fff;
+    }
+  }
+  #cnc-container {
+    input:checked+label.btn {
+      background-color: #000;
+      color:#fff;
+    }
+    
+    [for="cnc-home-radio"].btn--secondary:after {
+      content: "or";
+      color: #000;
+      display: block;
+      text-align: center;
+      position: absolute;
+      width: 100%;
+      left: 0;
+      top: 100%;
+      text-transform: none;
+      pointer-events: none;
+      font-size: 14px;
+    }
+  }
+  #cnc-results-container {
+    position:relative;
+    
+    #cnc-message {
+      display: none;
+      margin-top:20px;
+    }
+  }
+  #cnc-container [for="cnc-store-radio"].btn {margin-bottom:0;}  
+  input[type="text"].cnc-address-search-input, 
+  .cnc-address-search-input {border-color:#000;}
+  .cnc-address-search {
+    margin-top:0;
+  }
+  #cnc-map-container {padding-top:20px;}
+  #cnc-results {
+    padding:0;
+    
+    #cnc-info {
+      color:#000;
+      font-size:13px;
+      font-style:italic;
+      font-weight:600;
+      margin: 0 20px -30px;
+      position: relative;
+      top: 15px;
+    }
+  }
+  #cnc-outlets {       
+    li {
+      position:relative;
+      padding:0;
+      
+      &:after {
+        content:"";
+        background-color:#c3c3c3;
+        height:1px;
+        left:20px;
+        position:absolute;
+        top:100%;
+        width:calc(100% - 40px);
+      }
+      
+      &:first-child {padding-top:40px;}
+
+      input {opacity:0;}
+    }
+  }
+  #cnc-outlets .cnc-outlet-label {
+    border:none;
+    display:-webkit-flex;
+    display:flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-align-items: flex-start;
+    align-items: flex-start;
+    width: auto;
+    margin: 0;
+    overflow:hidden;
+    padding: 20px 20px 0;
+    position:relative;
+  }
+  #cnc-results-container .cnc-availability-table {
+    margin:30px 0;
+    width:100%;
+    
+    tr, td {border:none;}
+    thead {display:none;}
+    td.product-title {
+      color:#000;
+      font-size:12px;
+      line-height:1.4;
+      width:60%;
+      
+      span {
+        color:#c3c3c3 !important;
+        font-size:12px;
+      }
+    }
+    td.product-quantity,
+    td.availability {
+      text-align:right;
+      width:20%;
+    }
+    
+    .availability i {font-size:14px;}
+    .cnc-outlet-unavailable {
+      color:red;
+      font-size:10px;
+      line-height:1.3;
+      text-transform:none;
+      
+      i {
+        display:none;
+        margin-right:3px;
+        font-size:12px;
+      }
+    }
+    
+  }
+  #cnc-results-container .cnc-store-details {
+    width:calc(55% - 20px);
+    @media (max-width:767px) {
+      width:55%;
+    }
+  }
+  .cnc-store-details {
+    color: #000;
+    font-size: 13px;
+    line-height: 1.5;
+    text-transform:none;
+    
+    strong {font-family: 'tk-futura-pt-n5';}
+  }
+  .cnc-pickup-message {
+    color:#000;
+    font-family: 'tk-futura-pt-i4';
+    font-size:12px;
+    line-height:1.3;
+    text-align:right;
+    text-transform:none;
+    width:45%;
+  }
+  .cnc-address-search p {
+    font-size:14px;
+    
+    strong {color:#000;}
+  }
+  
+} 

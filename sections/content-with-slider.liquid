@@ -1,0 +1,94 @@
+{% style %}
+  {% render 'css-loop',
+      css: section_css,
+      id: section.id
+  %}
+  {% render 'css-loop',
+      css: section.settings.custom_css,
+      id: section.id
+  %}
+  {% render 'css-loop',
+          css: custom_css,
+          id: id
+  %}
+{% endstyle %}
+
+<section class="section
+                {{ section.settings.css_class }}
+                is-width-{{ section.settings.width }}
+                {% if section.settings.show_gutter == false %}
+                  has-no-side-gutter
+                  has-background
+                {% else %}
+                  has-gutter-enabled
+                {% endif %}
+                {% if section.settings.width == 'wide' %}
+                  equal-columns--outside-trim
+                {% endif %}"
+                {% if section.settings.animation != "none" %}
+                  data-scroll-class="{{ section.settings.animation }}"
+                {% endif %}>
+  <div class="container">
+    <div>
+      <p>{{ body_text }}</p>
+    </div>
+
+    <div> 
+          {%
+            render 'product-slider',
+            limit: section.settings.products_limit,
+            products: collection.products,
+            skip_product: product,
+            per_slide: section.settings.products_per,
+            mobile_products_per_row: section.settings.mobile_products_per_row,
+            align_height: section.settings.align_height,
+            height: section.settings.collection_height,
+            show_gutter: section.settings.show_gutter,
+            featured_collection: section.settings.collection
+          %}
+    </div>
+    </div>
+</section>
+
+
+{% schema %}
+  {
+    "name": "Content With Slider",
+    "class": "content-with-slider-section",
+    "settings": [
+      {
+        "type":"richtext",
+        "id":"body_text",
+        "label":"Content"
+      },
+      {
+        "type": "header",
+        "content": "Advanced",
+        "info": "[Learn more](https://help.outofthesandbox.com/hc/en-us/articles/360022329373)"
+      },
+    {
+      "type": "text",
+      "id": "css_class",
+      "label": "CSS Class"
+    },
+    {
+      "type": "textarea",
+      "id": "custom_css",
+      "label": "Custom CSS"
+    }
+    ],
+    "presets": [ 
+      { 
+        "name": "Content With Slider",
+        "category": "Content" 
+      } 
+    ]
+    
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

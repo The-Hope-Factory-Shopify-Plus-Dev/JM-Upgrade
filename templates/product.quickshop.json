@@ -1,0 +1,1 @@
+{"layout":"quickshop","sections":{"main":{"type":"quickshop","blocks":{"title":{"type":"title","settings":{}},"price":{"type":"price","settings":{}},"form":{"type":"form","settings":{}},"description":{"type":"description","settings":{}},"share":{"type":"share","settings":{}}},"block_order":["title","price","form","description","share"],"settings":{}}},"order":["main"]}

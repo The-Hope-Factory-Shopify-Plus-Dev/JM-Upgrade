@@ -1,0 +1,174 @@
+{%- assign mobile_image = section.settings.mobile_image -%}
+
+<div class="video-wrapper{% if mobile_image != blank %} is-hidden-mobile-only{% endif %}">
+  <video height="auto" width="100%" src="https://cdn.shopify.com/videos/c/o/v/3b279f42ce3e4dd0afd98b83b633c472.mp4" autoplay="autoplay" playsinline="" muted="" loop="loop" onclick="redirectToLink()"></video>
+</div>
+
+{% if mobile_image != blank %}
+  <div class="is-hidden-desktop-only" onclick="redirectToLink()">
+  
+    {% render 'image-element',
+      image: mobile_image,
+      alt: mobile_image.alt,
+      stretch_width: true
+    %}
+  </div>
+{% endif %}
+
+<script>
+    function redirectToLink() {
+  window.location.href = "https://www.jomercer.com.au/collections/autumn-25-ascend";
+}
+</script>
+
+{% schema %}
+  {
+    "name": "Alternate video",
+    "settings": [  
+      {
+        "type": "checkbox",
+        "id": "autoplay",
+        "label": "Autoplay video",
+        "info": "Limited browser support for autoplaying video. Autoplay video will allowed when muted",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "autoloop",
+        "label": "Autoloop video",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "mute_video",
+        "label": "Mute video",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "controls",
+        "label": "Show video controls",
+        "default": true
+      },
+      /*{
+        "type": "video_url",
+        "id": "iframe_video",
+        "label": "YouTube or Vimeo video URL",
+        "accept": ["youtube", "vimeo"],
+        "default": "https://www.youtube.com/watch?v=8NxS0vrPcsA"
+      },*/
+      {
+        "type": "text",
+        "id": "html5_video",
+        "label": "HTML5 MP4/OGV File URL"
+      },
+      {
+        "type": "image_picker",
+        "id": "mobile_image",
+        "label": "Gif image",
+        "info": "This gif image visible on mobile only"
+      },
+      {
+        "type": "header",
+        "content": "Layout"
+      },
+      {
+        "type": "select",
+        "id": "width",
+        "label": "Width",
+        "default": "wide",
+        "options": [
+          {
+            "value": "half",
+            "label": "Half"
+          },
+          {
+            "value": "standard",
+            "label": "Standard"
+          },
+          {
+            "value": "wide",
+            "label": "Wide"
+          }
+        ]
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "label": "Top spacing",
+        "min": 0,
+        "max": 80,
+        "default": 20,
+        "unit": "px"
+      },
+      {
+        "type": "range",
+        "id": "padding_bottom",
+        "label": "Bottom spacing",
+        "min": 0,
+        "max": 80,
+        "default": 0,
+        "unit": "px"
+      }, 
+      {
+        "type": "select",
+        "id": "animation",
+        "label": "Animation",
+        "default": "none",
+        "options": [
+          {
+            "value": "none",
+            "label": "None"
+          },
+          {
+            "value": "fadeIn",
+            "label": "Fade in"
+          },
+          {
+            "value": "fadeInDown",
+            "label": "Fade in down"
+          },
+          {
+            "value": "fadeInLeft",
+            "label": "Fade in left"
+          },
+          {
+            "value": "fadeInRight",
+            "label": "Fade in right"
+          },
+          {
+            "value": "slideInLeft",
+            "label": "Slide in left"
+          },
+          {
+            "value": "slideInRight",
+            "label": "Slide in right"
+          },
+          {
+            "value": "zoomIn",
+            "label": "Zoom in"
+          }
+        ]
+      },
+      {
+      "type": "header",
+      "content": "Advanced",
+      "info": "[Learn more](https://help.outofthesandbox.com/hc/en-us/articles/360022329373)"
+      },
+      {
+        "type": "text",
+        "id": "css_class",
+        "label": "CSS Class"
+      },
+      {
+        "type": "textarea",
+        "id": "custom_css",
+        "label": "Custom CSS"
+      }
+    ],
+    "presets": [{
+      "name": "Alternate video",
+      "category": "Video"
+    }]
+  }
+{% endschema %}

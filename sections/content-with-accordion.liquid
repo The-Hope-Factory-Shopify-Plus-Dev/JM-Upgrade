@@ -1,0 +1,376 @@
+{% comment %} Content setttings {% endcomment %}
+{%- assign blocks = section.blocks -%}
+{% comment %} End content settings {% endcomment %}
+
+{% comment %} Is the color set to transparent? {% endcomment %}
+{%- assign text_alpha = section.settings.text_color | color_extract: 'alpha' -%}
+{%- assign icon_alpha = section.settings.icon_color | color_extract: 'alpha' -%}
+{%- assign background_alpha = section.settings.background | color_extract: 'alpha' -%}
+{%- assign gradient_alpha = section.settings.gradient | color_extract: 'alpha' -%}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {% for block in section.blocks %}
+      {% unless block.type == 'heading' %}
+        {
+          "@type": "Question",
+          "name": "{{ block.settings.title | escape }}",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "{{ block.settings.answer | strip_html }}"
+          }
+        }{% unless forloop.last %},{% endunless %}
+      {% endunless %}
+    {% endfor %}
+  ]
+}
+</script>
+
+{% style %}
+  #shopify-section-{{ section.id }} {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+    padding-left: {{ section.settings.padding_left }}px;
+    padding-right: {{ section.settings.padding_right }}px;
+    {% if section.settings.width == 'wide' %}
+      width: 100%;
+    {% elsif section.settings.width == 'half' %}
+      width: 50%;
+    {% endif %}
+  }
+  {% render 'css-loop',
+      css: section_css,
+      id: section.id
+  %}
+  {% render 'css-loop',
+      css: section.settings.custom_css,
+      id: section.id
+  %}
+  {% render 'css-loop',
+          css: custom_css,
+          id: id
+  %}
+  .tab-page__linklist {
+    margin:  0 auto 45px; 
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+  }
+  .tab-page__linklist li {
+    margin: 0 30px;
+  }
+  .page-detail-head {
+    margin: 0 0 65px;
+    width: 100%;
+  }
+  .page-detail-head h2 {
+    font-size: 32px;
+    margin: 0 0 20px;
+  }
+  
+}
+  
+{% endstyle %}  
+
+{% capture icon_set %}
+{% if settings.toggle_icon_style == 'carets' %}
+  {% render 'icon',
+          name: 'down-caret',
+          icon_class: 'icon--rotate'
+  %}
+{% else %}
+  {% render 'icon',
+          name: 'plus',
+          icon_class: 'icon--active'
+  %}
+  {% render 'icon', name: 'minus' %}
+{% endif %}
+{% endcapture %}
+
+<section class="section
+                {{ section.settings.css_class }}
+                is-width-{{ section.settings.width }}
+                {% if section.settings.show_gutter == false %}
+                  has-no-side-gutter
+                  has-background
+                {% else %}
+                  has-gutter-enabled
+                {% endif %}
+                {% if section.settings.width == 'wide' %}
+                  equal-columns--outside-trim
+                {% endif %}"
+                {% if section.settings.animation != "none" %}
+                  data-scroll-class="{{ section.settings.animation }}"
+                {% endif %}>
+  <div class="container">
+    {% if linklists[section.settings.page_linklist].links.size > 0 %}
+      <ul class="tab-page__linklist">
+        {% for link in linklists[section.settings.page_linklist].links %}
+        <li>
+          <a href="{{ link.url }}"{% if link.active %} aria-current="page"{% endif %}>{{ link.title }}</a>
+        </li>
+        {% endfor %}
+      </ul>          
+    {% endif %}
+    {% if section.settings.title != blank or section.settings.content != blank %}
+      <div class="page-detail-head text-align-center">
+        {% if section.settings.title != blank %}
+          <h2>{{ section.settings.title }} {{ blocks.settings.accordion_text }}</h2>
+        {% endif %} 
+        {% if section.settings.content != blank %}
+          <div class="rte">{{ section.settings.content }}</div>
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+  <div class="accordion-container">
+    <div class="page-faq__column-wrap container column-wrapper">
+      <div class="{% if image == true %}one-half{% else %}one-whole{% endif %} medium-down--one-whole column faq faq__column-1">
+        {% if section.blocks.size > 0 %}
+          <dl class="{{ section.settings.css_class }}
+                    faq-accordion
+                    accordion-icon--{{ settings.toggle_icon_style }}">
+            {% for block in section.blocks %}
+              {% if block.type == 'content' %}
+                {% if block.settings.accordion_title != blank %}
+                  <dt>
+                    <button class="accordion-style--{{ settings.toggle_icon_style }} accordion__button custom-button" type="button" aria-controls="panel-{{ block.id }}" aria-expanded="true">
+                      {{ icon_set }}
+                      {{ block.settings.accordion_title }}
+                    </button>
+                  </dt>
+                  <dd id="panel-{{ block.id }}" aria-hidden="false">
+                    <div class="content">
+                      {{ block.settings.accordion_text }}
+                    </div>
+                  </dd>
+                {% endif %}
+                {% elsif block.type == 'heading' %}
+                  {% if block.settings.title != blank %}
+                  <h2 class="title faq-title">{{ block.settings.title }}</h2>
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+          </dl>
+        {% endif %}
+      </div>
+      </div>
+      
+</section>
+
+
+
+<script data-theme-editor-load-script src="{{ 'z__jsFAQ.js' | asset_url }}"></script>
+
+{% schema %}
+  {
+    "name": "Content with Accordion",
+    "class": "content-with-accordion",
+    "settings": [
+      {
+      "type": "link_list",
+      "id": "page_linklist",
+      "label": "Menu"
+      },
+      {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+      },
+      {
+      "type": "richtext",
+      "id": "content",
+      "label": "Text"
+    },    
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "rgba(0,0,0,0)"
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background",
+      "default": "#CCCCCC"
+    },
+    {
+      "type": "color",
+      "id": "gradient",
+      "label": "Gradient",
+      "default": "rgba(0,0,0,0)"
+    },
+    {
+      "type": "range",
+      "id": "gradient_rotation",
+      "label": "Gradient rotation",
+      "min": 0,
+      "max": 180,
+      "step": 10,
+      "default": 0,
+      "unit": "deg"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "width",
+      "label": "Width",
+      "default": "standard",
+      "options": [
+        {
+          "value": "half",
+          "label": "Half"
+        },
+        {
+          "value": "standard",
+          "label": "Standard"
+        },
+        {
+          "value": "wide",
+          "label": "Wide"
+        }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "show_gutter",
+      "label": "Show gutter",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top spacing",
+      "min": 0,
+      "max": 80,
+      "default": 20,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom spacing",
+      "min": 0,
+      "max": 80,
+      "default": 20,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_left",
+      "label": "Left spacing",
+      "min": 0,
+      "max": 80,
+      "default": 0,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_right",
+      "label": "Right spacing",
+      "min": 0,
+      "max": 80,
+      "default": 0,
+      "unit": "px"
+    },
+    {
+      "type": "select",
+      "id": "animation",
+      "label": "Animation",
+      "default": "none",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "fadeIn",
+          "label": "Fade in"
+        },
+        {
+          "value": "fadeInDown",
+          "label": "Fade in down"
+        },
+        {
+          "value": "fadeInLeft",
+          "label": "Fade in left"
+        },
+        {
+          "value": "fadeInRight",
+          "label": "Fade in right"
+        },
+        {
+          "value": "slideInLeft",
+          "label": "Slide in left"
+        },
+        {
+          "value": "slideInRight",
+          "label": "Slide in right"
+        },
+        {
+          "value": "zoomIn",
+          "label": "Zoom in"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Advanced",
+      "info": "[Learn more](https://help.outofthesandbox.com/hc/en-us/articles/360022329373)"
+    },
+    {
+      "type": "text",
+      "id": "css_class",
+      "label": "CSS Class"
+    },
+    {
+      "type": "textarea",
+      "id": "custom_css",
+      "label": "Custom CSS"
+    }
+   ],
+    "blocks":[
+      {  
+        
+        "name": "Accordion",
+        "type": "content",
+        "settings": [
+          {
+          "type": "header",
+          "content": "Accordion"
+          },
+          {
+          "type": "text",
+          "id": "accordion_title",
+          "label": "Title",
+          "default": "Accordion Title"
+          },
+          {
+          "type": "text",
+          "id": "accordion_text",
+          "label": "Body Text",
+          "default": "Body Text"
+          }
+        ]
+      }
+    ],
+    "presets": [
+    {
+      "name": "Content with Accordion",
+      "category": "Text"
+    }
+  ]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

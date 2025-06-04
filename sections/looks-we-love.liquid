@@ -1,0 +1,394 @@
+{% style %}
+  #shopify-section-{{ section.id }} {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+    {% if section.settings.width == 'wide' %}
+      width: 100%;
+    {% endif %}
+  }
+  #shopify-section-{{ section.id }} .product__thumbnail {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  #shopify-section-{{ section.id }} .product__thumbnail:nth-child(1),
+  #shopify-section-{{ section.id }} .product__thumbnail:nth-child(2) {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+  }
+  #shopify-section-{{ section.id }} .thumbnail__caption {padding: 0;}
+  #shopify-section-{{ section.id }} .product-thumbnail {
+    font-size: 12px;
+    text-align: left;
+  }
+  #shopify-section-{{ section.id }} .product-thumbnail__price {margin-top: 15px;}
+  #shopify-section-{{ section.id }} .looks__heading {margin-bottom: 30px;}
+
+  @media (max-width: 798px) {
+    #shopify-section-{{ section.id }} .column-collection {margin-top: 10px;}
+    #shopify-section-{{ section.id }} .featured-collection {justify-content: space-between;}
+    #shopify-section-{{ section.id }} .featured-collection .thumbnail {
+      margin-left: 0;
+      margin-right: 0;
+      width: calc(50% - 7px);
+    }
+    
+  }
+  
+  {% render 'css-loop',
+          css: section.settings.custom_css,
+          id: section.id
+  %}
+{% endstyle %}
+
+<section class="section
+                {{ section.settings.css_class }}
+                is-width-{{ section.settings.width }}
+                {% if section.settings.show_gutter == false %}
+                  has-no-side-gutter
+                  has-background
+                {% else %}
+                  has-gutter-enabled
+                {% endif %}
+                {% if section.settings.width == 'wide' %}
+                  equal-columns--outside-trim
+                {% endif %}
+                "
+                {% if section.settings.animation != "none" %}
+                  data-scroll-class="{{ section.settings.animation }}"
+                {% endif %}>
+  {% if section.settings.title != blank %}<h2 class="looks__heading title text-align-center">{{ section.settings.title }}</h2>{% endif %}
+  <div class="container">      
+      {% for block in section.blocks %}
+
+        {% if block.type == 'collection' %}
+          {%- assign collection = collections[block.settings.collection] -%}
+          {% style %}
+            #shopify-section-{{ block.id }} {
+                background-color: {%- if background_alpha != 0 -%}{{ block.settings.background }}{% endif %};
+              }
+            {% render 'css-loop',
+                    css: block_css,
+                    id: block.id
+            %}
+          {% endstyle %}
+
+          <div class="image-with-text__column
+                      {% render 'column-width', value: forloop.length %}
+                      medium-down--one-whole
+                      column
+                      column-{{ block.type }}
+                      {% if background_alpha != 0 %}has-background {% endif %}
+                      is-flex
+                      is-flex-wrap
+                      is-justify-{{ block.settings.alignment }}
+                      is-align-{{ block.settings.vertical_position }}
+                      "
+                      {% if type != 'block' %}
+                        {{ block.shopify_attributes }} id="shopify-section-{{ block.id }}"
+                      {% endif %}>
+            <div class="container has-column-padding-bottom featured-collection layout--grid is-justify-center">
+              {% if collection.all_products_count > 0 %}
+                {%
+                  render 'product-loop',
+                  limit: 4,
+                  products: collection.products,
+                  skip_product: product,
+                  products_per_row: 2,
+                  mobile_products_per_row: 2
+                %}
+              {% endif %}
+            </div>
+          </div>
+
+        {% endif %}  
+
+        {% if block.type == 'image' %}
+
+          {% comment %} Content settings {% endcomment %}
+          {%- assign image = block.settings.image -%}
+          {% comment %} End content settings {% endcomment %}
+
+          <div class="image-with-text__image-column
+          image-with-text__column
+          {% if forloop.length == 1 %}
+            one-whole
+          {% elsif forloop.length == 2 %}
+            one-half
+          {% elsif forloop.length == 3 %}
+            one-third
+          {% endif %}
+          medium-down--one-whole
+          column
+          column-{{ block.type }}  
+          is-flex
+          is-align-center
+          {% if block.settings.image_crop != 'none' %}has-image-crop{% endif %}
+          image-crop--{{ block.settings.image_crop }}" {% if type != 'block' %}{{ block.shopify_attributes }} id="shopify-section-{{ block.id }}"{% endif %}>
+            {% if block.settings.image_link %}
+              <a class="image-with-text__link" href="{{ block.settings.image_link }}">
+            {% endif %}
+              {% if image != blank %}
+                {% render 'image-element',
+                        image: image,
+                        alt: image.alt,
+                        stretch_width: true,
+                        additional_classes: 'image-with-text__image'
+                %}
+              {% else %}
+                {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+              {% endif %}
+            {% if block.settings.image_link %}
+              </a>
+            {% endif %}
+          </div>
+        {% endif %}
+
+    {% endfor %}
+
+  </div>
+</section>
+
+<script
+  type="application/json"
+  data-section-id="{{ section.id }}"
+  data-section-data>
+  {
+    "collection_style": {{ layout | json }},
+    "products_per": {{ block.settings.products_per | json}},
+    "products_available": {{ collection.all_products_count | json }},
+    "products_limit": {{ block.settings.products_limit | json }},
+    "align_height": {{ block.settings.align_height | json }}
+  }
+</script>
+<script data-theme-editor-load-script src="{{ 'z__jsFeaturedCollection.js' | asset_url }}"></script>
+
+{% schema %}
+{
+  "name": "Looks we love",
+  "class": "looks-love",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "width",
+      "label": "Width",
+      "default": "standard",
+      "options": [
+        {
+          "value": "standard",
+          "label": "Standard"
+        },
+        {
+          "value": "wide",
+          "label": "Wide"
+        }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "show_gutter",
+      "label": "Show gutter",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top spacing",
+      "min": 0,
+      "max": 80,
+      "default": 0,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom spacing",
+      "default": 0,
+      "min": 0,
+      "max": 80,
+      "unit": "px"
+    },
+    {
+      "type": "select",
+      "id": "animation",
+      "label": "Animation",
+      "default": "none",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "fadeIn",
+          "label": "Fade in"
+        },
+        {
+          "value": "fadeInDown",
+          "label": "Fade in down"
+        },
+        {
+          "value": "fadeInLeft",
+          "label": "Fade in left"
+        },
+        {
+          "value": "fadeInRight",
+          "label": "Fade in right"
+        },
+        {
+          "value": "slideInLeft",
+          "label": "Slide in left"
+        },
+        {
+          "value": "slideInRight",
+          "label": "Slide in right"
+        },
+        {
+          "value": "zoomIn",
+          "label": "Zoom in"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Advanced",
+      "info": "[Learn more](https://help.outofthesandbox.com/hc/en-us/articles/360022329373)"
+    },
+    {
+      "type": "text",
+      "id": "css_class",
+      "label": "CSS Class"
+    },
+    {
+      "type": "textarea",
+      "id": "custom_css",
+      "label": "Custom CSS"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image",
+          "info": "1024 x 1024px recommended"
+        },
+        {
+          "type": "select",
+          "id": "image_crop",
+          "label": "Image cropping",
+          "default": "none",
+          "info": "Only applied when text area is taller than the image.",
+          "options": [
+            {
+              "value": "none",
+              "label": "None"
+            },
+            {
+              "value": "left",
+              "label": "Left"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "right",
+              "label": "Right"
+            }
+          ]
+        },
+        {
+          "type": "url",
+          "id": "image_link",
+          "label": "Link"
+        }
+      ]
+    },
+    {
+      "type": "collection",
+      "name": "Collection",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        }/*,
+        {
+          "type": "header",
+          "content": "Product"
+        },
+        {
+          "type": "range",
+          "id": "products_per",
+          "label": "Products per row",
+          "min": 2,
+          "max": 7,
+          "default": 5
+        },
+        {
+          "type": "select",
+          "id": "mobile_products_per_row",
+          "label": "Products per row on mobile",
+          "info": "Applied only when 'Collection layout' is set to 'Grid'.",
+          "options": [
+            {
+              "value": "1",
+              "label": "1"
+            },
+            {
+              "value": "2",
+              "label": "2"
+            }
+          ],
+          "default": "1"
+        },
+        {
+          "type": "range",
+          "id": "products_limit",
+          "label": "Limit products",
+          "min": 3,
+          "max": 50,
+          "default": 10
+        },
+        {
+          "type": "checkbox",
+          "id": "align_height",
+          "label": "Align to height"
+        },
+        {
+          "type": "range",
+          "id": "collection_height",
+          "label": "Product image height",
+          "min": 150,
+          "max": 400,
+          "step": 10,
+          "default": 200,
+          "unit": "px",
+          "info": "Applied when 'Align to height' is enabled. [Learn more](https://help.outofthesandbox.com/hc/en-us/articles/360022543913)"
+        }*/
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Looks we love",
+      "category": "Image",
+      "settings": {
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    }
+  ]
+}
+{% endschema %}

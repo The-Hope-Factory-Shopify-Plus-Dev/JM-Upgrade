@@ -1,0 +1,22 @@
+{% layout none %}
+
+{%- assign collection_handles = product.collections | map: 'handle' -%}
+
+{% capture custom_html %}
+  <div class="webyze-multi-product-colors" data-product-id="{{ product.id }}"></div>
+{%
+  render 'product-thumbnail__swatch',
+  product: product
+%}
+        
+{% unless collection_handles contains 'coming-soon' %}
+  <div class="inline-quickshop js-product_section product-{{ product.id }}">
+     {% render 'product__form-collection', product: product %}
+  </div>
+{% endunless %}
+{% endcapture %}
+
+{
+  "id": {{ product.id | json }},          
+  "custom_html": {{ custom_html | json }}
+}

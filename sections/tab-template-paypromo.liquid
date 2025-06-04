@@ -1,0 +1,718 @@
+{% comment %} Content setttings {% endcomment %}
+{%- assign blocks = section.blocks -%}
+{% comment %} End content settings {% endcomment %}
+
+{% comment %} Is the color set to transparent? {% endcomment %}
+{%- assign text_alpha = section.settings.text_color | color_extract: 'alpha' -%}
+{%- assign icon_alpha = section.settings.icon_color | color_extract: 'alpha' -%}
+{%- assign background_alpha = section.settings.background | color_extract: 'alpha' -%}
+{%- assign gradient_alpha = section.settings.gradient | color_extract: 'alpha' -%}
+{% comment %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {% for block in section.blocks %}
+      {% unless block.type == 'heading' %}
+        {
+          "@type": "Question",
+          "name": "{{ block.settings.title | escape }}",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "{{ block.settings.answer | strip_html }}"
+          }
+        }{% unless forloop.last %},{% endunless %}
+      {% endunless %}
+    {% endfor %}
+  ]
+}
+</script>
+{% endcomment %}
+<script data-theme-editor-load-script src="{{ 'z__jsFAQ.js' | asset_url }}"></script>
+{% style %}
+  #shopify-section-{{ section.id }} {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+    padding-left: {{ section.settings.padding_left }}px;
+    padding-right: {{ section.settings.padding_right }}px;
+    {% if section.settings.width == 'wide' %}
+      width: 100%;
+    {% elsif section.settings.width == 'half' %}
+      width: 50%;
+    {% endif %}
+  }
+  .tab-page__linklist {
+    margin:  0 auto 45px; 
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+  }
+  .tab-page__linklist li {margin: 0 30px;}
+  .tab-page__linklist li a.active-page {font-weight: 500;}
+  .page-detail-head {
+    margin: 0 0 65px;
+    width: 100%;
+  }
+  .page-detail-head h2 {
+    font-size: 32px;
+    margin: 0 0 20px;
+  }
+  .page-description-tab {
+    width: 100%;
+  }
+  .tab-heading {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+  }
+  .tab-heading li {width: 100%;}
+  .tab-heading li a.tabmenu {
+    background-color: transparent;
+    border-radius: 20px 20px 0 0;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 16px;
+    padding: 18px 50px;
+    text-align: center;
+  }
+  .tab-heading li a.tabmenu.active {background-color: #F4F4F4;}
+  .tabcontent {
+    background-color: #F4F4F4;
+    padding: 40px 80px;    
+  }
+  .tabcontent h3 {margin: 0 0 15px;}
+  .page-with-tab .table.is-bordered td, 
+  .page-with-tab .table.is-bordered th {border: none;}
+  .payment-options {
+    width: 100%;
+    display: -webkit-flex;
+    display: flex;
+    column-gap: 10px;
+    row-gap: 10px;
+    margin-bottom: 10rem;
+    justify-content: space-between;
+}
+  .payment-options .payment-option {
+    width: calc(25% - 10px);
+  }
+  .payment-option{
+    padding-top:20px;
+     display: grid;
+    justify-content: center;
+    justify-items: center;
+    align-content: space-between;
+  }
+  .payment-option img,.payment-option span, .payment-option a{
+    padding-bottom:20px;
+  }
+  .payment-option a{
+    text-decoration: underline;
+    font-weight: bold;
+  }
+  
+  @media (max-width: 798px) {
+    .tab-page__linklist {
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-left: 30px;
+      margin-right: 30px;
+    }
+    .tab-page__linklist li {
+      margin: 0 0 12px;
+      white-space: nowrap;
+      width: 50%;
+    }
+    .tab-page__linklist li:nth-of-type(odd) {text-align: left;}
+    .tab-page__linklist li:nth-of-type(even) {text-align: right;}
+    .page-detail-head h2 {
+      font-size: 22px;
+      margin: 0 0 14px;
+    }
+    .tab-heading li a.tabmenu {
+      font-size: 15px;
+      padding: 8px 30px;
+    }
+    .tabcontent {padding: 40px 15px;}
+
+    .payment-options .payment-option {width: calc(100% - 10px);}
+  }
+  {% render 'css-loop',
+      css: section_css,
+      id: section.id
+  %}
+  {% render 'css-loop',
+      css: section.settings.custom_css,
+      id: section.id
+  %}
+  {% render 'css-loop',
+          css: custom_css,
+          id: id
+  %}
+  
+{% endstyle %}
+
+{% capture icon_set %}
+{% if settings.toggle_icon_style == 'carets' %}
+  {% render 'icon',
+          name: 'down-caret',
+          icon_class: 'icon--rotate'
+  %}
+{% else %}
+  {% render 'icon',
+          name: 'plus',
+          icon_class: 'icon--active'
+  %}
+  {% render 'icon', name: 'minus' %}
+{% endif %}
+{% endcapture %}
+
+<section class="section
+                {{ section.settings.css_class }}
+                is-width-{{ section.settings.width }}
+                {% if section.settings.show_gutter == false %}
+                  has-no-side-gutter
+                  has-background
+                {% else %}
+                  has-gutter-enabled
+                {% endif %}
+                {% if section.settings.width == 'wide' %}
+                  equal-columns--outside-trim
+                {% endif %}"
+                {% if section.settings.animation != "none" %}
+                  data-scroll-class="{{ section.settings.animation }}"
+                {% endif %}>
+  <div class="container">
+    {% if linklists[section.settings.page_linklist].links.size > 0 %}
+      <ul class="tab-page__linklist">
+        {% for link in linklists[section.settings.page_linklist].links %}
+        <li>
+          <a href="{{ link.url }}"{% if link.active %}class="active-page" aria-current="page"{% endif %}>{{ link.title }}</a>
+        </li>
+        {% endfor %}
+      </ul>          
+    {% endif %}
+    {% if section.settings.title != blank or section.settings.content != blank %}
+      <div class="page-detail-head text-align-center">
+        {% if section.settings.title != blank %}
+          <h2>{{ section.settings.title }}</h2>
+        {% endif %} 
+        {% if section.settings.content != blank %}
+          <div class="rte">{{ section.settings.content }}</div>
+        {% endif %}
+      </div>
+    {% endif %}  
+
+  <div class="page-description-tab">
+  <ul class="tab-heading">
+    {% for block in blocks %}
+      {% if block.settings.title != blank %}
+        <li>
+          <a href="javascript:SwitchTab('tb_{{forloop.index}}', 'content_{{forloop.index}}');" id="tb_{{forloop.index}}" class="tabmenu{% if forloop.index == 1 %} active{% endif %}">
+          {{ block.settings.title }}
+          </a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+  
+  {% for block in blocks %}
+
+  <div id="content_{{forloop.index}}" class="tabcontent"{% unless forloop.index == 1 %} style="display:none;"{% endunless %}> 
+    <h3 class="text-align-left">{{ block.settings.title }}</h3>
+
+    <div class="content-accordion">
+      <dl class="faq-accordion accordion-icon--{{ settings.toggle_icon_style }}">
+        {% for i in (1..4) %}
+        {% capture heading %}accordion_heading{{ i }}{% endcapture %}
+        {% capture body_text %}accordion_text{{ i }}{% endcapture %}
+          {% if block.settings[heading] != blank or block.settings[body_text] != blank %}               
+          <dt>
+            <button class="accordion-style--{{ settings.toggle_icon_style }} accordion__button" type="button" aria-controls="panel-{{ forloop.index }}" aria-expanded="true">
+              {{ icon_set }}
+              {{ block.settings[heading] }}
+            </button>
+          </dt>
+          <dd id="panel-{{ forloop.index }}" aria-hidden="false">
+            <div class="content">
+              {{ block.settings[body_text] }}
+            </div>
+          </dd>
+          {% endif %}
+        {% endfor %}
+      </dl>
+    </div>
+    
+    <div class="payment-options">
+      {% for i in (1..4) %}
+      {% capture image %}image{{ i }}{% endcapture %}
+      {% capture text %}text{{ i }}{% endcapture %}
+      {% capture link %}link{{ i }}{% endcapture %}
+      {% capture link_label %}link_label{{ i }}{% endcapture %}
+        <div class="payment-option">
+          {% if block.settings[image] != blank %}
+          <img src="{{ block.settings[image] | img_url: '120x' }}" />
+          {% endif %}  
+          {% if block.settings[text] != blank %}
+          <span>{{ block.settings[text] }}</span>
+          {% endif %}
+          {% if block.settings[link] != blank %}
+          <a href="{{ block.settings[link] }}">{{ block.settings[link_label] }}</a>
+          {% endif %}  
+        </div>
+      {% endfor %}  
+    </div>
+    {%- assign collection = collections[block.settings.collection] -%}
+    {% if block.settings.collection != blank %}
+    <div class="featured-collection-section jsFeaturedCollection"> 
+      <div class="featured-collection promo-featured-collection layout--slider">                  
+        {%
+          render 'product-slider',
+          limit: block.settings.products_limit,
+          products: collection.products,
+          skip_product: product,
+          per_slide: block.settings.products_per,
+          mobile_products_per_row: block.settings.mobile_products_per_row,
+          align_height: block.settings.align_height,
+          height: block.settings.collection_height,
+          show_gutter: block.settings.show_gutter,
+          featured_collection: block.settings.collection
+        %}            
+      </div>
+      <script
+        type="application/json"
+        data-section-id="{{ section.id }}"
+        data-section-data>
+        {
+          "collection_style": "slider",
+          "products_per": {{ block.settings.products_per | json}},
+          "products_available": {{ collection.all_products_count | json }},
+          "products_limit": {{ block.settings.products_limit | json }},
+          "align_height": {{ block.settings.align_height | json }}
+        }
+      </script>
+      <script data-theme-editor-load-script src="{{ 'z__jsFeaturedCollection.js' | asset_url }}"></script>
+    </div>
+    {% endif %}
+   </div>
+  {% endfor %}
+   </div> 
+  </div>
+</section>
+
+<script type="text/javascript">
+function SwitchTab(tab_id, tab_content) {
+  // first of all we get all tab content blocks (I think the best way to get them by class names)
+  var x = document.getElementsByClassName("tabcontent");
+  var i;
+  for (i = 0; i < x.length; i++) {
+      x[i].style.display = 'none'; // hide all tab content
+  }
+  document.getElementById(tab_content).style.display = 'block'; // display the content of the tab we need
+
+  // now we get all tab menu items by class names (use the next code only if you need to highlight current tab)
+  var x = document.getElementsByClassName("tabmenu");
+  var i;
+  for (i = 0; i < x.length; i++) {
+      x[i].className = 'tabmenu'; 
+  }
+  document.getElementById(tab_id).className = 'tabmenu active';
+}
+  
+</script>
+<script defer>
+(function() {
+ window.PXUTheme.jsFAQ.init();
+})();
+</script>
+{% schema %}
+{
+  "name": "Tab template",
+  "class": "tab-template-section jsFeaturedCollection",
+  "settings": [
+    {
+      "type": "link_list",
+      "id": "page_linklist",
+      "label": "Menu"
+    },    
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title"
+    },    
+    {
+      "type": "richtext",
+      "id": "content",
+      "label": "Text"
+    },    
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "rgba(0,0,0,0)"
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background",
+      "default": "#CCCCCC"
+    },
+    {
+      "type": "color",
+      "id": "gradient",
+      "label": "Gradient",
+      "default": "rgba(0,0,0,0)"
+    },
+    {
+      "type": "range",
+      "id": "gradient_rotation",
+      "label": "Gradient rotation",
+      "min": 0,
+      "max": 180,
+      "step": 10,
+      "default": 0,
+      "unit": "deg"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "select",
+      "id": "width",
+      "label": "Width",
+      "default": "standard",
+      "options": [
+        {
+          "value": "half",
+          "label": "Half"
+        },
+        {
+          "value": "standard",
+          "label": "Standard"
+        },
+        {
+          "value": "wide",
+          "label": "Wide"
+        }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "id": "show_gutter",
+      "label": "Show gutter",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top spacing",
+      "min": 0,
+      "max": 80,
+      "default": 20,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom spacing",
+      "min": 0,
+      "max": 80,
+      "default": 20,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_left",
+      "label": "Left spacing",
+      "min": 0,
+      "max": 80,
+      "default": 0,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "padding_right",
+      "label": "Right spacing",
+      "min": 0,
+      "max": 80,
+      "default": 0,
+      "unit": "px"
+    },
+    {
+      "type": "select",
+      "id": "animation",
+      "label": "Animation",
+      "default": "none",
+      "options": [
+        {
+          "value": "none",
+          "label": "None"
+        },
+        {
+          "value": "fadeIn",
+          "label": "Fade in"
+        },
+        {
+          "value": "fadeInDown",
+          "label": "Fade in down"
+        },
+        {
+          "value": "fadeInLeft",
+          "label": "Fade in left"
+        },
+        {
+          "value": "fadeInRight",
+          "label": "Fade in right"
+        },
+        {
+          "value": "slideInLeft",
+          "label": "Slide in left"
+        },
+        {
+          "value": "slideInRight",
+          "label": "Slide in right"
+        },
+        {
+          "value": "zoomIn",
+          "label": "Zoom in"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Advanced",
+      "info": "[Learn more](https://help.outofthesandbox.com/hc/en-us/articles/360022329373)"
+    },
+    {
+      "type": "text",
+      "id": "css_class",
+      "label": "CSS Class"
+    },
+    {
+      "type": "textarea",
+      "id": "custom_css",
+      "label": "Custom CSS"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "tab_elements",
+      "name": "Tab element",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Heading",
+          "default": "Tab heading"
+        },
+        {
+          "type": "header",
+          "content": "Payment options"
+        },
+        {
+          "type": "image_picker",
+          "id": "image1",
+          "label": "Image for option 1"
+        },
+        {
+          "type": "text",
+          "id": "text1",
+          "label": "Text for option 1"
+        },
+        {
+          "type": "url",
+          "id": "link1",
+          "label": "Learn more link"
+        },
+        {
+          "type": "text",
+          "id": "link_label1",
+          "label": "Learn more",
+          "default": "Learn more"
+        },
+        {
+          "type": "image_picker",
+          "id": "image2",
+          "label": "Image for option 2"
+        },
+        {
+          "type": "text",
+          "id": "text2",
+          "label": "Text for option 2"
+        },
+        {
+          "type": "url",
+          "id": "link2",
+          "label": "Learn more link"
+        },
+        {
+          "type": "text",
+          "id": "link_label2",
+          "label": "Learn more",
+          "default": "Learn more"
+        },
+        {
+          "type": "image_picker",
+          "id": "image3",
+          "label": "Image for option 3"
+        },
+        {
+          "type": "text",
+          "id": "text3",
+          "label": "Text for option 3"
+        },
+        {
+          "type": "url",
+          "id": "link3",
+          "label": "Learn more link"
+        },
+        {
+          "type": "text",
+          "id": "link_label3",
+          "label": "Learn more",
+          "default": "Learn more"
+        },
+        {
+          "type": "image_picker",
+          "id": "image4",
+          "label": "Image for option 4"
+        },
+        {
+          "type": "text",
+          "id": "text4",
+          "label": "Text for option 4"
+        },
+        {
+          "type": "url",
+          "id": "link4",
+          "label": "Learn more link"
+        },
+        {
+          "type": "text",
+          "id": "link_label4",
+          "label": "Learn more",
+          "default": "Learn more"
+        },
+        {
+          "type": "header",
+          "content": "Collection"
+        },
+        {
+          "type": "text",
+          "id": "collection_title",
+          "label": "Collection title"
+        },
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        },
+        {
+          "type": "range",
+          "id": "products_per",
+          "label": "Products per row",
+          "min": 2,
+          "max": 5,
+          "default": 5
+        },
+        {
+          "type": "select",
+          "id": "mobile_products_per_row",
+          "label": "Products per row on mobile",
+          "info": "Applied only when 'Collection layout' is set to 'Grid'.",
+          "options": [
+            {
+              "value": "1",
+              "label": "1"
+            },
+            {
+              "value": "2",
+              "label": "2"
+            }
+          ],
+          "default": "1"
+        },
+        {
+          "type": "range",
+          "id": "products_limit",
+          "label": "Limit products",
+          "min": 3,
+          "max": 5,
+          "default": 3
+        },
+        {
+          "type": "checkbox",
+          "id": "align_height",
+          "label": "Align to height"
+        },
+        {
+          "type": "range",
+          "id": "collection_height",
+          "label": "Product image height",
+          "min": 150,
+          "max": 400,
+          "step": 10,
+          "default": 200,
+          "unit": "px",
+          "info": "Applied when 'Align to height' is enabled. [Learn more](https://help.outofthesandbox.com/hc/en-us/articles/360022543913)"
+        },
+        {
+          "type": "header",
+          "content": "Accordion"
+        },
+        {
+          "type":"text",
+          "id":"accordion_heading1",
+          "label":"Accordion Heading 1"
+        },
+        {
+          "type":"richtext",
+          "id":"accordion_text1",
+          "label":"Accordion Body Text 1"
+        },
+        {
+          "type":"text",
+          "id":"accordion_heading2",
+          "label":"Accordion Heading 2"
+        },
+        {
+          "type":"richtext",
+          "id":"accordion_text2",
+          "label":"Accordion Body Text 2"
+        },
+        {
+          "type":"text",
+          "id":"accordion_heading3",
+          "label":"Accordion Heading 3"
+        },
+        {
+          "type":"richtext",
+          "id":"accordion_text3",
+          "label":"Accordion Body Text 3"
+        },
+        {
+          "type":"text",
+          "id":"accordion_heading4",
+          "label":"Accordion Heading 4"
+        },
+        {
+          "type":"richtext",
+          "id":"accordion_text4",
+          "label":"Accordion Body Text 4"
+        }
+        
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Tab template",
+      "category": "Text"
+    }
+  ]
+}
+{% endschema %}
