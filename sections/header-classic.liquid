@@ -399,9 +399,9 @@
 <script src="{{ 'z__jsHeader.js' | asset_url }}"></script>
 <script>
 
-  const $carousel = $('.announcement_carousel');
+  const $carousel = document.querySelector('.announcement_carousel');
 
-    const $$carouselSlider = $carousel.flickity({
+    const $carouselSlider = $carousel.flickity({
       initialIndex: 0,
       contain: true,
       wrapAround: true,
