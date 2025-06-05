@@ -105,7 +105,7 @@ additional_classes: <string>
             aria-describedby="country-heading-{{ id }}"
             data-disclosure-toggle
           >
-          <span class="disclosure__toggle-content">{{ localization.country.name }} ({{ localization.country.currency.iso_code }}{% if localization.country.currency.symbol %} {{ localization.country.currency.symbol }}{%- endif -%})</span> {% render 'icon', name: 'down-caret' %}
+          <span class="disclosure__toggle-content">{% if localization.country.market.handle contains 'asia' %}{{ localization.country.market.handle | replace: '-', ' ' | capitalize }}{% else %}{{ localization.country.name }}{% endif %} {% if localization.country.currency.symbol %}{{ localization.country.currency.symbol }}{%- endif -%}{{ localization.country.currency.iso_code }}</span> {% render 'icon', name: 'down-caret' %}
           </button>
           <div class="disclosure__list-wrap">
             <ul
@@ -113,6 +113,7 @@ additional_classes: <string>
               class="disclosure-list"
             >
               {%- for country in localization.available_countries -%}
+                {%- unless country.market.handle contains 'asia' -%}
                 <li
                   class="
                     disclosure-list__item
@@ -127,10 +128,49 @@ additional_classes: <string>
                     name="country_code"
                     value="{{ country.iso_code }}"
                   >
-                    {{ country.name }} ({{ country.currency.iso_code }}{% if country.currency.symbol %} {{ country.currency.symbol }}{%- endif -%})
+                    {{ country.name }} {% if country.currency.symbol %}{{ country.currency.symbol }}{%- endif -%}{{ country.currency.iso_code }}
                   </button>
                 </li>
+                {%- endunless -%}
               {%- endfor -%}
+              {%- for country in localization.available_countries -%}
+                {%- if country.market.handle contains 'asia' -%}
+                  <li
+                    class="
+                      disclosure-list__item
+                        disclosure-list__item--current
+                    "
+                  >
+                    <button
+                      type="submit"
+                      class="disclosure__button"
+                      name="country_code"
+                      value="{{ country.iso_code }}"
+                    >
+                      {{ country.market.handle | replace: '-', ' ' | capitalize }} {% if country.currency.symbol %}{{ country.currency.symbol }}{%- endif -%}{{ country.currency.iso_code }}
+                    </button>
+                  </li>
+                  {%- break -%}
+                {%- endif -%}
+              {%- endfor -%}
+              {%- if object.settings -%}
+                {%- for i in (1..5) -%}
+                  {%- capture country_option -%}country_option_{{ i }}{%- endcapture -%}
+                  {%- capture redirection_link -%}country_option_{{ i }}_redirection_link{%- endcapture -%}
+                  {%- if object.settings[country_option] != blank and object.settings[redirection_link] != blank -%}
+                    <li
+                      class="disclosure-list__item" data-country="{{ object.settings[country_option] | handle }}"
+                    >
+                      <button
+                        class="disclosure__button"
+                        name="country_code"
+                        value="{{ object.settings[country_option] | handle }}"
+                        onClick="redirectTo(event, '{{- object.settings[redirection_link] | strip -}}')"
+                      >{{ object.settings[country_option] }}</button>
+                    </li>
+                  {%- endif -%}
+                {%- endfor -%}
+              {%- endif -%}
             </ul>
           </div>
         </div>
@@ -139,4 +179,10 @@ additional_classes: <string>
   </div>
 </div>
 {%- endform -%}
+{% comment %}
+<script>
+  const countryList = dcoument.querySelectorAll('.disclosure-list li.disclosure-list__item');
 
+  console.log(countries);
+</script>
+{% endcomment %}
