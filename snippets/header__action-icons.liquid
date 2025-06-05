@@ -75,6 +75,8 @@
     {% endif %}
   {% endif %}
 
+  {% render 'iwish_v2' with 'iwishlink' %}
+
   {% comment %} Cart icon {% endcomment %}
   <div class="header-cart action-area__link {% if cart.item_count != 0 %}has-cart-count{% endif %}" data-ajax-cart-trigger>
     <a class="header__link" href="{{ routes.cart_url }}" >
