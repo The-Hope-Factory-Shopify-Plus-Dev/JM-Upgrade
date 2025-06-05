@@ -1,1 +1,153 @@
-{"type":"footer","name":"Footer","sections":{"footer_icon_bar":{"type":"footer__icon-bar","blocks":{"footer__icon-bar-0":{"type":"text","disabled":true,"settings":{"icon":"same-day-delivery","text":"SAME DAY DELIVERY","link":"shopify:\/\/pages\/australian-delivery"}},"footer__icon-bar-3":{"type":"text","disabled":true,"settings":{"icon":"shipping-2","text":"FREE SHIPPING OVER $140","link":"shopify:\/\/pages\/australian-delivery"}},"footer__icon-bar-2":{"type":"text","disabled":true,"settings":{"icon":"returns","text":"30 DAY RETURNS","link":"shopify:\/\/pages\/new-return-return-policy"}},"17f27208-020d-4bfe-9347-8b8932f06eb0":{"type":"text","disabled":true,"settings":{"icon":"chat","text":"Descriptive text","link":""}},"a0d194b7-2e8b-4065-81a9-64c5d85312c4":{"type":"text","disabled":true,"settings":{"icon":"chat","text":"Descriptive text","link":""}},"999364b6-2e1f-4f68-b9d7-b8859312c4e6":{"type":"text","disabled":true,"settings":{"icon":"chat","text":"Descriptive text","link":""}}},"block_order":["footer__icon-bar-0","footer__icon-bar-3","footer__icon-bar-2","17f27208-020d-4bfe-9347-8b8932f06eb0","a0d194b7-2e8b-4065-81a9-64c5d85312c4","999364b6-2e1f-4f68-b9d7-b8859312c4e6"],"settings":{"show_icon_bar":true,"icon_position":"row","alignment":"center","size":"small","background":"#ffffff","link_color":"#000000","link_hover_color":"#000000","text_color":"#000000","width":"wide","css_class":"","custom_css":"icon-bar__block.is-text-medium {\n  font-size: 13px;\n}"}},"footer":{"type":"footer-classic","blocks":{"4b396222-61b6-4101-9d2d-256036dc1b85":{"type":"link_list","settings":{"menu":"customer-care","social_icons_footer":false}},"footer-classic-1":{"type":"link_list","settings":{"menu":"our-brand","social_icons_footer":false}},"footer-classic-0":{"type":"logo","settings":{"logo":"shopify:\/\/shop_images\/JM_Logo_White_RGB.png","size":"small","text":"","social_icons_footer":true}}},"block_order":["4b396222-61b6-4101-9d2d-256036dc1b85","footer-classic-1","footer-classic-0"],"settings":{"copyright_text":"<p>Registered as Solesbury Pty Ltd<\/p>","display_designed_by":false,"display_shopify":false,"show_locale_selector":false,"show_currency_selector":false,"display_payment_methods":true,"css_class":"","custom_css":".footer__menu-link a {\n  font-size: 11px;\n}\n\n.footer__heading {\n  font-weight: 500;\n  font-size: 13px;\n  letter-spacing: .15em;\n}"}}},"order":["footer_icon_bar","footer"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "type": "footer",
+  "name": "Footer",
+  "sections": {
+    "smsbump_footer_form_embeded_footer_327690_Mg7mJW": {
+      "type": "smsbump_footer_form_embeded_footer_327690",
+      "custom_css": [
+        ".form-holder {justify-content: center !important; margin: 0 auto !important;}"
+      ],
+      "name": "Yotpo|Footer email",
+      "settings": {}
+    },
+    "footer_icon_bar": {
+      "type": "footer__icon-bar",
+      "blocks": {
+        "footer__icon-bar-0": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "icon": "same-day-delivery",
+            "text": "SAME DAY DELIVERY",
+            "link": "shopify://pages/australian-delivery"
+          }
+        },
+        "footer__icon-bar-3": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "icon": "shipping-2",
+            "text": "FREE SHIPPING OVER $140",
+            "link": "shopify://pages/australian-delivery"
+          }
+        },
+        "footer__icon-bar-2": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "icon": "returns",
+            "text": "30 DAY RETURNS",
+            "link": "shopify://pages/new-return-return-policy"
+          }
+        },
+        "17f27208-020d-4bfe-9347-8b8932f06eb0": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "icon": "chat",
+            "text": "Descriptive text",
+            "link": ""
+          }
+        },
+        "a0d194b7-2e8b-4065-81a9-64c5d85312c4": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "icon": "chat",
+            "text": "Descriptive text",
+            "link": ""
+          }
+        },
+        "999364b6-2e1f-4f68-b9d7-b8859312c4e6": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "icon": "chat",
+            "text": "Descriptive text",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "footer__icon-bar-0",
+        "footer__icon-bar-3",
+        "footer__icon-bar-2",
+        "17f27208-020d-4bfe-9347-8b8932f06eb0",
+        "a0d194b7-2e8b-4065-81a9-64c5d85312c4",
+        "999364b6-2e1f-4f68-b9d7-b8859312c4e6"
+      ],
+      "settings": {
+        "show_icon_bar": true,
+        "icon_position": "row",
+        "alignment": "center",
+        "mobile_alignment": "none",
+        "size": "small",
+        "background": "#ffffff",
+        "link_color": "#000000",
+        "link_hover_color": "#000000",
+        "text_color": "#000000",
+        "width": "wide",
+        "css_class": "",
+        "custom_css": "icon-bar__block.is-text-medium {\n  font-size: 13px;\n}"
+      }
+    },
+    "footer": {
+      "type": "footer-classic",
+      "blocks": {
+        "4b396222-61b6-4101-9d2d-256036dc1b85": {
+          "type": "link_list",
+          "settings": {
+            "menu": "customer-care",
+            "social_icons_footer": false
+          }
+        },
+        "footer-classic-1": {
+          "type": "link_list",
+          "settings": {
+            "menu": "our-brand",
+            "social_icons_footer": false
+          }
+        },
+        "footer-classic-0": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/JM_Logo_White_RGB.png",
+            "size": "small",
+            "text": "",
+            "social_icons_footer": true
+          }
+        }
+      },
+      "block_order": [
+        "4b396222-61b6-4101-9d2d-256036dc1b85",
+        "footer-classic-1",
+        "footer-classic-0"
+      ],
+      "settings": {
+        "copyright_text": "<p>Registered as Solesbury Pty Ltd</p>",
+        "display_designed_by": false,
+        "display_shopify": false,
+        "show_follow_on_shop": true,
+        "show_locale_selector": false,
+        "show_currency_selector": false,
+        "display_payment_methods": true,
+        "css_class": "",
+        "custom_css": ".footer__menu-link a {\n  font-size: 11px;\n}\n\n.footer__heading {\n  font-weight: 500;\n  font-size: 13px;\n  letter-spacing: .15em;\n}"
+      }
+    }
+  },
+  "order": [
+    "smsbump_footer_form_embeded_footer_327690_Mg7mJW",
+    "footer_icon_bar",
+    "footer"
+  ]
+}
