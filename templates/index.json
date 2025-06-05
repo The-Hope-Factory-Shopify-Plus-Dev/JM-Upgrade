@@ -1,1 +1,828 @@
-{"sections":{"custom_liquid_Gwxg6a":{"type":"custom-liquid","disabled":true,"settings":{"custom_liquid":"<div class=\"essential-announcement-block\" id=\"9c11d126-98f9-4a2c-bdbf-93d325114616\"><\/div>"}},"cara_home_video_ePMEtP":{"type":"cara_home_video","name":"Cara Video Homepage","settings":{"video_link":"shopify:\/\/collections\/winter-25","desktop_video":"https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/3b279f42ce3e4dd0afd98b83b633c472.mp4","mobile_video":"https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/3b8ad3f408844a97a982a9655fcd75bf.mp4","autoplay":true,"loop":true,"mute":true}},"fec414bd-b982-4481-9432-0e52f43e346c":{"type":"index__slideshow-classic","blocks":{"image_zJXAFV":{"type":"image","disabled":true,"settings":{"image":"shopify:\/\/shop_images\/Web_Banners-LTO_149.95_desktop_header.jpg","mobile_image":"shopify:\/\/shop_images\/Web_Banners-LTO_149.95_Mobile_mobile.jpg","link":"shopify:\/\/collections\/limited-time-only","pretext":"","title":"","subtitle":"","pretext_color":"rgba(0,0,0,0)","heading_color":"rgba(0,0,0,0)","subheading_color":"rgba(0,0,0,0)","text_alignment":"center","text_horizontal_position":"center","text_width":40,"background_color":"#ffffff","background_opacity":0,"border_color":"#ffffff","border_width":0,"button_1":"","button_1_link":"","button_1_style":"button--secondary","button_2":"","button_2_link":"","button_2_style":"button--secondary","pretext_color_mobile":"rgba(0,0,0,0)","heading_color_mobile":"rgba(0,0,0,0)","subheading_color_mobile":"rgba(0,0,0,0)"}},"image_ReCzNa":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Web_Banners-70_Off_2PR_desktop_header_981d5c26-e46b-4ff9-b6b8-dc0b73545644.jpg","mobile_image":"shopify:\/\/shop_images\/Web_Banners-70_Off_2PR_mobile_b1b77935-f087-4f0b-baa2-c6f21988cbe7.jpg","link":"shopify:\/\/collections\/winter-24","pretext":"","title":"","subtitle":"","pretext_color":"rgba(0,0,0,0)","heading_color":"rgba(0,0,0,0)","subheading_color":"rgba(0,0,0,0)","text_alignment":"center","text_horizontal_position":"center","text_width":40,"background_color":"#ffffff","background_opacity":0,"border_color":"#ffffff","border_width":0,"button_1":"","button_1_link":"","button_1_style":"button--secondary","button_2":"","button_2_link":"","button_2_style":"button--secondary","pretext_color_mobile":"rgba(0,0,0,0)","heading_color_mobile":"rgba(0,0,0,0)","subheading_color_mobile":"rgba(0,0,0,0)"}}},"block_order":["image_zJXAFV","image_ReCzNa"],"disabled":true,"settings":{"image_slideshow_speed":3,"image_transition":"slide","show_arrows":false,"show_nav_buttons":false,"width":"wide","padding_top":0,"padding_bottom":0,"animation":"none","mobile_text_below_image":true,"css_class":"","custom_css":""}},"424abe0b-b747-40b7-b3de-dc8cdd97f9ea":{"type":"index__image-with-text-overlay","settings":{"image":"shopify:\/\/shop_images\/Web_Banner_New_LTO_Ends_desktop_thin.jpg","mobile_image":"shopify:\/\/shop_images\/Web_Banner_New_LTO_Ends_mobile_thin.jpg","link":"shopify:\/\/collections\/new","pretext":"","title":"","subtitle":"","pretext_color":"#000000","heading_color":"#000000","subheading_color":"#000000","text_alignment":"center","text_horizontal_position":"center","text_vertical_position":"middle","text_width":40,"background_color":"#ffffff","background_opacity":77,"border_color":"#ffffff","border_width":0,"button_1":"","button_1_link":"","button_1_style":"button--secondary","button_2":"","button_2_link":"","button_2_style":"button--secondary","width":"wide","padding_top":9,"padding_bottom":0,"padding_left":0,"padding_right":0,"animation":"none","mobile_text_below_image":true,"pretext_color_mobile":"rgba(0,0,0,0)","heading_color_mobile":"rgba(0,0,0,0)","subheading_color_mobile":"rgba(0,0,0,0)","css_class":"","custom_css":""}},"1662120804727cc161":{"type":"index__gallery","blocks":{"16621208041c3cfd94-3":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/WEB_IG_Stormi_Knee_Boots_Chocolate_Croc_Leather_1.jpg","link":"shopify:\/\/collections\/boots"}},"16621208041c3cfd94-1":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/WEB_IG_Julio_Loafers_Black_Leather_1_658bc110-bd21-4d6a-9687-c01c00d8e0cc.jpg","link":"shopify:\/\/collections\/lace-up-loafers"}},"16621208041c3cfd94-2":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/WEB_IG_Matisse_Crossbody_Bag_Bitter_Choc_Suede_1.jpg","link":"shopify:\/\/collections\/all-bags"}},"16621208041c3cfd94-0":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/WEB_IG_Lilo_Sneakers_Leopard_Hair_1.jpg","link":"shopify:\/\/collections\/flats"}}},"block_order":["16621208041c3cfd94-3","16621208041c3cfd94-1","16621208041c3cfd94-2","16621208041c3cfd94-0"],"settings":{"gallery_type":"classic","images_per_row":4,"crop_images":false,"enable_lightbox":false,"overlay_color":"#ffffff","link_color":"#ffffff","width":"wide","show_gutter":true,"padding_top":11,"padding_bottom":16,"animation":"none","css_class":"","custom_css":""}},"1661523613f00a644e":{"type":"index__featured-collection","custom_css":[".product_form--radio variant-selection options-selection {display: none;}",".product_form-collection .purchase-details .purchase-details__spb--false {margin-top: 0; display: none;}"],"settings":{"title":"WINTER '25","collection":"winter-25","products_per":4,"products_limit":8,"align_height":false,"collection_height":360,"button_label":"SHOP NOW","button_style":"button--primary","collection_style":"slider","width":"wide","show_gutter":true,"padding_top":20,"padding_bottom":20,"animation":"fadeIn","mobile_products_per_row":"2","css_class":"","custom_css":".top-heading {\n    margin-bottom: 5px;\nmargin-top: 20px;\n}\n\n.thumbnail-sticker.sale-sticker\n{\ndisplay: none;\n}\n\n.title {\n  font-size: 25px;\n}"}},"01105ed2-7af5-4049-bc2f-0a51092c3bc4":{"type":"index__image-with-text-overlay","disabled":true,"settings":{"link":"shopify:\/\/collections\/new","pretext":"","title":"","subtitle":"","pretext_color":"#000000","heading_color":"#000000","subheading_color":"#000000","text_alignment":"center","text_horizontal_position":"center","text_vertical_position":"middle","text_width":40,"background_color":"#ffffff","background_opacity":77,"border_color":"#ffffff","border_width":0,"button_1":"","button_1_link":"","button_1_style":"button--secondary","button_2":"","button_2_link":"","button_2_style":"button--secondary","width":"wide","padding_top":0,"padding_bottom":18,"padding_left":0,"padding_right":0,"animation":"none","mobile_text_below_image":true,"pretext_color_mobile":"rgba(0,0,0,0)","heading_color_mobile":"rgba(0,0,0,0)","subheading_color_mobile":"rgba(0,0,0,0)","css_class":"","custom_css":""}},"3b24b785-c828-469b-a1f2-5bfe20fb5a3d":{"type":"index__image-with-text-overlay","settings":{"image":"shopify:\/\/shop_images\/Web_Banner_W25_header_banner_copy.jpg","mobile_image":"shopify:\/\/shop_images\/Web_Banner_W25_mobile_banner_copy.jpg","link":"shopify:\/\/collections\/boots","pretext":"","title":"","subtitle":"","pretext_color":"#000000","heading_color":"#000000","subheading_color":"#000000","text_alignment":"center","text_horizontal_position":"center","text_vertical_position":"middle","text_width":40,"background_color":"#ffffff","background_opacity":77,"border_color":"#ffffff","border_width":0,"button_1":"","button_1_link":"","button_1_style":"button--secondary","button_2":"","button_2_link":"","button_2_style":"button--secondary","width":"wide","padding_top":0,"padding_bottom":0,"padding_left":0,"padding_right":0,"animation":"none","mobile_text_below_image":true,"pretext_color_mobile":"rgba(0,0,0,0)","heading_color_mobile":"rgba(0,0,0,0)","subheading_color_mobile":"rgba(0,0,0,0)","css_class":"","custom_css":""}},"index_featured_collection_jp4EKD":{"type":"index__featured-collection","custom_css":[".product_form--radio variant-selection options-selection {display: none;}",".product_form-collection .purchase-details .purchase-details__spb--false {margin-top: 0; display: none;}",".custom-sticker-2 {text-align: left; padding: 1px;}",".custom-sticker-1 {text-align: left; padding: 1px;}"],"settings":{"title":"SHOP BOOTS","collection":"boots","products_per":4,"products_limit":8,"align_height":false,"collection_height":360,"button_label":"SHOP NOW","button_style":"button--primary","collection_style":"slider","width":"wide","show_gutter":true,"padding_top":20,"padding_bottom":20,"animation":"fadeIn","mobile_products_per_row":"2","css_class":"","custom_css":".top-heading {\n    margin-bottom: 5px;\nmargin-top: 20px;\n}\n\n.thumbnail-sticker.sale-sticker\n{\ndisplay: none;\n}\n\n.title {\n  font-size: 25px;\n}"}},"index_featured_collection_fpnNUA":{"type":"index__featured-collection","disabled":true,"settings":{"title":"NEW ARRIVALS","collection":"new","products_per":4,"products_limit":8,"align_height":false,"collection_height":360,"button_label":"SHOP NOW","button_style":"button--primary","collection_style":"slider","width":"wide","show_gutter":true,"padding_top":20,"padding_bottom":20,"animation":"fadeIn","mobile_products_per_row":"2","css_class":"","custom_css":".top-heading {\n    margin-bottom: 5px;\nmargin-top: 20px;\n}\n\n.thumbnail-sticker.sale-sticker\n{\ndisplay: none;\n}\n\n.title {\n  font-size: 25px;\n}"}},"28599c50-5b0f-4ba3-9dec-cd0086027d07":{"type":"index__rich-text","disabled":true,"settings":{"title":"Spring is near and with that is New Beginnings.","heading_font":"open_sans_n4","heading_alignment":"center","heading_size":23,"text":"<p>Our latest collection pays homage to the Australian fashion space. Embrace the essence of refined elegance in each carefully<br\/>crafted piece. Explore elevated silhouettes that have given new life into timeless classics.<\/p>","text_font":"open_sans_n4","text_alignment":"center","text_size":9,"columns":1,"button_label":"","button_link":"","button_style":"button--primary","button_alignment":"center","heading_color":"rgba(0,0,0,0)","text_color":"rgba(0,0,0,0)","background":"#ffffff","gradient":"#ffffff","gradient_rotation":180,"width":"wide","padding_top":20,"padding_bottom":0,"padding_left":0,"padding_right":0,"animation":"none","css_class":"","custom_css":""}},"two_third_banner_7yXXWr":{"type":"two-third-banner","disabled":true,"settings":{"image":"shopify:\/\/shop_images\/WEB_IG_Finn_Flat_Sandals_Sand_Leather_1_copy.jpg","mobile_image":"shopify:\/\/shop_images\/WEB_IG_Finn_Flat_Sandals_Sand_Leather_1_copy.jpg","title":"SUMMER '25","heading_size":"small","text":"<p>On the breathtaking shores of Vanuatu, we invite you to explore Summer ’25 in effortless style, embracing the warmth of the season. Inspired by sunlit skies and natural landscapes, our latest collection blends timeless style with modern details. <\/p>","button_label":"DISCOVER THE COLLECTION","link":"shopify:\/\/pages\/autumn-25-gallery","button_style":"button--link-style","background":"rgba(0,0,0,0)","text_color":"rgba(0,0,0,0)","padding_top":20,"padding_bottom":80,"mobile_padding_top":0,"mobile_padding_bottom":30,"animation":"none","css_class":"","custom_css":".content-text \n{\n  font-size: 15px;\n}\n\n.image-with-text__heading.is-regular {\n  font-size: 25px;\n}"}},"1661524294b06f151f":{"type":"index__image-with-text","blocks":{"1661524294161107df-2":{"type":"text","settings":{"title":"WINTER '25","heading_size":"small","text":"<p>For Winter '25, Jo Mercer presents Endure - a collection that embodies strength, elegance, and enduring style. Designed to transcend time and trends, Endure celebrates craftsmanship and modern sophistication.<\/p><p> <\/p>","alignment":"left","vertical_position":"center","button_label":"BEHIND THE COLLECTION","link":"shopify:\/\/pages\/winter-25-gallery","button_style":"button--primary","background":"rgba(0,0,0,0)","text_color":"rgba(0,0,0,0)"}},"1661524294161107df-0":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/WEB_IG_Nola_Mid_Ankle_Boots_Cacao_Leather_2.jpg","image_link":"shopify:\/\/collections\/autumn-25-ascend"}}},"block_order":["1661524294161107df-2","1661524294161107df-0"],"settings":{"width":"wide","show_gutter":true,"padding_top":50,"padding_bottom":50,"animation":"fadeIn","mobile_padding_top":0,"mobile_padding_bottom":71,"css_class":"","custom_css":".content-text \n{\n  font-size: 15px;\n}\n\n.image-with-text__heading.is-regular {\n  font-size: 25px;\n}"}},"166247423445973b96":{"type":"looks-we-love","blocks":{"97947cb9-7896-4ba5-a2b9-73233e9940f0":{"type":"collection","settings":{"collection":"the-event-edit"}},"fb034194-7904-45f5-a013-26255cd76845":{"type":"image","disabled":true,"settings":{"image":"shopify:\/\/shop_images\/Social_Libby_High_Heels_Black_Leather_Glo_Bag_2.jpg","image_crop":"center","image_link":""}}},"block_order":["97947cb9-7896-4ba5-a2b9-73233e9940f0","fb034194-7904-45f5-a013-26255cd76845"],"disabled":true,"settings":{"title":"THE EVENT WEAR EDIT","width":"wide","show_gutter":true,"padding_top":20,"padding_bottom":20,"animation":"none","css_class":"","custom_css":""}},"index_slideshow_classic_i8hjcW":{"type":"index__slideshow-classic","blocks":{"image_GiDkPz":{"type":"image","disabled":true,"settings":{"image":"shopify:\/\/shop_images\/New_season_colours.jpg","mobile_image":"shopify:\/\/shop_images\/Web_Banners-_SU25_Secondary_mobile_a49ab27c-63e5-4a01-a692-c97348cfadf2.jpg","link":"shopify:\/\/collections\/new","pretext":"","title":"","subtitle":"","pretext_color":"#000000","heading_color":"#000000","subheading_color":"#000000","text_alignment":"center","text_horizontal_position":"center","text_width":40,"background_color":"#ffffff","background_opacity":77,"border_color":"#ffffff","border_width":0,"button_1":"","button_1_link":"","button_1_style":"button--secondary","button_2":"","button_2_link":"","button_2_style":"button--secondary","pretext_color_mobile":"rgba(0,0,0,0)","heading_color_mobile":"rgba(0,0,0,0)","subheading_color_mobile":"rgba(0,0,0,0)"}}},"block_order":["image_GiDkPz"],"disabled":true,"settings":{"image_slideshow_speed":8,"image_transition":"slide","show_arrows":true,"show_nav_buttons":true,"width":"wide","padding_top":0,"padding_bottom":0,"animation":"none","mobile_text_below_image":true,"css_class":"","custom_css":""}},"d2b919ee-0af4-4b18-ab7f-b56b379710a3":{"type":"index__featured-collection","disabled":true,"custom_css":[".product_form--radio variant-selection options-selection {display: none;}",".product_form-collection .purchase-details .purchase-details__spb--false {margin-top: 0; display: none;}"],"settings":{"title":"SHOP SANDALS","collection":"sandals","products_per":4,"products_limit":8,"align_height":false,"collection_height":360,"button_label":"SHOP NOW","button_style":"button--primary","collection_style":"slider","width":"wide","show_gutter":true,"padding_top":44,"padding_bottom":20,"animation":"fadeIn","mobile_products_per_row":"2","css_class":"","custom_css":".top-heading {\n    margin-bottom: 5px;\nmargin-top: 20px;\n}\n\n.thumbnail-sticker.sale-sticker\n{\ndisplay: none;\n}\n\n.title {\n  font-size: 25px;\n}"}},"index_featured_collection_38hiYR":{"type":"index__featured-collection","disabled":true,"custom_css":[".product_form--radio variant-selection options-selection {display: none;}",".product_form-collection .purchase-details .purchase-details__spb--false {margin-top: 0; display: none;}"],"settings":{"title":"SHOP NEW","collection":"new","products_per":4,"products_limit":8,"align_height":false,"collection_height":360,"button_label":"SHOP NOW","button_style":"button--primary","collection_style":"slider","width":"wide","show_gutter":true,"padding_top":44,"padding_bottom":20,"animation":"fadeIn","mobile_products_per_row":"2","css_class":"","custom_css":".top-heading {\n    margin-bottom: 5px;\nmargin-top: 20px;\n}\n\n.thumbnail-sticker.sale-sticker\n{\ndisplay: none;\n}\n\n.title {\n  font-size: 25px;\n}"}},"166255188950b865ee":{"type":"two-third-banner","settings":{"image":"shopify:\/\/shop_images\/Store_Banner_Desktop_4afb92a0-fabc-496d-b6ca-7d84b5427740.jpg","mobile_image":"shopify:\/\/shop_images\/Store_Banner_Mobile_3398f754-d354-41f2-a1a9-5be648cc1783.jpg","title":"VISIT US IN-STORE","heading_size":"regular","text":"<p>Discover Jo Mercer's aesthetic that places emphasis on soft curves, marble finishes and a neutral palette to create a warm & welcoming shopping experience. <\/p>","button_label":"STORE LOCATOR","link":"shopify:\/\/pages\/store-locator","button_style":"button--secondary","background":"rgba(0,0,0,0)","text_color":"rgba(0,0,0,0)","padding_top":80,"padding_bottom":20,"mobile_padding_top":0,"mobile_padding_bottom":0,"animation":"none","css_class":"","custom_css":".content-text \n{\n  font-size: 15px;\n}\n\n.image-with-text__heading.is-regular {\n  font-size: 25px;\n}"}},"166556380043c8a829":{"type":"apps","blocks":{"80cdb855-499e-43c2-83e3-cc97ffd31620":{"type":"shopify:\/\/apps\/covet-instagram-feed-reviews\/blocks\/app-block-standard\/577480e8-b5be-4890-968c-06ccfb458c74","disabled":true,"settings":{"gallery_embed_id":0,"show_text":false,"title_text":"Covet.pics gallery","title_color":"#000000","title_size":22,"subtitle_text":"","subtitle_color":"#000000","subtitle_size":14,"text_alignment":"center","margin":20,"custom_html_above":"","custom_html_below":""}}},"block_order":["80cdb855-499e-43c2-83e3-cc97ffd31620"],"disabled":true,"settings":{"width":"wide","padding_top":20,"padding_bottom":20,"css_class":"","custom_css":""}},"d1a79bf3-c2e9-4a64-a0fd-2117f449b4e4":{"type":"index__modal","disabled":true,"custom_css":[".plus-modal-content {background-color: #fefefe; margin: 15% auto; padding: 20px; border: 1px solid #888; width: 40%;}",".plus-perks h3 {min-height: 50px; margin: 0 auto;}"],"settings":{"plus_location_greeting":"Welcome","plus_location":"","plus_modal_heading_1":"Free Standard Shipping","plus_modal_text_1":"Free Shipping on orders over $140 or click and collect within 2 hours after ordering in-store","plus_modal_heading_2":"Buy Now, Pay Later with Afterpay","plus_modal_text_2":"Repay in fortnightly instalments","plus_modal_heading_3":"Customer Support","plus_modal_text_3":"Our customer care team is here to support you via email or live chat.","heading_size":25,"sub_heading_size":18}},"17470158660302c61f":{"type":"apps","blocks":{"instafeed_app_block_K9yPUJ":{"type":"shopify:\/\/apps\/instafeed\/blocks\/app-block\/5c329ba9-407e-40ec-a145-431c886f5df9","settings":{"heading_font":"helvetica_n4","heading_size":20,"heading_alignment":"center","feed_width":100,"section_top_padding":0,"section_bottom_padding":0,"html_area":""}}},"block_order":["instafeed_app_block_K9yPUJ"],"settings":{"width":"standard","padding_top":20,"padding_bottom":20,"css_class":"","custom_css":""}},"171228509117f7b679":{"type":"apps","settings":{"width":"wide","padding_top":20,"padding_bottom":20,"css_class":"","custom_css":""}},"index_html_a49ypG":{"type":"index__html","custom_css":[],"settings":{"html_content":"<body>\n\n\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Dropdown Example<\/title>\n    <link rel=\"stylesheet\" href=\"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/font-awesome\/6.0.0-beta3\/css\/all.min.css\">\n    <style>\n        body {\n            font-family: Arial, sans-serif;\n        }\n        .dropdown {\n            width: 80%;\n            margin: 0 auto;\n            text-align: center;\n        }\n        details {\n            border: 1px solid rgba(255, 255, 255, 0.5); \/* Slight border for visibility *\/\n            border-radius: 4px;\n            background-color: transparent;\n            padding: 10px;\n            cursor: pointer;\n            color: #333; \/* Text color for better visibility on transparent background *\/\n            position: relative;\n        }\n        summary {\n            display: flex;\n            align-items: center;\n            justify-content: center;\n            background-color: transparent;\n            outline: none;\n        }\n        .dropdown__arrow {\n            margin-right: 10px;\n        }\n        .dropdown__arrow-item {\n            font-size: 24px;\n        }\n        details[open] summary {\n            border-bottom: 1px solid rgba(255, 255, 255, 0.5); \/* Border between title and content *\/\n        }\n        .dropdown__content {\n            background-color: transparent;\n            border: none;\n            padding: 10px;\n            color: #333; \/* Text color for better visibility on transparent background *\/\n        }\n        .dropdown__content p {\n            margin: 0;\n            text-align: center;\n        }\n        .dropdown__content a {\n            color: #007bff;\n            text-decoration: underline;\n        }\n    <\/style>\n\n\n    <div class=\"dropdown\">\n        <details>\n            <summary>\n                <div class=\"dropdown__arrow\">\n                    <span class=\"dropdown__arrow-item\"><i class=\"fa fa-chevron-down\"><\/i><\/span>\n                <\/div>\n                <span class=\"dropdown__title-text\">Since 1998, Jo Mercer has been a leader in premium leather shoes for women, fashion-forward footwear and a champion of Australian design through a deep respect for beauty, form and materiality.<\/span>\n            <\/summary>\n            <div class=\"dropdown__content\">\n                <p>Walk into a world where fashion meets function and style is always matched by substance.<\/p>\n                <p>Inspiring confidence through quality, design and craftsmanship is at the heart of what we do. Since inception, our timeless women’s leather shoes, premium footwear and fashion-forward accessories for women have epitomised effortless sophistication and modern luxury for every wearer.<\/p>\n                <p>At Jo Mercer, we believe that what you wear has the power to enhance your confidence, comfort and overall quality of life. The right footwear and women’s accessories can help you put your best foot forward, in every way. Level up your look with premium high heel shoes, trend-setting women’s slides, seasonal ladies boots, comfortable but ever-classic leather loafers—and many more.<\/p>\n                <p>Whether you’re being treated to an in-store experience at one of our boutique women’s shoe shops or browsing our women’s shoes online, Jo Mercer’s curated collection of footwear and accessories will ensure you elevate every step.<\/p>\n                <p>Can’t find a store near you? Shop premium <a href=\"https:\/\/www.jomercer.com.au\/en-as\/collections\/accessories\" title=\"https:\/\/www.jomercer.com.au\/en-as\/collections\/accessories\">women’s accessories<\/a> and <strong>women’s shoes online<\/strong> and we’ll deliver them straight to your door. International shipping available.<\/p>\n            <\/div>\n        <\/details>\n    <\/div>\n\n<\/body>","width":"standard","padding_top":20,"padding_bottom":20,"padding_left":0,"padding_right":0,"animation":"none","css_class":"","custom_css":".accordion__item {\n    overflow: hidden;\n    margin-bottom: 10px;\n}\n\n.accordion__title {\n    display: flex;\n    align-items: center;\n    cursor: pointer;\n    padding: 10px;\n    transition: opacity 0.3s;\n}\n\n.accordion__title:hover {\n    opacity: 0.8;\n}\n\n.accordion__arrow {\n    cursor: pointer;\n    margin-right: 10px;\n}\n\n.accordion__arrow-item {\n    margin-right: 10px;\n}\n\n.accordion__content {\n    display: none;\n    padding: 10px;\n}\n\n.accordion__content p {\n    margin: 0;\n}"}}},"order":["custom_liquid_Gwxg6a","cara_home_video_ePMEtP","fec414bd-b982-4481-9432-0e52f43e346c","424abe0b-b747-40b7-b3de-dc8cdd97f9ea","1662120804727cc161","1661523613f00a644e","01105ed2-7af5-4049-bc2f-0a51092c3bc4","3b24b785-c828-469b-a1f2-5bfe20fb5a3d","index_featured_collection_jp4EKD","index_featured_collection_fpnNUA","28599c50-5b0f-4ba3-9dec-cd0086027d07","two_third_banner_7yXXWr","1661524294b06f151f","166247423445973b96","index_slideshow_classic_i8hjcW","d2b919ee-0af4-4b18-ab7f-b56b379710a3","index_featured_collection_38hiYR","166255188950b865ee","166556380043c8a829","d1a79bf3-c2e9-4a64-a0fd-2117f449b4e4","17470158660302c61f","171228509117f7b679","index_html_a49ypG"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "custom_liquid_Gwxg6a": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<div class=\"essential-announcement-block\" id=\"9c11d126-98f9-4a2c-bdbf-93d325114616\"></div>"
+      }
+    },
+    "cara_home_video_ePMEtP": {
+      "type": "cara_home_video",
+      "name": "Cara Video Homepage",
+      "settings": {
+        "video_link": "shopify://collections/winter-25",
+        "desktop_video": "https://cdn.shopify.com/videos/c/o/v/3b279f42ce3e4dd0afd98b83b633c472.mp4",
+        "mobile_video": "https://cdn.shopify.com/videos/c/o/v/3b8ad3f408844a97a982a9655fcd75bf.mp4",
+        "autoplay": true,
+        "loop": true,
+        "mute": true
+      }
+    },
+    "fec414bd-b982-4481-9432-0e52f43e346c": {
+      "type": "index__slideshow-classic",
+      "blocks": {
+        "image_zJXAFV": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Web_Banners-LTO_149.95_desktop_header.jpg",
+            "mobile_image": "shopify://shop_images/Web_Banners-LTO_149.95_Mobile_mobile.jpg",
+            "link": "shopify://collections/limited-time-only",
+            "pretext": "",
+            "title": "",
+            "subtitle": "",
+            "pretext_color": "rgba(0,0,0,0)",
+            "heading_color": "rgba(0,0,0,0)",
+            "subheading_color": "rgba(0,0,0,0)",
+            "text_alignment": "center",
+            "text_horizontal_position": "center",
+            "text_width": 40,
+            "background_color": "#ffffff",
+            "background_opacity": 0,
+            "border_color": "#ffffff",
+            "border_width": 0,
+            "button_1": "",
+            "button_1_link": "",
+            "button_1_style": "button--secondary",
+            "button_2": "",
+            "button_2_link": "",
+            "button_2_style": "button--secondary",
+            "mobile_pretext": "",
+            "mobile_title": "",
+            "mobile_subtitle": "",
+            "pretext_color_mobile": "rgba(0,0,0,0)",
+            "heading_color_mobile": "rgba(0,0,0,0)",
+            "subheading_color_mobile": "rgba(0,0,0,0)",
+            "mobile_text_alignment": "none"
+          }
+        },
+        "image_ReCzNa": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Web_Banners-70_Off_2PR_desktop_header_981d5c26-e46b-4ff9-b6b8-dc0b73545644.jpg",
+            "mobile_image": "shopify://shop_images/Web_Banners-70_Off_2PR_mobile_b1b77935-f087-4f0b-baa2-c6f21988cbe7.jpg",
+            "link": "shopify://collections/winter-24",
+            "pretext": "",
+            "title": "",
+            "subtitle": "",
+            "pretext_color": "rgba(0,0,0,0)",
+            "heading_color": "rgba(0,0,0,0)",
+            "subheading_color": "rgba(0,0,0,0)",
+            "text_alignment": "center",
+            "text_horizontal_position": "center",
+            "text_width": 40,
+            "background_color": "#ffffff",
+            "background_opacity": 0,
+            "border_color": "#ffffff",
+            "border_width": 0,
+            "button_1": "",
+            "button_1_link": "",
+            "button_1_style": "button--secondary",
+            "button_2": "",
+            "button_2_link": "",
+            "button_2_style": "button--secondary",
+            "mobile_pretext": "",
+            "mobile_title": "",
+            "mobile_subtitle": "",
+            "pretext_color_mobile": "rgba(0,0,0,0)",
+            "heading_color_mobile": "rgba(0,0,0,0)",
+            "subheading_color_mobile": "rgba(0,0,0,0)",
+            "mobile_text_alignment": "none"
+          }
+        }
+      },
+      "block_order": [
+        "image_zJXAFV",
+        "image_ReCzNa"
+      ],
+      "disabled": true,
+      "settings": {
+        "image_slideshow_speed": 3,
+        "image_transition": "slide",
+        "show_arrows": false,
+        "show_nav_buttons": false,
+        "width": "wide",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "animation": "none",
+        "mobile_text_below_image": true,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "424abe0b-b747-40b7-b3de-dc8cdd97f9ea": {
+      "type": "index__image-with-text-overlay",
+      "settings": {
+        "image": "shopify://shop_images/Web_Banner_New_LTO_Ends_desktop_thin.jpg",
+        "mobile_image": "shopify://shop_images/Web_Banner_New_LTO_Ends_mobile_thin.jpg",
+        "link": "shopify://collections/new",
+        "pretext": "",
+        "title": "",
+        "subtitle": "",
+        "pretext_color": "#000000",
+        "heading_color": "#000000",
+        "subheading_color": "#000000",
+        "text_alignment": "center",
+        "text_horizontal_position": "center",
+        "text_vertical_position": "middle",
+        "text_width": 40,
+        "background_color": "#ffffff",
+        "background_opacity": 77,
+        "border_color": "#ffffff",
+        "border_width": 0,
+        "button_1": "",
+        "button_1_link": "",
+        "button_1_style": "button--secondary",
+        "button_2": "",
+        "button_2_link": "",
+        "button_2_style": "button--secondary",
+        "width": "wide",
+        "padding_top": 9,
+        "padding_bottom": 0,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "mobile_text_below_image": true,
+        "mobile_preheading": "",
+        "mobile_heading": "",
+        "mobile_subheading": "",
+        "pretext_color_mobile": "rgba(0,0,0,0)",
+        "heading_color_mobile": "rgba(0,0,0,0)",
+        "subheading_color_mobile": "rgba(0,0,0,0)",
+        "text_alignment_mobile": "same_as_desktop",
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1662120804727cc161": {
+      "type": "index__gallery",
+      "blocks": {
+        "16621208041c3cfd94-3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/WEB_IG_Stormi_Knee_Boots_Chocolate_Croc_Leather_1.jpg",
+            "title": "BOOTS",
+            "link": "shopify://collections/boots"
+          }
+        },
+        "16621208041c3cfd94-1": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/WEB_IG_Julio_Loafers_Black_Leather_1_658bc110-bd21-4d6a-9687-c01c00d8e0cc.jpg",
+            "title": "LOAFERS",
+            "link": "shopify://collections/lace-up-loafers"
+          }
+        },
+        "16621208041c3cfd94-2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/WEB_IG_Matisse_Crossbody_Bag_Bitter_Choc_Suede_1.jpg",
+            "title": "BAGS",
+            "link": "shopify://collections/all-bags"
+          }
+        },
+        "16621208041c3cfd94-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/WEB_IG_Lilo_Sneakers_Leopard_Hair_1.jpg",
+            "title": "FLATS",
+            "link": "shopify://collections/flats"
+          }
+        }
+      },
+      "block_order": [
+        "16621208041c3cfd94-3",
+        "16621208041c3cfd94-1",
+        "16621208041c3cfd94-2",
+        "16621208041c3cfd94-0"
+      ],
+      "settings": {
+        "gallery_type": "classic",
+        "crop_images": false,
+        "images_per_row": 4,
+        "images_per_row_mobile": 1,
+        "enable_lightbox": false,
+        "overlay_color": "#ffffff",
+        "link_color": "#ffffff",
+        "width": "wide",
+        "disable_horizontal_gap": false,
+        "show_gutter": true,
+        "gutter_size": "standard",
+        "padding_top": 11,
+        "padding_bottom": 16,
+        "mobile_padding_top": 20,
+        "mobile_padding_bottom": 20,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1661523613f00a644e": {
+      "type": "index__featured-collection",
+      "custom_css": [
+        ".product_form--radio variant-selection options-selection {display: none;}",
+        ".product_form-collection .purchase-details .purchase-details__spb--false {margin-top: 0; display: none;}"
+      ],
+      "settings": {
+        "title": "WINTER '25",
+        "collection": "winter-25",
+        "products_per": 4,
+        "products_limit": 8,
+        "align_height": false,
+        "collection_height": 360,
+        "button_label": "SHOP NOW",
+        "button_style": "button--primary",
+        "collection_style": "slider",
+        "width": "wide",
+        "show_gutter": true,
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "animation": "fadeIn",
+        "collection_layout_mobile": "grid",
+        "mobile_products_per_row": "2",
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20,
+        "css_class": "",
+        "custom_css": ".top-heading {\n    margin-bottom: 5px;\nmargin-top: 20px;\n}\n\n.thumbnail-sticker.sale-sticker\n{\ndisplay: none;\n}\n\n.title {\n  font-size: 25px;\n}"
+      }
+    },
+    "01105ed2-7af5-4049-bc2f-0a51092c3bc4": {
+      "type": "index__image-with-text-overlay",
+      "disabled": true,
+      "settings": {
+        "link": "shopify://collections/new",
+        "pretext": "",
+        "title": "",
+        "subtitle": "",
+        "pretext_color": "#000000",
+        "heading_color": "#000000",
+        "subheading_color": "#000000",
+        "text_alignment": "center",
+        "text_horizontal_position": "center",
+        "text_vertical_position": "middle",
+        "text_width": 40,
+        "background_color": "#ffffff",
+        "background_opacity": 77,
+        "border_color": "#ffffff",
+        "border_width": 0,
+        "button_1": "",
+        "button_1_link": "",
+        "button_1_style": "button--secondary",
+        "button_2": "",
+        "button_2_link": "",
+        "button_2_style": "button--secondary",
+        "width": "wide",
+        "padding_top": 0,
+        "padding_bottom": 18,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "mobile_text_below_image": true,
+        "mobile_preheading": "",
+        "mobile_heading": "",
+        "mobile_subheading": "",
+        "pretext_color_mobile": "rgba(0,0,0,0)",
+        "heading_color_mobile": "rgba(0,0,0,0)",
+        "subheading_color_mobile": "rgba(0,0,0,0)",
+        "text_alignment_mobile": "same_as_desktop",
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "3b24b785-c828-469b-a1f2-5bfe20fb5a3d": {
+      "type": "index__image-with-text-overlay",
+      "settings": {
+        "image": "shopify://shop_images/Web_Banner_W25_header_banner_copy.jpg",
+        "mobile_image": "shopify://shop_images/Web_Banner_W25_mobile_banner_copy.jpg",
+        "link": "shopify://collections/boots",
+        "pretext": "",
+        "title": "",
+        "subtitle": "",
+        "pretext_color": "#000000",
+        "heading_color": "#000000",
+        "subheading_color": "#000000",
+        "text_alignment": "center",
+        "text_horizontal_position": "center",
+        "text_vertical_position": "middle",
+        "text_width": 40,
+        "background_color": "#ffffff",
+        "background_opacity": 77,
+        "border_color": "#ffffff",
+        "border_width": 0,
+        "button_1": "",
+        "button_1_link": "",
+        "button_1_style": "button--secondary",
+        "button_2": "",
+        "button_2_link": "",
+        "button_2_style": "button--secondary",
+        "width": "wide",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "mobile_text_below_image": true,
+        "mobile_preheading": "",
+        "mobile_heading": "",
+        "mobile_subheading": "",
+        "pretext_color_mobile": "rgba(0,0,0,0)",
+        "heading_color_mobile": "rgba(0,0,0,0)",
+        "subheading_color_mobile": "rgba(0,0,0,0)",
+        "text_alignment_mobile": "same_as_desktop",
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "index_featured_collection_jp4EKD": {
+      "type": "index__featured-collection",
+      "custom_css": [
+        ".product_form--radio variant-selection options-selection {display: none;}",
+        ".product_form-collection .purchase-details .purchase-details__spb--false {margin-top: 0; display: none;}",
+        ".custom-sticker-2 {text-align: left; padding: 1px;}",
+        ".custom-sticker-1 {text-align: left; padding: 1px;}"
+      ],
+      "settings": {
+        "title": "SHOP BOOTS",
+        "collection": "boots",
+        "products_per": 4,
+        "products_limit": 8,
+        "align_height": false,
+        "collection_height": 360,
+        "button_label": "SHOP NOW",
+        "button_style": "button--primary",
+        "collection_style": "slider",
+        "width": "wide",
+        "show_gutter": true,
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "animation": "fadeIn",
+        "collection_layout_mobile": "grid",
+        "mobile_products_per_row": "2",
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20,
+        "css_class": "",
+        "custom_css": ".top-heading {\n    margin-bottom: 5px;\nmargin-top: 20px;\n}\n\n.thumbnail-sticker.sale-sticker\n{\ndisplay: none;\n}\n\n.title {\n  font-size: 25px;\n}"
+      }
+    },
+    "index_featured_collection_fpnNUA": {
+      "type": "index__featured-collection",
+      "disabled": true,
+      "settings": {
+        "title": "NEW ARRIVALS",
+        "collection": "new",
+        "products_per": 4,
+        "products_limit": 8,
+        "align_height": false,
+        "collection_height": 360,
+        "button_label": "SHOP NOW",
+        "button_style": "button--primary",
+        "collection_style": "slider",
+        "width": "wide",
+        "show_gutter": true,
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "animation": "fadeIn",
+        "collection_layout_mobile": "grid",
+        "mobile_products_per_row": "2",
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20,
+        "css_class": "",
+        "custom_css": ".top-heading {\n    margin-bottom: 5px;\nmargin-top: 20px;\n}\n\n.thumbnail-sticker.sale-sticker\n{\ndisplay: none;\n}\n\n.title {\n  font-size: 25px;\n}"
+      }
+    },
+    "28599c50-5b0f-4ba3-9dec-cd0086027d07": {
+      "type": "index__rich-text",
+      "disabled": true,
+      "settings": {
+        "title": "Spring is near and with that is New Beginnings.",
+        "heading_font": "open_sans_n4",
+        "heading_alignment": "center",
+        "heading_size": 23,
+        "text": "<p>Our latest collection pays homage to the Australian fashion space. Embrace the essence of refined elegance in each carefully<br/>crafted piece. Explore elevated silhouettes that have given new life into timeless classics.</p>",
+        "text_font": "open_sans_n4",
+        "text_alignment": "center",
+        "text_size": 9,
+        "columns": 1,
+        "button_label": "",
+        "button_link": "",
+        "button_style": "button--primary",
+        "button_alignment": "center",
+        "heading_color": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "background": "#ffffff",
+        "gradient": "#ffffff",
+        "gradient_rotation": 180,
+        "width": "wide",
+        "padding_top": 20,
+        "padding_bottom": 0,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "mobile_title": "",
+        "mobile_text": "",
+        "mobile_alignment": "none",
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 0,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "two_third_banner_7yXXWr": {
+      "type": "two-third-banner",
+      "disabled": true,
+      "settings": {
+        "image": "shopify://shop_images/WEB_IG_Finn_Flat_Sandals_Sand_Leather_1_copy.jpg",
+        "mobile_image": "shopify://shop_images/WEB_IG_Finn_Flat_Sandals_Sand_Leather_1_copy.jpg",
+        "title": "SUMMER '25",
+        "heading_size": "small",
+        "text": "<p>On the breathtaking shores of Vanuatu, we invite you to explore Summer ’25 in effortless style, embracing the warmth of the season. Inspired by sunlit skies and natural landscapes, our latest collection blends timeless style with modern details. </p>",
+        "button_label": "DISCOVER THE COLLECTION",
+        "link": "shopify://pages/autumn-25-gallery",
+        "button_style": "button--link-style",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "padding_top": 20,
+        "padding_bottom": 80,
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": 30,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ".content-text \n{\n  font-size: 15px;\n}\n\n.image-with-text__heading.is-regular {\n  font-size: 25px;\n}"
+      }
+    },
+    "1661524294b06f151f": {
+      "type": "index__image-with-text",
+      "blocks": {
+        "1661524294161107df-2": {
+          "type": "text",
+          "settings": {
+            "title": "WINTER '25",
+            "heading_size": "small",
+            "text": "<p>For Winter '25, Jo Mercer presents Endure - a collection that embodies strength, elegance, and enduring style. Designed to transcend time and trends, Endure celebrates craftsmanship and modern sophistication.</p><p> </p>",
+            "alignment": "left",
+            "vertical_position": "center",
+            "button_label": "BEHIND THE COLLECTION",
+            "link": "shopify://pages/winter-25-gallery",
+            "button_style": "button--primary",
+            "background": "rgba(0,0,0,0)",
+            "text_color": "rgba(0,0,0,0)",
+            "mobile_title": "",
+            "mobile_heading_size": "same_as_desktop",
+            "mobile_text": "",
+            "mobile_alignment": "same_as_desktop"
+          }
+        },
+        "1661524294161107df-0": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/WEB_IG_Nola_Mid_Ankle_Boots_Cacao_Leather_2.jpg",
+            "image_link": "shopify://collections/autumn-25-ascend"
+          }
+        }
+      },
+      "block_order": [
+        "1661524294161107df-2",
+        "1661524294161107df-0"
+      ],
+      "settings": {
+        "width": "wide",
+        "show_gutter": true,
+        "padding_top": 50,
+        "padding_bottom": 50,
+        "animation": "fadeIn",
+        "mobile_text_position": "same_as_desktop",
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": 71,
+        "css_class": "",
+        "custom_css": ".content-text \n{\n  font-size: 15px;\n}\n\n.image-with-text__heading.is-regular {\n  font-size: 25px;\n}"
+      }
+    },
+    "166247423445973b96": {
+      "type": "looks-we-love",
+      "blocks": {
+        "97947cb9-7896-4ba5-a2b9-73233e9940f0": {
+          "type": "collection",
+          "settings": {
+            "collection": "the-event-edit"
+          }
+        },
+        "fb034194-7904-45f5-a013-26255cd76845": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Social_Libby_High_Heels_Black_Leather_Glo_Bag_2.jpg",
+            "image_crop": "center",
+            "image_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "97947cb9-7896-4ba5-a2b9-73233e9940f0",
+        "fb034194-7904-45f5-a013-26255cd76845"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "THE EVENT WEAR EDIT",
+        "width": "wide",
+        "show_gutter": true,
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "index_slideshow_classic_i8hjcW": {
+      "type": "index__slideshow-classic",
+      "blocks": {
+        "image_GiDkPz": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/New_season_colours.jpg",
+            "mobile_image": "shopify://shop_images/Web_Banners-_SU25_Secondary_mobile_a49ab27c-63e5-4a01-a692-c97348cfadf2.jpg",
+            "link": "shopify://collections/new",
+            "pretext": "",
+            "title": "",
+            "subtitle": "",
+            "pretext_color": "#000000",
+            "heading_color": "#000000",
+            "subheading_color": "#000000",
+            "text_alignment": "center",
+            "text_horizontal_position": "center",
+            "text_width": 40,
+            "background_color": "#ffffff",
+            "background_opacity": 77,
+            "border_color": "#ffffff",
+            "border_width": 0,
+            "button_1": "",
+            "button_1_link": "",
+            "button_1_style": "button--secondary",
+            "button_2": "",
+            "button_2_link": "",
+            "button_2_style": "button--secondary",
+            "mobile_pretext": "",
+            "mobile_title": "",
+            "mobile_subtitle": "",
+            "pretext_color_mobile": "rgba(0,0,0,0)",
+            "heading_color_mobile": "rgba(0,0,0,0)",
+            "subheading_color_mobile": "rgba(0,0,0,0)",
+            "mobile_text_alignment": "none"
+          }
+        }
+      },
+      "block_order": [
+        "image_GiDkPz"
+      ],
+      "disabled": true,
+      "settings": {
+        "image_slideshow_speed": 8,
+        "image_transition": "slide",
+        "show_arrows": true,
+        "show_nav_buttons": true,
+        "width": "wide",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "animation": "none",
+        "mobile_text_below_image": true,
+        "padding_top_mobile": 0,
+        "padding_bottom_mobile": 0,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "d2b919ee-0af4-4b18-ab7f-b56b379710a3": {
+      "type": "index__featured-collection",
+      "disabled": true,
+      "custom_css": [
+        ".product_form--radio variant-selection options-selection {display: none;}",
+        ".product_form-collection .purchase-details .purchase-details__spb--false {margin-top: 0; display: none;}"
+      ],
+      "settings": {
+        "title": "SHOP SANDALS",
+        "collection": "sandals",
+        "products_per": 4,
+        "products_limit": 8,
+        "align_height": false,
+        "collection_height": 360,
+        "button_label": "SHOP NOW",
+        "button_style": "button--primary",
+        "collection_style": "slider",
+        "width": "wide",
+        "show_gutter": true,
+        "padding_top": 44,
+        "padding_bottom": 20,
+        "animation": "fadeIn",
+        "collection_layout_mobile": "grid",
+        "mobile_products_per_row": "2",
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20,
+        "css_class": "",
+        "custom_css": ".top-heading {\n    margin-bottom: 5px;\nmargin-top: 20px;\n}\n\n.thumbnail-sticker.sale-sticker\n{\ndisplay: none;\n}\n\n.title {\n  font-size: 25px;\n}"
+      }
+    },
+    "index_featured_collection_38hiYR": {
+      "type": "index__featured-collection",
+      "disabled": true,
+      "custom_css": [
+        ".product_form--radio variant-selection options-selection {display: none;}",
+        ".product_form-collection .purchase-details .purchase-details__spb--false {margin-top: 0; display: none;}"
+      ],
+      "settings": {
+        "title": "SHOP NEW",
+        "collection": "new",
+        "products_per": 4,
+        "products_limit": 8,
+        "align_height": false,
+        "collection_height": 360,
+        "button_label": "SHOP NOW",
+        "button_style": "button--primary",
+        "collection_style": "slider",
+        "width": "wide",
+        "show_gutter": true,
+        "padding_top": 44,
+        "padding_bottom": 20,
+        "animation": "fadeIn",
+        "collection_layout_mobile": "grid",
+        "mobile_products_per_row": "2",
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20,
+        "css_class": "",
+        "custom_css": ".top-heading {\n    margin-bottom: 5px;\nmargin-top: 20px;\n}\n\n.thumbnail-sticker.sale-sticker\n{\ndisplay: none;\n}\n\n.title {\n  font-size: 25px;\n}"
+      }
+    },
+    "166255188950b865ee": {
+      "type": "two-third-banner",
+      "settings": {
+        "image": "shopify://shop_images/Store_Banner_Desktop_4afb92a0-fabc-496d-b6ca-7d84b5427740.jpg",
+        "mobile_image": "shopify://shop_images/Store_Banner_Mobile_3398f754-d354-41f2-a1a9-5be648cc1783.jpg",
+        "title": "VISIT US IN-STORE",
+        "heading_size": "regular",
+        "text": "<p>Discover Jo Mercer's aesthetic that places emphasis on soft curves, marble finishes and a neutral palette to create a warm & welcoming shopping experience. </p>",
+        "button_label": "STORE LOCATOR",
+        "link": "shopify://pages/store-locator",
+        "button_style": "button--secondary",
+        "background": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "padding_top": 80,
+        "padding_bottom": 20,
+        "mobile_padding_top": 0,
+        "mobile_padding_bottom": 0,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ".content-text \n{\n  font-size: 15px;\n}\n\n.image-with-text__heading.is-regular {\n  font-size: 25px;\n}"
+      }
+    },
+    "166556380043c8a829": {
+      "type": "apps",
+      "blocks": {
+        "80cdb855-499e-43c2-83e3-cc97ffd31620": {
+          "type": "shopify://apps/covet-instagram-feed-reviews/blocks/app-block-standard/577480e8-b5be-4890-968c-06ccfb458c74",
+          "disabled": true,
+          "settings": {
+            "gallery_embed_id": 0,
+            "show_text": false,
+            "title_text": "Covet.pics gallery",
+            "title_color": "#000000",
+            "title_size": 22,
+            "subtitle_text": "",
+            "subtitle_color": "#000000",
+            "subtitle_size": 14,
+            "text_alignment": "center",
+            "margin": 20,
+            "custom_html_above": "",
+            "custom_html_below": ""
+          }
+        }
+      },
+      "block_order": [
+        "80cdb855-499e-43c2-83e3-cc97ffd31620"
+      ],
+      "disabled": true,
+      "settings": {
+        "width": "wide",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "d1a79bf3-c2e9-4a64-a0fd-2117f449b4e4": {
+      "type": "index__modal",
+      "disabled": true,
+      "custom_css": [
+        ".plus-modal-content {background-color: #fefefe; margin: 15% auto; padding: 20px; border: 1px solid #888; width: 40%;}",
+        ".plus-perks h3 {min-height: 50px; margin: 0 auto;}"
+      ],
+      "settings": {
+        "plus_location_greeting": "Welcome",
+        "plus_location": "",
+        "plus_modal_heading_1": "Free Standard Shipping",
+        "plus_modal_text_1": "Free Shipping on orders over $140 or click and collect within 2 hours after ordering in-store",
+        "plus_modal_heading_2": "Buy Now, Pay Later with Afterpay",
+        "plus_modal_text_2": "Repay in fortnightly instalments",
+        "plus_modal_heading_3": "Customer Support",
+        "plus_modal_text_3": "Our customer care team is here to support you via email or live chat.",
+        "heading_size": 25,
+        "sub_heading_size": 18
+      }
+    },
+    "17470158660302c61f": {
+      "type": "apps",
+      "blocks": {
+        "instafeed_app_block_K9yPUJ": {
+          "type": "shopify://apps/instafeed/blocks/app-block/5c329ba9-407e-40ec-a145-431c886f5df9",
+          "settings": {
+            "heading_font": "helvetica_n4",
+            "heading_size": 20,
+            "heading_alignment": "center",
+            "feed_width": 100,
+            "section_top_padding": 0,
+            "section_bottom_padding": 0,
+            "html_area": ""
+          }
+        }
+      },
+      "block_order": [
+        "instafeed_app_block_K9yPUJ"
+      ],
+      "settings": {
+        "width": "standard",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "171228509117f7b679": {
+      "type": "apps",
+      "settings": {
+        "width": "wide",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "index_html_a49ypG": {
+      "type": "index__html",
+      "custom_css": [],
+      "settings": {
+        "html_content": "<body>\n\n\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Dropdown Example</title>\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css\">\n    <style>\n        body {\n            font-family: Arial, sans-serif;\n        }\n        .dropdown {\n            width: 80%;\n            margin: 0 auto;\n            text-align: center;\n        }\n        details {\n            border: 1px solid rgba(255, 255, 255, 0.5); /* Slight border for visibility */\n            border-radius: 4px;\n            background-color: transparent;\n            padding: 10px;\n            cursor: pointer;\n            color: #333; /* Text color for better visibility on transparent background */\n            position: relative;\n        }\n        summary {\n            display: flex;\n            align-items: center;\n            justify-content: center;\n            background-color: transparent;\n            outline: none;\n        }\n        .dropdown__arrow {\n            margin-right: 10px;\n        }\n        .dropdown__arrow-item {\n            font-size: 24px;\n        }\n        details[open] summary {\n            border-bottom: 1px solid rgba(255, 255, 255, 0.5); /* Border between title and content */\n        }\n        .dropdown__content {\n            background-color: transparent;\n            border: none;\n            padding: 10px;\n            color: #333; /* Text color for better visibility on transparent background */\n        }\n        .dropdown__content p {\n            margin: 0;\n            text-align: center;\n        }\n        .dropdown__content a {\n            color: #007bff;\n            text-decoration: underline;\n        }\n    </style>\n\n\n    <div class=\"dropdown\">\n        <details>\n            <summary>\n                <div class=\"dropdown__arrow\">\n                    <span class=\"dropdown__arrow-item\"><i class=\"fa fa-chevron-down\"></i></span>\n                </div>\n                <span class=\"dropdown__title-text\">Since 1998, Jo Mercer has been a leader in premium leather shoes for women, fashion-forward footwear and a champion of Australian design through a deep respect for beauty, form and materiality.</span>\n            </summary>\n            <div class=\"dropdown__content\">\n                <p>Walk into a world where fashion meets function and style is always matched by substance.</p>\n                <p>Inspiring confidence through quality, design and craftsmanship is at the heart of what we do. Since inception, our timeless women’s leather shoes, premium footwear and fashion-forward accessories for women have epitomised effortless sophistication and modern luxury for every wearer.</p>\n                <p>At Jo Mercer, we believe that what you wear has the power to enhance your confidence, comfort and overall quality of life. The right footwear and women’s accessories can help you put your best foot forward, in every way. Level up your look with premium high heel shoes, trend-setting women’s slides, seasonal ladies boots, comfortable but ever-classic leather loafers—and many more.</p>\n                <p>Whether you’re being treated to an in-store experience at one of our boutique women’s shoe shops or browsing our women’s shoes online, Jo Mercer’s curated collection of footwear and accessories will ensure you elevate every step.</p>\n                <p>Can’t find a store near you? Shop premium <a href=\"https://www.jomercer.com.au/en-as/collections/accessories\" title=\"https://www.jomercer.com.au/en-as/collections/accessories\">women’s accessories</a> and <strong>women’s shoes online</strong> and we’ll deliver them straight to your door. International shipping available.</p>\n            </div>\n        </details>\n    </div>\n\n</body>",
+        "width": "standard",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20,
+        "css_class": "",
+        "custom_css": ".accordion__item {\n    overflow: hidden;\n    margin-bottom: 10px;\n}\n\n.accordion__title {\n    display: flex;\n    align-items: center;\n    cursor: pointer;\n    padding: 10px;\n    transition: opacity 0.3s;\n}\n\n.accordion__title:hover {\n    opacity: 0.8;\n}\n\n.accordion__arrow {\n    cursor: pointer;\n    margin-right: 10px;\n}\n\n.accordion__arrow-item {\n    margin-right: 10px;\n}\n\n.accordion__content {\n    display: none;\n    padding: 10px;\n}\n\n.accordion__content p {\n    margin: 0;\n}"
+      }
+    }
+  },
+  "order": [
+    "custom_liquid_Gwxg6a",
+    "cara_home_video_ePMEtP",
+    "fec414bd-b982-4481-9432-0e52f43e346c",
+    "424abe0b-b747-40b7-b3de-dc8cdd97f9ea",
+    "1662120804727cc161",
+    "1661523613f00a644e",
+    "01105ed2-7af5-4049-bc2f-0a51092c3bc4",
+    "3b24b785-c828-469b-a1f2-5bfe20fb5a3d",
+    "index_featured_collection_jp4EKD",
+    "index_featured_collection_fpnNUA",
+    "28599c50-5b0f-4ba3-9dec-cd0086027d07",
+    "two_third_banner_7yXXWr",
+    "1661524294b06f151f",
+    "166247423445973b96",
+    "index_slideshow_classic_i8hjcW",
+    "d2b919ee-0af4-4b18-ab7f-b56b379710a3",
+    "index_featured_collection_38hiYR",
+    "166255188950b865ee",
+    "166556380043c8a829",
+    "d1a79bf3-c2e9-4a64-a0fd-2117f449b4e4",
+    "17470158660302c61f",
+    "171228509117f7b679",
+    "index_html_a49ypG"
+  ]
+}
