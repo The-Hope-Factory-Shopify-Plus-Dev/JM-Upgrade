@@ -95,6 +95,28 @@
         url: collection.url,
       %}
     </div>
+    {% if section.settings.button_label != blank %}
+        <div
+          class="
+            featured-collection__button-container
+            one-whole
+            column
+          "
+        >
+          <a
+            class="
+              featured-collection__button
+              button
+              {{ section.settings.button_style }}
+            "
+            {% if section_onboarding == false %}
+              href="{{ collection.url }}"
+            {% endif %}
+          >
+            {{- section.settings.button_label | escape -}}
+          </a>
+        </div>
+      {% endif %}
   {% endif %}
 
   <div
@@ -193,28 +215,7 @@
       {% endfor %}
     {% endif %}
 
-    {% if section.settings.button_label != blank %}
-      <div
-        class="
-          featured-collection__button-container
-          one-whole
-          column
-        "
-      >
-        <a
-          class="
-            featured-collection__button
-            button
-            {{ section.settings.button_style }}
-          "
-          {% if section_onboarding == false %}
-            href="{{ collection.url }}"
-          {% endif %}
-        >
-          {{- section.settings.button_label | escape -}}
-        </a>
-      </div>
-    {% endif %}
+    
   </div>
 </section>
 
