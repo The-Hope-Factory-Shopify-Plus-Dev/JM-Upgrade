@@ -133,7 +133,8 @@
               {%
                 render 'mega-menu__linklist',
                 menu_link: block.settings.menu_1,
-                link_setting: block.settings.menu_1_link
+                link_setting: block.settings.menu_1_link,
+                hide_title: block.settings.hide_title   
               %}
             {% else %}
               <p class="menu__heading">{{ 'homepage.onboarding.menu_title' | t }}</p>
