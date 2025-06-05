@@ -95,25 +95,13 @@
         url: collection.url,
       %}
       {% if section.settings.button_label != blank %}
-        <div
-          class="
-            featured-collection__button-container
-            one-whole
-            column
-          "
-        >
-          <a
-            class="
-              featured-collection__button
-              button
-              {{ section.settings.button_style }}
-            "
-            {% if section_onboarding == false %}
-              href="{{ collection.url }}"
-            {% endif %}
-          >
-            {{- section.settings.button_label | escape -}}
-          </a>
+        <div class="buttons is-center">
+          {% render 'button',
+          label: section.settings.button_label,
+          href: section.settings.button_link,
+          style: section.settings.button_style,
+          type: "link"
+        %}
         </div>
       {% endif %}
     </div>
