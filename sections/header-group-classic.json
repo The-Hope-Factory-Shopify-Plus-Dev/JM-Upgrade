@@ -35,6 +35,80 @@
     },
     "header": {
       "type": "header-classic",
+      "blocks": {
+        "announcement_text_Nneegh": {
+          "type": "announcement_text",
+          "settings": {
+            "message_au": "ENDURE | WINTER '25",
+            "message_nz": "",
+            "message_af": "",
+            "message_us": "",
+            "message_ca": "",
+            "message_gb": "",
+            "message_ad": "",
+            "message_bm": ""
+          }
+        },
+        "announcement_text_QDDi8a": {
+          "type": "announcement_text",
+          "settings": {
+            "message_au": "END OF SEASON SALE | ON NOW",
+            "message_nz": "",
+            "message_af": "",
+            "message_us": "",
+            "message_ca": "",
+            "message_gb": "",
+            "message_ad": "",
+            "message_bm": ""
+          }
+        },
+        "announcement_text_CUcd7N": {
+          "type": "announcement_text",
+          "settings": {
+            "message_au": "FREE STANDARD SHIPPING ON ON ORDERS OVER $140",
+            "message_nz": "",
+            "message_af": "",
+            "message_us": "",
+            "message_ca": "",
+            "message_gb": "",
+            "message_ad": "",
+            "message_bm": ""
+          }
+        },
+        "announcement_text_dHTyQX": {
+          "type": "announcement_text",
+          "settings": {
+            "message_au": "BUY NOW, PAY LATER WITH AFTERPAY AND KLARNA",
+            "message_nz": "",
+            "message_af": "",
+            "message_us": "",
+            "message_ca": "",
+            "message_gb": "",
+            "message_ad": "",
+            "message_bm": ""
+          }
+        },
+        "announcement_text_GdDwJc": {
+          "type": "announcement_text",
+          "settings": {
+            "message_au": "2HR CLICK AND COLLECT AVAILABLE IN ALL STORES",
+            "message_nz": "",
+            "message_af": "",
+            "message_us": "",
+            "message_ca": "",
+            "message_gb": "",
+            "message_ad": "",
+            "message_bm": ""
+          }
+        }
+      },
+      "block_order": [
+        "announcement_text_Nneegh",
+        "announcement_text_QDDi8a",
+        "announcement_text_CUcd7N",
+        "announcement_text_dHTyQX",
+        "announcement_text_GdDwJc"
+      ],
       "custom_css": [
         ".mobile-menu .mobile-menu-footer ul {margin: 0 0 15px; padding: 0rem 1.5rem; padding-top: 0rem; padding-right: 1.5rem; padding-bottom: 0rem; padding-left: 1.5rem;}",
         ".mobile-layout--left .mobile-icons {width: 10%;}"
@@ -42,6 +116,7 @@
       "settings": {
         "logo": "shopify://shop_images/JM_Logo_White_RGB.png",
         "logo_width": 200,
+        "announcement_text": true,
         "main_linklist": "main-menu",
         "menu_alignment": "center",
         "dropdown_click": false,
