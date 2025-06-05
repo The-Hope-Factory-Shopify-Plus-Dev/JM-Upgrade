@@ -85,6 +85,7 @@
   {% endif %}
 >
   {% if title != blank %}
+    
     <div class="container">
       {%
         render 'heading',
@@ -96,6 +97,17 @@
       %}
     </div>
   {% endif %}
+
+  {% if section.settings.button_label != blank %}
+      <div class="buttons is-center">
+        {% render 'button',
+          label: section.settings.button_label,
+          href: section.settings.button_link,
+          style: section.settings.button_style,
+          type: "link"
+        %}
+      </div>
+    {% endif %}
 
   <div
     class="
