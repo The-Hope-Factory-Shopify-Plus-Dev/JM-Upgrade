@@ -34,6 +34,42 @@
     .mega-menu__{{ section.id }} .mega-menu__block:first-child {
       border-left: 0;
     }
+  /* THF Custom CSS */
+
+  .mega-menu__{{ section.id }} .mega-menu-image-caption {
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    transition: all 0.3s linear 0s;
+  }
+  .mega-menu__{{ section.id }} .mega-menu-image-caption p {
+    font-size: 14px;
+    letter-spacing: .15em;
+    margin: 0;
+    text-transform: uppercase;
+  }
+  .block__image:hover .mega-menu-image-caption {background-color: rgba(0,0,0,0.45);}
+  .header__link, .header__link>a {text-transform: uppercase;}
+  .mega-menu {font-size: 14px;}
+  .mega-menu__linklist>ul>li {margin-bottom: 0.25rem;}
+  .mega-menu__linklist>ul>li>a:hover {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+  }   
+
+  @media (max-width: 798px) {
+    .mega-menu__block.block__image {display: none;}
+    .mega-menu__block.block__menu {
+      padding-left: 30px;
+      width: 100%;
+    }
+  }
 
   @media (min-width: 799px) {
     .mega-menu__{{ section.id }} .mega-menu {
