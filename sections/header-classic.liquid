@@ -398,17 +398,19 @@
 </script>
 <script src="{{ 'z__jsHeader.js' | asset_url }}"></script>
 <script>
-  jQuery(function($){
-    var $carousel = $('.announcement_carousel').flickity({
+
+  const $carousel = $('.announcement_carousel');
+
+    const $$carouselSlider = $carousel.flickity({
+      initialIndex: 0,
       contain: true,
-      percentPosition: true,
       wrapAround: true,
       prevNextButtons: false,
       pageDots: false,
-      autoPlay: true,
-      pauseAutoPlayOnHover: true
+      imagesLoaded: true,
+      draggable: true
     });
-  });
+  
 </script>
 
 {% schema %}
