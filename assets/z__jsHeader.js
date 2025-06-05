@@ -289,6 +289,25 @@ window.PXUTheme.jsHeader = {
     this.disableSticky();
     this.disableOverlayStyle();
   }
+
+  const $annocumentSlider = $section.find('.announcement_carousel');
+
+    const $headerannocumentSlider = $annocumentSlider.flickity({
+      contain: true,
+      percentPosition: true,
+      wrapAround: true,
+      prevNextButtons: false,
+      pageDots: false,
+      autoPlay: true,
+      pauseAutoPlayOnHover: true
+    });
+
+    $featuredPromosSlider.on( 'settle.flickity', function() {
+      $featuredPromosSlider.flickity('resize');
+    });
+
+
+  
 }
 
 /******/ })()
