@@ -84,18 +84,29 @@
     data-scroll-class="{{ section.settings.animation }}"
   {% endif %}
 >
-  {% if title != blank %}
-    
-    <div class="container">
+   {% if title != blank %}
+    {% if section.settings.top_heading %}
+    <div class="container top-heading">
       {%
         render 'heading',
         title: title,
         heading_tag: 'h2',
         context: 'featured-collection',
         text_alignment: 'center',
-        url: collection.url,
+        url: collection.url
       %}
+    {% if section.settings.button_label != blank %}
+      <div class="buttons is-center">
+        {% render 'button',
+          label: section.settings.button_label,
+          href: section.settings.button_link,
+          style: section.settings.button_style,
+          type: "link"
+        %}
+      </div>
+    {% endif %}  
     </div>
+    {% endif %}
   {% endif %}
 
   {% if section.settings.button_label != blank %}
