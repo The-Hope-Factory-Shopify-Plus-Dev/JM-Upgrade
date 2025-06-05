@@ -2,21 +2,15 @@
 ** Gallery **
 {% endcomment %}
 
-{% liquid
-  assign blocks = section.blocks
-  assign use_mobile_slider = false
+{%- assign blocks = section.blocks -%}
 
-  if type == 'block'
-    assign loop = "1,2,3,4,5" | split: ','
-  else
-    assign loop = blocks
-  endif
+{% if type == 'block' %}
+  {%- assign loop = "1,2,3,4,5" | split: ',' -%}
+{% else %}
+  {%- assign loop = blocks -%}
+{% endif %}
 
-  if section.settings.mobile_layout == 'slider' and blocks.size > 1
-    assign use_mobile_slider = true
-  endif
-%}
-
+{% comment %} Section specific CSS {% endcomment %}
 {%- capture section_css -%}
   .gallery-item__overlay {
     background-color: {{ section.settings.overlay_color | color_modify: 'alpha', 0.77 }};
@@ -31,33 +25,20 @@
   #shopify-section-{{ section.id }} {
     padding-top: {{ section.settings.padding_top }}px;
     padding-bottom: {{ section.settings.padding_bottom }}px;
-
     {% if section.settings.width == 'wide' %}
       width: 100%;
     {% endif %}
   }
 
-  @media only screen and (max-width: 798px) {
-    #shopify-section-{{ section.id }} {
-      padding-top: {{ section.settings.padding_top_mobile }}px;
-      padding-bottom: {{ section.settings.padding_bottom_mobile }}px;
-    }
-  }
-
-  {%
-    render 'css-loop',
-    css: section_css,
-    id: section.id,
+  {% render 'css-loop',
+          css: section_css,
+          id: section.id
   %}
-
-  {%
-    render 'css-loop',
-    css: section.settings.custom_css,
-    id: section.id,
+  {% render 'css-loop',
+          css: section.settings.custom_css,
+          id: section.id
   %}
-  /* THF Custom css */
-
-   #shopify-section-{{ section.id }} .caption {
+  #shopify-section-{{ section.id }} .caption {
     display: -webkit-flex;
     display: flex;    
     padding: 20px 28px;
@@ -110,237 +91,141 @@
   {% endif %} 
 {% endstyle %}
 
-<section
-  class="
-    section
-    {{ section.settings.css_class }}
-    is-width-{{ section.settings.width }}
-    {% if section.settings.show_gutter == false %}
-      has-no-side-gutter
-      has-background
-    {% else %}
-      has-gutter-enabled
-    {% endif %}
-    {% if loop.size > section.settings.images_per_row %}
-      has-multirow-blocks
-    {% endif %}
-    {% if section.settings.width == 'wide' and section.settings.show_gutter == false %}
-      equal-columns--outside-trim
-    {% endif %}
-  "
-  {% if section.settings.animation != "none" %}
-    data-scroll-class="{{ section.settings.animation }}"
-  {% endif %}
->
-  {% if use_mobile_slider and section.settings.show_arrows %}
-    <div class="container">
-      <div class="one-whole column">
-        <div class="gallery__nav-wrapper">
-          {%
-            render 'icon',
-            name: 'left-arrow',
-            icon_class: 'gallery__nav gallery__nav--prev',
-          %}
-          {%
-            render 'icon',
-            name: 'right-arrow',
-            icon_class: 'gallery__nav gallery__nav--next',
-          %}
-        </div>
-      </div>
-    </div>
-  {% endif %}
+{% comment %} HTML markup {% endcomment %}
+<section  class="section
+                {{ section.settings.css_class }}
+                is-width-{{ section.settings.width }}
 
-  <div
-    class="
-      gallery__wrapper
-      gallery__wrapper--{{ section.settings.gallery_type }}
-      gallery__wrapper--page-dots-{{ section.settings.show_navigation_dots }}
-      {% if section.settings.gallery_type != 'vertical-masonry' %}container{% endif %}
-    "
-    data-gallery-wrapper
-  >
+                {% if section.settings.show_gutter == false %}
+                  has-no-side-gutter
+                  has-background
+                {% else %}
+                  has-gutter-enabled
+                {% endif %}
+                {% if loop.size > section.settings.images_per_row %}
+                  has-multirow-blocks
+                {% endif %}
+                {% if section.settings.width == 'wide' and section.settings.show_gutter == false %}
+                  equal-columns--outside-trim
+                {% endif %}
+                "
+          {% if section.settings.animation != "none" %}
+            data-scroll-class="{{ section.settings.animation }}"
+          {% endif %}>
+
+  <div class="is-justify-center
+              gallery__wrapper
+              gallery-type--{{ section.settings.gallery_type }}
+              {% if section.settings.gallery_type != 'masonry' %}
+              container
+              {% endif %}">
+
     {% if blocks.size > 0 or loop.size > 0 %}
       {% for item in loop %}
+
         {% if type == 'block' %}
           {% capture index %}{{ forloop.index }}{% endcapture %}
         {% else %}
-          {% assign block = item %}
+          {%- assign block = item -%}
         {% endif %}
 
         {% comment %} Add number to id for each loop {% endcomment %}
         {% capture image_index %}image{{ index }}{% endcapture %}
-        {% capture mobile_image_index %}mobile_image{{ index }}{% endcapture %}
         {% capture link %}link{{ index }}{% endcapture %}
-        {% capture hide %}hide{{ index }}{% endcapture %}
+        {% capture hide %}hide{{ index}}{% endcapture %}
 
-        {% liquid
-          assign image = block.settings[image_index]
-          assign mobile_image = block.settings[mobile_image_index] | default: image
-        %}
+        {% comment %} Content settings {% endcomment %}
+        {%- assign image = block.settings[image_index] -%}
+        {% comment %} End content settings {% endcomment %}
 
         {% if block.settings[hide] == false or type != "block" %}
-          <div
-            class="
-              gallery__item
-              {% if section.settings.show_gutter %}
-                has-gutter
-              {% endif %}
-              {% if section.settings.gallery_type == 'classic' or section.settings.gallery_type == 'vertical-masonry' %}
-                {% render 'column-width', value: section.settings.images_per_row %}
-                {% if use_mobile_slider %}
-                  medium-down--one-whole
+          <div class="gallery__item
+                      {% if section.settings.show_gutter %}
+                        has-gutter
+                      {% endif %}
+                      {% if section.settings.gallery_type != 'horizontal-masonry' %}
+                        {% render 'column-width', value: section.settings.images_per_row %}
+                        medium-down--one-half
+                        {% if section.settings.images_per_row_mobile > 1 %}small-down--one-half{% else %}small-down--one-whole{% endif %}
+                      {% endif %}
+                      column 
+                      {% if section.settings.gallery_type == 'classic' and section.settings.crop_images == true %}
+                        has-image-crop image-crop--center
+                      {% endif %}"
+            {% if type != 'block' %}{{ block.shopify_attributes }}{% endif %}>
+
+            {% if image != blank %}
+
+              <div class="gallery__item-wrap is-relative">
+              {% if block.settings.title != blank and block.settings[link] != blank %}<a href="{{ block.settings[link] }}" class="gallery__link">{% endif %}
+                
+                {% if section.settings.gallery_type == 'horizontal-masonry' %}
+                  {% render 'image-element',
+                          image: image,
+                          alt: image.alt,
+                          back_to_basics: true
+                  %}
+                {% elsif section.settings.gallery_type == 'masonry'
+                %}
+                  {% render 'image-element',
+                          image: image,
+                          alt: image.alt
+                  %}
                 {% else %}
-                  medium-down--one-half
-                  small-down--one-whole
+                  {% render 'image-element',
+                          image: image,
+                          alt: image.alt,
+                          stretch_width:
+                          section.settings.crop_images
+                  %}
                 {% endif %}
-              {% elsif section.settings.gallery_type == 'horizontal-masonry' and use_mobile_slider %}
-                medium-down--one-whole
-              {% endif %}
-              column
-              {% if section.settings.gallery_type == 'classic' and section.settings.crop_images == true %}
-                has-image-crop image-crop--center
-              {% endif %}
-              has-image-crop--mobile-{{ section.settings.crop_images_mobile }}
-            "
-            {% if type != 'block' %}
-              {{ block.shopify_attributes }}
+
+                {% unless block.settings.title != blank %}
+                {% if section.settings.enable_lightbox or block.settings[link] != blank %}
+                  <div class="gallery-item__overlay is-flex is-align-center is-justify-center">
+                    {% if section.settings.enable_lightbox %}
+                      <a href="{{ image |  img_url: '2000x' }}" data-fancybox="{{ section.id }}" class="gallery__link">
+                        {% render 'icon', name: 'zoom' %}
+                      </a>
+                    {% endif %}
+                    {% if block.settings[link] != blank %}
+                      <a href="{{ block.settings[link] }}" class="gallery__link">
+                        {% render 'icon', name: 'link' %}
+                      </a>
+                    {% endif %}
+                  </div>
+                {% endif %}
+                {% endunless %}  
+
+                {% if block.settings.title != blank %}
+                  <div class="caption">
+                    <h3>{{ block.settings.title }}</h3>
+                  </div>
+                {% endif %}  
+                {% if block.settings.title != blank and block.settings[link] != blank %}</a>{% endif %}
+              </div>
+
+            {% else %}
+              <div class="gallery__item-wrap is-relative">
+
+                {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+
+                {% if section.settings.enable_lightbox or block.settings[link] != blank %}
+                  <div class="gallery-item__overlay is-flex is-align-center is-justify-center">
+                    {% if section.settings.enable_lightbox %}
+                      <a href="{{ image |  img_url: '2000x' }}" data-fancybox="{{ section.id }}" class="gallery__link">
+                        {% render 'icon', name: 'zoom' %}
+                      </a>
+                    {% endif %}
+                    {% if block.settings[link] != blank %}
+                      <a href="{{ block.settings[link] }}" class="gallery__link">
+                        {% render 'icon', name: 'link' %}
+                      </a>
+                    {% endif %}
+                  </div>
+                {% endif %}
+              </div>
             {% endif %}
-            data-gallery-item
-          >
-            <div class="gallery__item-wrap is-relative">
-              {% if section.settings.gallery_type == 'horizontal-masonry' %}
-                {% if image != blank %}
-                  {%
-                    render 'image-element',
-                    image: image,
-                    additional_wrapper_classes: 'is-hidden-mobile-only',
-                    alt: image.alt,
-                    back_to_basics: true,
-                    focal_point: image.presentation.focal_point,
-                  %}
-                {% else %}
-                  {{- 'image' | placeholder_svg_tag: 'placeholder-svg is-hidden-mobile-only' -}}
-                {% endif %}
-
-                {% if mobile_image != blank %}
-                  {%
-                    render 'image-element',
-                    image: mobile_image,
-                    additional_wrapper_classes: 'is-hidden-desktop-only',
-                    alt: mobile_image.alt,
-                    back_to_basics: true,
-                    focal_point: mobile_image.presentation.focal_point,
-                  %}
-                {% else %}
-                  {{- 'image' | placeholder_svg_tag: 'placeholder-svg is-hidden-desktop-only' -}}
-                {% endif %}
-              {% elsif section.settings.gallery_type == 'vertical-masonry' %}
-                {% if image != blank %}
-                  {%
-                    render 'image-element',
-                    image: image,
-                    additional_wrapper_classes: 'is-hidden-mobile-only',
-                    alt: image.alt,
-                    focal_point: image.presentation.focal_point,
-                  %}
-                {% else %}
-                  {{- 'image' | placeholder_svg_tag: 'placeholder-svg is-hidden-mobile-only' -}}
-                {% endif %}
-
-                {% if mobile_image != blank %}
-                  {%
-                    render 'image-element',
-                    image: mobile_image,
-                    additional_wrapper_classes: 'is-hidden-desktop-only',
-                    alt: mobile_image.alt,
-                    focal_point: mobile_image.presentation.focal_point,
-                  %}
-                {% else %}
-                  {{- 'image' | placeholder_svg_tag: 'placeholder-svg is-hidden-desktop-only' -}}
-                {% endif %}
-              {% else %}
-                {% if image != blank %}
-                  {%
-                    render 'image-element',
-                    image: image,
-                    additional_wrapper_classes: 'is-hidden-mobile-only',
-                    alt: image.alt,
-                    stretch_width: section.settings.crop_images,
-                    focal_point: image.presentation.focal_point,
-                  %}
-                {% else %}
-                  {{- 'image' | placeholder_svg_tag: 'placeholder-svg is-hidden-mobile-only' -}}
-                {% endif %}
-
-                {% if mobile_image != blank %}
-                  {%
-                    render 'image-element',
-                    image: mobile_image,
-                    additional_wrapper_classes: 'is-hidden-desktop-only',
-                    alt: mobile_image.alt,
-                    stretch_width: section.settings.crop_images,
-                    focal_point: mobile_image.presentation.focal_point,
-                  %}
-                {% else %}
-                  {{- 'image' | placeholder_svg_tag: 'placeholder-svg is-hidden-desktop-only' -}}
-                {% endif %}
-              {% endif %}
-
-              {% if section.settings.enable_lightbox or block.settings[link] != blank %}
-                <div
-                  class="
-                    gallery-item__overlay
-                    is-flex
-                    is-align-center
-                    is-justify-center
-                  "
-                >
-                  {% if section.settings.enable_lightbox %}
-                    <a
-                      class="
-                        gallery__link
-                        is-hidden-mobile-only
-                      "
-                      {% if image != blank %}
-                        href="{{ image | img_url: '2000x' }}"
-                        data-fancybox="{{ section.id }}"
-                      {% endif %}
-                    >
-                      {%
-                        render 'icon',
-                        name: 'zoom',
-                      %}
-                    </a>
-
-                    <a
-                      class="
-                        gallery__link
-                        is-hidden-desktop-only
-                      "
-                      {% if mobile_image != blank %}
-                        href="{{ mobile_image | img_url: '2000x' }}"
-                        data-fancybox="{{ section.id }}"
-                      {% endif %}
-                    >
-                      {%
-                        render 'icon',
-                        name: 'zoom',
-                      %}
-                    </a>
-                  {% endif %}
-
-                  {% if block.settings[link] != blank %}
-                    <a class="gallery__link" href="{{ block.settings[link] }}">
-                      {%
-                        render 'icon',
-                        name: 'link',
-                      %}
-                    </a>
-                  {% endif %}
-                </div>
-              {% endif %}
-            </div>
           </div>
         {% endif %}
       {% endfor %}
@@ -348,20 +233,18 @@
   </div>
 </section>
 
+{% comment %} JavaScript {% endcomment %}
 <script
   type="application/json"
   data-section-id="{{ section.id }}"
-  data-section-data
->
+  data-section-data >
   {
-    "use_mobile_slider": {{ use_mobile_slider | json }},
-    "show_navigation_dots": {{ section.settings.show_navigation_dots }},
     "gallery_type": {{ section.settings.gallery_type | json }},
-    "show_gutter": {{ section.settings.show_gutter }},
-    "crop_images_mobile": {{ section.settings.crop_images_mobile }}
+    "show_gutter": {{ section.settings.show_gutter }}
   }
 </script>
 <script data-theme-editor-load-script src="{{ 'z__jsGallery.js' | asset_url }}"></script>
+
 
 {% schema %}
   {
@@ -373,6 +256,7 @@
         "type": "select",
         "id": "gallery_type",
         "label": "Gallery style",
+        "default": "classic",
         "options": [
           {
             "value": "classic",
@@ -383,11 +267,17 @@
             "label": "Horizontal masonry"
           },
           {
-            "value": "vertical-masonry",
+            "value": "masonry",
             "label": "Vertical masonry"
           }
-        ],
-        "default": "classic"
+        ]
+      },
+      {
+        "type": "checkbox",
+        "id": "crop_images",
+        "label": "Crop images",
+        "default": false,
+        "info": "Applies to classic only."
       },
       {
         "type": "range",
@@ -397,14 +287,17 @@
         "max": 5,
         "step": 1,
         "default": 4,
-        "info": "Only applies to classic and vertical masonry gallery styles."
+        "info": "Applies to vertical masonry and classic only."
       },
       {
-        "type": "checkbox",
-        "id": "crop_images",
-        "label": "Crop images",
-        "default": false,
-        "info": "Only applies to classic gallery style."
+        "type": "range",
+        "id": "images_per_row_mobile",
+        "label": "Images per row in mobile",
+        "min": 0,
+        "max": 2,
+        "step": 1,
+        "default": 1,
+        "info": "Applies to vertical masonry and classic only."
       },
       {
         "type": "checkbox",
@@ -450,9 +343,31 @@
       },
       {
         "type": "checkbox",
+        "id": "disable_horizontal_gap",
+        "label": "Disable horizontal gap",
+        "info": "Disable gap on left and right edge"
+      },
+      {
+        "type": "checkbox",
         "id": "show_gutter",
         "label": "Show gutter",
         "default": true
+      },
+      {
+        "type": "select",
+        "id": "gutter_size",
+        "label": "Gutter size",
+        "default": "standard",
+        "options": [
+          {
+            "value": "standard",
+            "label": "Standard"
+          },
+          {
+            "value": "small",
+            "label": "Small"
+          }
+        ]
       },
       {
         "type": "range",
@@ -467,6 +382,28 @@
         "type": "range",
         "id": "padding_bottom",
         "label": "Bottom spacing",
+        "min": 0,
+        "max": 80,
+        "default": 20,
+        "unit": "px"
+      },
+      {
+        "type": "header",
+        "content": "Mobile padding"
+      },
+      {
+        "type": "range",
+        "id": "mobile_padding_top",
+        "label": "Top spacing for mobile",
+        "min": 0,
+        "max": 80,
+        "default": 20,
+        "unit": "px"
+      },
+      {
+        "type": "range",
+        "id": "mobile_padding_bottom",
+        "label": "Bottom spacing for mobile",
         "min": 0,
         "max": 80,
         "default": 20,
@@ -514,63 +451,6 @@
       },
       {
         "type": "header",
-        "content": "Mobile layout"
-      },
-      {
-        "type": "radio",
-        "id": "mobile_layout",
-        "label": "Mobile layout",
-        "default": "grid",
-        "options": [
-          {
-            "value": "slider",
-            "label": "Slider"
-          },
-          {
-            "value": "stacked",
-            "label": "Stacked"
-          }
-        ],
-        "default": "stacked"
-      },
-      {
-        "type": "checkbox",
-        "id": "crop_images_mobile",
-        "label": "Crop images on mobile",
-        "default": false
-      },
-      {
-        "type": "checkbox",
-        "id": "show_arrows",
-        "label": "Show arrows on mobile",
-        "default": true
-      },
-      {
-        "type": "checkbox",
-        "id": "show_navigation_dots",
-        "label": "Show navigation dots on mobile",
-        "default": true
-      },
-      {
-        "type": "range",
-        "id": "padding_top_mobile",
-        "label": "Mobile top spacing",
-        "min": 0,
-        "max": 80,
-        "default": 20,
-        "unit": "px"
-      },
-      {
-        "type": "range",
-        "id": "padding_bottom_mobile",
-        "label": "Mobile bottom spacing",
-        "min": 0,
-        "max": 80,
-        "default": 20,
-        "unit": "px"
-      },
-      {
-        "type": "header",
         "content": "Advanced"
       },
       {
@@ -600,10 +480,10 @@
             "info": "800 x 800px recommended"
           },
           {
-            "type": "image_picker",
-            "id": "mobile_image",
-            "label": "Mobile image",
-            "info": "Optional. Desktop image will show on mobile by default."
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "Title"
           },
           {
             "type": "url",
@@ -632,11 +512,6 @@
           }
         ]
       }
-    ],
-    "disabled_on": {
-      "groups": [
-        "*"
-      ]
-    }
+    ]
   }
 {% endschema %}
