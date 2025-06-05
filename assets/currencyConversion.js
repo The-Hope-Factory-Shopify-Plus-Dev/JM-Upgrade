@@ -504,9 +504,11 @@ function formatWithDelimiters(number) {
   var precision = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 2;
   var thousands = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : ',';
   var decimal = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : '.';
+
   if (isNaN(number) || !number) {
     return 0;
   }
+
   var preciseNumber = (number / 100.0).toFixed(precision);
   var parts = preciseNumber.split(thousands);
   var dollarsAmount = parts[0].replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1".concat(thousands));
@@ -521,35 +523,45 @@ function formatWithDelimiters(number) {
  * @returns {String}
  */
 
+
 function formatMoney(cents, format) {
   if (typeof cents === 'string') {
     cents = cents.replace('.', '');
   }
+
   var value = '';
   var placeholderRegex = /\{\{\s*(\w+)\s*\}\}/;
+
   switch (format.match(placeholderRegex)[1]) {
     case 'amount':
       value = formatWithDelimiters(cents, 2, ',', '.');
       break;
+
     case 'amount_with_space_separator':
       value = formatWithDelimiters(cents, 2, ' ', '.');
       break;
+
     case 'amount_with_comma_separator':
       value = formatWithDelimiters(cents, 2, '.', ',');
       break;
+
     case 'amount_with_apostrophe_separator':
       value = formatWithDelimiters(cents, 2, '\'', '.');
       break;
+
     case 'amount_no_decimals':
       value = formatWithDelimiters(cents, 0, ',', '.');
       break;
+
     case 'amount_no_decimals_with_space_separator':
       value = formatWithDelimiters(cents, 0, ' ', '.');
       break;
+
     case 'amount_no_decimals_with_comma_separator':
       value = formatWithDelimiters(cents, 0, ',', '.');
       break;
   }
+
   return format.replace(placeholderRegex, value);
 }
 /**
@@ -565,8 +577,10 @@ function formatMoney(cents, format) {
  * @private
  */
 
+
 function getCentsValue(moneyAmount, format, currency) {
   var cents = 0; // Convert prices from float values to integers if needed, then convert
+
   if (format.indexOf('amount_no_decimals') !== -1) {
     cents = moneyAmount * 100;
   } else if (currency === 'JOD' || currency === 'KWD' || currency === 'BHD') {
@@ -574,6 +588,7 @@ function getCentsValue(moneyAmount, format, currency) {
   } else {
     cents = moneyAmount;
   }
+
   return cents;
 }
 /**
@@ -583,13 +598,25 @@ function getCentsValue(moneyAmount, format, currency) {
  * @returns {Number|String}
  */
 
+
 function getMoneyValue(priceEl) {
   var price = priceEl.getAttribute('data-currency-original') || priceEl.textContent;
   var value = parseInt(price.replace(/[^0-9]/g, ''), 10);
   return !isNaN(value) ? value : '';
 }
+
 window.PXUTheme.currencyConverter = {
   init: function init() {
+
+    console.log(currency_converter );
+    if(currency_converter == true){
+      console.log('if');
+      return false;
+    }else{
+      console.log('else');
+    }
+    
+    
     this.options = {
       switcherSelector: '[data-currency-converter]',
       priceSelector: 'span.money',
@@ -611,12 +638,12 @@ window.PXUTheme.currencyConverter = {
       var $currencySelector = $(this);
       window.PXUTheme.currencyConverter.setCurrency($currencySelector.val());
     });
-    this.currentCurrency = this._getStoredCurrency() || this.options.defaultCurrency;
+    this.currentCurrency = this._getStoredCurrency() || this.options.defaultCurrency; // Gets negated with shopify multiple currency
 
-    // Gets negated with shopify multiple currency
     this.moneyFormats[this.options.presentmentCurrency].money_with_currency_format = this.options.moneyFormatCurrency;
     this.moneyFormats[this.options.presentmentCurrency].money_format = this.options.moneyFormatNoCurrency;
     this.isInitialised = true;
+
     this._current();
   },
   setCurrency: function setCurrency(newCurrency) {
@@ -626,6 +653,7 @@ window.PXUTheme.currencyConverter = {
     * @param {String} newCurrency - New currency to convert prices to
     */
     if (!this.isInitialised) return;
+
     this._convertAll(newCurrency);
   },
   update: function update(priceEl) {
@@ -637,12 +665,15 @@ window.PXUTheme.currencyConverter = {
     if (!this.isInitialised) return; // unset any stored previous conversions and the data-currency attribute itself
 
     var attributes = priceEl.attributes;
+
     for (var attr = 0; attr < attributes.length; attr++) {
       var attribute = attributes[attr];
+
       if (attribute.name.indexOf('data-currency') === 0) {
         priceEl.setAttribute(attribute.name, '');
       }
     }
+
     this._convertEl(priceEl, this.currentCurrency);
   },
   _getStoredCurrency: function _getStoredCurrency() {
@@ -677,19 +708,24 @@ window.PXUTheme.currencyConverter = {
     * @private
     */
     var switchers = document.querySelectorAll(this.options.switcherSelector);
+
     for (var i = 0; i < switchers.length; i += 1) {
       var switcher = switchers[i];
       var childrenEls = switcher.querySelectorAll('option');
+
       for (var j = 0; j < childrenEls.length; j += 1) {
         var optionEl = childrenEls[j];
+
         if (optionEl.selected && optionEl.value !== this.currentCurrency) {
           optionEl.selected = false;
         }
+
         if (optionEl.value === this.currentCurrency) {
           optionEl.selected = true;
         }
       }
     }
+
     this._convertAll(this.currentCurrency);
   },
   _convertEl: function _convertEl(priceEl, newCurrency) {
@@ -707,6 +743,7 @@ window.PXUTheme.currencyConverter = {
       return;
     } // If we are converting to a currency that we have saved, we will use the saved amount.
 
+
     if (priceEl.getAttribute("data-currency-".concat(newCurrency))) {
       priceEl.innerHTML = priceEl.getAttribute("data-currency-".concat(newCurrency));
     } else {
@@ -719,13 +756,16 @@ window.PXUTheme.currencyConverter = {
       var cents = window.Currency.convert(centsValue, oldCurrency, newCurrency);
       var oldPriceFormatted = formatMoney(centsValue, oldFormat);
       var priceFormatted = formatMoney(cents, newFormat);
+
       if (!priceEl.getAttribute('data-currency-original')) {
         priceEl.setAttribute('data-currency-original', oldPriceFormatted);
       }
+
       priceEl.setAttribute("data-currency-".concat(oldCurrency), oldPriceFormatted);
       priceEl.setAttribute("data-currency-".concat(newCurrency), priceFormatted);
       priceEl.innerHTML = priceFormatted;
     }
+
     priceEl.setAttribute('data-currency', newCurrency);
   },
   _convertAll: function _convertAll(newCurrency) {
@@ -736,14 +776,14 @@ window.PXUTheme.currencyConverter = {
     * @param {String} newCurrency - Currency to convert to
     * @private
     */
-
     var priceEls = document.querySelectorAll(this.options.priceSelector);
     if (!priceEls) return;
     this.currentCurrency = newCurrency;
     $('.currency-code').text(this.currentCurrency);
-    this._setStoredCurrency(newCurrency);
 
-    // only if Shopify multi currency is disabled, run convertEl function
+    this._setStoredCurrency(newCurrency); // only if Shopify multi currency is disabled, run convertEl function
+
+
     for (var i = 0; i < priceEls.length; i += 1) {
       this._convertEl(priceEls[i], newCurrency);
     }
