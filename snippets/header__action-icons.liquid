@@ -58,7 +58,7 @@
       {% comment %} Logout {% endcomment %}
       <a href="{{ routes.account_url }}" class="header__link action-area__link" >
           {% render 'icon',
-                  name: 'avatar',
+                  name: 'profile-2',
                   icon_class: 'header__icon'
           %}
           <span class="icon-caption">{{ 'layout.customer.my_account' | t | escape }}</span>
@@ -67,7 +67,7 @@
       {% comment %} Login {% endcomment %}
       <a href="{{ routes.account_login_url }}" class="header__link action-area__link" >
           {% render 'icon',
-                  name: 'avatar',
+                  name: 'profile-2',
                   icon_class: 'header__icon'
           %}
           <span class="icon-caption">{{ 'layout.customer.log_in' | t | escape }}</span>
