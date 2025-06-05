@@ -397,6 +397,19 @@
   }
 </script>
 <script src="{{ 'z__jsHeader.js' | asset_url }}"></script>
+<script>
+  jQuery(function($){
+    var $carousel = $('.announcement_carousel').flickity({
+      contain: true,
+      percentPosition: true,
+      wrapAround: true,
+      prevNextButtons: false,
+      pageDots: false,
+      autoPlay: true,
+      pauseAutoPlayOnHover: true
+    });
+  });
+</script>
 
 {% schema %}
   {
