@@ -17,16 +17,7 @@ link_setting: <string>
   </p>
   {% endif %}
   <ul>
-    {% for link in menu.links limit:4 %}
-      <li>
-        <a href="{{ link.url }}" class="mega-menu__linklist-link {% if link.active %}is-active{% endif %}">
-          {{ link.title }}
-        </a>
-      </li>
-    {% endfor %}
-  </ul>
-  <ul>
-    {% for link in menu.links offset:4 %}
+    {% for link in menu.links %}
       <li>
         <a href="{{ link.url }}" class="mega-menu__linklist-link {% if link.active %}is-active{% endif %}">
           {{ link.title }}
