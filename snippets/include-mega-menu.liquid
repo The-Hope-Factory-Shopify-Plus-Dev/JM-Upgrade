@@ -34,6 +34,7 @@
     .mega-menu__{{ section.id }} .mega-menu__block:first-child {
       border-left: 0;
     }
+  {% endif %}
   /* THF Custom CSS */
 
   .mega-menu__{{ section.id }} .mega-menu-image-caption {
@@ -89,7 +90,7 @@
     }
     .mega-menu .block__menu {width: 35%;}
   } /* THF Custom CSS */
-  {% endif %}
+ 
 
   {%- if custom_css != blank -%}
     {%- assign declarations = custom_css | split: '}' -%}
