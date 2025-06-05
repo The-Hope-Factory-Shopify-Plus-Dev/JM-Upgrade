@@ -7,6 +7,7 @@
   section so we manually assign the section id in the CSS selector
 {% endcomment %}
 {% style %}
+  .mega-menu.mega-menu--header-classic .container {max-width: 940px;} /* THF Custom changes */
   .mega-menu__{{ section.id }} .mega-menu {
     background-color: {{ section.settings.mega_menu_background_color }} !important;
     color: {{ section.settings.mega_menu_text_color }};
