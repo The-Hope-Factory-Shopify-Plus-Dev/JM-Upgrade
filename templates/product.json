@@ -1,1 +1,195 @@
-{"sections":{"breadcrumbs":{"type":"product__breadcrumb","settings":{"width":"wide","padding_top":20,"padding_bottom":20,"css_class":"","custom_css":""}},"sidebar":{"type":"product__sidebar","settings":{"padding_top":20,"padding_bottom":20,"css_class":"","custom_css":""}},"main":{"type":"product__main","blocks":{"title":{"type":"title","settings":{}},"price":{"type":"price","settings":{"display_savings":false}},"yotpo_product_reviews_star_rating_eeEGNw":{"type":"shopify:\/\/apps\/yotpo-product-reviews\/blocks\/star-rating\/eb7dfd7d-db44-4334-bc49-c893b51b36cf","settings":{"product":"{{product}}"}},"form":{"type":"form","settings":{"show_payment_button":false}},"description":{"type":"description","settings":{}},"share":{"type":"share","disabled":true,"settings":{}}},"block_order":["title","price","yotpo_product_reviews_star_rating_eeEGNw","form","description","share"],"custom_css":[".thumbnail-sticker.sale-sticker {display: none;}",".thumbnail-sticker.new-sticker {display: none;}",".thumbnail-sticker.pre-order-sticker {background-color: #0000; color: #fff; display: none;}"],"settings":{"product_images_position":"left","set_product_height":false,"product_height":670,"video_looping":false,"gallery_arrows":true,"enable_zoom":false,"enable_product_lightbox":true,"slideshow_speed":0,"slideshow_transition":"slide","display_thumbnails":true,"thumbnail_position":"bottom-thumbnails","enable_thumbnail_slider":true,"width":"wide","padding_top":20,"padding_bottom":21,"animation":"none","css_class":"","custom_css":".title {\n  font-size: 25px;\n}\n\n.icon-with-text span {\n    padding-left: 10px;\n    font-size: 15px;\n}"}},"17338721832a3cafde":{"type":"apps","blocks":{"yotpo_product_reviews_reviews_xTpJqw":{"type":"shopify:\/\/apps\/yotpo-product-reviews\/blocks\/reviews\/eb7dfd7d-db44-4334-bc49-c893b51b36cf","settings":{"product":"{{product}}"}}},"block_order":["yotpo_product_reviews_reviews_xTpJqw"],"settings":{"width":"standard","padding_top":20,"padding_bottom":20,"css_class":"","custom_css":""}},"recommendations":{"type":"product__recommendations","settings":{"show_product_recommendations":true,"product_recommendations_style":"grid","product_recommendations_heading":"RECOMMENDED FOR YOU","products_per":4,"recommended_products_limit":4,"align_height":false,"collection_height":200,"width":"standard","padding_top":20,"padding_bottom":20,"animation":"none","css_class":"","custom_css":".title {\n  font-size: 25px;\n}"}},"9e823a9f-9a70-4725-afe7-317d24fd3e1e":{"type":"content-with-slider","disabled":true,"settings":{"body_text":"","css_class":"","custom_css":""}}},"order":["breadcrumbs","sidebar","main","17338721832a3cafde","recommendations","9e823a9f-9a70-4725-afe7-317d24fd3e1e"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "breadcrumbs": {
+      "type": "product__breadcrumb",
+      "settings": {
+        "width": "wide",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "sidebar": {
+      "type": "product__sidebar",
+      "settings": {
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "main": {
+      "type": "product__main",
+      "blocks": {
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "display_savings": false
+          }
+        },
+        "yotpo_product_reviews_star_rating_eeEGNw": {
+          "type": "shopify://apps/yotpo-product-reviews/blocks/star-rating/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "form": {
+          "type": "form",
+          "settings": {
+            "show_payment_button": false,
+            "show_gift_card_recipient_form": false
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {}
+        },
+        "share": {
+          "type": "share",
+          "disabled": true,
+          "settings": {}
+        },
+        "icon_with_text_7nCfPi": {
+          "type": "icon_with_text",
+          "settings": {
+            "icon_with_text__icon_au": "shopify://shop_images/noun-reload-1640474.png",
+            "icon_with_text__text_au": "30 days returns",
+            "icon_with_text__text_nz": "",
+            "link_au": "shopify://pages/return-policy",
+            "link_nz": ""
+          }
+        },
+        "icon_with_text_Wk8JMt": {
+          "type": "icon_with_text",
+          "settings": {
+            "icon_with_text__icon_au": "shopify://shop_images/noun-shipping-5046173.png",
+            "icon_with_text__text_au": "Free shipping over $140",
+            "icon_with_text__text_nz": "",
+            "link_au": "shopify://pages/australian-delivery",
+            "link_nz": ""
+          }
+        },
+        "icon_with_text_YgyWxJ": {
+          "type": "icon_with_text",
+          "settings": {
+            "icon_with_text__icon_au": "shopify://shop_images/noun-clock-2970582.png",
+            "icon_with_text__text_au": "Click & Collect Available",
+            "icon_with_text__text_nz": "",
+            "link_au": "",
+            "link_nz": ""
+          }
+        }
+      },
+      "block_order": [
+        "title",
+        "price",
+        "yotpo_product_reviews_star_rating_eeEGNw",
+        "form",
+        "description",
+        "share",
+        "icon_with_text_7nCfPi",
+        "icon_with_text_Wk8JMt",
+        "icon_with_text_YgyWxJ"
+      ],
+      "custom_css": [
+        ".thumbnail-sticker.sale-sticker {display: none;}",
+        ".thumbnail-sticker.new-sticker {display: none;}",
+        ".thumbnail-sticker.pre-order-sticker {background-color: #0000; color: #fff; display: none;}"
+      ],
+      "settings": {
+        "product_images_position": "left",
+        "set_product_height": false,
+        "product_height": 670,
+        "video_looping": false,
+        "gallery_arrows": true,
+        "enable_zoom": false,
+        "enable_product_lightbox": true,
+        "slideshow_speed": 0,
+        "slideshow_transition": "slide",
+        "display_thumbnails": true,
+        "thumbnail_position": "bottom-thumbnails",
+        "enable_thumbnail_slider": true,
+        "grid_gallery": true,
+        "enable_sticky": true,
+        "width": "wide",
+        "padding_top": 20,
+        "padding_bottom": 21,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ".title {\n  font-size: 25px;\n}\n\n.icon-with-text span {\n    padding-left: 10px;\n    font-size: 15px;\n}"
+      }
+    },
+    "17338721832a3cafde": {
+      "type": "apps",
+      "blocks": {
+        "yotpo_product_reviews_reviews_xTpJqw": {
+          "type": "shopify://apps/yotpo-product-reviews/blocks/reviews/eb7dfd7d-db44-4334-bc49-c893b51b36cf",
+          "settings": {
+            "product": "{{product}}"
+          }
+        }
+      },
+      "block_order": [
+        "yotpo_product_reviews_reviews_xTpJqw"
+      ],
+      "settings": {
+        "width": "standard",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "recommendations": {
+      "type": "product__recommendations",
+      "settings": {
+        "show_product_recommendations": true,
+        "product_recommendations_style": "grid",
+        "product_recommendations_heading": "RECOMMENDED FOR YOU",
+        "products_per": 4,
+        "recommended_products_limit": 4,
+        "align_height": false,
+        "collection_height": 200,
+        "width": "standard",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "animation": "none",
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20,
+        "css_class": "",
+        "custom_css": ".title {\n  font-size: 25px;\n}"
+      }
+    },
+    "9e823a9f-9a70-4725-afe7-317d24fd3e1e": {
+      "type": "content-with-slider",
+      "disabled": true,
+      "settings": {
+        "body_text": "",
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "breadcrumbs",
+    "sidebar",
+    "main",
+    "17338721832a3cafde",
+    "recommendations",
+    "9e823a9f-9a70-4725-afe7-317d24fd3e1e"
+  ]
+}
