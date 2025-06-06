@@ -54,6 +54,11 @@
     {% endif %}
   }
 
+  .featured-collection-section .slider-gallery, .block__featured-collection .slider-gallery {
+    padding-left:{{section.settings.collection_pl}}px;
+    padding-right:{{section.settings.collection_pr}}px;   
+  }
+
   @media only screen and (max-width: 798px) {
     #shopify-section-{{ section.id }} {
       padding-top: {{ section.settings.padding_top_mobile }}px;
