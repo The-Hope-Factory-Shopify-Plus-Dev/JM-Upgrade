@@ -46,6 +46,55 @@ product_recommendations: <boolean>
   endif
 %}
 
+<style>
+  .flickity-prev-next-button {
+    background-color: transparent !important;
+    border-radius: 0;
+    top: -25px;
+    transform: none;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    height: 15px;
+    width: 15px;
+    opacity: 0.45;
+    transition: all 0.3s linear 0s;
+  }
+  .flickity-prev-next-button:hover {opacity: 1;}
+  .flickity-button.next {right: 40px;}
+  .flickity-button.previous {
+    left: auto;
+    right: 75px;
+  }
+  .flickity-prev-next-button svg {display: none;}
+  .flickity-prev-next-button:before {
+    content: "";
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 8px auto;
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+  .flickity-button.previous:before {background-image: url({{ 'caret-left.png' | asset_url }});}
+  .flickity-button.next:before {background-image: url({{ 'caret-right.png' | asset_url }});}
+  #quickshop .flickity-button.next {right: 0;}
+  #quickshop .flickity-button.previous {
+    left: auto;
+    right: 35px;
+  }
+
+
+  
+  @media (max-width: 798px) {
+    .flickity-button.next {right: 20px;}
+    .flickity-button.previous {right: 55px;}
+  }
+  
+</style>
+
 <div
   class="
     slider-gallery
