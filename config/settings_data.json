@@ -461,7 +461,7 @@
   },
   "platform_customizations": {
     "custom_css": [
-      ".thumbnail-sticker.sale-sticker {display: none;}",
+      ".thumbnail-sticker.thumbnail-sticker--sale {display: none;}",
       ".discount-sticker {background-color: #d02e2b; color: #fff;}",
       ".page-navigation-arrows {display: none;}",
       ".header__icons form.selectors-form button.disclosure__toggle {min-width: 135px; display: flex; justify-content: space-between; background: transparent; color: #fff; border: none; padding: 8px;}",
