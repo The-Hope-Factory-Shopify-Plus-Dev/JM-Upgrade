@@ -20,9 +20,10 @@
 {% if
   collection_handles contains 'best-seller' or
   collection_handles contains 'coming-soon' or
-  collection_handles contains 'new' or
+  product.tags contains "NEW" or product.tags contains "New-in" or product.tags contains "new"  or
   collection_handles contains 'pre-order' or
   collection_handles contains 'staff-pick' or
+  product.metafields.custom.discount_badge.value != blank or product.metafields.custom.sticker_1.value != blank or product.metafields.custom.sticker_2.value != blank or
   product_on_sale or
   product.available == false
 %}
@@ -65,7 +66,7 @@
         </div>
       {% endif %}
 
-      {% if collection_handles contains 'new' %}
+      {% if product.tags contains "NEW"  or product.tags contains "New-in" or product.tags contains "new" %}
         <div
           class="
             thumbnail-sticker
@@ -118,6 +119,24 @@
           </div>
         {% endif %}
 
+        {% if product.metafields.custom.discount_badge.value != blank %}
+            <div class="discount-sticker sticker-{{i}}">
+              <span class="sticker-text">{{ product.metafields.custom.discount_badge.value }}</span>
+            </div>
+      {% endif %}
+    
+      {% if product.metafields.custom.sticker_1.value != blank %}
+        <div class="thumbnail-sticker custom-sticker-1 sticker-{{i}}">
+          <span class="sticker-text">{{ product.metafields.custom.sticker_1.value }}</span>
+        </div>
+      {% endif %}
+
+      {% if product.metafields.custom.sticker_2.value != blank %}
+        <div class="thumbnail-sticker custom-sticker-2 sticker-{{i}}">
+          <span class="sticker-text">{{ product.metafields.custom.sticker_2.value }}</span>
+        </div>
+      {% endif %}
+
         {% unless product.available %}
           <div
             class="
@@ -130,6 +149,8 @@
             </span>
           </div>
         {% endunless %}
+
+      
       {% else %}
         <div
           class="
