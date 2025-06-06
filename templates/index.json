@@ -247,7 +247,7 @@
         "button_label": "SHOP NOW",
         "button_style": "button--primary",
         "collection_style": "slider",
-        "width": "standard",
+        "width": "wide",
         "show_gutter": true,
         "padding_top": 20,
         "padding_bottom": 20,
