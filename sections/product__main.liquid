@@ -129,6 +129,136 @@
   </script>
 {% endif %}
 
+<style>
+    .stickySwatchProductColor {display:none!important;}
+    {% if settings.enable_sticky_atc == true %}
+    .show-sticky-atc .shopify-main-product-form {
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 70px;
+      margin: auto;
+      max-width: 92%;
+      background-color: #fff;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 5px 10px;
+      border-radius: 10px;
+      z-index: 9999;
+    }
+    @media (min-width: 750px) {
+      .show-sticky-atc .shopify-main-product-form {
+        bottom: 20px;
+        max-width: 480px;
+      }
+    }
+    .show-sticky-atc .sticky-enable {
+      z-index: 9;
+    }
+    .show-sticky-atc #cnc-container,
+    .show-sticky-atc .iwishAddWrap,
+    .show-sticky-atc .cart-warning,
+    .show-sticky-atc .product__size-chart,
+    .show-sticky-atc .webyzeProductColors .swatchProductColor:not(.currentSwatch),
+    .show-sticky-atc .swatch__options .swatch__option,
+    .show-sticky-atc div:empty {display: none;}
+    .show-sticky-atc giftflick-api,
+    .show-sticky-atc giftflick-api + div,
+    .show-sticky-atc .klaviyo-bis-trigger,
+    .show-sticky-atc .yie-outer-element {display: none !important;}
+
+    .show-sticky-atc .purchase-details .purchase-details__spb--false,
+    .show-sticky-atc .swatch .option-title.Size-label {margin: 0;}
+    .show-sticky-atc .purchase-details {flex: 1;}
+
+    .show-sticky-atc .webyzeProductColors {
+      min-width: auto;
+      position: absolute;
+      bottom: 8px;
+      opacity: 0;
+    }
+    
+    .show-sticky-atc .stickySwatchProductColor {
+      display:flex!important;
+    }
+    .show-sticky-atc .webyzeProductColorsLabel > .swatchProductColor:hover > .webyzeTooltip{
+      opacity: 0;
+    }
+    .show-sticky-atc .webyzeProductColorsLabel {
+      cursor: pointer;
+      font-size: 0;
+      min-height: 30px;
+      opacity: 1;
+      position: relative;
+      pointer-events: initial;
+      top: 2px;
+      z-index: 1;
+    }
+    .show-sticky-atc .webyzeProductColorsLabel.active-label {
+      opacity: 1;
+    }
+    .show-sticky-atc .webyzeProductColors.open-colors {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      left: 0;
+      bottom: 60px;
+      background-color: #fff;
+      border-radius: 10px;
+      min-width: 70px;
+      padding: 10px 0;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+      opacity: 1;
+    }
+    .show-sticky-atc .webyzeProductColors.open-colors .swatchProductColor {
+      display: block;
+      pointer-events: initial;
+    }
+
+    .show-sticky-atc .variant-selection {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .show-sticky-atc .product_form--radio variant-selection options-selection {
+      cursor: pointer;
+      padding: 0;
+      margin: 0 20px;
+    }
+    .show-sticky-atc .swatch__options {
+      flex-direction: column;
+      align-items: center;
+      position: absolute;
+      left: 0;
+      bottom: 40px;
+      gap: 4px;
+      margin: 0;
+    }
+    .show-sticky-atc .swatch__options.open-size {
+      background-color: #fff;
+      border-radius: 10px;
+      min-width: 70px;
+      padding: 15px 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+    .show-sticky-atc .open-size.swatch__options .swatch__option {
+      display: block;
+      margin: 0;
+    }
+    .show-sticky-atc .swatch-element {
+      width: 40px;
+    }
+    .show-sticky-atc .label {font-size: 13px;}
+    .show-sticky-atc button {
+      border-radius: 10px;
+      margin: 0 !important;
+    }
+    .show-sticky-atc .button--add-to-cart[disabled] {display: block;}    
+    {% endif %}    
+  </style>
+
 {% schema %}
 
 {
