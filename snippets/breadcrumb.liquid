@@ -72,7 +72,7 @@
         <span class="breadcrumb-separator">
           {% render 'icon', name: breadcrumb_separator %}
         </span>
-        <span class="product_name">{{ product.title }}</span>
+        <span class="product_name">{{ product.title | capitalize }}</span>
       </li>
     {% endif %}
     {% if template.name == 'collection' %}
