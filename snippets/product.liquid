@@ -24,6 +24,95 @@
 
 {% comment %} HTML markup {% endcomment %}
 
+{% assign sticky = section.settings.enable_sticky %}
+{% style %}
+  .product-gallery--left-thumbnails:not(.product-gallery--image-amount-1) .product-gallery__thumbnails {
+    width: auto;
+  }
+  .product-gallery--left-thumbnails:not(.product-gallery--image-amount-1) {
+    display: block;
+  /*column-count: 2; */
+  }
+  .product-gallery .mobile-gallery {margin-top: 0;}
+  .product-gallery .mobile-gallery .product-gallery__thumbnail {opacity: 1;}
+  .product-gallery .mobile-gallery .product-gallery__thumbnail img {width: 100%;}
+  .mobile-gallery .flickity-button {background-color: transparent;}
+
+  @media (max-width: 798px) {
+    {% if section.settings.grid_gallery %}
+    .product__images.column {
+      margin: 0 0 20px;
+      width: 100%;
+    }
+    .product-gallery__thumbnail {
+      margin: 0 0 20px;
+      width: 100%;
+
+    }
+
+    .product-breadcrumb {padding:0px !important;}
+    {% endif %}
+  }
+
+  @media (min-width: 799px) {
+    .product__information{
+      width: 33.3333333333%;
+      max-width: 33.3333333333%;
+    }
+    .product_section{
+      flex-wrap:nowrap;
+    }
+    .product__images{
+      width: 66.6666666667%;
+      max-width: 66.6666666667%;
+    }
+    .product-template:not(.product-template--image-scroll) .product-gallery .grid-gallery .product-gallery__image {visibility: visible;}
+    .product-gallery .grid-gallery {
+      display: -webkit-flex;
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 20px;
+      row-gap: 20px;
+    }
+    .product-gallery .grid-gallery .product-gallery__image {width: calc(50% - 20px * 2 / 3);}
+    .sticky-enable {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 30px;
+      max-width:400px;
+    }
+  }
+
+   .icon-with-text {
+      align-items: center;
+      padding-bottom: 10px;
+      display: flex;
+   }
+  .product-block.product-block--icon-with-text {margin-top: 10px;}
+  .icon-with-text img {
+    width: 7%;
+    vertical-align: middle;
+    }
+  .icon-with-text span {
+    padding-left: 10px;
+    font-size: 16px;
+  }
+  .purchase-details .purchase-details__spb--true .action_button.action_button--secondary {
+    max-width: unset;
+    margin:0;
+    margin-bottom:20px;
+  }
+  .purchase-details .purchase-details__spb--true .shopify-payment-button {
+    margin: 0;
+    max-width: unset;
+  }
+  .find-button {
+    margin-bottom:20px;
+    margin-top:20px;
+  }
+{% endstyle %}
+
+
 <div class="product_section
             js-product_section
             container
@@ -34,7 +123,7 @@
             {% endif %}">
 
   <div class="product__images
-              one-half
+              
               column
               medium-down--one-whole">
     {% if section_onboarding %}
@@ -63,11 +152,14 @@
     class="
       product__information
       has-product-sticker
-      one-half
+      
       column
       medium-down--one-whole
     "
   >
+     {% if sticky %}
+      <div class="sticky-enable">
+    {% endif %}
     {% if stickers_enabled %}
       {% assign collection_handles = product.collections | map: 'handle' %}
       {%
@@ -415,5 +507,8 @@
         {%- endif -%}
       </div>
     {%- endfor -%}
+     {% if sticky %}
+      </div>
+    {% endif %}
   </div>
 </div>
