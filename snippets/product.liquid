@@ -504,6 +504,28 @@
           <div class="product-app">
             {% render block %}
           </div>
+        {%- elsif block.type == 'icon_with_text' -%}
+          {% comment %} icon with Text {% endcomment %}
+         
+          <div class="icon-with-text">
+             {% if localization.country.iso_code == 'AU' %}
+            <img src="{{ block.settings.icon_with_text__icon_au | img_url }}">
+            <span>
+              {%- if block.settings.link_au != blank %}<a href="{{ block.settings.link_au }}">{% endif -%}
+              {{- block.settings.icon_with_text__text_au -}}
+              {%- if block.settings.link_au != blank %}</a>{% endif -%}
+            </span>
+            {% endif %}
+             {% if localization.country.iso_code == 'NZ' %}
+            <img src="{{ block.settings.icon_with_text__icon_nz | img_url }}">
+            <span>
+              {%- if block.settings.link_nz != blank %}<a href="{{ block.settings.link_nz }}">{% endif -%}
+              {{- block.settings.icon_with_text__text_nz -}}
+              {%- if block.settings.link_nz != blank %}</a>{% endif -%}
+            </span>
+            {% endif %}
+          </div>
+         
         {%- endif -%}
       </div>
     {%- endfor -%}
