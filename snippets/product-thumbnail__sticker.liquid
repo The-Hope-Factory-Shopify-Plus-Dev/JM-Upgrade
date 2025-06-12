@@ -1,128 +1,79 @@
 {% comment %}
-  @param product {Object}
-    The product object
-
-  @param context {String}
-    The snippet context
-
-  @param collection_handles {String}
-    The associated collection handle
+----------------
+Optional values
+context: <string>
 {% endcomment %}
 
-{% comment %} Check if product is on sale {% endcomment %}
-
+{% comment %} Check if product is on sale 
+{% if product.compare_at_price_max > product.price %}
+  {% assign product_on_sale = true %}
+{% endif %}{% endcomment %}
 
 {% if product.tags contains "sale" or product.tags contains "Sale" or product.tags contains "SALE"  %}
   {% assign product_on_sale = true %}
 {% endif %}
 
 {% comment %} Check if sticker holder should be displayed {% endcomment %}
-{% if
-  collection_handles contains 'best-seller' or
-  collection_handles contains 'coming-soon' or
-  product.tags contains "NEW" or product.tags contains "New-in" or product.tags contains "new"  or
-  collection_handles contains 'pre-order' or
-  collection_handles contains 'staff-pick' or
-  product.metafields.custom.discount_badge.value != blank or product.metafields.custom.sticker_1.value != blank or product.metafields.custom.sticker_2.value != blank or
-  product_on_sale or
-  product.available == false
-%}
-  <div
-    class="
-      sticker-holder
-      sticker-shape-{{ settings.sticker_shape }}
-      sticker-position-{{ settings.sticker_position }}
-    "
-  >
-    <div
-      class="
-        sticker-holder__content
-        sticker-holder__content--{{ context }}
-      "
-    >
+{% if collection_handles contains 'best-seller' or
+      collection_handles contains 'coming-soon' or
+      product.tags contains "NEW" or product.tags contains "New-in" or product.tags contains "new" or
+      collection_handles contains 'pre-order' or
+      collection_handles contains 'staff-pick' or
+      product.metafields.custom.discount_badge.value != blank or product.metafields.custom.sticker_1.value != blank or product.metafields.custom.sticker_2.value != blank or
+      product_on_sale %}
+  <div class="
+              sticker-holder
+              sticker-shape-{{ settings.sticker_shape }}
+              sticker-position-{{ settings.sticker_position }}">
+    <div class="sticker-holder__content sticker-holder__content--{{ context }}">
+      
       {% if collection_handles contains 'best-seller' %}
-        <div
-          class="
-            thumbnail-sticker
-            thumbnail-sticker--best-seller
-          "
-        >
-          <span class="thumbnail-sticker__text">
-            {{- 'collections.general.best_seller' | t -}}
-          </span>
+        <div class="best-seller-sticker thumbnail-sticker sticker-{{i}}">
+          <span class="sticker-text">{{ 'collections.general.best_seller' | t }}</span>
         </div>
       {% endif %}
 
+
       {% if collection_handles contains 'coming-soon' %}
-        <div
-          class="
-            thumbnail-sticker
-            thumbnail-sticker--coming-soon
-          "
-        >
-          <span class="thumbnail-sticker__text">
-            {{- 'collections.general.coming_soon' | t -}}
-          </span>
+        <div class="coming-soon-sticker thumbnail-sticker sticker-{{i}}">
+          <span class="sticker-text">{{ 'collections.general.coming_soon' | t }}</span>
         </div>
       {% endif %}
 
       {% if product.tags contains "NEW"  or product.tags contains "New-in" or product.tags contains "new" %}
-        <div
-          class="
-            thumbnail-sticker
-            thumbnail-sticker--new
-          "
-        >
-          <span class="thumbnail-sticker__text">
-            {{- 'collections.general.new' | t -}}
-          </span>
+        <div class="new-sticker thumbnail-sticker sticker-{{i}}">
+          <span class="sticker-text">{{ 'collections.general.new' | t }}</span>
         </div>
-      {% endif %}
+      {% endif %} 
 
       {% if collection_handles contains 'pre-order' %}
-        <div
-          class="
-            thumbnail-sticker
-            thumbnail-sticker--pre-order
-          "
-        >
-          <span class="thumbnail-sticker__text">
-            {{- 'collections.general.pre_order' | t -}}
-          </span>
+        <div class="pre-order-sticker thumbnail-sticker sticker-{{i}}">
+          <span class="sticker-text">{{ 'collections.general.pre_order' | t }}</span>
         </div>
       {% endif %}
+
+      {% if product.available and product_on_sale %}
+        <div class="sale-sticker thumbnail-sticker sticker-{{i}}">
+          <span class="sticker-text">{{ 'collections.general.sale' | t }}</span>
+        </div>
+      {% endif %}
+
+      {% unless product.available %}
+        <div class="sold-out-sticker thumbnail-sticker sticker-{{i}}">
+          <span class="sticker-text">{{ 'collections.general.sold_out' | t }}</span>
+        </div>
+      {% endunless %}
 
       {% if collection_handles contains 'staff-pick' %}
-        <div
-          class="
-            thumbnail-sticker
-            thumbnail-sticker--staff-pick
-          "
-        >
-          <span class="thumbnail-sticker__text">
-            {{- 'collections.general.staff_pick' | t -}}
-          </span>
+        <div class="staff-pick-sticker thumbnail-sticker sticker-{{i}}">
+          <span class="sticker-text">{{ 'collections.general.staff_pick' | t }}</span>
         </div>
       {% endif %}
 
-      {% if context == 'thumbnail' %}
-        {% if product.available and product_on_sale %}
-          <div
-            class="
-              thumbnail-sticker
-              thumbnail-sticker--sale
-            "
-          >
-            <span class="thumbnail-sticker__text">
-              {{ 'collections.general.sale' | t }}
-            </span>
-          </div>
-        {% endif %}
-
-        {% if product.metafields.custom.discount_badge.value != blank %}
-            <div class="discount-sticker sticker-{{i}}">
-              <span class="sticker-text">{{ product.metafields.custom.discount_badge.value }}</span>
-            </div>
+      {% if product.metafields.custom.discount_badge.value != blank %}
+        <div class="discount-sticker sticker-{{i}}">
+          <span class="sticker-text">{{ product.metafields.custom.discount_badge.value }}</span>
+        </div>
       {% endif %}
     
       {% if product.metafields.custom.sticker_1.value != blank %}
@@ -136,60 +87,7 @@
           <span class="sticker-text">{{ product.metafields.custom.sticker_2.value }}</span>
         </div>
       {% endif %}
-
-        {% unless product.available %}
-          <div
-            class="
-              thumbnail-sticker
-              thumbnail-sticker--sold-out
-            "
-          >
-            <span class="thumbnail-sticker__text">
-              {{ 'collections.general.sold_out' | t }}
-            </span>
-          </div>
-        {% endunless %}
-
-      
-      {% else %}
-        <div
-          class="
-            thumbnail-sticker
-            thumbnail-sticker--hidden
-          "
-        >
-          {% comment %}Inject @pixelunion/shopify-price-ui/price-ui-badge begin{% endcomment %}
-          {%- assign locale_badge_sold_out = 'product.badge.sold_out' | t -%}
-          {%- assign locale_badge_on_sale = 'product.badge.sale' | t -%}
-          
-          <div class="price-ui-badge price-ui-badge--loading" data-price-ui-badge>
-            <noscript>
-              <style>
-                .price-ui-badge--loading {
-                  display: block !important;
-                  opacity: 1 !important;
-                }
-              </style>
-            </noscript>
-          
-            {% if product.available == false %}
-              {%-
-                render 'price-ui-templates',
-                template: 'price-ui-badge',
-                badge: locale_badge_sold_out,
-              -%}
-            {%- elsif product.compare_at_price > product.price -%}
-              {%-
-                render 'price-ui-templates',
-                template: 'price-ui-badge',
-                badge: locale_badge_on_sale,
-              -%}
-            {%- endif -%}
-          </div>
-          {% comment %}Inject @pixelunion/shopify-price-ui/price-ui-badge end{% endcomment %}
-
-        </div>
-      {% endif %}
+  
     </div>
   </div>
 {% endif %}
