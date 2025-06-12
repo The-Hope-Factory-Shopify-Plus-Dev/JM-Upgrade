@@ -10,11 +10,11 @@
 {% endcomment %}
 
 {% comment %} Check if product is on sale {% endcomment %}
-{% liquid
-  if product.compare_at_price > product.price
-    assign product_on_sale = true
-  endif
-%}
+
+
+{% if product.tags contains "sale" or product.tags contains "Sale" or product.tags contains "SALE"  %}
+  {% assign product_on_sale = true %}
+{% endif %}
 
 {% comment %} Check if sticker holder should be displayed {% endcomment %}
 {% if
