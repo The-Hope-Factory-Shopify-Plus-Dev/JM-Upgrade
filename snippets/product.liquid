@@ -211,7 +211,7 @@
             {% elsif section_onboarding %}
               {{ 'homepage.onboarding.product_title' | t }}
             {% else %}
-              {{ product.title }}
+              {{ product.title  | capitalize  }}
             {% endif %}
           </h1>
 
