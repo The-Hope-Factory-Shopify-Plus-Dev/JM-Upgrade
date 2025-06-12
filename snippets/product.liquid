@@ -207,7 +207,7 @@
           {% comment %} Name {% endcomment %}
           <h1 class="product-title title">
             {% if is_product_modal %}
-              <a href="{{ product.url }}">{{ product.title }}</a>
+              <a href="{{ product.url }}">{{ product.title | capitalize}}</a>
             {% elsif section_onboarding %}
               {{ 'homepage.onboarding.product_title' | t }}
             {% else %}
