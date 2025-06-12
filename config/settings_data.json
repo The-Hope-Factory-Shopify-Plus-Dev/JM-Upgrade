@@ -69,7 +69,7 @@
     "button_cart_bg_color--highlight": "#000000",
     "button_cart_border_color--highlight": "#000000",
     "icon": "icon_solid",
-    "toggle_icon_style": "plus_and_minus",
+    "toggle_icon_style": "carets",
     "media_share_style_link": "squared",
     "use_placeholders": true,
     "display_heading_divider": false,
