@@ -35,6 +35,13 @@
           "type": "title",
           "settings": {}
         },
+        "after_pay_ghXUwB": {
+          "type": "after_pay",
+          "settings": {
+            "text": "",
+            "link": ""
+          }
+        },
         "price": {
           "type": "price",
           "settings": {
@@ -96,6 +103,7 @@
       },
       "block_order": [
         "title",
+        "after_pay_ghXUwB",
         "price",
         "yotpo_product_reviews_star_rating_eeEGNw",
         "form",
