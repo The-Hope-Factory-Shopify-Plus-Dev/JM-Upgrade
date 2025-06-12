@@ -11,6 +11,10 @@
 .boost-sd__header-title{
   font-weight: normal;
 }
+.boost-sd__product-count{
+  font-size: 14px;
+  text-transform: uppercase;
+}
 @media only screen and (min-width: 768px) {
     .boost-sd__product-list-grid--4-col.boost-sd__product-list--margin .boost-sd__product-item {
         margin-bottom: var(--boostsd-product-item-margin-bottom);
