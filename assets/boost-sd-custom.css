@@ -12,4 +12,9 @@
         margin-right: calc(var(--boostsd-product-list-gap-desktop) * .5);
         width: calc(25% - 20px);
     }
+  .boost-sd__product-list--margin {
+        margin-left: calc(20px * -.5);
+        margin-right: calc(20px * -.5);
+    }
 }
+
