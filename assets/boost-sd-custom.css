@@ -4,6 +4,10 @@
   width: 100%;
   max-width: none;
 }
+.boost-sd__toolbar-inner{
+   width: 100%;
+  max-width: none;
+}
 .boost-sd__header-title{
   font-weight: normal;
 }
