@@ -138,7 +138,8 @@
     <link rel="shortcut icon" type="image/x-icon" href="{{ 'favicon.png' | asset_url }}">
   {%- endif -%}
 
-  {{ content_for_header }}
+  {% render 'boost-sd-fallback' %}
+    {{ content_for_header }}
 
   {% render 'social-meta-info' %}
   {% if collection.previous_product %}<link rel="prev" href="{{ collection.previous_product }}">{% endif %}

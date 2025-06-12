@@ -1,1 +1,79 @@
-{"sections":{"banner":{"type":"fallback_image_banner","disabled":true,"settings":{"image_darken":true,"width":"wide","banner_height":"medium","padding_top":0,"padding_bottom":0,"css_class":"","custom_css":""}},"main":{"type":"collection__main","custom_css":[".sale-sticker {display: none;}",".product_form-collection .swatch {margin-top: 5px; display: none;}",".product_form-collection .purchase-details .purchase-details__spb--false {margin-top: 0; display: none;}",".custom-sticker-2 {text-align: left;padding: 1px;}",".custom-sticker-1 {text-align: left; padding: 1px;}"],"settings":{"collection_breadcrumb":true,"collection_tags":true,"collection_sort":true,"show_sidebar":false,"sidebar_position":"left","show_promo_banner":false,"image_darken":true,"promo_title":"Special sale on now!","promo_text":"<p>Description of promotion with lots of details.<\/p>","banner_height":"medium","align_height":false,"collection_height":200,"products_per_row":4,"mobile_products_per_row":"2","pagination_limit":48,"pagination_type":"basic_pagination","width":"wide","padding_top":40,"padding_bottom":40,"css_class":"","custom_css":""}}},"order":["banner","main"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "fallback_image_banner",
+      "disabled": true,
+      "settings": {
+        "image_darken": true,
+        "width": "wide",
+        "banner_height": "medium",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "main": {
+      "type": "collection__main",
+      "disabled": true,
+      "custom_css": [
+        ".sale-sticker {display: none;}",
+        ".product_form-collection .swatch {margin-top: 5px; display: none;}",
+        ".product_form-collection .purchase-details .purchase-details__spb--false {margin-top: 0; display: none;}",
+        ".custom-sticker-2 {text-align: left;padding: 1px;}",
+        ".custom-sticker-1 {text-align: left; padding: 1px;}"
+      ],
+      "settings": {
+        "collection_breadcrumb": true,
+        "collection_tags": true,
+        "collection_sort": true,
+        "show_sidebar": false,
+        "sidebar_position": "left",
+        "show_promo_banner": false,
+        "image_darken": true,
+        "promo_title": "Special sale on now!",
+        "promo_text": "<p>Description of promotion with lots of details.</p>",
+        "banner_height": "medium",
+        "align_height": false,
+        "collection_height": 200,
+        "products_per_row": 4,
+        "mobile_products_per_row": "2",
+        "pagination_limit": 48,
+        "pagination_type": "basic_pagination",
+        "width": "wide",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1493394c-e4f9-404e-b185-4b31dbcdea3e": {
+      "type": "apps",
+      "blocks": {
+        "1dbadf24-5d60-46be-bbd2-b4e5a5495233": {
+          "type": "shopify://apps/boost-ai-search-discovery/blocks/product-filter/7fc998ae-a150-4367-bab8-505d8a4503f7",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "1dbadf24-5d60-46be-bbd2-b4e5a5495233"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "1493394c-e4f9-404e-b185-4b31dbcdea3e",
+    "banner",
+    "main"
+  ],
+  "wrapper": ".boost-sd__product-filter-fallback"
+}

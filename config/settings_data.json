@@ -456,6 +456,11 @@
         "type": "shopify://apps/instafeed/blocks/app-embed/5c329ba9-407e-40ec-a145-431c886f5df9",
         "disabled": false,
         "settings": {}
+      },
+      "652fbc80-6bce-41b5-8148-33230e8b5796": {
+        "type": "shopify://apps/boost-ai-search-discovery/blocks/boost-sd/7fc998ae-a150-4367-bab8-505d8a4503f7",
+        "disabled": false,
+        "settings": {}
       }
     }
   },
