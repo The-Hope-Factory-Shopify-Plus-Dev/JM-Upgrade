@@ -143,43 +143,43 @@
         "content_cNm6VR": {
           "type": "content",
           "settings": {
-            "title": "What is your question?",
-            "answer": "<p>Provide the answer to the question here.</p>"
+            "title": "How can I track my order?",
+            "answer": "<p>We are currently using Australia Post for all orders. You will be able to use <a href=\"https://auspost.com.au/mypost/track/#/search\" target=\"_blank\"><strong>Australia Post Tracking</strong></a> to track your parcel. Please note that this may take up to 24hours to show detailed movements of your order. If an alternative shipping method is required, please contact the team at hello@jomercer.com.au.</p>"
           }
         },
         "content_YQCWGM": {
           "type": "content",
           "settings": {
-            "title": "What is your question?",
-            "answer": "<p>Provide the answer to the question here.</p>"
+            "title": "Why have I only received part of my order?",
+            "answer": "<p>All orders are fulfilled by the nearest location with stock, which means that orders are sometimes separately into different parcels and shipping times. Please note that only one tracking number will be provided to the customer, but customer service will be able to track the multiple items for you by contacting hello@jomercer.com.au.</p>"
           }
         },
         "content_MzPzxg": {
           "type": "content",
           "settings": {
-            "title": "What is your question?",
-            "answer": "<p>Provide the answer to the question here.</p>"
+            "title": "Will I have to sign for my delivery?",
+            "answer": "<p>All international orders from JO MERCER requires a signature for proof of delivery. Please note this when ordering.</p>"
           }
         },
         "content_ad9dBP": {
           "type": "content",
           "settings": {
-            "title": "What is your question?",
-            "answer": "<p>Provide the answer to the question here.</p>"
+            "title": "Why has my order been shipped back?",
+            "answer": "<p>Your order may have been returned to our warehouse for numerous reasons. This may be due to failure of parcel collection, incorrect address or delivery details or failure to sign. JO MERCER is not responsible for shipping on orders return to our warehouse and the shipping will be subtracted from the total order refund once processed.</p>"
           }
         },
         "content_zfJgVr": {
           "type": "content",
           "settings": {
-            "title": "What is your question?",
-            "answer": "<p>Provide the answer to the question here.</p>"
+            "title": "I've ordered an item on preorder- what happens next?",
+            "answer": "<p>All pre order shipping dates are highlighted in the individual product description. Shipping dates may differ depending on color, so ensure you are reviewing the specific shipping date on your ordered color. If you have any questions about the shipping date, or it is not visible, please contact the team at hello@jomercer.com.au. Once ready to order to be shipped, you will be notified with your tracking number. In some cases, the delivery date may be subject to change, so be mindful of this when ordering. Note that your pre order will be shipped separately if you have multiple items in your order. </p><p><strong>Please note*</strong> Our standard returns policy applies for all pre-orders, with our 30-day return period commencing on the day your order is dispatched from our warehouse.</p>"
           }
         },
         "content_QgGECh": {
           "type": "content",
           "settings": {
-            "title": "What is your question?",
-            "answer": "<p>Provide the answer to the question here.</p>"
+            "title": "What happens if my parcel is stolen?",
+            "answer": "<p>It is the customers responsibility to nominate a safe and secure shipping address. JO MERCER is not responsible for any stolen or missing parcels once an order has been delivered to the nominated address. </p>"
           }
         },
         "image_FztiWP": {
@@ -197,7 +197,6 @@
         "content_QgGECh",
         "image_FztiWP"
       ],
-      "disabled": true,
       "settings": {
         "title": "",
         "width": "standard",
