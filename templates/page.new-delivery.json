@@ -134,7 +134,7 @@
         "padding_top_mobile": 20,
         "padding_bottom_mobile": 0,
         "css_class": "",
-        "custom_css": ""
+        "custom_css": ".rich-text__text {font-family\"Friedel Pro\";}"
       }
     },
     "index_faq_bGtGCz": {
