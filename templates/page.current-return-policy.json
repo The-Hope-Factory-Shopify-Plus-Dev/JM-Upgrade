@@ -348,6 +348,111 @@
         "css_class": "",
         "custom_css": ""
       }
+    },
+    "index_faq_yxNLb7": {
+      "type": "index__faq",
+      "blocks": {
+        "heading_4dpiYR": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "title": "Section heading"
+          }
+        },
+        "content_HNE6KU": {
+          "type": "content",
+          "settings": {
+            "title": "FULL PRICED ITEMS",
+            "answer": "<p>- Eligible for a refund, exchange, or credit note within 30 days from purchase.</p><p>- Items must be unworn, in original condition, and with packaging and the original shoe box.</p><p>- A receipt or other valid proof of purchase is required for all returns.</p>"
+          }
+        },
+        "content_pMAkf3": {
+          "type": "content",
+          "settings": {
+            "title": "SALE ITEMS",
+            "answer": "<ul><li>Eligible for an exchange or credit note only, unless deemed faulty, within 30 days from purchase.</li><li>Items must be unworn, in original condition, and with packaging and the original shoe box.</li><li>A receipt or other valid proof of purchase is required for all returns.</li></ul>"
+          }
+        },
+        "content_eK4nmh": {
+          "type": "content",
+          "settings": {
+            "title": "PROMOTIONAL ITEMS",
+            "answer": "<ul><li>When returning an item purchased in a promotion based on multiple items (e.g. 70% off second pair), the item you keep will revert to full price.</li><li>When returning an item purchased in a promotion based on multiple items (50% off second pair), the item you keep will revert to full price. We will exchange for size/colour. Style changes will forfeit the promotional % offer, and the price difference will need to be paid upon exchange. Promotional discounts cannot be retrospectively applied to items returned for exchange or store credit.</li><li>Items must be unworn, in original condition, and with packaging and the original shoe box.</li><li>A receipt or other valid proof of purchase is required for all returns.</li><li>International returns postage is the responsibility of the customer.</li><li>Split return outcomes may apply to any order. For example, if you purchase a full-price item and a sale item in the same transaction, you may be eligible for a refund on the full-price item and store credit for the sale item.</li></ul>"
+          }
+        },
+        "heading_jeMRP9": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "title": "Section heading"
+          }
+        },
+        "content_K36Lky": {
+          "type": "content",
+          "settings": {
+            "title": "NON - RETURNABLE ITEMS",
+            "answer": "<p>For hygiene reasons, we cannot accept returns on shoe care or hosiery unless the item is deemed faulty.</p><p>Item/s marked as \"FINAL SALE\" cannot be returned for a exchange or refund unless in the event of them being faulty. If final sale items are returned despite this policy, items will be sent back to you at an additional charge.</p>"
+          }
+        },
+        "content_MhVTRF": {
+          "type": "content",
+          "settings": {
+            "title": "REFUND PROCESS",
+            "answer": "<p>Refunds will be processed to the original payment method. Please allow up to 5-7 business days for your refund to be processed once the item has been received and assessed by our Customer Care team.</p>"
+          }
+        },
+        "content_cUG73f": {
+          "type": "content",
+          "settings": {
+            "title": "EXCHANGE PROCESS",
+            "answer": "<p>When lodging a return through the Loop Portal, please note that the exchange request is not always guaranteed. If the requested item becomes ‘out of stock’ at the time of processing, our Customer Care team will be in contact via the email used to initiate the exchange and organise alternative arrangements.<br/><br/>Jo Mercer covers the initial return shipping cost for change-of-mind returns. Any additional exchanges must still be within 30 days of the original purchase date and return shipping will be the customer’s responsibility.<br/><br/>Please note that a return label cost will be deducted from your refund or credit note. For exchanges, you will need to pay for the shipping label via the portal.</p><p><br/>Once you’re ready to proceed with your return, head to our RETURNS portal <a href=\"https://returns.jomercer.com.au/#/?_gl=1*knit52*_gcl_aw*R0NMLjE3MzE1NTQwMTYuQ2p3S0NBaUF1ZEc1QmhBUkVpd0FXTWxTakdHUGpuZVZEWDBaaFZjbjVOcEd1VHpkcVNZbHM4Q0FNLTNmXzRGcEIwNFJzWkJTNTlUSkhob0NlNzBRQXZEX0J3RQ..*_gcl_au*MTgxNDE5OTgxMC4xNzM2MTE0MTU1\" target=\"_blank\" title=\"https://returns.jomercer.com.au/#/?_gl=1*knit52*_gcl_aw*R0NMLjE3MzE1NTQwMTYuQ2p3S0NBaUF1ZEc1QmhBUkVpd0FXTWxTakdHUGpuZVZEWDBaaFZjbjVOcEd1VHpkcVNZbHM4Q0FNLTNmXzRGcEIwNFJzWkJTNTlUSkhob0NlNzBRQXZEX0J3RQ..*_gcl_au*MTgxNDE5OTgxMC4xNzM2MTE0MTU1\">HERE</a> to book your return.</p>"
+          }
+        },
+        "image_QFmDWA": {
+          "type": "image",
+          "disabled": true,
+          "settings": {}
+        },
+        "content_DPy8Cf": {
+          "type": "content",
+          "settings": {
+            "title": " FAULTY ITEMS",
+            "answer": "<p>Please contact our Customer Care team or visit your nearest store if you believe your item is faulty. You can lodge your faulty return <a href=\"https://returns.jomercer.com.au/#/?_gl=1*knit52*_gcl_aw*R0NMLjE3MzE1NTQwMTYuQ2p3S0NBaUF1ZEc1QmhBUkVpd0FXTWxTakdHUGpuZVZEWDBaaFZjbjVOcEd1VHpkcVNZbHM4Q0FNLTNmXzRGcEIwNFJzWkJTNTlUSkhob0NlNzBRQXZEX0J3RQ..*_gcl_au*MTgxNDE5OTgxMC4xNzM2MTE0MTU1\" title=\"https://returns.jomercer.com.au/#/?_gl=1*knit52*_gcl_aw*R0NMLjE3MzE1NTQwMTYuQ2p3S0NBaUF1ZEc1QmhBUkVpd0FXTWxTakdHUGpuZVZEWDBaaFZjbjVOcEd1VHpkcVNZbHM4Q0FNLTNmXzRGcEIwNFJzWkJTNTlUSkhob0NlNzBRQXZEX0J3RQ..*_gcl_au*MTgxNDE5OTgxMC4xNzM2MTE0MTU1\">HERE</a>. Please ensure you submit a photo.<br/><br/>If your item is deemed faulty or damaged, we will offer a replacement, repair, or refund in line with Australian Consumer Law. A product may be considered faulty if it meets the following conditions:</p><ul><li>There is a manufacturing defect.</li><li>It is not fit for purpose.</li></ul><p>Signs of wear and tear that are not considered a manufacturing fault:</p><ul><li>Worn or marked finishes (leather, hair on leather, patent leather)</li><li>Scuffed soles</li><li>Stretched straps and leather</li><li>Torn straps</li><li>Scuffed heels</li></ul><p>We reserve the right to repair for minor issues, as per ACCC guidelines.</p><p>We will accept returns on faulty items within a reasonable time frame after assessment in-store or by one of our Customer Care team.</p>"
+          }
+        },
+        "content_8rAhLM": {
+          "type": "content",
+          "settings": {
+            "title": "HOW TO LODGE YOUR RETURN",
+            "answer": "<p><strong>In-Store Purchases</strong> </p><p>Items purchased in-store can only be returned or exchanged in-store. Please bring your item and proof of purchase to your nearest Jo Mercer store for assistance.<br/><br/><strong>Online Purchases</strong><br/>Items purchased online can be returned via mail or in-store. Please note that a return label cost will be deducted from your refund or credit note. For exchanges, you will need to pay for the shipping label via the returns portal link below:</p><p><a href=\"https://returns.jomercer.com.au/#/?_gl=1*knit52*_gcl_aw*R0NMLjE3MzE1NTQwMTYuQ2p3S0NBaUF1ZEc1QmhBUkVpd0FXTWxTakdHUGpuZVZEWDBaaFZjbjVOcEd1VHpkcVNZbHM4Q0FNLTNmXzRGcEIwNFJzWkJTNTlUSkhob0NlNzBRQXZEX0J3RQ..*_gcl_au*MTgxNDE5OTgxMC4xNzM2MTE0MTU1\" title=\"https://returns.jomercer.com.au/#/?_gl=1*knit52*_gcl_aw*R0NMLjE3MzE1NTQwMTYuQ2p3S0NBaUF1ZEc1QmhBUkVpd0FXTWxTakdHUGpuZVZEWDBaaFZjbjVOcEd1VHpkcVNZbHM4Q0FNLTNmXzRGcEIwNFJzWkJTNTlUSkhob0NlNzBRQXZEX0J3RQ..*_gcl_au*MTgxNDE5OTgxMC4xNzM2MTE0MTU1\"><strong>HERE</strong></a><br/><br/>How to return by post:<br/>1. Review our Returns Policy and proceed to lodge your return <a href=\"https://returns.jomercer.com.au/#/?_gl=1*knit52*_gcl_aw*R0NMLjE3MzE1NTQwMTYuQ2p3S0NBaUF1ZEc1QmhBUkVpd0FXTWxTakdHUGpuZVZEWDBaaFZjbjVOcEd1VHpkcVNZbHM4Q0FNLTNmXzRGcEIwNFJzWkJTNTlUSkhob0NlNzBRQXZEX0J3RQ..*_gcl_au*MTgxNDE5OTgxMC4xNzM2MTE0MTU1\" title=\"https://returns.jomercer.com.au/#/?_gl=1*knit52*_gcl_aw*R0NMLjE3MzE1NTQwMTYuQ2p3S0NBaUF1ZEc1QmhBUkVpd0FXTWxTakdHUGpuZVZEWDBaaFZjbjVOcEd1VHpkcVNZbHM4Q0FNLTNmXzRGcEIwNFJzWkJTNTlUSkhob0NlNzBRQXZEX0J3RQ..*_gcl_au*MTgxNDE5OTgxMC4xNzM2MTE0MTU1\">HERE.</a><br/>2. Complete the returns form included in your delivery.<br/>3. Send your item back to us at the address provided (return postage costs are the<br/>responsibility of the customer unless the item is faulty).</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_4dpiYR",
+        "content_HNE6KU",
+        "content_pMAkf3",
+        "content_eK4nmh",
+        "heading_jeMRP9",
+        "content_K36Lky",
+        "content_MhVTRF",
+        "content_cUG73f",
+        "image_QFmDWA",
+        "content_DPy8Cf",
+        "content_8rAhLM"
+      ],
+      "name": "FAQ",
+      "settings": {
+        "title": "Return Information",
+        "width": "standard",
+        "padding_top": 56,
+        "padding_bottom": 56,
+        "animation": "none",
+        "padding_top_mobile": 56,
+        "padding_bottom_mobile": 56,
+        "css_class": "",
+        "custom_css": ""
+      }
     }
   },
   "order": [
@@ -357,6 +462,7 @@
     "cf205180-5ebc-4aa1-bd6a-cb372e97ad7b",
     "7034dca7-8c0c-4a7d-8f52-998a7ee800a2",
     "content_with_slider_FhfVqm",
-    "index_icon_with_text_column_GtrgQW"
+    "index_icon_with_text_column_GtrgQW",
+    "index_faq_yxNLb7"
   ]
 }
