@@ -32,7 +32,7 @@
         "text": "<p>At Jo Mercer, we want you to love your purchase. If for any reason you’re not satisfied, we’re here to help. Please review our Returns Policy below to ensure a smooth and seamless process.</p>",
         "text_font": "open_sans_n4",
         "text_alignment": "left",
-        "text_size": 14,
+        "text_size": 16,
         "columns": 1,
         "button_label": "",
         "button_link": "",
@@ -55,7 +55,7 @@
         "padding_top_mobile": 20,
         "padding_bottom_mobile": 0,
         "css_class": "",
-        "custom_css": ""
+        "custom_css": ".rich-text__text{\n   font-family:\"Friedel Pro\";\n}"
       }
     },
     "d5f5a03b-8fc1-4414-991d-2824b9db1fc8": {
