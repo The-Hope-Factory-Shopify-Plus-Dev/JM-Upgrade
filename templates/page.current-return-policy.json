@@ -346,7 +346,7 @@
         "padding_top_mobile": 20,
         "padding_bottom_mobile": 0,
         "css_class": "",
-        "custom_css": ".icon{display:nonel}"
+        "custom_css": ".icon{display:none;}"
       }
     },
     "index_faq_yxNLb7": {
