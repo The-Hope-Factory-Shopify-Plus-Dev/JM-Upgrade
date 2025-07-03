@@ -1,1 +1,221 @@
-{"sections":{"index_rich_text_j8pUYq":{"type":"index__rich-text","name":"Rich text","settings":{"title":"Shipping and Delivery","heading_font":"open_sans_n4","heading_alignment":"center","heading_size":30,"text":"<p><br\/>Shipping info for <strong>US customers only<\/strong>.<br\/>Please visit your local region site to ship internationally.<\/p>","text_font":"open_sans_n4","text_alignment":"center","text_size":14,"columns":1,"button_label":"","button_link":"","button_style":"button--primary","button_alignment":"center","heading_color":"rgba(0,0,0,0)","text_color":"rgba(0,0,0,0)","background":"rgba(0,0,0,0)","gradient":"rgba(0,0,0,0)","gradient_rotation":180,"width":"wide","padding_top":20,"padding_bottom":0,"padding_left":0,"padding_right":0,"animation":"none","css_class":"","custom_css":""}},"index_faq_YHEMFW":{"type":"index__faq","blocks":{"content_4CcXAT":{"type":"content","settings":{"title":"Processing Times","answer":"<p>All orders are dispatched within 1-4 business days from the time of ordering. <\/p><p>Our dispatch team operates between business hours Monday - Friday, excluding weekends and public holidays.<\/p><p>We aim to dispatch all orders within 1 business days, however, this may take longer during peak-trade periods. Please note, sale orders are dispatched within 7-10 business days. <\/p><p>As soon as our orders have been dispatched, we will email the relevant tracking details to help monitor the progress of shipping. <\/p>"}},"content_yU99n9":{"type":"content","settings":{"title":"Delivery Times","answer":"<p>Please refer to the table below for specific shipping times.<\/p>"}}},"block_order":["content_4CcXAT","content_yU99n9"],"name":"FAQ","settings":{"title":"","width":"standard","padding_top":45,"padding_bottom":15,"animation":"none","css_class":"","custom_css":""}},"index_html_7UajyE":{"type":"index__html","name":"Custom HTML","settings":{"html_content":"<body>\n\n\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>Shipping Information<\/title>\n    <style>\n        table {\n            width: 100%;\n            border-collapse: collapse;\n        }\n        th, td {\n            border: 1px solid #ddd;\n            padding: 8px;\n            text-align: left;\n        }\n        th {\n            font-weight: normal;\n        }\n        .header-row {\n            background-color: #f2f2f2;\n        }\n    <\/style>\n\n\n\n<table>\n    <tr class=\"header-row\">\n        <th colspan=\"2\">DHL Express Shipping<\/th>\n    <\/tr>\n    <tr>\n        <th>Cost<\/th>\n        <td>$25 shipping fee for orders under $200<\/td>\n    <\/tr>\n    <tr>\n        <th>Free Over<\/th>\n        <td>Free for orders over $200+<\/td>\n    <\/tr>\n    <tr>\n<th>Time<\/th>\n        <td>2-4 business days<\/td>\n<\/tr>\n<\/table>\n<\/body>","width":"standard","padding_top":20,"padding_bottom":20,"padding_left":0,"padding_right":0,"animation":"none","css_class":"","custom_css":""}},"index_faq_aCbrTV":{"type":"index__faq","blocks":{"content_Jf6zJR":{"type":"content","settings":{"title":"Order Tracking","answer":"<p>To track any active orders, please visit: <a href=\"https:\/\/www.dhl.com\/us-en\/home.html\" target=\"_blank\" title=\"https:\/\/www.dhl.com\/us-en\/home.html\">https:\/\/www.dhl.com\/us-en\/home.html<\/a><\/p>"}},"content_nfbBNU":{"type":"content","settings":{"title":"Taxes and Duties","answer":"<p>Unfortunately, Jo Mercer cannot be held responsible for any custom duties, foreign taxes or other fees which may be enforced in your country. These will remain the responsibility of the customer. Please contact your local customs office for further information.<\/p>"}},"content_ww6YdQ":{"type":"content","settings":{"title":"Customer Service","answer":"<p>For any returns, please contact <a href=\"mailto:hello@jomercer.com.au\" target=\"_blank\" title=\"mailto:hello@jomercer.com.au\"><strong>hello@jomercer.com.au<\/strong><\/a><strong>.<\/strong><br\/><\/p><p>For any further enquries, please contact visit your local <a href=\"https:\/\/mydhl.express.dhl\/us\/en\/home.html\" target=\"_blank\" title=\"https:\/\/mydhl.express.dhl\/us\/en\/home.html\"><strong>DHL<\/strong><\/a> for any queries. <\/p><p><em>Contact your local DHL service here:<\/em><\/p><p><a href=\"https:\/\/mydhl.express.dhl\/us\/en\/home.html\" target=\"_blank\" title=\"https:\/\/mydhl.express.dhl\/us\/en\/home.html\"><em><strong>https:\/\/mydhl.express.dhl\/us\/en\/home.html<\/strong><\/em><\/a><\/p>"}},"content_w6HNnJ":{"type":"content","settings":{"title":"Returns","answer":"<p>For any returns, please refer to our returns policy <a href=\"\/pages\/current-return-policy\" target=\"_blank\" title=\"Current return policy\"><strong>here.<\/strong><\/a><strong> <\/strong><\/p>"}},"content_XKHaPr":{"type":"content","settings":{"title":"Sustainability","answer":"<p>At JM, we take our commitment to the planet seriously.<\/p><p>That is why we proudly partner with DHL Express, utilising sustainable aviation fuel (SAF) via the GoGreen Plus service to deliver your orders. By<\/p><p>investing in sustainable aviation fuel, we actively reduce the CO2e emissions associated with our shipments by 10%, minimising our carbon footprint.<\/p>"}}},"block_order":["content_Jf6zJR","content_nfbBNU","content_ww6YdQ","content_w6HNnJ","content_XKHaPr"],"name":"FAQ","settings":{"title":"","width":"standard","padding_top":6,"padding_bottom":56,"animation":"none","css_class":"","custom_css":""}},"tab-element":{"type":"tab-template","blocks":{"821b914f-ca4e-4a3f-af8f-24a8e88d972d":{"type":"tab_elements","settings":{"title":"AUSTRALIAN DELIVERY","page":"australian-delivery","text":""}},"eb63c464-29df-4358-884c-6e4a70d4ece1":{"type":"tab_elements","settings":{"title":"NEW ZELAND DELIVERY","page":"new-zealand","text":""}},"26b19fd6-d14d-49b1-85a6-87a9de985c3a":{"type":"tab_elements","settings":{"title":"ORDER TRACKING","page":"new-delivery-order-tracking","text":""}},"5334f249-9396-490f-a3de-e1c50d0c8d82":{"type":"tab_elements","settings":{"title":"INTERNATIONAL DELIVERY","page":"new-delivery-international-delivery","text":""}}},"block_order":["821b914f-ca4e-4a3f-af8f-24a8e88d972d","eb63c464-29df-4358-884c-6e4a70d4ece1","26b19fd6-d14d-49b1-85a6-87a9de985c3a","5334f249-9396-490f-a3de-e1c50d0c8d82"],"disabled":true,"settings":{"page_linklist":"","title":"DELIVERY","content":"<p>We offer free standard shipping on all Australian orders over $140.<br\/>We offer free standard shipping on all International orders over $500.<\/p>","text_align":"center","text_color":"rgba(0,0,0,0)","background":"#ffffff","gradient":"rgba(0,0,0,0)","gradient_rotation":0,"width":"standard","show_gutter":true,"padding_top":20,"padding_bottom":0,"padding_left":0,"padding_right":0,"animation":"none","css_class":"","custom_css":""}},"1663150013de0636df":{"type":"contact-info-section","blocks":{"4e3ef80a-2434-4222-bd38-5f84dd083337":{"type":"contact_info","settings":{"info_label":"email","icon":"shopify:\/\/shop_images\/email_white.png","link_label":"hello@jomercer.com.au","link":"mailto:hello@jomercer.com.au"}},"a09274ca-1c86-43ab-b1b0-5e25df168270":{"type":"contact_info","settings":{"info_label":"Telephone","icon":"shopify:\/\/shop_images\/phone-call_white.png","link_label":"1300 855 045","link":"tel:1300 855 045"}},"fc5e8896-edd8-4c57-9dcc-18d8a05a6b1c":{"type":"contact_info","settings":{"info_label":"Store Locator","icon":"shopify:\/\/shop_images\/location-icon.png","link_label":"Store Locator","link":"shopify:\/\/pages\/store-locator"}}},"block_order":["4e3ef80a-2434-4222-bd38-5f84dd083337","a09274ca-1c86-43ab-b1b0-5e25df168270","fc5e8896-edd8-4c57-9dcc-18d8a05a6b1c"],"settings":{"title":"Questions?","text_color":"#ffffff","background":"#000000","gradient":"rgba(0,0,0,0)","gradient_rotation":0,"width":"standard","padding_top":0,"padding_bottom":20,"padding_left":0,"padding_right":0,"animation":"none","css_class":"","custom_css":""}},"index_faq_bGtGCz":{"type":"index__faq","blocks":{"content_cNm6VR":{"type":"content","settings":{"title":"What is your question?","answer":"<p>Provide the answer to the question here.<\/p>"}},"content_YQCWGM":{"type":"content","settings":{"title":"What is your question?","answer":"<p>Provide the answer to the question here.<\/p>"}},"content_MzPzxg":{"type":"content","settings":{"title":"What is your question?","answer":"<p>Provide the answer to the question here.<\/p>"}},"content_ad9dBP":{"type":"content","settings":{"title":"What is your question?","answer":"<p>Provide the answer to the question here.<\/p>"}},"content_zfJgVr":{"type":"content","settings":{"title":"What is your question?","answer":"<p>Provide the answer to the question here.<\/p>"}},"content_QgGECh":{"type":"content","settings":{"title":"What is your question?","answer":"<p>Provide the answer to the question here.<\/p>"}},"image_FztiWP":{"type":"image","disabled":true,"settings":{}}},"block_order":["content_cNm6VR","content_YQCWGM","content_MzPzxg","content_ad9dBP","content_zfJgVr","content_QgGECh","image_FztiWP"],"disabled":true,"settings":{"title":"","width":"standard","padding_top":56,"padding_bottom":56,"animation":"none","css_class":"","custom_css":""}}},"order":["index_rich_text_j8pUYq","index_faq_YHEMFW","index_html_7UajyE","index_faq_aCbrTV","tab-element","1663150013de0636df","index_faq_bGtGCz"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "index_rich_text_j8pUYq": {
+      "type": "index__rich-text",
+      "disabled": true,
+      "name": "Rich text",
+      "settings": {
+        "title": "Shipping and Delivery",
+        "heading_font": "open_sans_n4",
+        "heading_alignment": "center",
+        "heading_size": 30,
+        "text": "<p><br/>Shipping info for <strong>US customers only</strong>.<br/>Please visit your local region site to ship internationally.</p>",
+        "text_font": "open_sans_n4",
+        "text_alignment": "center",
+        "text_size": 14,
+        "columns": 1,
+        "button_label": "",
+        "button_link": "",
+        "button_style": "button--primary",
+        "button_alignment": "center",
+        "heading_color": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "background": "rgba(0,0,0,0)",
+        "gradient": "rgba(0,0,0,0)",
+        "gradient_rotation": 180,
+        "width": "wide",
+        "padding_top": 20,
+        "padding_bottom": 0,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "mobile_title": "",
+        "mobile_text": "",
+        "mobile_alignment": "none",
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 0,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "index_faq_YHEMFW": {
+      "type": "index__faq",
+      "blocks": {
+        "content_4CcXAT": {
+          "type": "content",
+          "settings": {
+            "title": "Processing Times",
+            "answer": "<p>All orders are dispatched within 1-4 business days from the time of ordering. </p><p>Our dispatch team operates between business hours Monday - Friday, excluding weekends and public holidays.</p><p>We aim to dispatch all orders within 1 business days, however, this may take longer during peak-trade periods. Please note, sale orders are dispatched within 7-10 business days. </p><p>As soon as our orders have been dispatched, we will email the relevant tracking details to help monitor the progress of shipping. </p>"
+          }
+        },
+        "content_yU99n9": {
+          "type": "content",
+          "settings": {
+            "title": "Delivery Times",
+            "answer": "<p>Please refer to the table below for specific shipping times.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "content_4CcXAT",
+        "content_yU99n9"
+      ],
+      "disabled": true,
+      "name": "FAQ",
+      "settings": {
+        "title": "",
+        "width": "standard",
+        "padding_top": 45,
+        "padding_bottom": 15,
+        "animation": "none",
+        "padding_top_mobile": 56,
+        "padding_bottom_mobile": 56,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "index_html_7UajyE": {
+      "type": "index__html",
+      "name": "Custom HTML",
+      "settings": {
+        "html_content": "<div style=\"text-align: center;\">\n<table width=\"100%\">\n<tbody>\n<tr>\n<td style=\"text-align: center;\">\n<strong>STANDARD SHIPPING</strong> </td>\n<td>\n<p style=\"text-align: center;\"><strong>$9.95</strong> (FREE OVER $140)</p>\n<p style=\"text-align: center;\">Orders are dispatched within 1-4 business days.</p>\n</td>\n<td style=\"text-align: center;\"><strong>3-5 BUSINESS DAYS</strong></td>\n</tr>\n<tr style=\"background: #fafafa;\">\n<td style=\"text-align: center;\"><strong>EXPRESS SHIPPING</strong></td>\n<td>\n<p style=\"text-align: center;\"><strong>$15</strong></p>\n<p style=\"text-align: center;\">Order before 1pm for same day dispatch.</p>\n</td>\n<td style=\"text-align: center;\"><strong>2-4 BUSINESS DAYS</strong></td>\n</tr>\n<tr>\n<td style=\"text-align: center;\"><strong>CLICK AND COLLECT</strong></td>\n<td style=\"text-align: center;\"><strong>Free</strong></td>\n<td style=\"text-align: center;\">\n<meta charset=\"utf-8\">Ready within 2 hours of ordering</td>\n</tr>\n<tr>\n<td style=\"text-align: center;\"><strong>SAME DAY DELIVERY</strong></td>\n<td style=\"text-align: center;\"><strong>$20</strong></td>\n<td style=\"text-align: center;\">\n<meta charset=\"utf-8\">Order before 12pm for same day delivery</td>\n</tr>\n</tbody>\n</table>\n\n</div>",
+        "width": "standard",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "index_rich_text_yJ3kGb": {
+      "type": "index__rich-text",
+      "name": "Rich text",
+      "settings": {
+        "title": "",
+        "heading_font": "open_sans_n4",
+        "heading_alignment": "center",
+        "heading_size": 30,
+        "text": "<p><strong>Shipping and Delivery information: </strong></p><ul><li>All orders are dispatched within 1- 4 business days from the time of ordering. Please note that our warehouse doesn't ship on non-business days or Australian public holidays.<br/></li><li>We understand that mistakes with your order can happen, so we'll try our best to amend any changes prior to shipping time. Please reach out to the customers service team at hello@jomercer.com.au if any amendments are required on your order and we will do our best to fulfill your request. Note that this is not always a possibility, so please check your product details and shipping information prior to submitting your order.</li><li>Please note that during peak periods (sale or public holidays), there may be delays to orders being shipped. </li></ul>",
+        "text_font": "open_sans_n4",
+        "text_alignment": "left",
+        "text_size": 12,
+        "columns": 1,
+        "button_label": "",
+        "button_link": "",
+        "button_style": "button--primary",
+        "button_alignment": "center",
+        "heading_color": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "background": "#ffffff",
+        "gradient": "#ffffff",
+        "gradient_rotation": 180,
+        "width": "wide",
+        "padding_top": 20,
+        "padding_bottom": 0,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "mobile_title": "",
+        "mobile_text": "",
+        "mobile_alignment": "none",
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 0,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "index_faq_bGtGCz": {
+      "type": "index__faq",
+      "blocks": {
+        "content_cNm6VR": {
+          "type": "content",
+          "settings": {
+            "title": "What is your question?",
+            "answer": "<p>Provide the answer to the question here.</p>"
+          }
+        },
+        "content_YQCWGM": {
+          "type": "content",
+          "settings": {
+            "title": "What is your question?",
+            "answer": "<p>Provide the answer to the question here.</p>"
+          }
+        },
+        "content_MzPzxg": {
+          "type": "content",
+          "settings": {
+            "title": "What is your question?",
+            "answer": "<p>Provide the answer to the question here.</p>"
+          }
+        },
+        "content_ad9dBP": {
+          "type": "content",
+          "settings": {
+            "title": "What is your question?",
+            "answer": "<p>Provide the answer to the question here.</p>"
+          }
+        },
+        "content_zfJgVr": {
+          "type": "content",
+          "settings": {
+            "title": "What is your question?",
+            "answer": "<p>Provide the answer to the question here.</p>"
+          }
+        },
+        "content_QgGECh": {
+          "type": "content",
+          "settings": {
+            "title": "What is your question?",
+            "answer": "<p>Provide the answer to the question here.</p>"
+          }
+        },
+        "image_FztiWP": {
+          "type": "image",
+          "disabled": true,
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "content_cNm6VR",
+        "content_YQCWGM",
+        "content_MzPzxg",
+        "content_ad9dBP",
+        "content_zfJgVr",
+        "content_QgGECh",
+        "image_FztiWP"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "",
+        "width": "standard",
+        "padding_top": 56,
+        "padding_bottom": 56,
+        "animation": "none",
+        "padding_top_mobile": 56,
+        "padding_bottom_mobile": 56,
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "index_rich_text_j8pUYq",
+    "index_faq_YHEMFW",
+    "index_html_7UajyE",
+    "index_rich_text_yJ3kGb",
+    "index_faq_bGtGCz"
+  ]
+}
