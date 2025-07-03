@@ -89,7 +89,7 @@
       "settings": {
         "html_content": "<div style=\"text-align: center;\" class=\"content\">\n<table width=\"100%\">\n<tbody>\n<tr>\n<td style=\"text-align: center;\">\n<strong>STANDARD SHIPPING</strong> </td>\n<td>\n<p style=\"text-align: center;\"><strong>$9.95</strong> (FREE OVER $140)</p>\n<p style=\"text-align: center;\">Orders are dispatched within 1-4 business days.</p>\n</td>\n<td style=\"text-align: center;\"><strong>3-5 BUSINESS DAYS</strong></td>\n</tr>\n<tr style=\"background: #fafafa;\">\n<td style=\"text-align: center;\"><strong>EXPRESS SHIPPING</strong></td>\n<td>\n<p style=\"text-align: center;\"><strong>$15</strong></p>\n<p style=\"text-align: center;\">Order before 1pm for same day dispatch.</p>\n</td>\n<td style=\"text-align: center;\"><strong>2-4 BUSINESS DAYS</strong></td>\n</tr>\n<tr>\n<td style=\"text-align: center;\"><strong>CLICK AND COLLECT</strong></td>\n<td style=\"text-align: center;\"><strong>Free</strong></td>\n<td style=\"text-align: center;\">\n<meta charset=\"utf-8\">Ready within 2 hours of ordering</td>\n</tr>\n<tr>\n<td style=\"text-align: center;\"><strong>SAME DAY DELIVERY</strong></td>\n<td style=\"text-align: center;\"><strong>$20</strong></td>\n<td style=\"text-align: center;\">\n<meta charset=\"utf-8\">Order before 12pm for same day delivery</td>\n</tr>\n</tbody>\n</table>\n\n</div>",
         "width": "standard",
-        "padding_top": 49,
+        "padding_top": 65,
         "padding_bottom": 51,
         "padding_left": 0,
         "padding_right": 0,
