@@ -194,6 +194,7 @@
         },
         "heading_R7p4MJ": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "title": "Section heading"
           }
@@ -201,22 +202,29 @@
         "content_GwRnkC": {
           "type": "content",
           "settings": {
-            "title": "What is your question?",
-            "answer": "<p>Provide the answer to the question here.</p>"
+            "title": "PAYPAL",
+            "answer": "<p>Paying with PayPal just might be your new favourite way to checkout online. Buy now, pay later also available. Shop at Jo Mercer online with Paypal.</p>"
           }
         },
         "content_TmHcBW": {
           "type": "content",
           "settings": {
-            "title": "What is your question?",
-            "answer": "<p>Provide the answer to the question here.</p>"
+            "title": "GIFT CARDS",
+            "answer": "<p>Jo Mercer Gift Cards can be purchased in store and online. Please note the below important information about Gift Cards:</p><ul><li>An E-Gift Card will be emailed through to you. If you are after a physical gift card, please head to any of our Jo Mercer retail stores to make your purchase.</li><li>Gift cards are valid for 3 years from the issued date, any remaining balance will not be available for use after the expiry date.</li><li>Jo Mercer will not replace any lost, stolen or damaged cards.</li><li>If a purchase exceeds the gift card, you’ll need to complete the purchase using another payment option.</li><li>Gift cards are non-transferable and may not be returned or redeemed for cash. You can purchase between $50-$1000 inclusive.</li><li>Promotional vouchers and discounts are not applicable to gift card purchases.</li><li>If you have received a gift voucher for our Australian website, this gift voucher can be redeemed only on our AU store not our NZ/International website.</li><li>Jo Mercer Gift Cards may not be used for promotional use. They may be purchased as personal or business gifts but not used for the purpose of marketing, advertising or other promotional activities.</li><li>If your order total exceeds the amount on your Jo Mercer Gift Card you must pay the difference with a different payment method.</li><li>The funds available on your Jo Mercer Gift Card can be verified on request or at the time of purchase at any Jo Mercer register. Any balance that remains on the gift card can be used in whole or part against any future purchases in Jo Mercer stores, no change will be given.</li></ul>"
           }
         },
         "content_cePkgt": {
           "type": "content",
           "settings": {
-            "title": "What is your question?",
-            "answer": "<p>Provide the answer to the question here.</p>"
+            "title": "PROMOTIONAL CODES",
+            "answer": "<p>When you are ready to checkout, simply add the promotional code into the box in the checkout. If the code is valid, the relevant discount will be applied to your order.<br/>Please note if you are receiving an error to check the dates of the promotion or the products that it is to be applied to.</p>"
+          }
+        },
+        "content_bUBpGm": {
+          "type": "content",
+          "settings": {
+            "title": "CURRENT PROMOTION TERMS & CONDITIONS",
+            "answer": "<p><strong>END OF SEASON SALE</strong></p><p>Promotion available in-store and online from 26/05/2025. Offer available on selected styles only. Offer excludes JM styles/samples.<br/><br/><strong>50% OFF SECOND PAIR<br/></strong><br/>Promotion available on full price styles only, excluding JM styles/samples. Offer available in-store and online from 30/06/2025 or whilst stocks last. The discount is applied automatically at check-out. Promotion not available in conjunction with any other promotion. Excludes shoe care, hosiery & gift cards.</p><p><strong>TAKE A FURTHER 30% OFF</strong></p><p>Promotion available in-store and online from 16/06/2025. Offer available on markdown styles only. The discount is applied automatically at check-out.<br/>Promotion not available in conjunction with any other promotion.</p>"
           }
         },
         "image_CLNmeR": {
@@ -234,6 +242,7 @@
         "content_GwRnkC",
         "content_TmHcBW",
         "content_cePkgt",
+        "content_bUBpGm",
         "image_CLNmeR"
       ],
       "name": "FAQ",
