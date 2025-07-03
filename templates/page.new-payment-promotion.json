@@ -1,1 +1,258 @@
-{"wrapper":".page-with-tab","sections":{"tab-element":{"type":"tab-template-paypromo","blocks":{"1febf108-b4e2-469f-a8ab-3efa83ff0f0c":{"type":"tab_elements","settings":{"title":"PAYMENTS","image1":"shopify://shop_images/Payments-Afterpay_24b6c009-4015-4411-adec-43508eb791dc.png","text1":"Buy Now, Pay Later","link1":"shopify://pages/afterpay","link_label1":"Learn more","image2":"shopify://shop_images/Group_450_large_8354d1bc-4a5a-4763-a871-984f23719a59.webp","text2":"Zip Now, Pay Later","link2":"shopify://pages/zippay","link_label2":"Learn more","image3":"shopify://shop_images/visa_ae_mc.png","text3":"","link3":"","link_label3":"Learn more","image4":"shopify://shop_images/paypal.png","text4":"Faster way to pay","link4":"","link_label4":"Learn more","collection_title":"Shop Giftcards","collection":"gift-cards-1","products_per":3,"mobile_products_per_row":"2","products_limit":5,"align_height":false,"collection_height":200,"accordion_heading1":"","accordion_text1":"","accordion_heading2":"","accordion_text2":"","accordion_heading3":"","accordion_text3":"","accordion_heading4":"","accordion_text4":""}},"1c9bcd32-39d1-45a1-9cca-3bfcc3175b76":{"type":"tab_elements","settings":{"title":"PROMOTIONS","text1":"","link1":"","link_label1":"Learn more","text2":"","link2":"","link_label2":"Learn more","text3":"","link3":"","link_label3":"Learn more","text4":"","link4":"","link_label4":"Learn more","collection_title":"","collection":"","products_per":5,"mobile_products_per_row":"1","products_limit":3,"align_height":false,"collection_height":200,"accordion_heading1":"END OF SEASON SALE","accordion_text1":"\u003cp\u003ePromotion available in-store and online from 04/12/2024.\u003c/p\u003e\u003cp\u003e\u003cbr/\u003eOffer available on selected styles only.\u003c/p\u003e\u003cp\u003e\u003cbr/\u003eOffer excludes JM styles/samples.\u003c/p\u003e","accordion_heading2":"","accordion_text2":"","accordion_heading3":"","accordion_text3":"","accordion_heading4":"","accordion_text4":""}}},"block_order":["1febf108-b4e2-469f-a8ab-3efa83ff0f0c","1c9bcd32-39d1-45a1-9cca-3bfcc3175b76"],"settings":{"page_linklist":"page-info-menu","title":"PAYMENTS \u0026 PROMOTIONS","content":"","text_color":"rgba(0,0,0,0)","background":"#f4f4f4","gradient":"rgba(0,0,0,0)","gradient_rotation":0,"width":"standard","show_gutter":true,"padding_top":20,"padding_bottom":0,"padding_left":0,"padding_right":0,"animation":"none","css_class":"","custom_css":""}},"1663227894d29207dd":{"type":"contact-info-section","blocks":{"6689d409-e064-4eff-b874-c5e7a57e60fe":{"type":"contact_info","settings":{"info_label":"Email","icon":"shopify://shop_images/email_white.png","link_label":"hello@jomercer.com.au","link":"mailto:hello@jomercer.com.au"}},"11c609af-c6c7-46d5-a914-c2a6cab660f4":{"type":"contact_info","settings":{"info_label":"Telephone","icon":"shopify://shop_images/phone-call_white.png","link_label":"1300 855 045","link":"tel:1300 855 045"}},"e1c10e7b-02fb-4c5e-b80d-37fadf908212":{"type":"contact_info","settings":{"info_label":"Store Locator","icon":"shopify://shop_images/location-icon.png","link_label":"Store Locator","link":"shopify://pages/store-locator"}}},"block_order":["6689d409-e064-4eff-b874-c5e7a57e60fe","11c609af-c6c7-46d5-a914-c2a6cab660f4","e1c10e7b-02fb-4c5e-b80d-37fadf908212"],"settings":{"title":"Questions?","text_color":"#ffffff","background":"#000000","gradient":"rgba(0,0,0,0)","gradient_rotation":0,"width":"standard","padding_top":0,"padding_bottom":20,"padding_left":0,"padding_right":0,"animation":"none","css_class":"","custom_css":""}}},"order":["tab-element","1663227894d29207dd"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "wrapper": ".page-with-tab",
+  "sections": {
+    "tab-element": {
+      "type": "tab-template-paypromo",
+      "blocks": {
+        "1febf108-b4e2-469f-a8ab-3efa83ff0f0c": {
+          "type": "tab_elements",
+          "settings": {
+            "title": "PAYMENTS",
+            "image1": "shopify://shop_images/Payments-Afterpay_24b6c009-4015-4411-adec-43508eb791dc.png",
+            "text1": "Buy Now, Pay Later",
+            "link1": "shopify://pages/afterpay",
+            "link_label1": "Learn more",
+            "image2": "shopify://shop_images/Group_450_large_8354d1bc-4a5a-4763-a871-984f23719a59.webp",
+            "text2": "Zip Now, Pay Later",
+            "link2": "shopify://pages/zippay",
+            "link_label2": "Learn more",
+            "image3": "shopify://shop_images/visa_ae_mc.png",
+            "text3": "",
+            "link3": "",
+            "link_label3": "Learn more",
+            "image4": "shopify://shop_images/paypal.png",
+            "text4": "Faster way to pay",
+            "link4": "",
+            "link_label4": "Learn more",
+            "collection_title": "Shop Giftcards",
+            "collection": "gift-cards-1",
+            "products_per": 3,
+            "mobile_products_per_row": "2",
+            "products_limit": 5,
+            "align_height": false,
+            "collection_height": 200,
+            "accordion_heading1": "",
+            "accordion_text1": "",
+            "accordion_heading2": "",
+            "accordion_text2": "",
+            "accordion_heading3": "",
+            "accordion_text3": "",
+            "accordion_heading4": "",
+            "accordion_text4": ""
+          }
+        },
+        "1c9bcd32-39d1-45a1-9cca-3bfcc3175b76": {
+          "type": "tab_elements",
+          "settings": {
+            "title": "PROMOTIONS",
+            "text1": "",
+            "link1": "",
+            "link_label1": "Learn more",
+            "text2": "",
+            "link2": "",
+            "link_label2": "Learn more",
+            "text3": "",
+            "link3": "",
+            "link_label3": "Learn more",
+            "text4": "",
+            "link4": "",
+            "link_label4": "Learn more",
+            "collection_title": "",
+            "collection": "",
+            "products_per": 5,
+            "mobile_products_per_row": "1",
+            "products_limit": 3,
+            "align_height": false,
+            "collection_height": 200,
+            "accordion_heading1": "END OF SEASON SALE",
+            "accordion_text1": "<p>Promotion available in-store and online from 04/12/2024.</p><p><br/>Offer available on selected styles only.</p><p><br/>Offer excludes JM styles/samples.</p>",
+            "accordion_heading2": "",
+            "accordion_text2": "",
+            "accordion_heading3": "",
+            "accordion_text3": "",
+            "accordion_heading4": "",
+            "accordion_text4": ""
+          }
+        }
+      },
+      "block_order": [
+        "1febf108-b4e2-469f-a8ab-3efa83ff0f0c",
+        "1c9bcd32-39d1-45a1-9cca-3bfcc3175b76"
+      ],
+      "disabled": true,
+      "settings": {
+        "page_linklist": "page-info-menu",
+        "title": "PAYMENTS & PROMOTIONS",
+        "content": "",
+        "text_color": "rgba(0,0,0,0)",
+        "background": "#f4f4f4",
+        "gradient": "rgba(0,0,0,0)",
+        "gradient_rotation": 0,
+        "width": "standard",
+        "show_gutter": true,
+        "padding_top": 20,
+        "padding_bottom": 0,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "1663227894d29207dd": {
+      "type": "contact-info-section",
+      "blocks": {
+        "6689d409-e064-4eff-b874-c5e7a57e60fe": {
+          "type": "contact_info",
+          "settings": {
+            "info_label": "Email",
+            "icon": "shopify://shop_images/email_white.png",
+            "link_label": "hello@jomercer.com.au",
+            "link": "mailto:hello@jomercer.com.au"
+          }
+        },
+        "11c609af-c6c7-46d5-a914-c2a6cab660f4": {
+          "type": "contact_info",
+          "settings": {
+            "info_label": "Telephone",
+            "icon": "shopify://shop_images/phone-call_white.png",
+            "link_label": "1300 855 045",
+            "link": "tel:1300 855 045"
+          }
+        },
+        "e1c10e7b-02fb-4c5e-b80d-37fadf908212": {
+          "type": "contact_info",
+          "settings": {
+            "info_label": "Store Locator",
+            "icon": "shopify://shop_images/location-icon.png",
+            "link_label": "Store Locator",
+            "link": "shopify://pages/store-locator"
+          }
+        }
+      },
+      "block_order": [
+        "6689d409-e064-4eff-b874-c5e7a57e60fe",
+        "11c609af-c6c7-46d5-a914-c2a6cab660f4",
+        "e1c10e7b-02fb-4c5e-b80d-37fadf908212"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "Questions?",
+        "text_color": "#ffffff",
+        "background": "#000000",
+        "gradient": "rgba(0,0,0,0)",
+        "gradient_rotation": 0,
+        "width": "standard",
+        "padding_top": 0,
+        "padding_bottom": 20,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "index_faq_F96Ujd": {
+      "type": "index__faq",
+      "blocks": {
+        "heading_GrqqbR": {
+          "type": "heading",
+          "disabled": true,
+          "settings": {
+            "title": "Section heading"
+          }
+        },
+        "content_YEeFq9": {
+          "type": "content",
+          "settings": {
+            "title": "CARD PAYMENTS WE ACCEPT",
+            "answer": "<ul><li>American Express</li><li>Visa</li><li>Mastercard</li></ul>"
+          }
+        },
+        "content_8tVXCz": {
+          "type": "content",
+          "settings": {
+            "title": "AFTERPAY",
+            "answer": "<p>For your convenience, Afterpay is available online to our AU and NZ customers at checkout. Check out now and pay later when you select Afterpay. Afterpay offers you the convenience of four equal fortnightly payments without any additional fees or interest, meaning your order ships immediately.</p><p><strong>All you need is:</strong></p><ul><li>An Australian debit or credit card (Australian Customers)</li><li>A New Zealand debit or credit card (New Zealand customers)</li><li>To be over 18 years of age</li><li>To live in either Australia or New Zealand</li></ul><p><strong>To use this service:</strong></p><ul><li>Add your items to your bag and check out as normal.</li><li>In checkout select Afterpay as your payment method.</li><li>Enter your details with Afterpay and you will be able to checkout.</li></ul><p><strong>Other things to note:</strong></p><ul><li>All Afterpay customers are required to make their first payment at the time of purchase. The remaining three payments are deducted automatically every 2 weeks in equal installments from your selected payment method.</li><li>If you would like to make additional unscheduled payments before they are due, you may log in to Afterpay to make your payments early. Afterpay will then adjust the amount owed accordingly.</li><li>Your payment schedule will be emailed to you or you can login at any time to view your payment schedule or make a payment before the next due date.</li><li>If you wish to return your items you can choose an exchange, or the payment plan can be cancelled.</li><li>If you would like to make additional unscheduled payments before they are due, you may log in to Afterpay to make your payments early.</li><li>Afterpay can’t be used when purchasing an e-gift voucher.</li><li>For more information, visit Afterpay’s FAQ page. If you have a question about your Afterpay account, please contact the Afterpay toll-free customer support line at <a href=\"glocom://8552896014\" title=\"Click to dial with Communicator\">855-289-6014</a>.</li></ul><p><strong>How it Works:</strong></p><ul><li>When you use Afterpay, you pay for your items in 4 instalments over 6 weeks, without incurring any interest. To use Afterpay, add items to your shopping cart then select Afterpay from the available payment options. You pay for the first instalment of 25% at the time of purchase, and the remaining three instalments will be automatically deducted from your nominated debit or credit card over the following six weeks.</li><li>For orders under $40: A one-time late fee of up to 25% of the order total applies</li><li>For orders of $40 or more: A $10 late fee is charged when a payment is missed. If the outstanding amount remains unpaid after seven days, an additional $7 late fee applies . This is the same for all late payments until the 25% cap or $68 amount is reached. To remain within the cap, we may charge partial amounts of the $10 and $7 fees.</li><li>You can check your General Terms for other late fees caps that may apply.</li><li>Afterpay is committed to doing everything they can to help you not miss a payment, including sending you payment reminders and offering options to reschedule upcoming payment dates.</li><li>Afterpay is designed to be completely different to traditional credit products that charge interest, so that customers are never in a situation of high compounding interest and revolving debt.</li></ul><p><strong>Can I return using Afterpay?</strong></p><ul><li>We accept returns of online purchases, including transactions paid for using Afterpay.</li><li>For online returns - the refund will be triggered through Afterpay and you will receive a notification that the order has been refunded. All communications will come from Afterpay.</li><li>If you'd like to return your purchase for any reason, please first ensure that your purchase is eligible for a return, here. Once confirmed, please follow our instructions for online returns, which can be found here.</li><li>If you need any assistance, please email us or chat with us on our live chat.</li></ul><p>For further information, head to the <a href=\"https://www.afterpay.com/en-AU/business/resources/marketing/about-afterpay\" title=\"https://www.afterpay.com/en-AU/business/resources/marketing/about-afterpay\"><em>website here.</em></a></p><p>Late fees, eligibility criteria and T&Cs apply. Afterpay Australia Pty Ltd Australian Credit Licence 527911.</p>"
+          }
+        },
+        "content_HGtpYd": {
+          "type": "content",
+          "settings": {
+            "title": "KLARNA",
+            "answer": "<p><strong>Who is Klarna?</strong></p><p>Klarna is a global payment and shopping provider that takes end-to-end responsibility for your payment. Klarna allows shoppers to buy now and pay later at more than 200,000 retailers around the world. Learn more.</p><p><strong>What are 4 interest-free instalments from Klarna?</strong></p><p>When you pay in 4 interest-free instalments with Klarna, your purchase is split into 4 payments automatically charged to your debit or credit card every 2 weeks. There is no interest and no fees when payments are made on time. It’s that easy</p><p>.<strong>Is there a cost for paying in 4 interest-free instalments?</strong></p><p>There are no added costs or upfront fees when using this payment option. A late fee may be charged for payments made after the due date. View terms here.</p><p><strong>Will this impact my credit score?</strong></p><p>When you use Klarna to split your purchase into 4 interest free payments, Klarna will run a soft credit check. This soft credit check won't affect your credit score, it will just help Klarna confirm you pay your bills on time.</p><p><strong>What happens if I cancel or return my order?</strong></p><p>As soon as we have received and accepted your cancellation or return, Klarna will cancel any future scheduled payments as well as refund any amounts due. The return will be reflected in the Klarna app immediately.</p><p><strong>Why have I not been offered pay in 4 interest-free instalments?</strong></p><p>Eligibility to pay in 4 interest-free instalments with Klarna is generated by algorithms that consider a number of factors. All orders are assessed individually, and if you have been accepted for a Klarna payment method before, it does not mean it will be offered for every order. In turn, being denied once does not mean you will be denied for all future orders.</p><p><strong>How do I pay for my order?</strong></p><p>As soon as your order is shipped, you will receive an email from Klarna outlining your payment schedule. Payments will be automatically withdrawn from the debit/credit card you provided at checkout.</p><p><strong>When is my payment due?</strong></p><p>The first ¼ of your payment is due when your order has shipped. The remaining three payments will automatically charge every two weeks. Your payment schedule is sent via email and you can also access your payment schedule in the Klarna app by clicking on ‘Spending’, choosing the order you want to see, and then clicking on ‘Show Plan’.</p><p><strong>Can I pay before the due date?</strong></p><p>Yes. Just open the Klarna app or log onto <a href=\"https://app.klarna.com/\" target=\"_blank\">https://app.klarna.com/</a>to pay off your balance early.</p><p><strong>Is my payment information safe?</strong></p><p>Your payment information is processed securely by Klarna. No payment details are shared with Jo Mercer. All transactions take place via connections secured with the latest industry standard security protocols.</p>"
+          }
+        },
+        "heading_R7p4MJ": {
+          "type": "heading",
+          "settings": {
+            "title": "Section heading"
+          }
+        },
+        "content_GwRnkC": {
+          "type": "content",
+          "settings": {
+            "title": "What is your question?",
+            "answer": "<p>Provide the answer to the question here.</p>"
+          }
+        },
+        "content_TmHcBW": {
+          "type": "content",
+          "settings": {
+            "title": "What is your question?",
+            "answer": "<p>Provide the answer to the question here.</p>"
+          }
+        },
+        "content_cePkgt": {
+          "type": "content",
+          "settings": {
+            "title": "What is your question?",
+            "answer": "<p>Provide the answer to the question here.</p>"
+          }
+        },
+        "image_CLNmeR": {
+          "type": "image",
+          "disabled": true,
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "heading_GrqqbR",
+        "content_YEeFq9",
+        "content_8tVXCz",
+        "content_HGtpYd",
+        "heading_R7p4MJ",
+        "content_GwRnkC",
+        "content_TmHcBW",
+        "content_cePkgt",
+        "image_CLNmeR"
+      ],
+      "name": "FAQ",
+      "settings": {
+        "title": "PAYMENTS & PROMOTIONS",
+        "width": "standard",
+        "padding_top": 56,
+        "padding_bottom": 56,
+        "animation": "none",
+        "padding_top_mobile": 56,
+        "padding_bottom_mobile": 56,
+        "css_class": "",
+        "custom_css": ""
+      }
+    }
+  },
+  "order": [
+    "tab-element",
+    "1663227894d29207dd",
+    "index_faq_F96Ujd"
+  ]
+}
