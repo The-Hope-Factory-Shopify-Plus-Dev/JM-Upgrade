@@ -55,7 +55,7 @@
         "padding_top_mobile": 20,
         "padding_bottom_mobile": 0,
         "css_class": "",
-        "custom_css": ".rich-text__text{\n   font-family:\"Friedel Pro\";\n}"
+        "custom_css": ".rich-text__text{\n   font-family:\"Friedel Pro\";\n}\n.rich-text__heading{\n  font-family:\"Friedel Pro\";\n}"
       }
     },
     "d5f5a03b-8fc1-4414-991d-2824b9db1fc8": {
