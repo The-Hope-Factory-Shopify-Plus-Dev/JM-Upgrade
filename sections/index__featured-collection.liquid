@@ -117,6 +117,7 @@
 >
   {% if title != blank %}
     <div class="container">
+      <div class="one-half column">
       {%
         render 'heading',
         title: title,
@@ -125,6 +126,8 @@
         text_alignment: 'center',
         url: collection.url,
       %}
+      </div>
+       <div class="one-half column">
       {% if section.settings.button_label != blank %}
         <div
           class="
@@ -147,6 +150,7 @@
           </a>
         </div>
       {% endif %}
+       </div>
     </div>
     
   {% endif %}
