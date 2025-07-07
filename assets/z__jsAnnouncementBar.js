@@ -41,6 +41,21 @@ window.PXUTheme.jsAnnouncementBar = {
         this.hide();
       });
     }
+       const $annocumentSlider = $section.find('.announcement_carousel');
+
+      const $headerannocumentSlider = $annocumentSlider.flickity({
+        contain: true,
+        percentPosition: true,
+        wrapAround: true,
+        prevNextButtons: false,
+        pageDots: false,
+        autoPlay: true,
+        pauseAutoPlayOnHover: true
+      });
+  
+      $headerannocumentSlider.on( 'settle.flickity', function() {
+        $headerannocumentSlider.flickity('resize');
+      });
   },
   enableSticky: function() {
     // Add sticky functionality and recalculate offset for header sticky
