@@ -307,7 +307,7 @@
           %}
         </div>
       </div>
-
+      {% comment %}
       {% if section.settings.announcement_text %}
         {{ localization.country.iso_code }}
         <div class="custom-announcement-bar announcement_carousel">
@@ -372,6 +372,7 @@
           {% endfor %}
         </div>
       {% endif %}
+      {% endcomment %}
     </section>
   </header>
 
