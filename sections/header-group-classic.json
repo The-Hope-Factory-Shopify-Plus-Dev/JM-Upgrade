@@ -117,6 +117,19 @@
             "message_ad": "BUY NOW, PAY LATER WITH AFTERPAY AND KLARNA",
             "message_bm": "BUY NOW, PAY LATER WITH AFTERPAY AND KLARNA"
           }
+        },
+        "announcement_text_wBBHNi": {
+          "type": "announcement_text",
+          "settings": {
+            "message_au": "",
+            "message_nz": "FREE RETURNS ON FIRST ORDERS FOR NZ CUSTOMERS",
+            "message_af": "",
+            "message_us": "",
+            "message_ca": "",
+            "message_gb": "",
+            "message_ad": "",
+            "message_bm": ""
+          }
         }
       },
       "block_order": [
@@ -124,7 +137,8 @@
         "announcement_text_QDDi8a",
         "announcement_text_CUcd7N",
         "announcement_text_dHTyQX",
-        "announcement_text_GdDwJc"
+        "announcement_text_GdDwJc",
+        "announcement_text_wBBHNi"
       ],
       "custom_css": [
         ".mobile-menu .mobile-menu-footer ul {margin: 0 0 15px; padding: 0rem 1.5rem; padding-top: 0rem; padding-right: 1.5rem; padding-bottom: 0rem; padding-left: 1.5rem;}",
