@@ -127,8 +127,8 @@
         "button_label": "",
         "link": "",
         "button_style": "button--primary",
-        "background": "#000000",
-        "text_color": "#ffffff",
+        "background": "#f4f1eb",
+        "text_color": "#000000",
         "width": "wide",
         "css_class": "",
         "custom_css": ""
