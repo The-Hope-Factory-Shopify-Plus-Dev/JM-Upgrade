@@ -13,7 +13,24 @@
   "sections": {
     "announcement_bar": {
       "type": "announcement-bar",
-      "disabled": true,
+      "blocks": {
+        "announcement_text_8xNEKE": {
+          "type": "announcement_text",
+          "settings": {
+            "message_au": "",
+            "message_nz": "",
+            "message_af": "",
+            "message_us": "",
+            "message_ca": "",
+            "message_gb": "",
+            "message_ad": "",
+            "message_bm": ""
+          }
+        }
+      },
+      "block_order": [
+        "announcement_text_8xNEKE"
+      ],
       "settings": {
         "homepage_only": false,
         "enable_sticky": false,
@@ -40,13 +57,13 @@
           "type": "announcement_text",
           "settings": {
             "message_au": "ENDURE | WINTER '25",
-            "message_nz": "",
-            "message_af": "",
-            "message_us": "",
-            "message_ca": "",
-            "message_gb": "",
-            "message_ad": "",
-            "message_bm": ""
+            "message_nz": "ENDURE | WINTER '25",
+            "message_af": "ENDURE | WINTER '25",
+            "message_us": "ENDURE | WINTER '25",
+            "message_ca": "ENDURE | WINTER '25",
+            "message_gb": "ENDURE | WINTER '25",
+            "message_ad": "ENDURE | WINTER '25",
+            "message_bm": "ENDURE | WINTER '25"
           }
         },
         "announcement_text_QDDi8a": {
