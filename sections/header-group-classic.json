@@ -69,21 +69,21 @@
         "announcement_text_QDDi8a": {
           "type": "announcement_text",
           "settings": {
-            "message_au": "END OF SEASON SALE | ON NOW",
-            "message_nz": "",
-            "message_af": "",
-            "message_us": "",
-            "message_ca": "",
-            "message_gb": "",
-            "message_ad": "",
-            "message_bm": ""
+            "message_au": "TAKE A FURTHER 30% OFF SALE | AUTOMATICALLY APPLIED AT CHECKOUT",
+            "message_nz": "TAKE A FURTHER 30% OFF SALE | AUTOMATICALLY APPLIED AT CHECKOUT",
+            "message_af": "TAKE A FURTHER 30% OFF SALE | AUTOMATICALLY APPLIED AT CHECKOUT",
+            "message_us": "TAKE A FURTHER 30% OFF SALE | AUTOMATICALLY APPLIED AT CHECKOUT",
+            "message_ca": "TAKE A FURTHER 30% OFF SALE | AUTOMATICALLY APPLIED AT CHECKOUT",
+            "message_gb": "TAKE A FURTHER 30% OFF SALE | AUTOMATICALLY APPLIED AT CHECKOUT",
+            "message_ad": "TAKE A FURTHER 30% OFF SALE | AUTOMATICALLY APPLIED AT CHECKOUT",
+            "message_bm": "TAKE A FURTHER 30% OFF SALE | AUTOMATICALLY APPLIED AT CHECKOUT"
           }
         },
         "announcement_text_CUcd7N": {
           "type": "announcement_text",
           "settings": {
             "message_au": "FREE STANDARD SHIPPING ON ON ORDERS OVER $140",
-            "message_nz": "",
+            "message_nz": "FREE STANDARD SHIPPING ON ORDERS OVER $150",
             "message_af": "",
             "message_us": "",
             "message_ca": "",
