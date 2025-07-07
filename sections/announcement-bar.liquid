@@ -141,6 +141,19 @@
     "width": {{ section.settings.width | json }}
   }
 </script>
+<script>
+  jQuery(function($){
+    var $carousel = $('.announcement_carousel').flickity({
+      contain: true,
+      percentPosition: true,
+      wrapAround: true,
+      prevNextButtons: false,
+      pageDots: false,
+      autoPlay: true,
+      pauseAutoPlayOnHover: true
+    });
+  });
+</script>
 <script src="{{ 'z__jsAnnouncementBar.js' | asset_url }}"></script>
 
 {% schema %}
