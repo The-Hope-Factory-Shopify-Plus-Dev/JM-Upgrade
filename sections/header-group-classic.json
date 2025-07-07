@@ -91,6 +91,19 @@
             "message_ad": "30% OFF SELECT STYLES | LIMITED TIME ONLY",
             "message_bm": "30% OFF SELECT STYLES | LIMITED TIME ONLY"
           }
+        },
+        "announcement_text_RE4wzt": {
+          "type": "announcement_text",
+          "settings": {
+            "message_au": "",
+            "message_nz": "FREE RETURNS ON FIRST ORDERS FOR NZ CUSTOMERS",
+            "message_af": "",
+            "message_us": "",
+            "message_ca": "",
+            "message_gb": "",
+            "message_ad": "",
+            "message_bm": ""
+          }
         }
       },
       "block_order": [
@@ -99,7 +112,8 @@
         "announcement_text_GQTiyx",
         "announcement_text_KWbiqN",
         "announcement_text_BMEYwV",
-        "announcement_text_KiJw6Y"
+        "announcement_text_KiJw6Y",
+        "announcement_text_RE4wzt"
       ],
       "settings": {
         "homepage_only": false,
