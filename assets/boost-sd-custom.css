@@ -21,13 +21,13 @@
 @media only screen and (min-width: 768px) {
     .boost-sd__product-list-grid--4-col.boost-sd__product-list--margin .boost-sd__product-item {
         margin-bottom: var(--boostsd-product-item-margin-bottom);
-        margin-left: calc(20px * .5);
-        margin-right: calc(20px * .5);
-        width: calc(25% - 20px);
+        margin-left: calc(10px * .5);
+        margin-right: calc(10px * .5);
+        width: calc(25% - 10px);
     }
   .boost-sd__product-list--margin {
-        margin-left: calc(20px * -.5);
-        margin-right: calc(20px * -.5);
+        margin-left: calc(10px * -.5);
+        margin-right: calc(10px * -.5);
     }
   .boost-sd__toolbar--3_1 .boost-sd__toolbar-item:nth-child(2){
     justify-content: end;
