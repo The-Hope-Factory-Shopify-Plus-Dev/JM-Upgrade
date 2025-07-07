@@ -128,28 +128,7 @@
       %}
      
        
-      {% if section.settings.button_label != blank %}
-        <div
-          class="
-            featured-collection__button-container
-            one-whole
-            column text-center
-          "
-        >
-          <a
-            class="
-              featured-collection__button
-              button
-              {{ section.settings.button_style }}
-            "
-            {% if section_onboarding == false %}
-              href="{{ collection.url }}"
-            {% endif %}
-          >
-            {{- section.settings.button_label | escape -}}
-          </a>
-        </div>
-      {% endif %}
+      
        
     </div>
     
@@ -251,7 +230,28 @@
       {% endfor %}
     {% endif %}
 
-    
+    {% if section.settings.button_label != blank %}
+        <div
+          class="
+            featured-collection__button-container
+            one-whole
+            column text-center
+          "
+        >
+          <a
+            class="
+              featured-collection__button
+              button
+              {{ section.settings.button_style }}
+            "
+            {% if section_onboarding == false %}
+              href="{{ collection.url }}"
+            {% endif %}
+          >
+            {{- section.settings.button_label | escape -}}
+          </a>
+        </div>
+      {% endif %}
   </div>
 </section>
 
