@@ -51,81 +51,72 @@
   %}
 {% endstyle %}
 
+
+
 {% capture announcement %}
-  <div class="announcement-bar__container {{ section.settings.css_class }}">
-    <div class="announcement-bar is-{{ size }}" id="announcement-bar">
-      <div class="section is-width-{{ section.settings.width }}">
-        <div class="message-header">
-          <div
-            class="
-              announcement-bar__content
-              is-justify-{{ section.settings.alignment }}
-              show-close-icon-{{ show_close_icon }}
-            "
-          >
-            {% if section.settings.icon_label != blank %}
-              <span class="announcement-bar__icon is-{{ size }}">
-                {%
-                  render 'icon',
-                  name: icon,
-                %}
-              </span>
+   
+        <div class="custom-announcement-bar announcement_carousel">
+          {% for block in section.blocks %}
+            {% if localization.country.iso_code == 'AU' %}
+                {% if block.settings.message_au != blank %}
+                  <div class="carousel-cell announcement_message">
+                    <p>{{ block.settings.message_au }}</p>
+                  </div>
+                {% endif %}  
             {% endif %}
 
-            <div class="announcement-bar__text text-align-{{ section.settings.alignment }}">
-              {% if section.settings.text != blank %}
-                <div class="is-hidden-mobile-only">
-                  {{- section.settings.text -}}
-                </div>
-              {% endif %}
-
-              <div class="is-hidden-desktop-only">
-                {% if section.settings.mobile_text != blank %}
-                  {{- section.settings.mobile_text -}}
-                {% else %}
-                  {{- section.settings.text -}}
-                {% endif %}
-              </div>
-
-              <p class="buttons">
-                {% if section.settings.button_label != blank %}
-                  {%
-                    render 'button',
-                    label: section.settings.button_label,
-                    href: section.settings.link,
-                    type: "link",
-                    style: section.settings.button_style,
-                  %}
-                {% endif %}
-              </p>
-            </div>
-          </div>
-          {% if show_close_icon %}
-            <button
-              class="
-                close
-                announcement-bar__close
-                js-close-announcement
-              "
-              aria-label="close"
-            >
-              {%
-                render 'icon',
-                name: 'x',
-              %}
-            </button>
-          {% endif %}
+            {% if localization.country.iso_code == 'NZ' %}
+                {% if block.settings.message_nz != blank %}
+                  <div class="carousel-cell announcement_message">
+                    <p>{{ block.settings.message_nz }}</p>
+                  </div>
+                {% endif %}  
+            {% endif %}
+            {% if localization.country.iso_code == 'AF' %}
+                {% if block.settings.message_af != blank %}
+                  <div class="carousel-cell announcement_message">
+                    <p>{{ block.settings.message_af }}</p>
+                  </div>
+                {% endif %}  
+            {% endif %}
+            {% if localization.country.iso_code == 'US' %}
+                {% if block.settings.message_us != blank %}
+                  <div class="carousel-cell announcement_message">
+                    <p>{{ block.settings.message_us }}</p>
+                  </div>
+                {% endif %}  
+            {% endif %}
+            {% if localization.country.iso_code == 'CA' %}
+                {% if block.settings.message_ca != blank %}
+                  <div class="carousel-cell announcement_message">
+                    <p>{{ block.settings.message_ca }}</p>
+                  </div>
+                {% endif %}  
+            {% endif %}
+            {% if localization.country.iso_code == 'GB' %}
+                {% if block.settings.message_gb != blank %}
+                  <div class="carousel-cell announcement_message">
+                    <p>{{ block.settings.message_gb }}</p>
+                  </div>
+                {% endif %}  
+            {% endif %}
+            {% if localization.country.iso_code == 'AD' %}
+                {% if block.settings.message_ad != blank %}
+                  <div class="carousel-cell announcement_message">
+                    <p>{{ block.settings.message_ad }}</p>
+                  </div>
+                {% endif %}  
+            {% endif %}
+            {% if localization.country.iso_code == 'BM' %}
+                {% if block.settings.message_bm != blank %}
+                  <div class="carousel-cell announcement_message">
+                    <p>{{ block.settings.message_bm }}</p>
+                  </div>
+                {% endif %}  
+            {% endif %}
+          {% endfor %}
         </div>
-      </div>
-    </div>
-
-    <div
-      class="announcement-bar__shadow"
-      id="announcement-bar__shadow"
-      aria-visible="false"
-    >
-    </div>
-  </div>
+      
 {% endcapture %}
 
 {% if section.settings.homepage_only %}
