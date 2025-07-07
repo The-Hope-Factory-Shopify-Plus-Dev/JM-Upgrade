@@ -118,9 +118,9 @@
       "settings": {
         "homepage_only": false,
         "enable_sticky": false,
-        "show_close_icon": true,
-        "icon_label": "tag",
-        "text": "<p>Draw attention to promos + sales!</p>",
+        "show_close_icon": false,
+        "icon_label": "",
+        "text": "",
         "mobile_text": "",
         "alignment": "center",
         "size": "regular",
