@@ -52,12 +52,26 @@
             "message_ad": "",
             "message_bm": ""
           }
+        },
+        "announcement_text_KWbiqN": {
+          "type": "announcement_text",
+          "settings": {
+            "message_au": "2HR CLICK AND COLLECT AVAILABLE IN ALL STORES",
+            "message_nz": "",
+            "message_af": "",
+            "message_us": "",
+            "message_ca": "",
+            "message_gb": "",
+            "message_ad": "",
+            "message_bm": ""
+          }
         }
       },
       "block_order": [
         "announcement_text_8xNEKE",
         "announcement_text_EhnwAD",
-        "announcement_text_GQTiyx"
+        "announcement_text_GQTiyx",
+        "announcement_text_KWbiqN"
       ],
       "settings": {
         "homepage_only": false,
