@@ -65,13 +65,27 @@
             "message_ad": "",
             "message_bm": ""
           }
+        },
+        "announcement_text_BMEYwV": {
+          "type": "announcement_text",
+          "settings": {
+            "message_au": "BUY NOW, PAY LATER WITH AFTERPAY AND KLARNA",
+            "message_nz": "BUY NOW, PAY LATER WITH AFTERPAY AND KLARNA",
+            "message_af": "BUY NOW, PAY LATER WITH AFTERPAY AND KLARNA",
+            "message_us": "BUY NOW, PAY LATER WITH AFTERPAY AND KLARNA",
+            "message_ca": "BUY NOW, PAY LATER WITH AFTERPAY AND KLARNA",
+            "message_gb": "BUY NOW, PAY LATER WITH AFTERPAY AND KLARNA",
+            "message_ad": "BUY NOW, PAY LATER WITH AFTERPAY AND KLARNA",
+            "message_bm": "BUY NOW, PAY LATER WITH AFTERPAY AND KLARNA"
+          }
         }
       },
       "block_order": [
         "announcement_text_8xNEKE",
         "announcement_text_EhnwAD",
         "announcement_text_GQTiyx",
-        "announcement_text_KWbiqN"
+        "announcement_text_KWbiqN",
+        "announcement_text_BMEYwV"
       ],
       "settings": {
         "homepage_only": false,
