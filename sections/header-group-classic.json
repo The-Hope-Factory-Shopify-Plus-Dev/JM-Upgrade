@@ -17,19 +17,33 @@
         "announcement_text_8xNEKE": {
           "type": "announcement_text",
           "settings": {
-            "message_au": "",
-            "message_nz": "",
-            "message_af": "",
-            "message_us": "",
-            "message_ca": "",
-            "message_gb": "",
-            "message_ad": "",
-            "message_bm": ""
+            "message_au": "ENDURE | WINTER '25",
+            "message_nz": "ENDURE | WINTER '25",
+            "message_af": "ENDURE | WINTER '25",
+            "message_us": "ENDURE | WINTER '25",
+            "message_ca": "ENDURE | WINTER '25",
+            "message_gb": "ENDURE | WINTER '25",
+            "message_ad": "ENDURE | WINTER '25",
+            "message_bm": "ENDURE | WINTER '25"
+          }
+        },
+        "announcement_text_EhnwAD": {
+          "type": "announcement_text",
+          "settings": {
+            "message_au": "TAKE A FURTHER 30% OFF SALE | AUTOMATICALLY APPLIED AT CHECKOUT",
+            "message_nz": "TAKE A FURTHER 30% OFF SALE | AUTOMATICALLY APPLIED AT CHECKOUT",
+            "message_af": "TAKE A FURTHER 30% OFF SALE | AUTOMATICALLY APPLIED AT CHECKOUT",
+            "message_us": "TAKE A FURTHER 30% OFF SALE | AUTOMATICALLY APPLIED AT CHECKOUT",
+            "message_ca": "TAKE A FURTHER 30% OFF SALE | AUTOMATICALLY APPLIED AT CHECKOUT",
+            "message_gb": "TAKE A FURTHER 30% OFF SALE | AUTOMATICALLY APPLIED AT CHECKOUT",
+            "message_ad": "TAKE A FURTHER 30% OFF SALE | AUTOMATICALLY APPLIED AT CHECKOUT",
+            "message_bm": "TAKE A FURTHER 30% OFF SALE | AUTOMATICALLY APPLIED AT CHECKOUT"
           }
         }
       },
       "block_order": [
-        "announcement_text_8xNEKE"
+        "announcement_text_8xNEKE",
+        "announcement_text_EhnwAD"
       ],
       "settings": {
         "homepage_only": false,
