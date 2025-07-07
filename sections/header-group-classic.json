@@ -13,6 +13,7 @@
   "sections": {
     "announcement_bar": {
       "type": "announcement-bar",
+      "disabled": true,
       "settings": {
         "homepage_only": false,
         "enable_sticky": false,
