@@ -39,11 +39,25 @@
             "message_ad": "TAKE A FURTHER 30% OFF SALE | AUTOMATICALLY APPLIED AT CHECKOUT",
             "message_bm": "TAKE A FURTHER 30% OFF SALE | AUTOMATICALLY APPLIED AT CHECKOUT"
           }
+        },
+        "announcement_text_GQTiyx": {
+          "type": "announcement_text",
+          "settings": {
+            "message_au": "FREE STANDARD SHIPPING ON ON ORDERS OVER $140",
+            "message_nz": "FREE STANDARD SHIPPING ON ON ORDERS OVER $150",
+            "message_af": "",
+            "message_us": "",
+            "message_ca": "",
+            "message_gb": "",
+            "message_ad": "",
+            "message_bm": ""
+          }
         }
       },
       "block_order": [
         "announcement_text_8xNEKE",
-        "announcement_text_EhnwAD"
+        "announcement_text_EhnwAD",
+        "announcement_text_GQTiyx"
       ],
       "settings": {
         "homepage_only": false,
