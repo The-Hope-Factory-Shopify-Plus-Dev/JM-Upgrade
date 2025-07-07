@@ -78,6 +78,19 @@
             "message_ad": "BUY NOW, PAY LATER WITH AFTERPAY AND KLARNA",
             "message_bm": "BUY NOW, PAY LATER WITH AFTERPAY AND KLARNA"
           }
+        },
+        "announcement_text_KiJw6Y": {
+          "type": "announcement_text",
+          "settings": {
+            "message_au": "30% OFF SELECT STYLES | LIMITED TIME ONLY",
+            "message_nz": "30% OFF SELECT STYLES | LIMITED TIME ONLY",
+            "message_af": "30% OFF SELECT STYLES | LIMITED TIME ONLY",
+            "message_us": "30% OFF SELECT STYLES | LIMITED TIME ONLY",
+            "message_ca": "30% OFF SELECT STYLES | LIMITED TIME ONLY",
+            "message_gb": "30% OFF SELECT STYLES | LIMITED TIME ONLY",
+            "message_ad": "30% OFF SELECT STYLES | LIMITED TIME ONLY",
+            "message_bm": "30% OFF SELECT STYLES | LIMITED TIME ONLY"
+          }
         }
       },
       "block_order": [
@@ -85,7 +98,8 @@
         "announcement_text_EhnwAD",
         "announcement_text_GQTiyx",
         "announcement_text_KWbiqN",
-        "announcement_text_BMEYwV"
+        "announcement_text_BMEYwV",
+        "announcement_text_KiJw6Y"
       ],
       "settings": {
         "homepage_only": false,
