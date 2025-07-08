@@ -1,4 +1,7 @@
 /*********************** Custom CSS for Boost AI Search & Discovery  ************************/
+:root {
+  --boostsd-general-page-width-desktop: unset;
+}
 /* .boost-sd-layout {
     width: 100%;
     max-width: none;
