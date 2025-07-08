@@ -48,7 +48,7 @@
         "mobile_products_per_row": "2",
         "pagination_limit": 48,
         "pagination_type": "basic_pagination",
-        "width": "wide",
+        "width": "standard",
         "padding_top": 40,
         "padding_bottom": 40,
         "css_class": "",
@@ -66,7 +66,13 @@
       "block_order": [
         "ad6c76d3-0d53-4f0d-aaec-323dea56a64d"
       ],
-      "settings": {}
+      "settings": {
+        "width": "standard",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "css_class": "",
+        "custom_css": ""
+      }
     }
   },
   "order": [
