@@ -459,7 +459,7 @@
       },
       "652fbc80-6bce-41b5-8148-33230e8b5796": {
         "type": "shopify://apps/boost-ai-search-discovery/blocks/boost-sd/7fc998ae-a150-4367-bab8-505d8a4503f7",
-        "disabled": false,
+        "disabled": true,
         "settings": {}
       }
     }
