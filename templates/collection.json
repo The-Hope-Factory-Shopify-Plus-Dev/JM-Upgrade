@@ -23,6 +23,7 @@
     },
     "main": {
       "type": "collection__main",
+      "disabled": true,
       "custom_css": [
         ".sale-sticker {display: none;}",
         ".product_form-collection .swatch {margin-top: 5px; display: none;}",
@@ -53,10 +54,24 @@
         "css_class": "",
         "custom_css": ""
       }
+    },
+    "38b6ba23-2d9e-43aa-a012-0d1ca85bf7e3": {
+      "type": "apps",
+      "blocks": {
+        "ad6c76d3-0d53-4f0d-aaec-323dea56a64d": {
+          "type": "shopify://apps/boost-ai-search-filter/blocks/filter-product-list-ssr/7fc998ae-a150-4367-bab8-505d8a4503f7",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "ad6c76d3-0d53-4f0d-aaec-323dea56a64d"
+      ],
+      "settings": {}
     }
   },
   "order": [
     "banner",
-    "main"
+    "main",
+    "38b6ba23-2d9e-43aa-a012-0d1ca85bf7e3"
   ]
 }
