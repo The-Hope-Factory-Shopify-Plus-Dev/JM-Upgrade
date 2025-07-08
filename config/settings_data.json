@@ -461,6 +461,13 @@
         "type": "shopify://apps/boost-ai-search-discovery/blocks/boost-sd/7fc998ae-a150-4367-bab8-505d8a4503f7",
         "disabled": true,
         "settings": {}
+      },
+      "343925f7-b017-4af8-9403-297dd31e1dd8": {
+        "type": "shopify://apps/boost-ai-search-filter/blocks/boost-sd-ssr/7fc998ae-a150-4367-bab8-505d8a4503f7",
+        "disabled": false,
+        "settings": {
+          "templateId": "EGFW2dO7KT"
+        }
       }
     }
   },
