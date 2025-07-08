@@ -1,14 +1,13 @@
 /*********************** Custom CSS for Boost AI Search & Discovery  ************************/
 :root {
-  --boostsd-general-page-width-desktop: unset;
-  --boostsd-product-list-gap-desktop: 0;
-  --boostsd-product-list-gap-mobile: 0;
+    --boostsd-general-page-width-desktop: unset;
+    --boostsd-product-list-gap-desktop: 0;
+    --boostsd-product-list-gap-mobile: 0;
 }
 /* .boost-sd-layout {
     width: 100%;
     max-width: none;
 } */
-
 .boost-sd__toolbar-inner {
     width: 100%;
     max-width: none;
@@ -34,10 +33,12 @@
         margin-right: calc(10px * .5);
         width: calc(25% - 10px);
     }
-  .boost-sd__product-list--margin {
+
+    .boost-sd__product-list--margin {
         margin-left: calc(10px * -.5);
         margin-right: calc(20px * -.5);
     }
+
     .boost-sd__toolbar--3_1 .boost-sd__toolbar-item:nth-child(2) {
         justify-content: end;
     }
