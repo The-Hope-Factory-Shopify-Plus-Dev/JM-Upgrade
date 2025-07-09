@@ -29,7 +29,7 @@
         "title": "{{ collection.title }}",
         "heading_font": "open_sans_n4",
         "heading_alignment": "center",
-        "heading_size": 30,
+        "heading_size": 20,
         "text": "",
         "text_font": "open_sans_n4",
         "text_alignment": "left",
