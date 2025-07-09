@@ -239,7 +239,7 @@
         "icon_style": "icons",
         "enable_overlay": false,
         "show_text_shadow": false,
-        "overlay_link_color": "rgba(0,0,0,0)",
+        "overlay_link_color": "#000000",
         "overlay_link_hover_color": "rgba(0,0,0,0)",
         "overlay_background": "rgba(0,0,0,0)",
         "overlay_background_opacity": 0,
