@@ -18,7 +18,7 @@
     "logo_text": "#000000",
     "header_background": "#ffffff",
     "header_link_color": "#000000",
-    "header_link_hover_color": "#f4f1eb",
+    "header_link_hover_color": "#303030",
     "header_cart_badge_color": "rgba(0,0,0,0)",
     "dropdown_link_hover_color": "#000000",
     "footer_background": "#ffffff",
