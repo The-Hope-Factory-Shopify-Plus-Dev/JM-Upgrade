@@ -120,7 +120,7 @@
         "footer-classic-0": {
           "type": "logo",
           "settings": {
-            "logo": "shopify://shop_images/JM_Logo_White_RGB.png",
+            "logo": "shopify://shop_images/JM_Logo_Black_RGB.png",
             "size": "small",
             "text": "",
             "social_icons_footer": true
