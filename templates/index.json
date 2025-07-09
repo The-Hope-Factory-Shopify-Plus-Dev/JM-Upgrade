@@ -784,6 +784,7 @@
     },
     "171228509117f7b679": {
       "type": "apps",
+      "disabled": true,
       "settings": {
         "width": "wide",
         "padding_top": 20,
