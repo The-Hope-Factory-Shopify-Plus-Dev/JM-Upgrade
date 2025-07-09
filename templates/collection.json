@@ -22,6 +22,43 @@
         "custom_css": ""
       }
     },
+    "index_rich_text_hPLFBF": {
+      "type": "index__rich-text",
+      "name": "Rich text",
+      "settings": {
+        "title": "{{ collection.title }}",
+        "heading_font": "open_sans_n4",
+        "heading_alignment": "center",
+        "heading_size": 30,
+        "text": "",
+        "text_font": "open_sans_n4",
+        "text_alignment": "left",
+        "text_size": 14,
+        "columns": 2,
+        "button_label": "",
+        "button_link": "",
+        "button_style": "button--primary",
+        "button_alignment": "center",
+        "heading_color": "rgba(0,0,0,0)",
+        "text_color": "rgba(0,0,0,0)",
+        "background": "#ffffff",
+        "gradient": "#ffffff",
+        "gradient_rotation": 180,
+        "width": "wide",
+        "padding_top": 20,
+        "padding_bottom": 0,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "mobile_title": "",
+        "mobile_text": "",
+        "mobile_alignment": "none",
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 0,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
     "main": {
       "type": "collection__main",
       "disabled": true,
@@ -78,6 +115,7 @@
   },
   "order": [
     "banner",
+    "index_rich_text_hPLFBF",
     "main",
     "38b6ba23-2d9e-43aa-a012-0d1ca85bf7e3"
   ]
