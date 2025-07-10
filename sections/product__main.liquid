@@ -48,7 +48,7 @@
   if product.variants.size == 1 or settings.select_first_available_variant
     assign selected_variant = product.selected_or_first_available_variant
   endif
-
+ 
   for block in section.blocks
     if block.type == 'price'
       assign display_savings = block.settings.display_savings | json
@@ -58,7 +58,7 @@
     endif
   endfor
 %}
-
+{{ select_first_available_variant }}
 <section class="section
         {{ css_class }}
         is-width-{{ width }}"
