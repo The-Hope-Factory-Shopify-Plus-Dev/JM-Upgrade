@@ -100,7 +100,7 @@
     "tiktok_link": "https://www.tiktok.com/@jomercershoes",
     "youtube_link": "",
     "favicon": "shopify://shop_images/JM_Favicon.png",
-    "cart_action": "mini_cart",
+    "cart_action": "drawer",
     "show_lock_icon": false,
     "cart_icon": "bag",
     "display_special_instructions": false,
