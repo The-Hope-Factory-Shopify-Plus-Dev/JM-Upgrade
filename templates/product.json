@@ -139,7 +139,7 @@
         "padding_bottom": 21,
         "animation": "none",
         "css_class": "",
-        "custom_css": ".title {\n  font-size: 25px;\n}\n\n.icon-with-text span {\n    padding-left: 10px;\n    font-size: 15px;\n}"
+        "custom_css": ".title {\n  font-size: 23px;\n  text-transform:uppercase;\n}\n\n.icon-with-text span {\n    padding-left: 10px;\n    font-size: 15px;\n}"
       }
     },
     "17338721832a3cafde": {
