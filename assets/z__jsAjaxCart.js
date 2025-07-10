@@ -69,14 +69,17 @@ window.PXUTheme.jsAjaxCart = {
   showMiniCartOnHover: function () {
     const $el = $('[data-ajax-cart-trigger]');
 
-    $el.hover(function() {
+     $(document).on('click', '[data-ajax-cart-trigger]', function (e) {
+      /*e.preventDefault();*/
+      console.log('cart clicked');
       if(window.PXUTheme.theme_settings.header_layout == 'centered' && $('.header-sticky-wrapper').hasClass('is-sticky')) {
         $('.header-sticky-wrapper [data-ajax-cart-trigger]').addClass('show-mini-cart');
       } else {
         $el.addClass('show-mini-cart');
+        $("a.ajax-cart__cart-link").on('click', function(){
+           window.location = "/cart";    
+        });
       }
-    }, function() {
-      $el.removeClass('show-mini-cart');
     });
   },
   hideMiniCart: function () {
