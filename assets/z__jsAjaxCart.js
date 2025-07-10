@@ -57,6 +57,14 @@ window.PXUTheme.jsAjaxCart = {
       return false;
     });
 
+     $(document).on('click', '.ajax-cart__cart-title', function (e) {
+      e.preventDefault();
+      window.PXUTheme.jsAjaxCart.hideDrawer();
+      window.PXUTheme.jsAjaxCart.hideMiniCart();
+
+      return false;
+    });
+
   },
   showMiniCartOnHover: function () {
     const $el = $('[data-ajax-cart-trigger]');
