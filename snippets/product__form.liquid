@@ -88,7 +88,7 @@
       {% if variant_selection_id != blank %}id="{{ variant_selection_id }}"{% endif %}
       class="variant-selection"
       product-url="{{ product.url }}.js"
-      variant="not-selected"
+      variant="{% if selected_variant %}{{ selected_variant.id }}{% else %} not-selected{% endif %}"
       data-variant-selection
     >
       {% if product.has_only_default_variant %}
