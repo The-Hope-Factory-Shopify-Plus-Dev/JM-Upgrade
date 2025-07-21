@@ -1,7 +1,5 @@
 /******/ (() => { // webpackBootstrap
 var __webpack_exports__ = {};
-/* eslint-disable */
-
 window.PXUTheme.jsAjaxCart = {
   init: function ($section) {
 
@@ -27,6 +25,7 @@ window.PXUTheme.jsAjaxCart = {
 
     } else if (this.cart_action == 'mini_cart') {
       this.showMiniCartOnHover();
+      
     }
 
     $(document).on('click', '.ajax-submit', function (e) {
@@ -56,8 +55,7 @@ window.PXUTheme.jsAjaxCart = {
 
       return false;
     });
-
-     $(document).on('click', '.ajax-cart__cart-title', function (e) {
+    $(document).on('click', '.ajax-cart__cart-title', function (e) {
       e.preventDefault();
       window.PXUTheme.jsAjaxCart.hideDrawer();
       window.PXUTheme.jsAjaxCart.hideMiniCart();
@@ -68,6 +66,7 @@ window.PXUTheme.jsAjaxCart = {
   },
   showMiniCartOnHover: function () {
     const $el = $('[data-ajax-cart-trigger]');
+    
 
      $(document).on('click', '[data-ajax-cart-trigger]', function (e) {
       /*e.preventDefault();*/
@@ -81,6 +80,8 @@ window.PXUTheme.jsAjaxCart = {
         });
       }
     });
+    
+    
   },
   hideMiniCart: function () {
     if (this.cart_action != 'mini_cart') return false;
@@ -171,22 +172,17 @@ window.PXUTheme.jsAjaxCart = {
   },
   addToCart: function ($addToCartForm) {
     const $addToCartBtn = $addToCartForm.find('.button--add-to-cart');
-    this.recipientForm = $addToCartForm[0].querySelector('[data-recipient-form]');
-
-    if (this.recipientForm) {
-      this.recipientForm.classList.remove('recipient-form--has-errors');
-    }
 
     $addToCartForm.removeClass('shopify-product-form--unselected-error');
 
     if ($addToCartBtn[0].hasAttribute('data-options-unselected')) {
-      const cartWarning = `<p class="cart-warning__message animated bounceIn">${window.PXUTheme.translation.select_variant}</p>`;
+      const cartWarning = `<p class="cart-warning__message animated bounceIn">Please select a size</p>`;
 
       $('.warning').remove();
 
       $addToCartForm
         .addClass('shopify-product-form--unselected-error')
-        .find('.cart-warning')
+        .find('.options-selection__option-name')
         .html(cartWarning);
 
       $addToCartBtn
@@ -219,6 +215,7 @@ window.PXUTheme.jsAjaxCart = {
             .addClass('animated zoomOut');
         },
         success: function (product) {
+
           let $el = $('[data-ajax-cart-trigger]');
 
           $addToCartBtn
@@ -275,21 +272,16 @@ window.PXUTheme.jsAjaxCart = {
           }
 
         },
-        error: XMLHttpRequest => {
-          const response = eval('(' + XMLHttpRequest.responseText + ')');
+        error: function (XMLHttpRequest) {
+          let response = eval('(' + XMLHttpRequest.responseText + ')');
+          response = response.description;
+
+          const cartWarning = `<p class="cart-warning__message animated bounceIn">Please select a size</p>`;
 
           $('.warning').remove();
 
-          let cartWarning;
-
-          if (response.errors && response.errors.email) {
-            this.recipientForm.classList.add('recipient-form--has-errors');
-          } else {
-            cartWarning = `<p class="cart-warning__message animated bounceIn">${response.description.replace('All 1 ', 'All ')}</p>`;
-          }
-
           $addToCartForm
-            .find('.cart-warning')
+            .find('.options-selection__option-name')
             .html(cartWarning);
 
           $addToCartBtn
@@ -320,7 +312,9 @@ window.PXUTheme.jsAjaxCart = {
       if (options.item_count > 0) {
         const itemList = $(html.content).find('.ajax-cart__list');
         const cartDetails = $(html.content).find('.ajax-cart__details-wrapper');
+const proprice = $(html.content).find('.ProPrice');
 
+        $('.ProPrice').replaceWith(proprice);
         $('.ajax-cart__list').replaceWith(itemList);
         $('.ajax-cart__details-wrapper').replaceWith(cartDetails);
         $('.ajax-cart__empty-cart-message').addClass('is-hidden');
