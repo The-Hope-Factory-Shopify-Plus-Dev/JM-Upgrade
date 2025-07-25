@@ -206,7 +206,9 @@ window.PXUTheme.jsAjaxCart = {
         type: 'post',
         data: $addToCartForm.serialize(),
         beforeSend: function () {
-          
+          $addToCartBtn
+            .attr('disabled', 'disabled')
+            .addClass('disabled');
 
           $addToCartBtn.find('span')
             .removeClass("fadeInDown")
