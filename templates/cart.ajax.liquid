@@ -40,12 +40,20 @@
       {% endif %}
     "
   >
+    <p class="ajax-cart__cart-title has-margin-bottom"><a href="/collections/new">
+        <svg style="width: 10px;vertical-align: text-bottom;"xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
+          <path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/>
+        </svg>
+      &nbsp;&nbsp;&nbsp;{{ 'cart.general.title' | t }}</a>
+      <span class="cart__count--text is-hidden" data-bind="itemCount" >{{ cart.item_count }}</span>
+      
+    </p>
     {%
       render 'icon',
       name: settings.cart_icon
     %}
     <p class="ajax-cart__empty-text">{{ 'layout.general.empty_cart' | t }}</p>
-    <a href="{{ routes.all_products_collection_url }}">{{ 'cart.general.continue_shopping_link_html' | t }}</a>
+    <a href="/collections/new">{{ 'cart.general.continue_shopping_link_html' | t }}</a>
   </div>
 
   <form action="{{ routes.cart_url }}" method="post"
