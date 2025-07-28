@@ -93,6 +93,13 @@
         "custom_css": ""
       }
     },
+    "custom_liquid_GdXG6j": {
+      "type": "custom-liquid",
+      "name": "Custom liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"one-whole medium-down--one-whole column has-no-side-gutter\">\n        {% assign menu = collection.handle %}\n        <ul class=\"sub-collection-menu\">\n        {% for link in linklists[menu].links %}\n          <li><a href=\"{{ link.url }}\">{{ link.title }}</a></li>\n        {% endfor %}\n        </ul>\n    </div>"
+      }
+    },
     "38b6ba23-2d9e-43aa-a012-0d1ca85bf7e3": {
       "type": "apps",
       "blocks": {
@@ -117,6 +124,7 @@
     "banner",
     "index_rich_text_hPLFBF",
     "main",
+    "custom_liquid_GdXG6j",
     "38b6ba23-2d9e-43aa-a012-0d1ca85bf7e3"
   ]
 }
