@@ -1157,7 +1157,8 @@ function selectCallback(productEl, product, variant, state) {
   } else {
     console.log('not variant else');
     if(document.querySelector('.klaviyo-bis-trigger') != null){
-    document.querySelector('.klaviyo-bis-trigger').classList.add('hide'); 
+    document.querySelector('.klaviyo-bis-trigger').classList.add('hide');      
+    }
     notifyMessage = `${window.PXUTheme.translation.email_content} | ${notifyUrl}`;
   }
   if ($notifyFormInputs.hasClass('customer--true')) {
