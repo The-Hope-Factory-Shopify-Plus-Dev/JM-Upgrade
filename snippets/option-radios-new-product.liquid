@@ -191,7 +191,7 @@
                         {% for related_product in product_handles %}
                              {{ related_product }}
                               {% assign group_product_color = related_product.metafields.custom.swatch_colour_code | remove: '["' | remove: '"]' %}
-                              Gati:{{ group_product_color }}
+                              Gati:{{ related_product.metafields.custom.swatch_colour_code }}
                               {% assign group_product_color_title = related_product.metafields.custom.colour_name | remove: '["' | remove: '"]' %}
                               {% assign group_product_color_image = related_product.metafields.custom.colour_image | image_url %}
                                
