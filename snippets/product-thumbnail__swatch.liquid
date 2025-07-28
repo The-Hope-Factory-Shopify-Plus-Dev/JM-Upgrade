@@ -47,3 +47,57 @@
     {% endif %}
   {% endfor %}
 {% endif %}
+
+{% if product.metafields.custom.related_products != blank %}
+      <div class="thumbnail-swatch is-justify-{{ settings.thumbnail_text_alignment }} is-flex-wrap">
+          {% assign colorHex = product.metafields.custom.colour  | remove: '["' | remove: '"]' %}
+          {% assign colorTitle = product.metafields.custom.colour_title | remove: '["' | remove: '"]' %}
+          {% assign colorImage = product.metafields.custom.swatch_colour_image | image_url  %}
+          {% assign product_handles = product.metafields.custom.related_products  | remove: '["' | remove: '"]' | split: "," %}
+             <a href="{{product.url}}" class="swatch swatch__style--{{ settings.collection_swatches_shape }}" data-value="{{ product.metafields.custom.colour_title | escape | strip }}">
+                <div aria-label="{{ colorTitle }}"
+                        tabindex="0"
+                        data-value="{{ colorTitle }}"
+                        data-value-handle="{{ value | handle }}"
+                        class="swatch-element-collection  {{colorTitle }}-swatch">
+                {% if colorImage %}
+                  <label style="background-image:url({{ colorImage }});" data-variant-option-value-label> 
+                  </label>
+                {% else %}
+                <label style="background-color:{{colorHex}};" data-variant-option-value-label>
+                </label>
+                {% endif %}
+                 
+                </div>
+                </a>
+  
+                  {% for product_handle in product_handles %}
+                  {% assign group_product =  all_products[product_handle] %}
+                  {% assign group_product_color = group_product.metafields.custom.colour | remove: '["' | remove: '"]' %}
+                  {% assign group_product_color_title = group_product.metafields.custom.colour_title | remove: '["' | remove: '"]' %}
+                  {% assign group_product_color_image = group_product.metafields.custom.swatch_colour_image | image_url %}
+                  {% assign value = product.title | split:"." | last %}
+                  <a href="{{group_product.url}}" class="swatch swatch__style--{{ settings.collection_swatches_shape }}" datacolor="{{colorHex}}" data-value="{{ value | escape | strip }}">
+                  <div aria-label="{{ value | escape | strip }}"
+                          tabindex="0"
+                          data-value="{{ value | escape | strip }}"
+                          data-value-handle="{{ value | handle }}"
+                          class="swatch-element-collection  {{ value | handle }}-swatch"
+                        >
+                   {%if group_product_color_image %}
+                     <label style="background-image:url({{ group_product_color_image }});" data-variant-option-value-label>
+                     </label>
+                  {% else %}
+                      <label style="background-color:{{group_product_color}};" data-variant-option-value-label>
+                      </label>
+                  {% endif %}
+                     <div class="group_products_tooltip">{{group_product_color_title}}</div>
+                  </div>
+                  </a>
+  
+  
+              {% endfor %}
+      </div>
+              
+        {% endif %}
+
