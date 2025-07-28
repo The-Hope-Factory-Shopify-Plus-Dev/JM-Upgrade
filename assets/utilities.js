@@ -1255,7 +1255,9 @@ function selectCallback(productEl, product, variant, state) {
     $notifyForm.hide();
     $notifyFormInputs.empty();
     if (variant && !variant.available) {
+      $('[data-add-to-cart-trigger]', $product).innerHTML =  '<a class="klaviyo-bis-trigger" href="#">Notify Me When Available</a>';
       $notifyForm.fadeIn();
+      $('.klaviyo-bis-trigger', $product).css('display','block');
       $notifyFormInputs.empty();
       $notifyFormInputs.append(notifyFormHTML);
     }
