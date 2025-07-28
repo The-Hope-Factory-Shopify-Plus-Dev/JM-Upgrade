@@ -165,7 +165,7 @@
                  
                  <div class="option-title label">Colours </div>
                       <div class="all-color-swatch">
-                       {% comment %} {% assign product_handles = product.metafields.custom.related_products  | remove: '["' | remove: '"]' | split: ", " %}{% endcomment %}
+                      {% assign product_handles = product.metafields.custom.related_products  | remove: '["' | remove: '"]' | split: ", " %}
 
                         {% assign related_products = product.metafields.custom.related_products .value %}
                        
@@ -188,7 +188,7 @@
                             <div class="tooltip">{{colorTitle}}</div>
                           </div>
                         </a>
-                        {% for related_product in related_products %}
+                        {% for related_product in product_handles %}
                              
                               {% assign group_product_color = related_product.metafields.custom.swatch_colour_code | remove: '["' | remove: '"]' %}
                               {% assign group_product_color_title = related_product.metafields.custom.colour_name | remove: '["' | remove: '"]' %}
