@@ -166,7 +166,7 @@
                  <div class="option-title label">Colours </div>
                       <div class="all-color-swatch">
                       {% assign product_handles = product.metafields.custom.related_products  | remove: '["' | remove: '"]' | split: ", " %}
-
+                         {{ product_handles }}
                         {% assign related_products = product.metafields.custom.related_products .value %}
                        
                           <a href="{{product.url}}" class="1 active swatch-item {% if product.available == false %} crossed {% endif %}" data-value="{{colorTitle}}">
