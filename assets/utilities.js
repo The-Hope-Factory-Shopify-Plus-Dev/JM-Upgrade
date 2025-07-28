@@ -1151,8 +1151,13 @@ function selectCallback(productEl, product, variant, state) {
       // Escape variant titles
       const variantTitle = variant.title.toLowerCase() === 'default title' ? variant.name.replace(/"/g, '&quot;') : variant.title.replace(/"/g, '&quot;');
       notifyMessage = `${window.PXUTheme.translation.email_content}${variantTitle} | ${notifyUrl}?variant=${variant.id}`;
+      if(document.querySelector('.klaviyo-bis-trigger') != null){
+      document.querySelector('.klaviyo-bis-trigger').classList.remove('hide');
     }
   } else {
+    console.log('not variant else');
+    if(document.querySelector('.klaviyo-bis-trigger') != null){
+    document.querySelector('.klaviyo-bis-trigger').classList.add('hide'); 
     notifyMessage = `${window.PXUTheme.translation.email_content} | ${notifyUrl}`;
   }
   if ($notifyFormInputs.hasClass('customer--true')) {
@@ -1241,7 +1246,10 @@ function selectCallback(productEl, product, variant, state) {
     $('.items_left', $product).text('');
     $('[data-max-inventory-management]', $product).removeAttr('max');
     $('.sold_out', $product).text(message);
-    $('[data-add-to-cart-trigger]', $product).addClass('disabled').attr('disabled', 'disabled').attr('data-options-unselected', null).find('span:not(.icon)').text(message);
+     if (message == 'Sold Out'){
+       $('[data-add-to-cart-trigger]', $product).addClass('disabled').attr('disabled', 'disabled').attr('data-options-unselected', null).find('span:not(.icon)').text(message);
+       $('[data-add-to-cart-trigger]', $product).innerHTML =  '<a class="klaviyo-bis-trigger" href="#">Notify Me When Available</a>';
+    }
     $('.shopify-payment-button', $product).hide();
     $('.purchase-details__quantity', $product).hide();
     $notifyForm.hide();
