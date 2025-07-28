@@ -473,7 +473,7 @@
       },
       "13019466082614940324": {
         "type": "shopify://apps/linkify-product-colors/blocks/app-embed-block/1fdc741b-f4ed-4b8c-aee7-aa5e4ad76aa8",
-        "disabled": false,
+        "disabled": true,
         "settings": {}
       }
     }
