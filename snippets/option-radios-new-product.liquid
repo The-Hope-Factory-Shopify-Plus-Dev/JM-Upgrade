@@ -160,7 +160,7 @@
 
 {% if product.metafields.custom.related_products != blank %}
       <div class="thumbnail-swatch is-justify-{{ settings.thumbnail_text_alignment }} is-flex-wrap">
-          {% assign colorHex = product.metafields.custom.colour  | remove: '["' | remove: '"]' %}
+          {% assign colorHex = product.metafields.custom.swatch_colour_code  | remove: '["' | remove: '"]' %}
           {% assign colorTitle = product.metafields.custom.colour_title | remove: '["' | remove: '"]' %}
           {% assign colorImage = product.metafields.custom.swatch_colour_image | image_url  %}
           {% assign product_handles = product.metafields.custom.related_products  | remove: '["' | remove: '"]' | split: "," %}
