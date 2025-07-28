@@ -73,7 +73,7 @@
             "enable_map": false,
             "google_api_key": "",
             "map_height": 300,
-            "product_button_label": "Check Stock in Store",
+            "product_button_label": "FIND IN STORE",
             "cart_delivery_label": "Home Delivery",
             "cart_pickup_label": "Store Pickup",
             "search_box_placeholder": "Enter postcode to find pickup locations",
