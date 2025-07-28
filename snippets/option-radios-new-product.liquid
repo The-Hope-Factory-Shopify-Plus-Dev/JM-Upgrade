@@ -190,7 +190,7 @@
                         </a>
                         {% for related_product in product_handles %}
                              {% assign related = all_products[related_product] %}
-                             {{ related }}
+                             {{ related_product }}
                               {% assign group_product_color = related_product.metafields.custom.swatch_colour_code | remove: '["' | remove: '"]' %}
                               Gati:{{ related.metafields.custom.swatch_colour_code }}
                               {% assign group_product_color_title = related_product.metafields.custom.colour_name | remove: '["' | remove: '"]' %}
