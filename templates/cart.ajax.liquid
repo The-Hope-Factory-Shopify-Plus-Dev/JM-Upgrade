@@ -224,7 +224,7 @@
             {% endif %}
           </div>
 
-          <div class="ajax-cart__right-content media-right">
+          <div class="ajax-cart__right-content is-hidden media-right">
             <a class="ajax-cart__delete" data-ajax-cart-delete data-cart-item-key="{{ item.key }}" href="{{ routes.cart_change_url }}?line={{ forloop.index }}&amp;quantity=0" title="{{ 'cart.general.remove' | t }}" >
               <button class="close" aria-label="close">
                 {%
