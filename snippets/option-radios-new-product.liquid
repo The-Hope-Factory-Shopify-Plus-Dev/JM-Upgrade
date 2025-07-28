@@ -183,7 +183,7 @@
   
                   {% for product_handle in product_handles %}
                   {% assign group_product =  all_products[product_handle] %}
-                  {% assign group_product_color = group_product.metafields.custom.colour | remove: '["' | remove: '"]' %}
+                  {% assign group_product_color = group_product.metafields.custom.swatch_colour_code | remove: '["' | remove: '"]' %}
                   {% assign group_product_color_title = group_product.metafields.custom.colour_title | remove: '["' | remove: '"]' %}
                   {% assign group_product_color_image = group_product.metafields.custom.swatch_colour_image | image_url %}
                   {% assign value = product.title | split:"." | last %}
