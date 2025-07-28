@@ -8,6 +8,7 @@
 
 <template data-html="content">
   {% comment %} No items in the cart message {% endcomment %}
+  {% comment %}
   <div class="ajax-cart__cart-count">
     <p class="ajax-cart__cart-title">
       {{ 'cart.general.title' | t }}
@@ -29,7 +30,7 @@
       %}
     </div>
   </div>
-
+{% endcomment %}
   <div
     class="
       ajax-cart__empty-cart-message
