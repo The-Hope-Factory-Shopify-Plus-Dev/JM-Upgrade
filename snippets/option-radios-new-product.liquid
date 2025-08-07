@@ -160,6 +160,18 @@
     </div>
   {% endif %}
 </fieldset>
+ {% unless product.type == 'VOUCHERS' %}
+        {% assign totalProductsQuantity = 0 %}
+        {% for variant in product.variants %}
+        {% assign totalProductsQuantity = totalProductsQuantity | plus: variant.inventory_quantity%}
+        {% endfor %}
+        {% if  totalProductsQuantity < 120 %}
+        <div style="text-align:center;margin: 0 auto;padding-top: 10px;">
+          <p style="color:red"> LOW IN STOCK </p>
+        </div>
+        {% endif %}
+      {% endunless %}
+                
 {% comment %}
 {% if option.name == 'Size' %}
   {% comment %} Size chart {% endcomment %}
