@@ -25,6 +25,31 @@
 
 <fieldset class="swatch is-flex is-flex-wrap {% if option.name contains 'color' or option.name contains 'Colour' %} color-option-div {% endif %}" data-option-index="{{ option_index }}" >
  <legend class="option-title label {{ option.name }}-label">
+     {% if option.name == 'Size' %}
+        {% comment %} Size chart {% endcomment %}
+        {% for tag in product.tags %}
+          {% if tag contains 'meta-size-chart-' %}
+            {% assign meta_size_chart = true %}
+          {% endif %}
+        {% endfor %}
+
+        {% if settings.size_chart != blank or meta_size_chart %}
+          <a
+            class="product__size-chart"
+            href="javascript:;"
+            data-fancybox
+            data-src="#size-chart{{ product.id }}"
+            data-type="inline"
+            >Size Guide</a
+          >
+          {%
+            render 'popup-size-chart',
+            product_id: product.id,
+          %}
+        {% endif %}
+      {% endif %}
+
+     {% comment %}
       <span
         class="abcd options-selection__option-name"
         data-variant-option-name="{{ 'product.variants.chosen_option_html' | t: option: option.name, value: option.selected_value | escape }}"
@@ -36,6 +61,7 @@
           {{ 'product.variants.choose_option' | t: option: option.name }}
         {% endif %}
       </span>
+      {% endcomment %}
     </legend>
   <div
     class="swatch__options"
