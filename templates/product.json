@@ -335,9 +335,9 @@
       "type": "index__heading",
       "name": "Heading",
       "settings": {
-        "preheading": "<p>Add a preheading</p>",
-        "title": "",
-        "subheading": "<p>Additional text or description of section</p>",
+        "preheading": "",
+        "title": "Other Categories to Explore",
+        "subheading": "",
         "heading_alignment": "center",
         "vertical_spacing": "medium",
         "preheading_color": "rgba(0,0,0,0)",
@@ -365,12 +365,22 @@
         "image_QAHkzQ": {
           "type": "image",
           "settings": {
-            "title": "Title",
+            "image": "shopify://shop_images/WEB_IG_Fisher_High_Heel_Sandals_Biscuit_Suede_1.jpg",
+            "title": "SANDALS",
             "link": ""
           }
         },
         "image_D9YzxC": {
           "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/WEB_IG_Nola_Mid_Ankle_Boots_Black_Leather_1.jpg",
+            "title": "HEELS",
+            "link": ""
+          }
+        },
+        "image_UpdiTY": {
+          "type": "image",
+          "disabled": true,
           "settings": {
             "title": "Title",
             "link": ""
@@ -379,14 +389,16 @@
         "image_eLWDxt": {
           "type": "image",
           "settings": {
-            "title": "Title",
+            "image": "shopify://shop_images/WEB_IG_Sailor_Casual_Flats_Tan_Leather_1.jpg",
+            "title": "FLATS",
             "link": ""
           }
         },
         "image_UM3qGc": {
           "type": "image",
           "settings": {
-            "title": "Title",
+            "image": "shopify://shop_images/WEB_IG_Margo_Shoulder_Bag_Bitter_Choc_Suede_1_cce03532-0dbd-4eb3-965d-8c03e73f3783.jpg",
+            "title": "BAGS",
             "link": ""
           }
         }
@@ -394,6 +406,7 @@
       "block_order": [
         "image_QAHkzQ",
         "image_D9YzxC",
+        "image_UpdiTY",
         "image_eLWDxt",
         "image_UM3qGc"
       ],
