@@ -35,18 +35,18 @@
           "type": "title",
           "settings": {}
         },
-        "price": {
-          "type": "price",
-          "settings": {
-            "display_savings": false
-          }
-        },
         "after_pay_ghXUwB": {
           "type": "after_pay",
           "settings": {
             "after_pay_image": "shopify://shop_images/AP_logo_lockup_6328x2204_blackclear_png.png",
             "text": "OR BUY NOW PAY LATER WITH",
             "link": "#"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {
+            "display_savings": false
           }
         },
         "yotpo_product_reviews_star_rating_eeEGNw": {
@@ -141,8 +141,8 @@
       },
       "block_order": [
         "title",
-        "price",
         "after_pay_ghXUwB",
+        "price",
         "yotpo_product_reviews_star_rating_eeEGNw",
         "form",
         "retail_express_rex_clickandcollect_FYiCQB",
