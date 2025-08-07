@@ -39,7 +39,7 @@
           "type": "after_pay",
           "settings": {
             "after_pay_image": "shopify://shop_images/AP_logo_lockup_6328x2204_blackclear_png.png",
-            "text": "OR BUY NOW PAY LATER WITH",
+            "text": "Buy now, Pay later.",
             "link": "#"
           }
         },
