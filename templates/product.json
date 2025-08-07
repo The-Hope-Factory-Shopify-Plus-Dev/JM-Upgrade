@@ -265,6 +265,159 @@
         "css_class": "",
         "custom_css": ""
       }
+    },
+    "index_featured_promotions_6GaVGH": {
+      "type": "index__featured-promotions",
+      "blocks": {
+        "image_xDp4Qd": {
+          "type": "image",
+          "settings": {
+            "icon_label": "truck",
+            "title": "Special deal",
+            "text": "<p>Promotion description details.</p>",
+            "link": "",
+            "overlay_text": "rgba(0,0,0,0)",
+            "overlay_background": "rgba(0,0,0,0)",
+            "overlay_background_opacity": 70
+          }
+        },
+        "image_GPnaLh": {
+          "type": "image",
+          "settings": {
+            "icon_label": "bag",
+            "title": "Special deal",
+            "text": "<p>Promotion description details.</p>",
+            "link": "",
+            "overlay_text": "rgba(0,0,0,0)",
+            "overlay_background": "rgba(0,0,0,0)",
+            "overlay_background_opacity": 70
+          }
+        },
+        "image_7bCKYE": {
+          "type": "image",
+          "settings": {
+            "icon_label": "tag",
+            "title": "Special deal",
+            "text": "<p>Promotion description details.</p>",
+            "link": "",
+            "overlay_text": "rgba(0,0,0,0)",
+            "overlay_background": "rgba(0,0,0,0)",
+            "overlay_background_opacity": 70
+          }
+        }
+      },
+      "block_order": [
+        "image_xDp4Qd",
+        "image_GPnaLh",
+        "image_7bCKYE"
+      ],
+      "disabled": true,
+      "name": "Featured promotions",
+      "settings": {
+        "border_radius": 0,
+        "crop_images": true,
+        "show_border": true,
+        "overlay_text": "#FFFFFF",
+        "overlay_background": "#939393",
+        "overlay_background_opacity": 70,
+        "width": "standard",
+        "show_gutter": true,
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "animation": "none",
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "index_heading_CDULix": {
+      "type": "index__heading",
+      "name": "Heading",
+      "settings": {
+        "preheading": "<p>Add a preheading</p>",
+        "title": "",
+        "subheading": "<p>Additional text or description of section</p>",
+        "heading_alignment": "center",
+        "vertical_spacing": "medium",
+        "preheading_color": "rgba(0,0,0,0)",
+        "heading_color": "rgba(0,0,0,0)",
+        "subheading_color": "rgba(0,0,0,0)",
+        "background": "rgba(0,0,0,0)",
+        "gradient": "rgba(0,0,0,0)",
+        "gradient_rotation": 0,
+        "width": "standard",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "padding_left": 0,
+        "padding_right": 0,
+        "animation": "none",
+        "mobile_text_alignment": "none",
+        "padding_top_mobile": 20,
+        "padding_bottom_mobile": 20,
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
+    "index_gallery_ajWNCA": {
+      "type": "index__gallery",
+      "blocks": {
+        "image_QAHkzQ": {
+          "type": "image",
+          "settings": {
+            "title": "Title",
+            "link": ""
+          }
+        },
+        "image_D9YzxC": {
+          "type": "image",
+          "settings": {
+            "title": "Title",
+            "link": ""
+          }
+        },
+        "image_eLWDxt": {
+          "type": "image",
+          "settings": {
+            "title": "Title",
+            "link": ""
+          }
+        },
+        "image_UM3qGc": {
+          "type": "image",
+          "settings": {
+            "title": "Title",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_QAHkzQ",
+        "image_D9YzxC",
+        "image_eLWDxt",
+        "image_UM3qGc"
+      ],
+      "name": "Gallery",
+      "settings": {
+        "gallery_type": "classic",
+        "crop_images": false,
+        "images_per_row": 4,
+        "images_per_row_mobile": 1,
+        "enable_lightbox": true,
+        "overlay_color": "#000000",
+        "link_color": "#FFFFFF",
+        "width": "standard",
+        "disable_horizontal_gap": false,
+        "show_gutter": true,
+        "gutter_size": "standard",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "mobile_padding_top": 20,
+        "mobile_padding_bottom": 20,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
     }
   },
   "order": [
@@ -273,6 +426,9 @@
     "main",
     "17338721832a3cafde",
     "recommendations",
-    "9e823a9f-9a70-4725-afe7-317d24fd3e1e"
+    "9e823a9f-9a70-4725-afe7-317d24fd3e1e",
+    "index_featured_promotions_6GaVGH",
+    "index_heading_CDULix",
+    "index_gallery_ajWNCA"
   ]
 }
