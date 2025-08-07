@@ -179,6 +179,17 @@
               %}
             {% endif %}
           {% endfor %}
+          {% unless product.type == 'VOUCHERS' %}
+        {% assign totalProductsQuantity = 0 %}
+        {% for variant in product.variants %}
+        {% assign totalProductsQuantity = totalProductsQuantity | plus: variant.inventory_quantity%}
+        {% endfor %}
+        {% if  totalProductsQuantity < 120 %}
+        <div class="low-stock" style="text-align:center;margin: 0 auto;padding-top: 10px;">
+          <p style="color:red"> LOW IN STOCK </p>
+        </div>
+        {% endif %}
+      {% endunless %}
         </options-selection>
         {% comment %}Inject @pixelunion/shopify-variants-ui/options-selection end{% endcomment %}
     
@@ -254,17 +265,7 @@
         <div id="cnc-map-container"></div>
         <div id="cnc-results-container"></div>
        
-      {% unless product.type == 'VOUCHERS' %}
-        {% assign totalProductsQuantity = 0 %}
-        {% for variant in product.variants %}
-        {% assign totalProductsQuantity = totalProductsQuantity | plus: variant.inventory_quantity%}
-        {% endfor %}
-        {% if  totalProductsQuantity < 120 %}
-        <div class="low-stock" style="text-align:center;margin: 0 auto;padding-top: 10px;">
-          <p style="color:red"> LOW IN STOCK </p>
-        </div>
-        {% endif %}
-      {% endunless %}
+      
                 
         
 
