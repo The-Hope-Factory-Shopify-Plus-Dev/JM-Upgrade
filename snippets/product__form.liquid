@@ -260,7 +260,7 @@
         {% assign totalProductsQuantity = totalProductsQuantity | plus: variant.inventory_quantity%}
         {% endfor %}
         {% if  totalProductsQuantity < 120 %}
-        <div style="text-align:center;margin: 0 auto;padding-top: 10px;">
+        <div class="low-stock" style="text-align:center;margin: 0 auto;padding-top: 10px;">
           <p style="color:red"> LOW IN STOCK </p>
         </div>
         {% endif %}
