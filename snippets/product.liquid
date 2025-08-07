@@ -196,7 +196,7 @@
         {%- elsif block.type == 'after_pay' -%}
           {% comment %} after_pay {% endcomment %}
           <div class="after_pay">
-            <h3>{{ block.settings.text }}</h3> <a href="">See options</a>
+            <h3>{{ block.settings.text }}</h3> 
             {%- if block.settings.after_pay_image != blank -%}
             <img src="https://cdn.shopify.com/s/files/1/0356/1504/7820/files/ca5f7ca7-9f00-4934-9280-6967ff56dc63_Wordmark_Transparent_And_Black.avif?v=1728621128" width="60" height="80" style="vertical-align:middle;width:60px;top:0px"> or <a href="{{ block.settings.link }}"><img src="{{ block.settings.after_pay_image | image_url: width: 200}}" width="1500" height="1500"></a>
             {%- endif -%}
