@@ -163,6 +163,14 @@
             "link_au_3": "",
             "link_nz_3": ""
           }
+        },
+        "complementary_products_WXakeN": {
+          "type": "complementary_products",
+          "settings": {
+            "heading": "You may also love...",
+            "product_recommendation_limit": 2,
+            "products_per_slide": 2
+          }
         }
       },
       "block_order": [
@@ -177,7 +185,8 @@
         "share",
         "icon_with_text_7nCfPi",
         "icon_with_text_Wk8JMt",
-        "icon_with_text_YgyWxJ"
+        "icon_with_text_YgyWxJ",
+        "complementary_products_WXakeN"
       ],
       "custom_css": [
         ".thumbnail-sticker.sale-sticker {display: none;}",
