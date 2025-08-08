@@ -39,7 +39,7 @@
           "type": "shopify://apps/mst-wishlist-marketing-flow/blocks/v3-app-block-product/7f9269b0-1b45-4d0c-8479-faf04f05d8ac",
           "settings": {
             "multi_language": false,
-            "iwish_add_txt": "Add To Wishlist",
+            "iwish_add_txt": "",
             "iwish_added_txt": "Added To Wishlist",
             "theme_btn_class": "",
             "icon_style": "heart",
