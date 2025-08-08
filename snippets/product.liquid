@@ -174,6 +174,7 @@
      {% if sticky %}
       <div class="sticky-enable">
     {% endif %}
+    {% comment %}
     {% if stickers_enabled %}
       {% assign collection_handles = product.collections | map: 'handle' %}
       {%
@@ -183,6 +184,7 @@
         collection_handles: collection_handles,
       %}
     {% endif %}
+     {% endcomment %}
 
     {%- for block in section.blocks -%}
       <div
