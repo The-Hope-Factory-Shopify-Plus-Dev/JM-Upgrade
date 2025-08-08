@@ -176,9 +176,12 @@ enable_product_lightbox: <boolean>
             {% assign thumbnail_badge = '' %}
           {% endif %}
 
-          <div class="product-gallery__thumbnail one-fifth column is-relative"
+         <div class="product-gallery__thumbnail {% if section.settings.grid_gallery %}one-whole{% else %}one-fifth{% endif %} column is-relative"
                 data-title="{{ media.alt | escape }}" tabindex="0">
-            <img src="{{ media | img_url: '300x' }}" alt="">
+            <picture>  
+              <source srcset="{{ media | img_url: 'master' }}" media="(min-width: 0px) and (max-width: 767px)">
+              <img data-src="" src="{{ media| img_url: 'master' }}" alt="" class="lazyload lazyload--fade-in" data-sizes="auto" loading="lazy">
+            </picture>
             {% if thumbnail_badge != blank %}
               {% render 'icon',
                       name: thumbnail_badge,
