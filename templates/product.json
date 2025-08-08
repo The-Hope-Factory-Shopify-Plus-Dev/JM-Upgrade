@@ -35,6 +35,21 @@
           "type": "title",
           "settings": {}
         },
+        "mst_wishlist_marketing_flow_v3_app_block_product_tmMLtc": {
+          "type": "shopify://apps/mst-wishlist-marketing-flow/blocks/v3-app-block-product/7f9269b0-1b45-4d0c-8479-faf04f05d8ac",
+          "settings": {
+            "multi_language": false,
+            "iwish_add_txt": "Add To Wishlist",
+            "iwish_added_txt": "Added To Wishlist",
+            "theme_btn_class": "",
+            "icon_style": "heart",
+            "iwish_add_icon_outline": "",
+            "iwish_added_icon_filled": "",
+            "text_font_size": 14,
+            "text_color": "#000000",
+            "text_color_hover": ""
+          }
+        },
         "after_pay_ghXUwB": {
           "type": "after_pay",
           "settings": {
@@ -82,21 +97,6 @@
             "some_available_label": "Some Unavailable",
             "addressnotfound_label": "Your postcode was not found - please try a different postcode.",
             "nolocations_label": "No locations are available in your area."
-          }
-        },
-        "mst_wishlist_marketing_flow_v3_app_block_product_tmMLtc": {
-          "type": "shopify://apps/mst-wishlist-marketing-flow/blocks/v3-app-block-product/7f9269b0-1b45-4d0c-8479-faf04f05d8ac",
-          "settings": {
-            "multi_language": false,
-            "iwish_add_txt": "Add To Wishlist",
-            "iwish_added_txt": "Added To Wishlist",
-            "theme_btn_class": "",
-            "icon_style": "heart",
-            "iwish_add_icon_outline": "",
-            "iwish_added_icon_filled": "",
-            "text_font_size": 14,
-            "text_color": "#000000",
-            "text_color_hover": ""
           }
         },
         "description": {
@@ -175,12 +175,12 @@
       },
       "block_order": [
         "title",
+        "mst_wishlist_marketing_flow_v3_app_block_product_tmMLtc",
         "after_pay_ghXUwB",
         "price",
         "yotpo_product_reviews_star_rating_eeEGNw",
         "form",
         "retail_express_rex_clickandcollect_FYiCQB",
-        "mst_wishlist_marketing_flow_v3_app_block_product_tmMLtc",
         "description",
         "share",
         "icon_with_text_7nCfPi",
