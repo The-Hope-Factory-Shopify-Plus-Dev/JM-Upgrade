@@ -317,7 +317,7 @@
         "border_radius": 0,
         "crop_images": true,
         "show_border": true,
-        "overlay_text": "#FFFFFF",
+        "overlay_text": "#ffffff",
         "overlay_background": "#939393",
         "overlay_background_opacity": 70,
         "width": "standard",
@@ -365,7 +365,7 @@
         "image_QAHkzQ": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/WEB_IG_Fisher_High_Heel_Sandals_Biscuit_Suede_1.jpg",
+            "image": "shopify://shop_images/High_Res_Fisher_High_Heel_Sandals_Biscuit_Suede_1.jpg",
             "title": "SANDALS",
             "link": ""
           }
@@ -373,7 +373,7 @@
         "image_D9YzxC": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/WEB_IG_Nola_Mid_Ankle_Boots_Black_Leather_1.jpg",
+            "image": "shopify://shop_images/High_Res_Rhi_Low_Heels_Bitter_Choc_Suede_1.jpg",
             "title": "HEELS",
             "link": ""
           }
@@ -389,7 +389,7 @@
         "image_eLWDxt": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/WEB_IG_Sailor_Casual_Flats_Tan_Leather_1.jpg",
+            "image": "shopify://shop_images/High_Res_Julio_Loafers_Black_Croc_2.jpg",
             "title": "FLATS",
             "link": ""
           }
@@ -397,7 +397,7 @@
         "image_UM3qGc": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/WEB_IG_Margo_Shoulder_Bag_Bitter_Choc_Suede_1_cce03532-0dbd-4eb3-965d-8c03e73f3783.jpg",
+            "image": "shopify://shop_images/High_Res_Margo_Shoulder_Bag_Bitter_Choc_Suede_1.jpg",
             "title": "BAGS",
             "link": ""
           }
@@ -418,7 +418,7 @@
         "images_per_row_mobile": 1,
         "enable_lightbox": true,
         "overlay_color": "#000000",
-        "link_color": "#FFFFFF",
+        "link_color": "#ffffff",
         "width": "standard",
         "disable_horizontal_gap": false,
         "show_gutter": true,
