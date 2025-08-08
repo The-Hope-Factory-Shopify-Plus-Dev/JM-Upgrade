@@ -6970,15 +6970,17 @@ class Product {
           arrowShape: window.arrowShape,
         });
       }
-      $mobileSlider.flickity({
-           wrapAround: true,
-            prevNextButtons: true,
-            pageDots: false,
-            initialIndex: 0,
-            accessibility: true, //true by default
-            autoPlay: false
-        });
+      
     }
+    $mobile-gallery.flickity({
+          wrapAround: true,
+          prevNextButtons: true,
+          pageDots: false,
+          initialIndex: 0,
+          accessibility: true, //true by default
+          autoPlay: false 
+        });
+    
   }
 
   scrollSelectedImage(variant) {
