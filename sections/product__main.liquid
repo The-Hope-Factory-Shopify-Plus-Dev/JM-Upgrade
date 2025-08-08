@@ -118,18 +118,7 @@
 </script>
 
 <script src="{{ 'z__jsProduct.js' | asset_url }}"></script>
-<script>
-  var elem = document.querySelector('.mobile-gallery');
-  
-  var flkty = new Flickity( elem, {
-    wrapAround: true,
-    prevNextButtons: true,
-    pageDots: false,
-    initialIndex: 0,
-    accessibility: true, //true by default
-    autoPlay: false // advance cells every 3 seconds
-});
-</script>
+
 {% comment %} Shopify-XR {% endcomment %}
 {% assign model = product.media | where: 'media_type', 'model' | first %}
 
