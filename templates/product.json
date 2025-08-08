@@ -242,7 +242,7 @@
       "settings": {
         "show_product_recommendations": true,
         "product_recommendations_style": "grid",
-        "product_recommendations_heading": "RECOMMENDED FOR YOU",
+        "product_recommendations_heading": "Recommended For You",
         "products_per": 4,
         "recommended_products_limit": 4,
         "align_height": false,
