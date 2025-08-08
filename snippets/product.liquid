@@ -151,6 +151,15 @@
         enable_zoom: enable_zoom
       %}
     {% endif %}
+     {% if stickers_enabled %}
+      {% assign collection_handles = product.collections | map: 'handle' %}
+      {%
+        render 'product-thumbnail__sticker',
+        product: product,
+        context: 'product',
+        collection_handles: collection_handles,
+      %}
+    {% endif %}
   </div>
 
   <div
