@@ -6972,7 +6972,7 @@ class Product {
       }
       
     }
-    $mobile-gallery.flickity({
+    $mobileSlider.flickity({
           wrapAround: true,
           prevNextButtons: true,
           pageDots: false,
