@@ -164,7 +164,8 @@ enable_product_lightbox: <boolean>
                 {% if enable_thumbnail_slider == false %}
                   container equal-columns--outside-trim
                   is-justify-center
-                {% endif %}">
+                {% endif %} {% if section.settings.grid_gallery %}hide small-down--show mobile-gallery{% endif %}">
+      
         {% for media in product.media %}
 
           {% if media.media_type contains 'video' %}
