@@ -6532,6 +6532,7 @@ class Product {
     // Define variables
     const $productGallery = selector;
     const $thumbnailProductGallery = $productGallery.closest('.product-gallery').find('.product-gallery__thumbnails');
+    const $mobileSlider = $productGallery.find('.mobile-gallery');
 
     const $slides = $productGallery.find('.product-gallery__image');
     const $thumbnails = $thumbnailProductGallery.find('.product-gallery__thumbnail');
@@ -6969,6 +6970,14 @@ class Product {
           arrowShape: window.arrowShape,
         });
       }
+      $mobileSlider.flickity({
+           wrapAround: true,
+            prevNextButtons: true,
+            pageDots: false,
+            initialIndex: 0,
+            accessibility: true, //true by default
+            autoPlay: false
+        });
     }
   }
 
