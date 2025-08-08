@@ -6412,6 +6412,22 @@ class Product {
     this.$productGallery = $section.find('.product-gallery__main');
     const $stickyElement = $section.find('.sticky-product-scroll');
 
+    const $mobileSlider = $section.find('.mobile-gallery');
+
+    const $featuredmobileSlider = $mobileSlider.flickity({
+      wrapAround: true,
+      prevNextButtons: true,
+      pageDots: false,
+      initialIndex: 0,
+      accessibility: true, //true by default
+      autoPlay: false // advance cells every 3 seconds
+    });
+
+    $featuredmobileSlider.on( 'settle.flickity', function() {
+      $featuredmobileSlider.flickity('resize');
+    });
+
+
     if (this.$productGallery) {
       this.enableSlideshow(this.$productGallery);
 
@@ -6532,7 +6548,7 @@ class Product {
     // Define variables
     const $productGallery = selector;
     const $thumbnailProductGallery = $productGallery.closest('.product-gallery').find('.product-gallery__thumbnails');
-    const $mobileSlider = $productGallery.find('.mobile-gallery');
+    
 
     const $slides = $productGallery.find('.product-gallery__image');
     const $thumbnails = $thumbnailProductGallery.find('.product-gallery__thumbnail');
