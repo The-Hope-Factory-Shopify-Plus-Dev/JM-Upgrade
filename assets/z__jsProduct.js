@@ -7209,3 +7209,15 @@ window.PXUTheme.jsProduct = {
 
 /******/ })()
 ;
+
+var elem = document.querySelector('.mobile-gallery');
+  
+  var flkty = new Flickity( elem, {
+    wrapAround: true,
+    prevNextButtons: true,
+    pageDots: false,
+    initialIndex: 0,
+    accessibility: true, //true by default
+    autoPlay: false // advance cells every 3 seconds
+});
+  
