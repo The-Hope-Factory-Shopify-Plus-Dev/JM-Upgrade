@@ -356,7 +356,7 @@
         "padding_top_mobile": 20,
         "padding_bottom_mobile": 20,
         "css_class": "",
-        "custom_css": ""
+        "custom_css": ".title{font-size:25px;}"
       }
     },
     "index_gallery_ajWNCA": {
