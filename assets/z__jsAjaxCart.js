@@ -182,7 +182,7 @@ window.PXUTheme.jsAjaxCart = {
 
       $addToCartForm
         .addClass('shopify-product-form--unselected-error')
-        .find('.swatch__options')
+        .find('.options-selection__option-name')
         .html(cartWarning);
 
       $addToCartBtn
@@ -281,7 +281,7 @@ window.PXUTheme.jsAjaxCart = {
           $('.warning').remove();
 
           $addToCartForm
-            .find('.swatch__options')
+            .find('.options-selection__option-name')
             .html(cartWarning);
 
           $addToCartBtn
