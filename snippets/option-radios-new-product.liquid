@@ -58,7 +58,7 @@
         {% if selected_variant %}
           {{ 'product.variants.chosen_option_html' | t: option: option.name, value: option.selected_value }}
         {% else %}
-          {{ 'product.variants.choose_option' | t: option: option.name }}
+         {% comment %} {{ 'product.variants.choose_option' | t: option: option.name }}{% endcomment %}
         {% endif %}
       </span>
      
