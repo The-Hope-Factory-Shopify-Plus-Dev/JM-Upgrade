@@ -49,7 +49,7 @@
         {% endif %}
       {% endif %}
 
-     {% unless option.name == 'Size' %} 
+    
       <span
         class="abcd 1 options-selection__option-name"
         data-variant-option-name="{{ 'product.variants.chosen_option_html' | t: option: option.name, value: option.selected_value | escape }}"
@@ -63,7 +63,7 @@
         {% endif %}
         
       </span>
-    {% endunless %}
+   
      
     </legend>
   <div
