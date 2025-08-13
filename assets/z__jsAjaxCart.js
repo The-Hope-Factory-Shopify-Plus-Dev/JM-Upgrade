@@ -182,7 +182,7 @@ window.PXUTheme.jsAjaxCart = {
 
       $addToCartForm
         .addClass('shopify-product-form--unselected-error')
-        .find('.options-selection__option-name')
+        .find('.warning-message')
         .html(cartWarning);
 
       $addToCartBtn
@@ -281,7 +281,7 @@ window.PXUTheme.jsAjaxCart = {
           $('.warning').remove();
 
           $addToCartForm
-            .find('.options-selection__option-name')
+            .find('.warning-message')
             .html(cartWarning);
 
           $addToCartBtn
