@@ -55,13 +55,13 @@
         data-variant-option-name="{{ 'product.variants.chosen_option_html' | t: option: option.name, value: option.selected_value | escape }}"
         data-variant-option-choose-name="{{ 'product.variants.choose_option' | t: option: option.name }}"
       >
-        {% comment %} 
+       
         {% if selected_variant %}
           {{ 'product.variants.chosen_option_html' | t: option: option.name, value: option.selected_value }}
         {% else %}
          {{ 'product.variants.choose_option' | t: option: option.name }}
         {% endif %}
-         {% endcomment %}
+        
       </span>
      
     </legend>
