@@ -23,7 +23,7 @@
 {% assign loop_index = option_index | plus: 1 %}
 {%- assign swatch_option_key = 'option' | append: loop_index -%}
 
-<fieldset class="swatch is-flex is-flex-wrap {% if option.name contains 'color' or option.name contains 'Colour' %} color-option-div {% endif %}" data-option-index="{{ option_index }}" >
+<fieldset class="swatch {% if option.name contains 'color' or option.name contains 'Colour' %} color-option-div {% endif %}" data-option-index="{{ option_index }}" >
  <legend class="option-title label {{ option.name }}-label">
      {% if option.name == 'Size' %}
         {% comment %} Size chart {% endcomment %}
