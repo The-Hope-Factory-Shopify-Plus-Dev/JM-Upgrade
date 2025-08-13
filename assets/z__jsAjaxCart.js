@@ -281,7 +281,7 @@ window.PXUTheme.jsAjaxCart = {
           $('.warning').remove();
 
           $addToCartForm
-            .find('.options-selection__option-name')
+            .find('.swatch__options')
             .html(cartWarning);
 
           $addToCartBtn
