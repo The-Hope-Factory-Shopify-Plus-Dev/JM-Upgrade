@@ -160,7 +160,7 @@
         "show_currency_selector": false,
         "display_payment_methods": true,
         "css_class": "",
-        "custom_css": ".footer__menu-link a {\n  font-size: 11px;\n}\n\n.footer__heading {\n  font-weight: 700;\n  font-size: 15px;\n  letter-spacing: .15em;\n  text-transform:uppercase;\n}"
+        "custom_css": ".footer__menu-link a {\n  font-size: 10px;\n}\n\n.footer__heading {\n  font-weight: 700;\n  font-size: 13px;\n  letter-spacing: .15em;\n  text-transform:uppercase;\n}"
       }
     }
   },
