@@ -59,7 +59,7 @@
     "show_search_icon_mobile": false,
     "show_locale_selector": false,
     "show_currency_selector": false,
-    "mobile_menu_background_color": "#000000",
+    "mobile_menu_background_color": "#ffffff",
     "mobile_menu_link_color": "#000000",
     "mobile_menu_link_hover_color": "#000000",
     "button_primary_padding": "regular",
