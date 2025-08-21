@@ -149,7 +149,7 @@
                   has-background
                   has-padding-top
                   has-padding-bottom">
-    <div class="container is-justify-space-between">
+    <div class="container has-limit is-justify-space-between">
       {% for block in section.blocks %}
         <div id="shopify-section-{{ block.id }}" class="footer__block block__{{ block.id }} block__{{ block.type | downcase | replace: '_', '-' }}
                     {% render 'column-width', value: section.blocks.size %}
