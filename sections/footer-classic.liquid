@@ -232,6 +232,12 @@
                 id: 'footer',
               %}
 
+              {% if block.settings.newsletter_richtext_bottom != blank %}
+                <div class="content">
+                  {{ block.settings.newsletter_richtext_bottom }}
+                </div>
+              {% endif %}
+
               {% if block.settings.social_icons_footer %}
                 <div class="has-padding-bottom has-padding-top">
                   {% render 'social-icons' %}
