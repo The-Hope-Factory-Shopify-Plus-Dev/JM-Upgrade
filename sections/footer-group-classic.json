@@ -109,7 +109,9 @@
             "newsletter_title": "Join Our Newsletter",
             "newsletter_richtext": "<p>Enjoy 10% off when you sign up.</p>",
             "display_first_name": false,
-            "display_last_name": false
+            "display_last_name": false,
+            "newsletter_richtext_bottom": "<p>Sign up to emails to be the first to hear about new arrivals, restocks and gain early access to VIP sales and offers.</p>",
+            "social_icons_footer": true
           }
         },
         "empty_Jq9Xdq": {
