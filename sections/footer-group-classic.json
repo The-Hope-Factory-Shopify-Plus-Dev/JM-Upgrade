@@ -112,6 +112,10 @@
             "display_last_name": false
           }
         },
+        "empty_Jq9Xdq": {
+          "type": "empty",
+          "settings": {}
+        },
         "4b396222-61b6-4101-9d2d-256036dc1b85": {
           "type": "link_list",
           "settings": {
@@ -139,6 +143,7 @@
       },
       "block_order": [
         "newsletter_VC7Gtd",
+        "empty_Jq9Xdq",
         "4b396222-61b6-4101-9d2d-256036dc1b85",
         "footer-classic-1",
         "footer-classic-0"
