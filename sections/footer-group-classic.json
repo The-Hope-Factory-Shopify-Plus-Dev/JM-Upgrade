@@ -157,7 +157,7 @@
         "display_shopify": false,
         "show_follow_on_shop": true,
         "show_locale_selector": false,
-        "show_currency_selector": false,
+        "show_currency_selector": true,
         "display_payment_methods": true,
         "css_class": "",
         "custom_css": ".footer__menu-link a {\n  font-size: 10px;\n}\n\n.footer__heading {\n  font-weight: 700;\n  font-size: 13px;\n  letter-spacing: .15em;\n  text-transform:uppercase;\n}"
