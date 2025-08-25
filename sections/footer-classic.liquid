@@ -292,7 +292,7 @@
           <p>{{ powered_by_link }}</p>
         {% endif %}
         {% if section.settings.display_payment_methods %}
-        <div class="footer__payment-methods small-down--one-whole medium-down--text-center text-left">
+        <div class="footer__payment-methods small-down--one-whole medium-down--text-center text-right">
           <div class="payment-methods">
             {% for type in shop.enabled_payment_types %}
               {{ type | payment_type_svg_tag: class:'payment-icon' }}
