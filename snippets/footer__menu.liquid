@@ -37,7 +37,8 @@ link_setting: <string>
   {% assign menu = linklists[menu_link] %}
   
     <dt class="footer__heading">
-   <a href="#" class="active accordion-style--plus_and_minus accordion__button">
+   <a href="#" class="active accordion-style--{{ settings.toggle_icon_style }}
+                        accordion__button">
       {% render 'icon',
           name: 'plus',
           icon_class: 'icon--rotate'
