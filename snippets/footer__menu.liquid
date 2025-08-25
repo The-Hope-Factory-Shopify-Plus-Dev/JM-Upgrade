@@ -6,7 +6,7 @@ Optional values
 linklist_class: <string>
 link_setting: <string>
 {% endcomment %}
-
+{% comment %}
 <div class="footer__menu is-justify-space-between {{ linklist_class }}">
 {% if menu_link != blank %}
   {% assign menu = linklists[menu_link] %}
@@ -28,4 +28,37 @@ link_setting: <string>
   <p class="footer__heading">{{ 'homepage.onboarding.menu_title' | t }}</p>
   <p>{{ 'homepage.onboarding.no_content' | t }}</p>
 {% endif %}
+</div>
+{% endcomment %}
+
+<div class="footer__menu is-justify-space-between {{ linklist_class }}">
+  <dl class="accordion accordion-icon--carets">
+{% if menu_link != blank %}
+  {% assign menu = linklists[menu_link] %}
+  
+    <dt class="footer__heading">
+   <a href="#" class="active accordion-style--carets accordion__button">
+      {% render 'icon',
+          name: 'down-caret',
+          icon_class: 'icon--rotate'
+  %}{{ menu.title }}
+    </a>
+    </dt>
+ <dd class="active">
+  <ul>
+    {% for link in menu.links %}
+      <li class="footer__menu-link">
+        <a href="{{ link.url }}" class="{% if link.active %}is-active{% endif %}">
+          {{ link.title }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p class="footer__heading">{{ 'homepage.onboarding.menu_title' | t }}</p>
+  <p>{{ 'homepage.onboarding.no_content' | t }}</p>
+
+ </dd>
+ {% endif %}
+  </dl>
 </div>
