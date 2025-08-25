@@ -273,15 +273,16 @@
         </div>
       {% endif %}
        <div class="footer__credits one-half column small-down--one-whole medium-down--text-center">
-      
+         <p>&copy; {{ "now" | date: "%Y" }} {{ shop.name | link_to: routes.root_url }}.</p>
+      {{ section.settings.copyright_text }}
       {% if section.settings.display_designed_by %}
           <p>{{ 'layout.general.designer_credits_html' | t }}</p>
         {% endif %}
       </div>
     
       <div class="footer__credits one-half column small-down--one-whole medium-down--text-center">
-        <p>&copy; {{ "now" | date: "%Y" }} {{ shop.name | link_to: routes.root_url }}.</p>
-        {{ section.settings.copyright_text }}
+       
+        
         {% if section.settings.display_designed_by %}
           <p>{{ 'layout.general.designer_credits_html' | t }}</p>
         {% endif %}
