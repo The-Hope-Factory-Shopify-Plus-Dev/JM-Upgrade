@@ -272,7 +272,22 @@
           </div>
         </div>
       {% endif %}
-      {% if section.settings.display_payment_methods %}
+      
+      {% if section.settings.footer_seo != blank %}
+      <div class="footer__seo one-half column small-down--one-whole text-center">
+        {{ section.settings.footer_seo }}
+      </div>
+      {% endif %}
+      <div class="footer__credits one-fourth column small-down--one-whole medium-down--text-center text-right">
+        <p>&copy; {{ "now" | date: "%Y" }} {{ shop.name | link_to: routes.root_url }}.</p>
+        {{ section.settings.copyright_text }}
+        {% if section.settings.display_designed_by %}
+          <p>{{ 'layout.general.designer_credits_html' | t }}</p>
+        {% endif %}
+        {% if section.settings.display_shopify %}
+          <p>{{ powered_by_link }}</p>
+        {% endif %}
+        {% if section.settings.display_payment_methods %}
         <div class="footer__payment-methods one-fourth column small-down--one-whole medium-down--text-center text-left">
           <div class="payment-methods">
             {% for type in shop.enabled_payment_types %}
@@ -293,20 +308,6 @@
           </div>
         </div>
       {% endif %}
-      {% if section.settings.footer_seo != blank %}
-      <div class="footer__seo one-half column small-down--one-whole text-center">
-        {{ section.settings.footer_seo }}
-      </div>
-      {% endif %}
-      <div class="footer__credits one-fourth column small-down--one-whole medium-down--text-center text-right">
-        <p>&copy; {{ "now" | date: "%Y" }} {{ shop.name | link_to: routes.root_url }}.</p>
-        {{ section.settings.copyright_text }}
-        {% if section.settings.display_designed_by %}
-          <p>{{ 'layout.general.designer_credits_html' | t }}</p>
-        {% endif %}
-        {% if section.settings.display_shopify %}
-          <p>{{ powered_by_link }}</p>
-        {% endif %}
       </div>
     </div>
     </div>
