@@ -32,12 +32,12 @@ link_setting: <string>
 {% endcomment %}
 
 <div class="footer__menu is-justify-space-between {{ linklist_class }}">
-  <dl class="accordion accordion-icon--carets">
+  <dl class="accordion accordion-icon--plus_and_minus">
 {% if menu_link != blank %}
   {% assign menu = linklists[menu_link] %}
   
     <dt class="footer__heading">
-   <a href="#" class="active accordion-style--carets accordion__button">
+   <a href="#" class="active accordion-style--plus_and_minus accordion__button">
       {% render 'icon',
           name: 'down-caret',
           icon_class: 'icon--rotate'
