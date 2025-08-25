@@ -247,11 +247,7 @@
         </div>
       {% endfor %}
     </div>
-  </section>
-  <section class="footer__extra-content">
-    <div class="section">
-    <div class="container is-justify-space-between has-padding-top has-padding-bottom">
-      {% if locale_selector or currency_selector or settings.show_multiple_currencies %}
+     {% if locale_selector or currency_selector or settings.show_multiple_currencies %}
         <div class="one-whole column">
           <div class="footer-menu__disclosure footer-classic__disclosure">
             {% render 'localization-switcher',
@@ -272,6 +268,11 @@
           </div>
         </div>
       {% endif %}
+  </section>
+  <section class="footer__extra-content">
+    <div class="section">
+    <div class="container is-justify-space-between has-padding-top has-padding-bottom">
+     
        <div class="footer__credits one-half column small-down--one-whole medium-down--text-center">
          <p>&copy; {{ "now" | date: "%Y" }} {{ shop.name | link_to: routes.root_url }}.</p>
       {{ section.settings.copyright_text }}
