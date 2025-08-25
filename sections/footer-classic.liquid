@@ -246,8 +246,7 @@
           {% endif %}
         </div>
       {% endfor %}
-    </div>
-     {% if locale_selector or currency_selector or settings.show_multiple_currencies %}
+       {% if locale_selector or currency_selector or settings.show_multiple_currencies %}
         <div class="one-whole column">
           <div class="footer-menu__disclosure footer-classic__disclosure">
             {% render 'localization-switcher',
@@ -268,6 +267,8 @@
           </div>
         </div>
       {% endif %}
+    </div>
+    
   </section>
   <section class="footer__extra-content">
     <div class="section">
