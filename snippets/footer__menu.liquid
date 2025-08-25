@@ -39,10 +39,12 @@ link_setting: <string>
     <dt class="footer__heading">
    <a href="#" class="active accordion-style--{{ settings.toggle_icon_style }}
                         accordion__button">
-      {% render 'icon',
-          name: 'plus',
-          icon_class: 'icon--rotate'
-  %}{{ menu.title }}
+      {%
+        render 'icon',
+        name: 'plus',
+        icon_class: 'plus'
+      %}
+    {{ menu.title }}
     </a>
     </dt>
  <dd class="active">
