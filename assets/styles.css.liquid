@@ -3784,7 +3784,7 @@ blockquote cite::before {
 }
 @media only screen and (max-width: 480px) {
   .section.is-width-half .container.small-down--has-limit {
-    max-width: 1200px;
+    max-width: 1600px;
     width: 95%;
   }
 }
@@ -3793,7 +3793,7 @@ blockquote cite::before {
   max-width: none;
 }
 .section.is-width-wide .container.has-limit {
-  max-width: 1200px;
+  max-width: 1600px;
   width: 95%;
 }
 @media only screen and (max-width: 480px) {
@@ -3803,14 +3803,14 @@ blockquote cite::before {
 }
 @media only screen and (max-width: 480px) {
   .section.is-width-wide .container.small-down--has-limit {
-    max-width: 1200px;
+    max-width: 1600px;
     width: 95%;
   }
 }
 
 @media only screen and (max-width: 480px) {
   .section.section__wrapper {
-    max-width: 1200px;
+    max-width: 1600px;
     width: 95%;
   }
 }
@@ -13727,6 +13727,8 @@ shopify-payment-terms {
 .footer__content {
     border-bottom: {{ footer_border }};
     border-top: {{ footer_border }};
+    max-width:1600px !important;
+    width:95% !important;
   }
 
 .footer__menu {
@@ -13926,7 +13928,7 @@ shopify-payment-terms {
     }
   }
 .footer-classic__disclosure {
-    justify-content: flex-end;
+    justify-content: flex-start;
   }
 @media only screen and (max-width: 1024px) {
     .footer-classic__disclosure {
@@ -15160,6 +15162,13 @@ h1.header__logo-text > a:hover,
   color:#000;
   left:5px;
 }
+@media only screen and (max-width: 798px){
+  .action-area__link:not(.has-cart-count) .header-cart__count {
+  display: block;
+  color:#000;
+  left:13px;
+ }
+}
 
 .action-area__link {
   display: flex;
@@ -15904,7 +15913,7 @@ h1.header__logo-text > a:hover,
 }
 @media only screen and (max-width: 480px) {
   .logo-list .logo-list__wrapper {
-    max-width: 1200px;
+    max-width: 1600px;
     width: 95%;
   }
 }
@@ -19475,7 +19484,7 @@ div.navbar-item.header__item[data-navlink-handle="sale"] label a{
 }
 #template-collection .shopify-section--custom-liquid{
   z-index:19;
-  max-width:1200px;
+  max-width:1600px;
 }
 .low-stock{
   position: absolute;
@@ -19527,4 +19536,27 @@ div.navbar-item.header__item[data-navlink-handle="sale"] label a{
 }
 .easyslider-content-wrapper{
   font-size:12px !important;
+}
+
+.footer__menu .accordion dt a[aria-expanded=true] .plus [data-stroke=vertical]{
+    display:none;
+}
+
+@media only screen and (min-width: 799px) {
+ .footer__menu .accordion dd{display:block;}
+  
+  .footer__menu .accordion dt{border-bottom:none;}
+  .footer__menu .accordion dt .icon{display:none;}
+  .footer__menu .accordion dd{padding:0px;}
+  
+  
+}
+@media only screen and (max-width: 798px) {
+   .footer__heading .accordion__button{
+       padding-left:0px !important;
+   }
+   .footer__heading .accordion__button{padding:0px;}
+}
+.header__menu{
+  background:aliceblue;
 }
