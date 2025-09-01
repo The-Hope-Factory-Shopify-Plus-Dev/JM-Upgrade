@@ -107,7 +107,7 @@
           "type": "newsletter",
           "settings": {
             "newsletter_title": "Join Our Newsletter",
-            "newsletter_richtext": "<p>Enjoy 10% off when you sign up.</p>",
+            "newsletter_richtext": "<p>Enjoy 10% off when you sign up</p>",
             "display_first_name": false,
             "display_last_name": false,
             "newsletter_richtext_bottom": "",
