@@ -124,6 +124,7 @@
     },
     "424abe0b-b747-40b7-b3de-dc8cdd97f9ea": {
       "type": "index__image-with-text-overlay",
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/Web_Banner_New_LTO_Ends_desktop_thin.jpg",
         "mobile_image": "shopify://shop_images/Web_Banner_New_LTO_Ends_mobile_thin.jpg",
@@ -210,6 +211,7 @@
         "16621208041c3cfd94-2",
         "16621208041c3cfd94-0"
       ],
+      "disabled": true,
       "settings": {
         "gallery_type": "classic",
         "crop_images": false,
