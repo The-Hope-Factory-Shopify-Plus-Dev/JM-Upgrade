@@ -15,14 +15,20 @@ window.PXUTheme.jsFeaturedCollection = {
   },
   createSlider: function(el) {
     const slider = $(el);
-
+     const slideData = {
+      products_per_slide: this.products_per,
+      products_available: this.products_available,
+      products_limit: this.products_limit,
+      cellAlign: "left",
+      wrapAround: true
+    }
     $(slider).flickity({
       lazyLoad: 2,
       freeScroll: true,
       imagesLoaded: true,
       draggable: true,
       cellAlign: 'center',
-      wrapAround: true,
+      wrapAround: slideData.wrapAround,
       pageDots: false,
       contain: true,
       prevNextButtons: this.products_limit > this.products_per ? true : false,
