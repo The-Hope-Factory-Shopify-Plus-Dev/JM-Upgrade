@@ -264,6 +264,67 @@
         "custom_css": ".top-heading {\n    margin-bottom: 5px;\nmargin-top: 20px;\n}\n\n.thumbnail-sticker.sale-sticker\n{\ndisplay: none;\n}\n\n.title {\n  font-size: 18px;\n}"
       }
     },
+    "index_gallery_LbmyeW": {
+      "type": "index__gallery",
+      "blocks": {
+        "image_wfKyBm": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Saffi_Flat_Sandals_Black_Leather_7.jpg",
+            "title": "SANDALS",
+            "link": "shopify://collections/sandals"
+          }
+        },
+        "image_nUqmAP": {
+          "type": "image",
+          "settings": {
+            "title": "Title",
+            "link": ""
+          }
+        },
+        "image_cy7ACi": {
+          "type": "image",
+          "settings": {
+            "title": "Title",
+            "link": ""
+          }
+        },
+        "image_dk8zWU": {
+          "type": "image",
+          "settings": {
+            "title": "Title",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_wfKyBm",
+        "image_nUqmAP",
+        "image_cy7ACi",
+        "image_dk8zWU"
+      ],
+      "name": "Gallery",
+      "settings": {
+        "gallery_type": "classic",
+        "crop_images": false,
+        "images_per_row": 2,
+        "images_per_row_mobile": 1,
+        "enable_lightbox": true,
+        "overlay_color": "#000000",
+        "link_color": "#FFFFFF",
+        "width": "wide",
+        "disable_horizontal_gap": false,
+        "show_gutter": true,
+        "gutter_size": "standard",
+        "padding_top": 20,
+        "padding_bottom": 20,
+        "mobile_padding_top": 20,
+        "mobile_padding_bottom": 20,
+        "animation": "none",
+        "css_class": "",
+        "custom_css": ""
+      }
+    },
     "01105ed2-7af5-4049-bc2f-0a51092c3bc4": {
       "type": "index__image-with-text-overlay",
       "disabled": true,
@@ -311,6 +372,7 @@
     },
     "3b24b785-c828-469b-a1f2-5bfe20fb5a3d": {
       "type": "index__image-with-text-overlay",
+      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/Web_Banner_W25_header_banner_copy.jpg",
         "mobile_image": "shopify://shop_images/Web_Banner_W25_mobile_banner_copy.jpg",
@@ -357,6 +419,7 @@
     },
     "index_featured_collection_jp4EKD": {
       "type": "index__featured-collection",
+      "disabled": true,
       "custom_css": [
         ".product_form--radio variant-selection options-selection {display: none;}",
         ".product_form-collection .purchase-details .purchase-details__spb--false {margin-top: 0; display: none;}",
@@ -820,6 +883,7 @@
     "424abe0b-b747-40b7-b3de-dc8cdd97f9ea",
     "1662120804727cc161",
     "1661523613f00a644e",
+    "index_gallery_LbmyeW",
     "01105ed2-7af5-4049-bc2f-0a51092c3bc4",
     "3b24b785-c828-469b-a1f2-5bfe20fb5a3d",
     "index_featured_collection_jp4EKD",
