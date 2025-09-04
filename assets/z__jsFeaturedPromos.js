@@ -11,7 +11,7 @@ window.PXUTheme.jsFeaturedPromos = {
     const $featuredPromosSlider = $promoSlider.flickity({
       initialIndex: 0,
       contain: true,
-      wrapAround: true,
+      wrapAround: false,
       prevNextButtons: false,
       pageDots: false,
       imagesLoaded: true,
