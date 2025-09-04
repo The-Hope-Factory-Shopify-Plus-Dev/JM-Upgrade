@@ -18,10 +18,11 @@
     },
     "cara_home_video_ePMEtP": {
       "type": "cara_home_video",
+      "disabled": true,
       "name": "Cara Video Homepage",
       "settings": {
         "video_link": "shopify://collections/winter-25",
-        "desktop_video": "https://cdn.shopify.com/videos/c/o/v/3b279f42ce3e4dd0afd98b83b633c472.mp4",
+        "desktop_video": "https://cdn.shopify.com/videos/c/o/v/67a162d58d2d42888f6f7f93f37b04ef.mp4",
         "mobile_video": "https://cdn.shopify.com/videos/c/o/v/3b8ad3f408844a97a982a9655fcd75bf.mp4",
         "autoplay": true,
         "loop": true,
@@ -69,8 +70,8 @@
         "image_ReCzNa": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/Web_Banners-70_Off_2PR_desktop_header_981d5c26-e46b-4ff9-b6b8-dc0b73545644.jpg",
-            "mobile_image": "shopify://shop_images/Web_Banners-70_Off_2PR_mobile_b1b77935-f087-4f0b-baa2-c6f21988cbe7.jpg",
+            "image": "shopify://shop_images/Web_Banner_50_Off_2PR-Recovered_header_banner.jpg",
+            "mobile_image": "shopify://shop_images/Web_Banner_50_-Off-2PR-Recovered_02.gif",
             "link": "shopify://collections/winter-24",
             "pretext": "",
             "title": "",
@@ -105,7 +106,6 @@
         "image_zJXAFV",
         "image_ReCzNa"
       ],
-      "disabled": true,
       "settings": {
         "image_slideshow_speed": 3,
         "image_transition": "slide",
