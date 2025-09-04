@@ -546,10 +546,10 @@
         "1661524294161107df-2": {
           "type": "text",
           "settings": {
-            "title": "WINTER '25",
-            "heading_size": "small",
+            "title": "SS26 : ELEMENT",
+            "heading_size": "regular",
             "text": "<p>For Winter '25, Jo Mercer presents Endure - a collection that embodies strength, elegance, and enduring style. Designed to transcend time and trends, Endure celebrates craftsmanship and modern sophistication.</p><p> </p>",
-            "alignment": "left",
+            "alignment": "center",
             "vertical_position": "center",
             "button_label": "BEHIND THE COLLECTION",
             "link": "shopify://pages/winter-25-gallery",
@@ -565,7 +565,7 @@
         "1661524294161107df-0": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/WEB_IG_Nola_Mid_Ankle_Boots_Cacao_Leather_2.jpg",
+            "image": "shopify://shop_images/WEB_IG_Frankie_Mid_Wedge_Biscuit_Suede_1_b02a08ec-8ca9-42ff-aa0d-ca4b3a03a362.jpg",
             "image_link": "shopify://collections/autumn-25-ascend"
           }
         }
