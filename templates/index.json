@@ -375,7 +375,6 @@
     },
     "3b24b785-c828-469b-a1f2-5bfe20fb5a3d": {
       "type": "index__image-with-text-overlay",
-      "disabled": true,
       "settings": {
         "image": "shopify://shop_images/Web_Banner_W25_header_banner_copy.jpg",
         "mobile_image": "shopify://shop_images/Web_Banner_W25_mobile_banner_copy.jpg",
@@ -401,8 +400,8 @@
         "button_2_link": "",
         "button_2_style": "button--secondary",
         "width": "wide",
-        "padding_top": 0,
-        "padding_bottom": 0,
+        "padding_top": 22,
+        "padding_bottom": 24,
         "padding_left": 0,
         "padding_right": 0,
         "animation": "none",
