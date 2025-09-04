@@ -20,7 +20,7 @@ window.PXUTheme.jsFeaturedCollection = {
       products_available: this.products_available,
       products_limit: this.products_limit,
       cellAlign: "left",
-      wrapAround: true
+      wrapAround: false
     }
     $(slider).flickity({
       lazyLoad: 2,
