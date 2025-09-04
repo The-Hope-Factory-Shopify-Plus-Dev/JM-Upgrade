@@ -253,7 +253,7 @@
         "show_gutter": true,
         "collection_pl": 20,
         "collection_pr": 20,
-        "padding_top": 43,
+        "padding_top": 60,
         "padding_bottom": 41,
         "animation": "fadeIn",
         "collection_layout_mobile": "grid",
