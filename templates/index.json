@@ -286,15 +286,17 @@
         "image_cy7ACi": {
           "type": "image",
           "settings": {
-            "title": "Title",
-            "link": ""
+            "image": "shopify://shop_images/WEB_IG_SailorCasualFlatsLightSageLeather1.jpg",
+            "title": "FLATS",
+            "link": "shopify://collections/flats"
           }
         },
         "image_dk8zWU": {
           "type": "image",
           "settings": {
-            "title": "Title",
-            "link": ""
+            "image": "shopify://shop_images/WEB_IG_Frankie_Mid_Wedge_Biscuit_Suede_1_b02a08ec-8ca9-42ff-aa0d-ca4b3a03a362.jpg",
+            "title": "HEELS",
+            "link": "shopify://collections/heels"
           }
         }
       },
