@@ -261,7 +261,7 @@
         "padding_top_mobile": 20,
         "padding_bottom_mobile": 20,
         "css_class": "",
-        "custom_css": ".top-heading {\n    margin-bottom: 5px;\nmargin-top: 20px;\n}\n\n.thumbnail-sticker.sale-sticker\n{\ndisplay: none;\n}\n\n.title {\n  font-size: 20px;\n}"
+        "custom_css": ".top-heading {\n    margin-bottom: 5px;\nmargin-top: 20px;\n}\n\n.thumbnail-sticker.sale-sticker\n{\ndisplay: none;\n}\n\n.title {\n  font-size: 18px;\n}"
       }
     },
     "01105ed2-7af5-4049-bc2f-0a51092c3bc4": {
