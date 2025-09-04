@@ -548,7 +548,7 @@
           "settings": {
             "title": "SS26 : ELEMENT",
             "heading_size": "regular",
-            "text": "<p>For Winter '25, Jo Mercer presents Endure - a collection that embodies strength, elegance, and enduring style. Designed to transcend time and trends, Endure celebrates craftsmanship and modern sophistication.</p><p> </p>",
+            "text": "<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.<br/><br/> </p>",
             "alignment": "center",
             "vertical_position": "center",
             "button_label": "BEHIND THE COLLECTION",
