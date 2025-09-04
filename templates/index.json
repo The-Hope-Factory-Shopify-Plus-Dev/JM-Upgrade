@@ -421,7 +421,6 @@
     },
     "index_featured_collection_jp4EKD": {
       "type": "index__featured-collection",
-      "disabled": true,
       "custom_css": [
         ".product_form--radio variant-selection options-selection {display: none;}",
         ".product_form-collection .purchase-details .purchase-details__spb--false {margin-top: 0; display: none;}",
@@ -429,8 +428,8 @@
         ".custom-sticker-1 {text-align: left; padding: 1px;}"
       ],
       "settings": {
-        "title": "SHOP BOOTS",
-        "collection": "boots",
+        "title": "SS26: ELEMENT",
+        "collection": "ss26-element",
         "products_per": 4,
         "products_limit": 8,
         "align_height": false,
@@ -438,7 +437,7 @@
         "button_label": "SHOP NOW",
         "button_style": "button--primary",
         "collection_style": "slider",
-        "width": "wide",
+        "width": "standard",
         "show_gutter": true,
         "collection_pl": 5,
         "collection_pr": 5,
@@ -450,7 +449,7 @@
         "padding_top_mobile": 20,
         "padding_bottom_mobile": 20,
         "css_class": "",
-        "custom_css": ".top-heading {\n    margin-bottom: 5px;\nmargin-top: 20px;\n}\n\n.thumbnail-sticker.sale-sticker\n{\ndisplay: none;\n}\n\n.title {\n  font-size: 25px;\n}"
+        "custom_css": ".top-heading {\n    margin-bottom: 5px;\nmargin-top: 20px;\n}\n\n.thumbnail-sticker.sale-sticker\n{\ndisplay: none;\n}\n\n.title {\n  font-size:18px;\n}"
       }
     },
     "index_featured_collection_fpnNUA": {
