@@ -278,8 +278,9 @@
         "image_nUqmAP": {
           "type": "image",
           "settings": {
-            "title": "Title",
-            "link": ""
+            "image": "shopify://shop_images/WEB_IG_TottieSneakersDuskBlueSuede1.jpg",
+            "title": "SNEAKERS",
+            "link": "shopify://collections/sneakers"
           }
         },
         "image_cy7ACi": {
