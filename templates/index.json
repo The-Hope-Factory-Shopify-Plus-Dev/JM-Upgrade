@@ -240,7 +240,7 @@
         ".product_form-collection .purchase-details .purchase-details__spb--false {margin-top: 0; display: none;}"
       ],
       "settings": {
-        "title": "New Arrivals",
+        "title": "NEW ARRIVALS",
         "collection": "new",
         "products_per": 4,
         "products_limit": 8,
