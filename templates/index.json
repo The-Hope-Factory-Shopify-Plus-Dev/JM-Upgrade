@@ -317,7 +317,7 @@
         "link_color": "#FFFFFF",
         "width": "wide",
         "disable_horizontal_gap": false,
-        "show_gutter": true,
+        "show_gutter": false,
         "gutter_size": "standard",
         "padding_top": 20,
         "padding_bottom": 20,
