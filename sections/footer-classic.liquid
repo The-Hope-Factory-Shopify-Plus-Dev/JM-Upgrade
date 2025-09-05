@@ -297,12 +297,12 @@
         {% if section.settings.display_payment_methods %}
         <div class="footer__payment-methods small-down--one-whole medium-down--text-center text-right">
           <div class="payment-methods">
-            <img src="https://cdn.shopify.com/s/files/1/0101/2210/0800/files/visa-card.png?v=1757037579" height="60px" width="60px" />
-            <img src="https://cdn.shopify.com/s/files/1/0101/2210/0800/files/icon-american-express.svg?v=1757038694" height="60px" width="60px" />
-            <img src="https://cdn.shopify.com/s/files/1/0101/2210/0800/files/mastercard.svg?v=1757038923" height="60px" width="60px" />
-            <img src="https://cdn.shopify.com/s/files/1/0101/2210/0800/files/paypal-logo.png?v=1757039004" height="20px" width="20px" />
-            <img src="https://cdn.shopify.com/s/files/1/0101/2210/0800/files/Shop_Pay_Logo_black.svg?v=1757039159" height="20px" width="20px" />
-            <img src="https://cdn.shopify.com/s/files/1/0101/2210/0800/files/Wordmark_Transparent_And_Black.png?v=1757039250" height="20px" width="20px"/>
+            <img src="https://cdn.shopify.com/s/files/1/0101/2210/0800/files/visa-card.png?v=1757037579" />
+            <img src="https://cdn.shopify.com/s/files/1/0101/2210/0800/files/icon-american-express.svg?v=1757038694" />
+            <img src="https://cdn.shopify.com/s/files/1/0101/2210/0800/files/mastercard.svg?v=1757038923"/>
+            <img src="https://cdn.shopify.com/s/files/1/0101/2210/0800/files/paypal-logo.png?v=1757039004" />
+            <img src="https://cdn.shopify.com/s/files/1/0101/2210/0800/files/Shop_Pay_Logo_black.svg?v=1757039159" />
+            <img src="https://cdn.shopify.com/s/files/1/0101/2210/0800/files/Wordmark_Transparent_And_Black.png?v=1757039250" />
             {% comment %}
             {% for type in shop.enabled_payment_types %}
               {{ type | payment_type_svg_tag: class:'payment-icon' }}
