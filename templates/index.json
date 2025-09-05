@@ -581,7 +581,7 @@
         "padding_bottom": 50,
         "animation": "fadeIn",
         "mobile_text_position": "bottom",
-        "mobile_padding_top": 0,
+        "mobile_padding_top": 49,
         "mobile_padding_bottom": 71,
         "css_class": "",
         "custom_css": ".content-text \n{\n  font-size: 15px;\n}\n\n.image-with-text__heading.is-regular {\n  font-size: 25px;\n}"
