@@ -299,6 +299,7 @@
           <div class="payment-methods">
             <img src="https://cdn.shopify.com/s/files/1/0101/2210/0800/files/visa-card.png?v=1757037579" />
             <img src="https://cdn.shopify.com/s/files/1/0101/2210/0800/files/icon-american-express.svg?v=1757038694" />
+            <img src="https://cdn.shopify.com/s/files/1/0101/2210/0800/files/mastercard.svg?v=1757038923" />
             {% for type in shop.enabled_payment_types %}
               {{ type | payment_type_svg_tag: class:'payment-icon' }}
             {% endfor %}
