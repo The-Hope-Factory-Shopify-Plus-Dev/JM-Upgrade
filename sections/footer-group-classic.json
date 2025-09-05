@@ -13,6 +13,7 @@
   "sections": {
     "smsbump_footer_form_embeded_footer_327690_Mg7mJW": {
       "type": "smsbump_footer_form_embeded_footer_327690",
+      "disabled": true,
       "custom_css": [
         ".form-holder {justify-content: center !important; margin: 0 auto !important;}"
       ],
