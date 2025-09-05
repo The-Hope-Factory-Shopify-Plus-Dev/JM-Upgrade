@@ -580,7 +580,7 @@
         "padding_top": 50,
         "padding_bottom": 50,
         "animation": "fadeIn",
-        "mobile_text_position": "same_as_desktop",
+        "mobile_text_position": "bottom",
         "mobile_padding_top": 0,
         "mobile_padding_bottom": 71,
         "css_class": "",
