@@ -78,7 +78,7 @@
     <div class="mobile-icons {% if settings.show_search_icon_mobile == false %}has-one-icon{% endif %}">
       {% if shop.customer_accounts_enabled %}
         {% comment %} Accounts {% endcomment %}
-        <li>
+        
           {% if customer %}
             {% comment %} Logout {% endcomment %}
             <a class="mobile-menu__item item-with-icon" href="{{ routes.account_url }}" >
@@ -100,7 +100,7 @@
               </span>
             </a>
           {% endif %}
-        </li>
+        
       {% endif %}
       {% if settings.show_search_icon_mobile %}
         {% comment %} Search icon {% endcomment %}
