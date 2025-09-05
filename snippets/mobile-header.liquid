@@ -76,32 +76,7 @@
       {% endif %}
     </div>
     <div class="mobile-icons {% if settings.show_search_icon_mobile == false %}has-one-icon{% endif %}">
-      {% if shop.customer_accounts_enabled %}
-        {% comment %} Accounts {% endcomment %}
-        
-          {% if customer %}
-            {% comment %} Logout {% endcomment %}
-            <a class="mobile-menu__item item-with-icon" href="{{ routes.account_url }}" >
-              {% if settings.icon_style != 'text' %}
-                {% render 'icon', name: 'avatar' %}
-              {% endif %}
-              <span class="icon-caption">
-                {{ 'layout.customer.my_account' | t | escape }}
-              </span>
-            </a>
-          {% else %}
-            {% comment %} Login {% endcomment %}
-            <a class="mobile-menu__item item-with-icon" href="{{ routes.account_login_url }}" >
-              {% if settings.icon_style != 'text' %}
-                {% render 'icon', name: 'avatar' %}
-              {% endif %}
-              <span class="icon-caption">
-                {{ 'layout.customer.log_in' | t | escape }}
-              </span>
-            </a>
-          {% endif %}
-        
-      {% endif %}
+      
       {% if settings.show_search_icon_mobile %}
         {% comment %} Search icon {% endcomment %}
         <a class="header__link action-area__link" data-show-search-trigger>
