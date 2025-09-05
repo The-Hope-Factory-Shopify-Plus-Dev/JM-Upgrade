@@ -56,7 +56,7 @@
     "show_announcement_bar": false,
     "show_fixed_message": true,
     "image_loading_style": "blur-up",
-    "show_search_icon_mobile": false,
+    "show_search_icon_mobile": true,
     "show_locale_selector": false,
     "show_currency_selector": false,
     "mobile_menu_background_color": "#ffffff",
