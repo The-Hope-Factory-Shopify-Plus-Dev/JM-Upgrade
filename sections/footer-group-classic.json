@@ -119,6 +119,10 @@
           "type": "empty",
           "settings": {}
         },
+        "empty_xaNKBd": {
+          "type": "empty",
+          "settings": {}
+        },
         "4b396222-61b6-4101-9d2d-256036dc1b85": {
           "type": "link_list",
           "settings": {
@@ -132,24 +136,14 @@
             "menu": "our-brand",
             "social_icons_footer": false
           }
-        },
-        "footer-classic-0": {
-          "type": "logo",
-          "disabled": true,
-          "settings": {
-            "logo": "shopify://shop_images/JM_Logo_Black_RGB.png",
-            "size": "small",
-            "text": "",
-            "social_icons_footer": true
-          }
         }
       },
       "block_order": [
         "newsletter_VC7Gtd",
         "empty_Jq9Xdq",
+        "empty_xaNKBd",
         "4b396222-61b6-4101-9d2d-256036dc1b85",
-        "footer-classic-1",
-        "footer-classic-0"
+        "footer-classic-1"
       ],
       "settings": {
         "copyright_text": "<p>Registered as Solesbury Pty Ltd</p>",
