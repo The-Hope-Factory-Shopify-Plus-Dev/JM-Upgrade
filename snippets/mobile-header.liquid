@@ -76,7 +76,7 @@
       {% endif %}
     </div>
     <div class="mobile-icons {% if settings.show_search_icon_mobile == false %}has-one-icon{% endif %}">
-      
+       {% render 'iwish_v2' with 'iwishlink' %}
       {% if settings.show_search_icon_mobile %}
         {% comment %} Search icon {% endcomment %}
         <a class="header__link action-area__link" data-show-search-trigger>
