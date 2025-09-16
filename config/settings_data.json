@@ -104,6 +104,7 @@
     "show_lock_icon": false,
     "cart_icon": "bag",
     "display_special_instructions": false,
+    "display_savings": true,
     "display_ajax_quantity_box": true,
     "go_to_checkout": true,
     "button_primary_inverse_bg_color": "#ffffff",
