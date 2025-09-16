@@ -621,9 +621,9 @@
         "c9f88e01-df80-4161-8f8b-dfa349d6f295": {
           "type": "image",
           "settings": {
-            "image": "shopify://shop_images/WEB_IG_Posie_Casual_Flats_Merlot_Hair_3.jpg",
-            "image_link": "shopify://collections/accessories",
-            "image_caption": "<p>SHOP ACCESSORIES</p>"
+            "image": "shopify://shop_images/WEB_IG_Tottie_Sneakers_Dusk_Blue_Suede_4.jpg",
+            "image_link": "shopify://collections/sneakers",
+            "image_caption": "<p>SHOP SNEAKERS</p>"
           }
         },
         "mega-menu-7-0": {
@@ -650,7 +650,7 @@
         "34ef744d-b2ae-4e8f-ac5d-dfbae0001097"
       ],
       "settings": {
-        "parent_link": "accessories",
+        "parent_link": "SNEAKERS",
         "mega_menu_background_color": "#ffffff",
         "mega_menu_text_color": "#404040",
         "enable_mega_menu_border": false,
