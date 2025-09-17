@@ -30,7 +30,7 @@
         "announcement_text_EhnwAD": {
           "type": "announcement_text",
           "settings": {
-            "message_au": "TAKE A FURTHER 30% OFF SALE",
+            "message_au": "TAKE A FURTHER 30% OFF SALE | AUTOMATICALLY APPLIED AT CHECKOUT",
             "message_nz": "TAKE A FURTHER 30% OFF SALE | AUTOMATICALLY APPLIED AT CHECKOUT",
             "message_af": "TAKE A FURTHER 30% OFF SALE | AUTOMATICALLY APPLIED AT CHECKOUT",
             "message_us": "TAKE A FURTHER 30% OFF SALE | AUTOMATICALLY APPLIED AT CHECKOUT",
