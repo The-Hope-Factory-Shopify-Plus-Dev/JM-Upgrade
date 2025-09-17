@@ -30,7 +30,7 @@
         "announcement_text_EhnwAD": {
           "type": "announcement_text",
           "settings": {
-            "message_au": "TAKE A FURTHER 30% OFF SALE | AUTOMATICALLY APPLIED AT CHECKOUT",
+            "message_au": "TAKE A FURTHER 30% OFF SALE",
             "message_nz": "TAKE A FURTHER 30% OFF SALE | AUTOMATICALLY APPLIED AT CHECKOUT",
             "message_af": "TAKE A FURTHER 30% OFF SALE | AUTOMATICALLY APPLIED AT CHECKOUT",
             "message_us": "TAKE A FURTHER 30% OFF SALE | AUTOMATICALLY APPLIED AT CHECKOUT",
@@ -42,7 +42,6 @@
         },
         "announcement_text_GQTiyx": {
           "type": "announcement_text",
-          "disabled": true,
           "settings": {
             "message_au": "FREE STANDARD SHIPPING ON ON ORDERS OVER $140",
             "message_nz": "FREE STANDARD SHIPPING ON ON ORDERS OVER $150",
@@ -56,7 +55,6 @@
         },
         "announcement_text_KWbiqN": {
           "type": "announcement_text",
-          "disabled": true,
           "settings": {
             "message_au": "2HR CLICK AND COLLECT AVAILABLE IN ALL STORES",
             "message_nz": "",
@@ -70,7 +68,6 @@
         },
         "announcement_text_BMEYwV": {
           "type": "announcement_text",
-          "disabled": true,
           "settings": {
             "message_au": "BUY NOW, PAY LATER WITH AFTERPAY AND KLARNA",
             "message_nz": "BUY NOW, PAY LATER WITH AFTERPAY AND KLARNA",
@@ -84,7 +81,6 @@
         },
         "announcement_text_KiJw6Y": {
           "type": "announcement_text",
-          "disabled": true,
           "settings": {
             "message_au": "30% OFF SELECT STYLES | LIMITED TIME ONLY",
             "message_nz": "30% OFF SELECT STYLES | LIMITED TIME ONLY",
@@ -98,7 +94,6 @@
         },
         "announcement_text_RE4wzt": {
           "type": "announcement_text",
-          "disabled": true,
           "settings": {
             "message_au": "",
             "message_nz": "FREE RETURNS ON FIRST ORDERS FOR NZ CUSTOMERS",
