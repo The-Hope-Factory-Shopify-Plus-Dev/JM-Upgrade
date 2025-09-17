@@ -29,7 +29,6 @@
         },
         "announcement_text_EhnwAD": {
           "type": "announcement_text",
-          "disabled": true,
           "settings": {
             "message_au": "TAKE A FURTHER 30% OFF SALE | AUTOMATICALLY APPLIED AT CHECKOUT",
             "message_nz": "TAKE A FURTHER 30% OFF SALE | AUTOMATICALLY APPLIED AT CHECKOUT",
