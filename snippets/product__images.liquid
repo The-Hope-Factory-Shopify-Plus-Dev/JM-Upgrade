@@ -180,7 +180,13 @@ enable_product_lightbox: <boolean>
                 data-title="{{ media.alt | escape }}" tabindex="0">
             <picture>  
               <source srcset="{{ media | img_url: 'master' }}" media="(min-width: 0px) and (max-width: 767px)">
+               {% if enable_product_lightbox and product.media.size > 0 %}
+                <a href="{{ media | img_url: '2048x' }}" class="product-gallery__link" data-fancybox="{{ product.id }}" title="{{ media.alt | escape }}">
+              {% endif %}
               <img data-src="" src="{{ media| img_url: 'master' }}" alt="" class="lazyload lazyload--fade-in" data-sizes="auto" loading="lazy">
+              {% if enable_product_lightbox and product.media.size > 0 %}
+                </a>
+              {% endif %}
             </picture>
             {% if thumbnail_badge != blank %}
               {% render 'icon',
